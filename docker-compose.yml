@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  ocr-tools:
+    container_name: wlt-ocr-tools
+    build: .
+    image: registry.apps.man.poznan.pl/wlt/wlt-ocr-tools:latest
+    ports:
+      - 5557:5557
+      - 9999:9999
+    volumes:
+      - ./var/vtl-storage:/var/vtl-storage
+      - ./var/vtl-trained-models:/var/vtl/tesseract-trained
+    environment:
+      OCR_TRAINING_ENDPOINT: http://localhost:5558
+      SPRING_ACTIVE_PROFILE: dev

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<springProfile name="jsonLogging">
+		<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+		</appender>
+	</springProfile>
+	<springProfile name="! jsonLogging">
+		<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder>
+				<pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n</pattern>
+			</encoder>
+		</appender>
+	</springProfile>
+
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+	<logger name="pl.psnc.vtl.ocr" level="DEBUG" />
+
+	<logger name="org.springframework.web" level="INFO" />
+
+</configuration>
