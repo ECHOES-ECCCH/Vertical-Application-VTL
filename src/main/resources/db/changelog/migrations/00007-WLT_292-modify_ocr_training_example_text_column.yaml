@@ -1,0 +1,16 @@
+databaseChangeLog:
+    - changeSet:
+          id: 00007-WLT_292-1
+          author: swolarz
+          comment: Change correct text column in ocr_training_examples table to text file path column
+          changes:
+              - modifyDataType:
+                    tableName: ocr_training_examples
+                    columnName: correct_text
+                    newDataType: varchar(255)
+
+              - renameColumn:
+                    tableName: ocr_training_examples
+                    oldColumnName: correct_text
+                    newColumnName: ocr_text_path
+

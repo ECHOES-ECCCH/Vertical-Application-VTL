@@ -1,0 +1,14 @@
+databaseChangeLog:
+    - changeSet:
+          id: 00005-WLT_296-1
+          author: swolarz
+          comment: Add text language column to OCR training examples table
+          changes:
+              - addColumn:
+                    tableName: ocr_training_examples
+                    columns:
+                        - column:
+                              name: lang
+                              type: varchar(8)
+                              constraints:
+                                  nullable: false

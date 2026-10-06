@@ -1,0 +1,45 @@
+databaseChangeLog:
+    - changeSet:
+          id: 00006-WLT_292-1
+          author: swolarz
+          comment: Create table for OCR training language statistics
+          changes:
+              - createTable:
+                    tableName: ocr_training_lang_stats
+                    columns:
+                        - column:
+                              name: id
+                              type: bigint
+                              autoIncrement: true
+                              constraints:
+                                  primaryKey: true
+                                  nullable: false
+                        - column:
+                              name: version
+                              type: bigint
+                              constraints:
+                                  nullable: false
+                        - column:
+                              name: lang
+                              type: varchar(8)
+                              constraints:
+                                  nullable: false
+                                  unique: true
+                        - column:
+                              name: total_examples
+                              type: bigint
+                              constraints:
+                                  nullable: false
+                        - column:
+                              name: used_examples
+                              type: bigint
+                              constraints:
+                                  nullable: false
+                        - column:
+                              name: new_examples
+                              type: bigint
+                              constraints:
+                                  nullable: false
+                        - column:
+                              name: last_training
+                              type: timestamp

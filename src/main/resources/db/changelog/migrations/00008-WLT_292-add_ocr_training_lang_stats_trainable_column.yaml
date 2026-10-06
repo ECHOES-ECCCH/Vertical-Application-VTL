@@ -1,0 +1,14 @@
+databaseChangeLog:
+    - changeSet:
+          id: 00008-WLT_292-1
+          author: swolarz
+          comment: Add column for 'trainable' flag for OCR languages statistics
+          changes:
+              - addColumn:
+                    tableName: ocr_training_lang_stats
+                    columns:
+                        - column:
+                              name: trainable
+                              type: boolean
+                              constraints:
+                                  nullable: false

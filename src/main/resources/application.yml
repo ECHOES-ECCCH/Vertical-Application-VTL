@@ -1,0 +1,74 @@
+server:
+    port: 5558
+
+spring:
+    datasource:
+        url: "jdbc:postgresql://${OCR_TRAIN_DB_HOST:localhost}:${OCR_TRAIN_DB_PORT:5432}/${OCR_TRAIN_DB_NAME:ocr_train_db}"
+        username: "${OCR_TRAIN_DB_USER}"
+        password: "${OCR_TRAIN_DB_PASS}"
+
+        hikari:
+            initialization-fail-timeout: 10000
+
+    jpa:
+#        show-sql: true
+
+        hibernate:
+            ddl-auto: update
+
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+
+    profiles:
+        active: ${SPRING_ACTIVE_PROFILE}
+
+
+vtl:
+    scheduler:
+        fetch-pending-ocr-corrections:
+            cron: 0 0/30 * * * ?
+        run-ocr-training:
+            cron: 0 0 0 * * *
+
+    ocr:
+        training:
+            procedure:
+                max-iterations: 10000
+
+            # files from https://github.com/tesseract-ocr/tessdata_best
+            tessdata-dir: ${VTL_STORAGE:/var/vtl}/tessdata_best
+            # files from https://github.com/tesseract-ocr/langdata
+            langdata-dir: ${VTL_STORAGE:/var/vtl}/langdata
+            # contains subfolders for each trained language
+            trained-langs-dir: ${VTL_STORAGE:/var/vtl}/trained_langs
+
+        corrections:
+            queue:
+                interval-minutes: 15
+                batch-size: 10
+
+    iiif-server:
+        request-timeout-ms: 5000
+
+
+logging:
+    level:
+        pl.psnc.vtl.ocrtraining: debug
+
+
+springdoc:
+    version: '1.0.0'
+    api-docs:
+        enabled: true
+        path: /v3/api-docs
+
+management:
+    health:
+        defaults:
+            enabled: false
+        db:
+            enabled: true
+    endpoint:
+        health:
+            show-details: always
