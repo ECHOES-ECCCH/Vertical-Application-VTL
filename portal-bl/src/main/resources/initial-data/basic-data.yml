@@ -1,0 +1,123 @@
+UserRoles:
+
+  - !!pl.psnc.vtl.portal.model.users.UserRole
+    code:       contributor
+    ord:        1
+    pl:         uczestnik
+    en:         contributor
+
+  - !!pl.psnc.vtl.portal.model.users.UserRole
+    code:       verifier
+    ord:        2
+    pl:         moderator
+    en:         verifier
+
+  - !!pl.psnc.vtl.portal.model.users.UserRole
+    code:       admin
+    ord:        3
+    pl:         kierownik
+    en:         manager
+
+  - !!pl.psnc.vtl.portal.model.users.UserRole
+    code:       student
+    ord:        4
+    pl:         student
+    en:         student
+
+Languages:
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.Language
+    code:       pol
+    ord:        1
+    pl:         polski
+    en:         Polish
+    forTranscriptionMetadata: true
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.Language
+    code:       eng
+    ord:        2
+    pl:         angielski
+    en:         English
+    forTranscriptionMetadata: true
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.Language
+    code:       deu
+    ord:        3
+    pl:         niemiecki
+    en:         German
+    forTranscriptionMetadata: true
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.Language
+    code:       fra
+    ord:        4
+    pl:         francuski
+    en:         French
+    forTranscriptionMetadata: true
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.Language
+    code:       lat
+    ord:        5
+    pl:         łacina
+    en:         Latin
+    forTranscriptionMetadata: true
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.Language
+    code:       rus
+    ord:        6
+    pl:         rosyjski
+    en:         Russian
+    forTranscriptionMetadata: true
+
+
+BiblTypes:
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.BiblType
+    code:       print
+    ord:        1
+    pl:         druk
+    en:         print
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.BiblType
+    code:       manuscript
+    ord:        2
+    pl:         rękopis
+    en:         manuscript
+
+
+ActorRoles:
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.ActorRole 
+    code:       author
+    ord:        1
+    pl:         Autor
+    en:         Author
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.ActorRole 
+    code:       editor
+    ord:        2
+    pl:         Redaktor
+    en:         Editor
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.ActorRole 
+    code:       translator
+    ord:        3
+    pl:         Tłumacz
+    en:         Translator
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.ActorRole 
+    code:       copyist
+    ord:        4
+    pl:         Kopista
+    en:         Copyist
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.ActorRole 
+    code:       publisher
+    ord:        5
+    pl:         Publicysta
+    en:         Publisher
+
+  - !!pl.psnc.vtl.portal.model.transcriptions.ActorRole 
+    code:       contributor
+    ord:        6
+    pl:         Współautor
+    en:         Contributor

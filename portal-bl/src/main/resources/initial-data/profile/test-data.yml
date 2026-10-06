@@ -1,0 +1,157 @@
+Transcriptions:
+  - !!pl.psnc.vtl.portal.model.transcriptions.Transcription
+    id:                          45
+    hidden:                      false
+    titleLabel:                  Test iiif presentation
+    authorsLabel:                ""
+    analyticInfo:
+      !!pl.psnc.vtl.portal.model.transcriptions.AnalyticInfo
+      id:                          45
+      title:                       Test
+      language:
+        !!pl.psnc.vtl.portal.model.transcriptions.Language
+        code:                        pol
+    monographicInfo:
+      !!pl.psnc.vtl.portal.model.transcriptions.MonographicInfo
+      id:                          45
+      title:                       Test
+    transcriptionInfo:
+      !!pl.psnc.vtl.portal.model.transcriptions.TranscriptionInfo
+      id:                          45
+      description:                 description100
+    profileDesc:
+      !!pl.psnc.vtl.portal.model.transcriptions.ProfileDesc
+      id:                          45
+    creationMode:                WEB_FORM
+    creator:
+      !!pl.psnc.vtl.portal.model.users.User
+      id:                       3
+
+TranscriptionUsers:
+  - !!pl.psnc.vtl.portal.model.permissions.TranscriptionUser
+    transcription:
+      !!pl.psnc.vtl.portal.model.transcriptions.Transcription
+      id:                          45
+    user:
+      !!pl.psnc.vtl.portal.model.users.User
+      id:                          3
+    role:
+      !!pl.psnc.vtl.portal.model.users.UserRole
+      code:                        admin
+
+Layers:
+  - !!pl.psnc.vtl.portal.model.layers.Layer
+    id:                          3
+    name:                        iiif_test_layer
+    description:                 iiif_test_layer
+    transcription:
+      !!pl.psnc.vtl.portal.model.transcriptions.Transcription
+      id:                          45
+  - !!pl.psnc.vtl.portal.model.layers.Layer
+    id:                          4
+    name:                        iiif_test_layer_2
+    description:                 iiif_test_layer_2
+    transcription:
+      !!pl.psnc.vtl.portal.model.transcriptions.Transcription
+      id:                          45
+
+Pages:
+  - !!pl.psnc.vtl.portal.model.pages.Page
+    id:                          107
+    transcription:
+      !!pl.psnc.vtl.portal.model.transcriptions.Transcription
+      id:                          45
+    path:                        page0004r.tif
+    percentOfTranscribed:        16
+    percentOfVerified:           16
+    pageNo:                      1
+    iiifUrl:                     1/page0004r_Page0000.tif/info.json
+    thumbnailUrl:                http://localhost:5555/iipsrv/iipsrv.fcgi/?IIIF=t1/page0004r_Page0000.tif/pct:0,0,100.0,66.9/!300,300/0/default.jpg
+    boundingBox:
+      !!pl.psnc.vtl.portal.model.regions.BoundingBox
+      upperLeftX:                  0
+      upperLeftY:                  0
+      lowerRightX:                 2595
+      lowerRightY:                 3759
+
+PageLayers:
+  - !!pl.psnc.vtl.portal.model.layers.PageLayer
+    layer:
+      !!pl.psnc.vtl.portal.model.layers.Layer
+      id: 3
+    page:
+      !!pl.psnc.vtl.portal.model.pages.Page
+      id: 107
+    percentOfTranscribed: 16
+    percentOfVerified: 16
+
+  - !!pl.psnc.vtl.portal.model.layers.PageLayer
+    layer:
+      !!pl.psnc.vtl.portal.model.layers.Layer
+      id: 4
+    page:
+      !!pl.psnc.vtl.portal.model.pages.Page
+      id: 107
+    percentOfTranscribed: 16
+    percentOfVerified: 16
+
+Verses:
+  - !!pl.psnc.vtl.portal.model.verses.Verse
+    id: 78
+    page:
+      !!pl.psnc.vtl.portal.model.pages.Page
+      id: 107
+      percentOfTranscribed: 0
+      percentOfVerified: 0
+    pageLayer:
+      !!pl.psnc.vtl.portal.model.layers.PageLayer
+      layer:
+        !!pl.psnc.vtl.portal.model.layers.Layer
+        id: 3
+      page:
+        !!pl.psnc.vtl.portal.model.pages.Page
+        id: 107
+    verseNo: 1
+    content: Wers na warstwie pierwszej
+    boundingBox:
+      !!pl.psnc.vtl.portal.model.regions.BoundingBox
+      upperLeftX: 280
+      upperLeftY: 330
+      lowerRightX: 2250
+      lowerRightY: 470
+    status: NONE
+    formatting:
+      !!pl.psnc.vtl.portal.model.verses.Formatting
+      endOfParagraph: false
+      imageCaption: false
+      tabularForm: END_OF_ROW
+
+  - !!pl.psnc.vtl.portal.model.verses.Verse
+    id: 79
+    page:
+      !!pl.psnc.vtl.portal.model.pages.Page
+      id: 107
+      percentOfTranscribed: 0
+      percentOfVerified: 0
+    pageLayer:
+      !!pl.psnc.vtl.portal.model.layers.PageLayer
+      layer:
+        !!pl.psnc.vtl.portal.model.layers.Layer
+        id: 4
+      page:
+        !!pl.psnc.vtl.portal.model.pages.Page
+        id: 107
+    verseNo: 2
+    content: Wers na warstwie drugiej
+    boundingBox:
+      !!pl.psnc.vtl.portal.model.regions.BoundingBox
+      upperLeftX: 300
+      upperLeftY: 1050
+      lowerRightX: 2200
+      lowerRightY: 1400
+    status: NONE
+    formatting:
+      !!pl.psnc.vtl.portal.model.verses.Formatting
+      endOfParagraph: false
+      imageCaption: false
+      tabularForm: END_OF_ROW

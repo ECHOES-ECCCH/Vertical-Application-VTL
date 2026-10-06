@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title id="1" level="m" type="main">TranscriptionId_2</title>
+                    </monogr>
+                </biblStruct>
+                <msDesc>
+                    <msIdentifier>
+                        <repositiory>VTL-REPO</repositiory>
+                        <idno>VTL-T2</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <titleStmt>
+                <title copyOf="1" level="m" type="main">TranscriptionId_2</title>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <sourceDoc>
+        <surface id="page_1" ulx="0" uly="0" lrx="2706" lry="4042">
+            <zone type="list">
+                <zone ulx="1" uly="1" lrx="9" lry="10" type="item">
+                    <line ulx="1" uly="1" lrx="9" lry="10">Ala ma kota6</line>
+                </zone>
+                <zone ulx="1" uly="1" lrx="9" lry="10" type="item">
+                    <line ulx="1" uly="1" lrx="9" lry="10">Ala ma kota7</line>
+                </zone>
+                <zone ulx="1" uly="1" lrx="9" lry="10" type="item">
+                    <line ulx="1" uly="1" lrx="9" lry="10">Ala ma kota8</line>
+                </zone>
+                <zone ulx="1" uly="1" lrx="9" lry="10" type="item">
+                    <line ulx="1" uly="1" lrx="9" lry="10">Ala ma kota9</line>
+                </zone>
+            </zone>
+            <zone type="list">
+                <zone ulx="393" uly="806" lrx="2054" lry="863" type="item"/>
+                <zone ulx="403" uly="905" lrx="2057" lry="976" type="item"/></zone>
+            <zone type="list">
+                <zone ulx="631" uly="1076" lrx="1843" lry="1125" type="item"/>
+                <zone ulx="312" uly="1276" lrx="2132" lry="1335" type="item"/></zone>
+        </surface>
+        <surface id="page_2" ulx="0" uly="0" lrx="2837" lry="4035">
+            <zone type="list">
+                <zone ulx="1" uly="1" lrx="9" lry="10" type="item">
+                    <line ulx="1" uly="1" lrx="9" lry="10">Ala ma kota9</line>
+                </zone>
+                <zone ulx="1" uly="1" lrx="9" lry="10" type="item">
+                    <line ulx="1" uly="1" lrx="9" lry="10">Ala ma kota9</line>
+                </zone>
+                <zone ulx="1" uly="1" lrx="9" lry="10" type="item">
+                    <line ulx="1" uly="1" lrx="9" lry="10">Ala ma kota9</line>
+                </zone>
+            </zone>
+        </surface>
+    </sourceDoc>
+</TEI>

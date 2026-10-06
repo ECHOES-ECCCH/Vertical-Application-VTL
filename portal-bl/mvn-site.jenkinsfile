@@ -1,0 +1,50 @@
+def copyFiles() {
+    def host = "wlt-mvn-site-host"
+    def user = "wlt-mvn-site-user"
+
+    withCredentials([
+            string(credentialsId: host, variable: 'HOST'),
+            string(credentialsId: user, variable: 'USER')
+    ]) {
+        sh '''
+              scp -r target/site ${USER}@${HOST}:/home/centos/www-data/mvn-site/info/wlt-portal
+              '''
+    }
+}
+
+
+pipeline {
+    agent { node { label 'DL-Team' } }
+    options { disableConcurrentBuilds() }
+    tools {
+        maven 'maven-3.5.0'
+        jdk 'openjdk-11-dlteam'
+    }
+    stages {
+        stage('Initialize') {
+            steps {
+                sh '''
+                    echo "using jdk-11-dlteam"
+                    echo "java : "
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                    echo "JAVA_HOME = ${JAVA_HOME}"
+                '''
+            }
+        }
+        stage('Maven site') {
+            steps {
+                sh '''
+                        mvn -X site
+                        '''
+            }
+        }
+
+        stage('Copy files') {
+            steps {
+                echo "copy site files"
+                copyFiles()
+            }
+        }
+    }
+}

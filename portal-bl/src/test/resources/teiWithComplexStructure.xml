@@ -1,0 +1,269 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title type="main" copyOf="1" level="m">Pisarz 14</tei:title>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:date when="2017-02-28"/>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:biblStruct>
+                    <tei:monogr>
+                        <tei:title type="main" id="1" level="m">Pisarz 14</tei:title>
+                    </tei:monogr>
+                </tei:biblStruct>
+                <tei:msDesc>
+                    <tei:msIdentifier>
+                        <tei:repository>VLT-TEST</tei:repository>
+                        <tei:idno>Vlt.01</tei:idno>
+                    </tei:msIdentifier>
+                </tei:msDesc>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+        <tei:facsimile/>
+        <tei:profileDesc>
+            <tei:textClass>
+                <tei:keywords>
+                    <tei:term>VLT-TEI</tei:term>
+                </tei:keywords>
+            </tei:textClass>
+        </tei:profileDesc>
+    </tei:teiHeader>
+
+
+    <tei:sourceDoc>
+        <tei:surface ulx="0" uly="0" lrx="2596" lry="3760">
+            <tei:zone xml:id="ocr_page_0" ulx="0" uly="0" lrx="2596" lry="3760">
+                <tei:zone xml:id="zone_1" type="pageNum" ulx="165" uly="198" lrx="2153" lry="248">
+                    <tei:line xml:id="ocr_line_p" ulx="165" uly="198" lrx="2153" lry="248">
+                        <tei:zone xml:id="ocrx_word_0" ulx="165" uly="209" lrx="259" lry="248">249</tei:zone>
+                    </tei:line>
+                </tei:zone>
+                <tei:zone xml:id="zone_2" type="head" ulx="165" uly="198" lrx="2153" lry="248">
+                    <tei:line xml:id="ocr_line_0" ulx="165" uly="198" lrx="2153" lry="248;">
+                        <tei:zone xml:id="ocrx_word_1" ulx="1544" uly="198" lrx="1681" lry="235">Pisarz</tei:zone>
+                        <tei:zone xml:id="ocrx_word_2" ulx="1717" uly="200" lrx="1775" lry="240">14,</tei:zone>
+                        <tei:zone xml:id="ocrx_word_3" ulx="1805" uly="199" lrx="1864" lry="233">ks.</tei:zone>
+                        <tei:zone xml:id="ocrx_word_4" ulx="1896" uly="198" lrx="1961" lry="232">III</tei:zone>
+                        <tei:zone xml:id="ocrx_word_5" ulx="1991" uly="209" lrx="2023" lry="232">r.</tei:zone>
+                        <tei:zone xml:id="ocrx_word_6" ulx="2058" uly="200" lrx="2153" lry="233">1427</tei:zone>
+                    </tei:line>
+                </tei:zone>
+                <tei:zone xml:id="zone_3" type="p" ulx="164" uly="338" lrx="2152" lry="548">
+                    <tei:line xml:id="ocr_line_1" ulx="164" uly="338" lrx="2154" lry="403">
+                        <tei:zone xml:id="ocrx_word_7" ulx="164" uly="352" lrx="427" lry="396">Thomislai</tei:zone>
+                        <tei:zone xml:id="ocrx_word_8" ulx="457" uly="353" lrx="607" lry="392">testes</tei:zone>
+                        <tei:zone xml:id="ocrx_word_9" ulx="639" uly="346" lrx="1069" lry="399">Marcezinkowsky:</tei:zone>
+                        <tei:zone xml:id="ocrx_word_10" ulx="1110" uly="341" lrx="1282" lry="403">[Ofzep</tei:zone>
+                        <tei:zone xml:id="ocrx_word_11" ulx="1310" uly="344" lrx="1367" lry="386">de</tei:zone>
+                        <tei:zone xml:id="ocrx_word_12" ulx="1394" uly="345" lrx="1603" lry="397">Rogowo</tei:zone>
+                        <tei:zone xml:id="ocrx_word_13" ulx="1634" uly="338" lrx="1923" lry="400">advocatus]</tei:zone>
+                        <tei:zone xml:id="ocrx_word_14" ulx="1956" uly="342" lrx="2154" lry="395">{primus</tei:zone>
+                    </tei:line>
+                    <tei:line xml:id="ocr_line_2" ulx="169" uly="413" lrx="2155" lry="473;">
+                        <tei:zone xml:id="ocrx_word_15" ulx="169" uly="426" lrx="390" lry="467">Derslaus</tei:zone>
+                        <tei:zone xml:id="ocrx_word_16" ulx="417" uly="424" lrx="474" lry="465">de</tei:zone>
+                        <tei:zone xml:id="ocrx_word_17" ulx="499" uly="420" lrx="769" lry="473">Oczweka},</tei:zone>
+                        <tei:zone xml:id="ocrx_word_18" ulx="795" uly="418" lrx="1029" lry="461">secundus</tei:zone>
+                        <tei:zone xml:id="ocrx_word_19" ulx="1053" uly="416" lrx="1278" lry="458">Nicolaus</tei:zone>
+                        <tei:zone xml:id="ocrx_word_20" ulx="1303" uly="416" lrx="1360" lry="457">de</tei:zone>
+                        <tei:zone xml:id="ocrx_word_21" ulx="1384" uly="414" lrx="1663" lry="468">Oczwyeka,</tei:zone>
+                        <tei:zone xml:id="ocrx_word_22" ulx="1686" uly="414" lrx="1861" lry="456">tercius</tei:zone>
+                        <tei:zone xml:id="ocrx_word_23" ulx="1886" uly="413" lrx="2155" lry="466">Thurinsky</tei:zone>
+                    </tei:line>
+                    <tei:line xml:id="ocr_line_3" ulx="164" uly="485" lrx="2152" lry="548;">
+                        <tei:zone xml:id="ocrx_word_24" ulx="164" uly="497" lrx="407" lry="548">Derslaus,</tei:zone>
+                        <tei:zone xml:id="ocrx_word_25" ulx="439" uly="495" lrx="639" lry="547">quartus</tei:zone>
+                        <tei:zone xml:id="ocrx_word_26" ulx="666" uly="491" lrx="934" lry="532">Mirzantha</tei:zone>
+                        <tei:zone xml:id="ocrx_word_27" ulx="962" uly="488" lrx="1299" lry="541">Caczkowsky,</tei:zone>
+                        <tei:zone xml:id="ocrx_word_28" ulx="1329" uly="487" lrx="1525" lry="540">quintus</tei:zone>
+                        <tei:zone xml:id="ocrx_word_29" ulx="1552" uly="485" lrx="1744" lry="527">Sbiluth</tei:zone>
+                        <tei:zone xml:id="ocrx_word_30" ulx="1781" uly="485" lrx="2152" lry="537">Kaczkowszky.</tei:zone>
+                    </tei:line>
+                </tei:zone>
+                <tei:zone xml:id="zone_4" type="p" ulx="0" uly="46" lrx="28" lry="2793">
+                    <tei:line xml:id="ocr_line_4" ulx="0" uly="46" lrx="28" lry="2793">
+                        <tei:zone xml:id="ocrx_word_31" ulx="0" uly="46" lrx="28" lry="2793"/>
+                    </tei:line>
+                </tei:zone>
+                <tei:zone xml:id="zone_eee" type="list">
+                    <tei:zone xml:id="zone_5" type="item" ulx="270" uly="591" lrx="1931" lry="647">
+                        <tei:line xml:id="ocr_line_5" ulx="270" uly="591" lrx="1931" lry="647">
+                            <tei:zone xml:id="ocrx_word_32" ulx="270" uly="600" lrx="450" lry="647">Zapiska</tei:zone>
+                            <tei:zone xml:id="ocrx_word_33" ulx="469" uly="597" lrx="648" lry="633">lacinska</tei:zone>
+                            <tei:zone xml:id="ocrx_word_34" ulx="670" uly="608" lrx="697" lry="631">w</tei:zone>
+                            <tei:zone xml:id="ocrx_word_35" ulx="719" uly="596" lrx="802" lry="642">rkp.</tei:zone>
+                            <tei:zone xml:id="ocrx_word_36" ulx="819" uly="606" lrx="872" lry="641">po</tei:zone>
+                            <tei:zone xml:id="ocrx_word_37" ulx="892" uly="594" lrx="1097" lry="640">nastepnej</tei:zone>
+                            <tei:zone xml:id="ocrx_word_38" ulx="1115" uly="594" lrx="1229" lry="633">rocie,</tei:zone>
+                            <tei:zone xml:id="ocrx_word_39" ulx="1249" uly="592" lrx="1474" lry="637">odnoszqcej</tei:zone>
+                            <tei:zone xml:id="ocrx_word_40" ulx="1494" uly="592" lrx="1550" lry="634">sie</tei:zone>
+                            <tei:zone xml:id="ocrx_word_41" ulx="1568" uly="591" lrx="1614" lry="625">do</tei:zone>
+                            <tei:zone xml:id="ocrx_word_42" ulx="1632" uly="591" lrx="1746" lry="636">inne)</tei:zone>
+                            <tei:zone xml:id="ocrx_word_43" ulx="1764" uly="601" lrx="1931" lry="637">sprawy.</tei:zone>
+                        </tei:line>
+                    </tei:zone>
+                    <tei:zone xml:id="zone_6" type="item" ulx="258" uly="771" lrx="2154" lry="834">
+                        <tei:line xml:id="ocr_line_6" ulx="258" uly="771" lrx="2154" lry="834">
+                            <tei:zone xml:id="ocrx_word_44" ulx="258" uly="784" lrx="362" lry="824">318.</tei:zone>
+                            <tei:zone xml:id="ocrx_word_45" ulx="400" uly="781" lrx="533" lry="834">(89v)</tei:zone>
+                            <tei:zone xml:id="ocrx_word_46" ulx="572" uly="804" lrx="612" lry="808">—</tei:zone>
+                            <tei:zone xml:id="ocrx_word_47" ulx="640" uly="777" lrx="823" lry="819">Paxina</tei:zone>
+                            <tei:zone xml:id="ocrx_word_48" ulx="867" uly="776" lrx="1007" lry="817">rotha</tei:zone>
+                            <tei:zone xml:id="ocrx_word_49" ulx="1051" uly="773" lrx="1279" lry="816">Miroslaii</tei:zone>
+                            <tei:zone xml:id="ocrx_word_50" ulx="1314" uly="773" lrx="1519" lry="815">testibus</tei:zone>
+                            <tei:zone xml:id="ocrx_word_51" ulx="1559" uly="774" lrx="1724" lry="813">contra</tei:zone>
+                            <tei:zone xml:id="ocrx_word_52" ulx="1771" uly="771" lrx="1952" lry="813">Paxino</tei:zone>
+                            <tei:zone xml:id="ocrx_word_53" ulx="2000" uly="771" lrx="2154" lry="812">Stani-</tei:zone>
+                        </tei:line>
+                    </tei:zone>
+                </tei:zone>
+                <tei:zone type="divHead1" ulx="168" uly="856" lrx="343" lry="896"> <!--H1-->
+                    <tei:line xml:id="ocr_line_7" ulx="168" uly="856" lrx="343" lry="896">
+                        <tei:zone xml:id="ocrx_word_54" ulx="168" uly="856" lrx="343" lry="896">slaum:</tei:zone>
+                    </tei:line>
+                </tei:zone>
+                <tei:zone type="divHead2" ulx="170" uly="965" lrx="1124" lry="1444"> <!--H2-->
+                    <tei:line xml:id="ocr_line_8" ulx="170" uly="965" lrx="1124" lry="1026">
+                        <tei:zone xml:id="ocrx_word_55" ulx="170" uly="974" lrx="300" lry="1016">Tako</tei:zone>
+                        <tei:zone xml:id="ocrx_word_56" ulx="321" uly="975" lrx="404" lry="1026">my</tei:zone>
+                        <tei:zone xml:id="ocrx_word_57" ulx="423" uly="972" lrx="517" lry="1022">bog</tei:zone>
+                        <tei:zone xml:id="ocrx_word_58" ulx="535" uly="968" lrx="724" lry="1023">pomofz</tei:zone>
+                        <tei:zone xml:id="ocrx_word_59" ulx="745" uly="965" lrx="1069" lry="1020">ifzwathykrifz</tei:zone>
+                        <tei:zone xml:id="ocrx_word_60" ulx="1071" uly="969" lrx="1124" lry="1016">|</tei:zone>
+                    </tei:line>
+                    <tei:line xml:id="ocr_line_9" ulx="168" uly="1038" lrx="1126" lry="1096">
+                        <tei:zone xml:id="ocrx_word_61" ulx="168" uly="1046" lrx="293" lry="1087">Jako</tei:zone>
+                        <tei:zone xml:id="ocrx_word_62" ulx="313" uly="1045" lrx="399" lry="1086">tho</tei:zone>
+                        <tei:zone xml:id="ocrx_word_63" ulx="418" uly="1042" lrx="714" lry="1096">polf{zlyedze</tei:zone>
+                        <tei:zone xml:id="ocrx_word_64" ulx="733" uly="1038" lrx="942" lry="1093">ogefziza</tei:zone>
+                        <tei:zone xml:id="ocrx_word_65" ulx="960" uly="1040" lrx="1126" lry="1091">wpra|-</tei:zone>
+                    </tei:line>
+                    <tei:line xml:id="ocr_line_10" ulx="169" uly="1109" lrx="1125" lry="1160">
+                        <tei:zone xml:id="ocrx_word_66" ulx="169" uly="1131" lrx="239" lry="1158">wo</tei:zone>
+                        <tei:zone xml:id="ocrx_word_67" ulx="271" uly="1115" lrx="468" lry="1158">witawil</tei:zone>
+                        <tei:zone xml:id="ocrx_word_68" ulx="500" uly="1112" lrx="732" lry="1154">miroflaw</tei:zone>
+                        <tei:zone xml:id="ocrx_word_69" ulx="762" uly="1110" lrx="955" lry="1153">maczka</tei:zone>
+                        <tei:zone xml:id="ocrx_word_70" ulx="955" uly="1112" lrx="999" lry="1160">|</tei:zone>
+                        <tei:zone xml:id="ocrx_word_71" ulx="1035" uly="1109" lrx="1125" lry="1151">fta-</tei:zone>
+                    </tei:line>
+                    <tei:line xml:id="ocr_line_11" ulx="169" uly="1181" lrx="1128" lry="1239;">
+                        <tei:zone xml:id="ocrx_word_72" ulx="169" uly="1188" lrx="360" lry="1230">niflawa</tei:zone>
+                        <tei:zone xml:id="ocrx_word_73" ulx="385" uly="1186" lrx="659" lry="1239">Jandrzeya</tei:zone>
+                        <tei:zone xml:id="ocrx_word_74" ulx="685" uly="1182" lrx="815" lry="1237">yizto</tei:zone>
+                        <tei:zone xml:id="ocrx_word_75" ulx="841" uly="1181" lrx="944" lry="1236">yelt</tei:zone>
+                        <tei:zone xml:id="ocrx_word_76" ulx="975" uly="1184" lrx="978" lry="1232">|</tei:zone>
+                        <tei:zone xml:id="ocrx_word_77" ulx="1007" uly="1184" lrx="1128" lry="1234">yego</tei:zone>
+                    </tei:line>
+                    <tei:line xml:id="ocr_line_12" ulx="167" uly="1252" lrx="1127" lry="1312;">
+                        <tei:zone xml:id="ocrx_word_78" ulx="167" uly="1273" lrx="329" lry="1312">prawa</tei:zone>
+                        <tei:zone xml:id="ocrx_word_79" ulx="358" uly="1256" lrx="643" lry="1311">oczezyf{zna</tei:zone>
+                        <tei:zone xml:id="ocrx_word_80" ulx="671" uly="1256" lrx="777" lry="1308">alye</tei:zone>
+                        <tei:zone xml:id="ocrx_word_81" ulx="803" uly="1255" lrx="888" lry="1296">tho</tei:zone>
+                        <tei:zone xml:id="ocrx_word_82" ulx="923" uly="1256" lrx="927" lry="1304">|</tei:zone>
+                        <tei:zone xml:id="ocrx_word_83" ulx="958" uly="1252" lrx="1127" lry="1294">[zalta-</tei:zone>
+                    </tei:line>
+                    <tei:line xml:id="ocr_line_13" ulx="169" uly="1325" lrx="1130" lry="1381">
+                        <tei:zone xml:id="ocrx_word_84" ulx="169" uly="1332" lrx="275" lry="1373">wila</tei:zone>
+                        <tei:zone xml:id="ocrx_word_85" ulx="307" uly="1330" lrx="510" lry="1372">mathka</tei:zone>
+                        <tei:zone xml:id="ocrx_word_86" ulx="542" uly="1340" lrx="662" lry="1381">yego</tei:zone>
+                        <tei:zone xml:id="ocrx_word_87" ulx="692" uly="1326" lrx="820" lry="1369">[tara</tei:zone>
+                        <tei:zone xml:id="ocrx_word_88" ulx="858" uly="1328" lrx="862" lry="1376">|</tei:zone>
+                        <tei:zone xml:id="ocrx_word_89" ulx="896" uly="1325" lrx="948" lry="1367">in</tei:zone>
+                        <tei:zone xml:id="ocrx_word_90" ulx="978" uly="1325" lrx="1130" lry="1366">media</tei:zone>
+                    </tei:line>
+                 </tei:zone>
+                <tei:zone type="table" ulx="1204" uly="962" lrx="2156" lry="3760">
+                    <tei:zone type="row" ulx="1204" uly="962" lrx="2156" lry="1350">
+                        <tei:zone type="cell" ulx="1204" uly="962" lrx="2156" lry="1087">
+                            <tei:line xml:id="ocr_line_15" ulx="1204" uly="962" lrx="2156" lry="1017">
+                                <tei:zone xml:id="ocrx_word_92" ulx="1204" uly="964" lrx="1336" lry="1007">Tako</tei:zone>
+                                <tei:zone xml:id="ocrx_word_93" ulx="1361" uly="964" lrx="1426" lry="1005">mi</tei:zone>
+                                <tei:zone xml:id="ocrx_word_94" ulx="1449" uly="964" lrx="1552" lry="1017">Bog</tei:zone>
+                                <tei:zone xml:id="ocrx_word_95" ulx="1574" uly="967" lrx="1745" lry="1017">pomoz</tei:zone>
+                                <tei:zone xml:id="ocrx_word_96" ulx="1770" uly="963" lrx="1785" lry="1003">i</tei:zone>
+                                <tei:zone xml:id="ocrx_word_97" ulx="1809" uly="962" lrx="1974" lry="1015">Swiety</tei:zone>
+                                <tei:zone xml:id="ocrx_word_98" ulx="1997" uly="962" lrx="2156" lry="1015">krzyz,</tei:zone>
+                            </tei:line>
+                            <tei:line xml:id="ocr_line_16" ulx="1202" uly="1034" lrx="2158" lry="1090">
+                                <tei:zone xml:id="ocrx_word_99" ulx="1202" uly="1036" lrx="1315" lry="1090">jako</tei:zone>
+                                <tei:zone xml:id="ocrx_word_100" ulx="1337" uly="1038" lrx="1389" lry="1077">to</tei:zone>
+                                <tei:zone xml:id="ocrx_word_101" ulx="1410" uly="1035" lrx="1679" lry="1089">polsledzie,</tei:zone>
+                                <tei:zone xml:id="ocrx_word_102" ulx="1704" uly="1047" lrx="1730" lry="1076">0</tei:zone>
+                                <tei:zone xml:id="ocrx_word_103" ulx="1753" uly="1034" lrx="1825" lry="1088">jez</tei:zone>
+                                <tei:zone xml:id="ocrx_word_104" ulx="1850" uly="1034" lrx="1913" lry="1086">sie</tei:zone>
+                                <tei:zone xml:id="ocrx_word_105" ulx="1934" uly="1047" lrx="1977" lry="1076">w</tei:zone>
+                                <tei:zone xml:id="ocrx_word_106" ulx="1998" uly="1045" lrx="2158" lry="1087">prawo</tei:zone>
+                            </tei:line>
+                        </tei:zone>
+                        <tei:zone type="cell" ulx="1202" uly="1096" lrx="2155" lry="1350">
+                            <tei:line xml:id="ocr_line_17" ulx="1202" uly="1096" lrx="2155" lry="1159">
+                                <tei:zone xml:id="ocrx_word_107" ulx="1202" uly="1107" lrx="1402" lry="1150">wstawit</tei:zone>
+                                <tei:zone xml:id="ocrx_word_108" ulx="1443" uly="1107" lrx="1699" lry="1148">Miroslaw:</tei:zone>
+                                <tei:zone xml:id="ocrx_word_109" ulx="1747" uly="1096" lrx="1939" lry="1159">Ma¢ka,</tei:zone>
+                                <tei:zone xml:id="ocrx_word_110" ulx="1978" uly="1104" lrx="2155" lry="1147">Stanis-</tei:zone>
+                            </tei:line>
+                            <tei:line xml:id="ocr_line_18" ulx="1202" uly="1177" lrx="2158" lry="1233">
+                                <tei:zone xml:id="ocrx_word_111" ulx="1202" uly="1180" lrx="1338" lry="1233">lawa,</tei:zone>
+                                <tei:zone xml:id="ocrx_word_112" ulx="1361" uly="1179" lrx="1598" lry="1232">Jedrzeja,</tei:zone>
+                                <tei:zone xml:id="ocrx_word_113" ulx="1621" uly="1178" lrx="1662" lry="1219">iz</tei:zone>
+                                <tei:zone xml:id="ocrx_word_114" ulx="1683" uly="1180" lrx="1734" lry="1219">to</tei:zone>
+                                <tei:zone xml:id="ocrx_word_115" ulx="1757" uly="1178" lrx="1850" lry="1232">jest</tei:zone>
+                                <tei:zone xml:id="ocrx_word_116" ulx="1870" uly="1177" lrx="1976" lry="1231">jego</tei:zone>
+                                <tei:zone xml:id="ocrx_word_117" ulx="1997" uly="1189" lrx="2158" lry="1230">prawa</tei:zone>
+                            </tei:line>
+                            <tei:line xml:id="ocr_line_19" ulx="1204" uly="1248" lrx="2158" lry="1304">
+                                <tei:zone xml:id="ocrx_word_118" ulx="1204" uly="1249" lrx="1453" lry="1304">o¢ezyzna,</tei:zone>
+                                <tei:zone xml:id="ocrx_word_119" ulx="1499" uly="1250" lrx="1571" lry="1292">ale</tei:zone>
+                                <tei:zone xml:id="ocrx_word_120" ulx="1613" uly="1252" lrx="1665" lry="1291">to</tei:zone>
+                                <tei:zone xml:id="ocrx_word_121" ulx="1708" uly="1248" lrx="1949" lry="1291">zastawila</tei:zone>
+                                <tei:zone xml:id="ocrx_word_122" ulx="1992" uly="1248" lrx="2158" lry="1290">matka</tei:zone>
+                            </tei:line>
+                            <tei:line xml:id="ocr_line_20" ulx="1204" uly="1323" lrx="1702" lry="1377;">
+                                <tei:zone xml:id="ocrx_word_123" ulx="1204" uly="1323" lrx="1310" lry="1377">jego</tei:zone>
+                                <tei:zone xml:id="ocrx_word_124" ulx="1345" uly="1324" lrx="1473" lry="1364">stara</tei:zone>
+                                <tei:zone xml:id="ocrx_word_125" ulx="1505" uly="1347" lrx="1546" lry="1351">—</tei:zone>
+                                <tei:zone xml:id="ocrx_word_126" ulx="1582" uly="1347" lrx="1624" lry="1350">—</tei:zone>
+                                <tei:zone xml:id="ocrx_word_127" ulx="1661" uly="1347" lrx="1702" lry="1350">—</tei:zone>
+                            </tei:line>
+                        </tei:zone>
+                    </tei:zone>
+                    <tei:zone type="row" ulx="261" uly="1582" lrx="2158" lry="3760">
+                        <tei:zone type="cell" ulx="261" uly="1582" lrx="2158" lry="1695">
+                            <tei:line xml:id="ocr_line_21" ulx="261" uly="1582" lrx="2158" lry="1645">
+                                <tei:zone xml:id="ocrx_word_128" ulx="261" uly="1595" lrx="365" lry="1634">319.</tei:zone>
+                                <tei:zone xml:id="ocrx_word_129" ulx="403" uly="1593" lrx="501" lry="1645">(90)</tei:zone>
+                                <tei:zone xml:id="ocrx_word_130" ulx="539" uly="1616" lrx="581" lry="1620">—</tei:zone>
+                                <tei:zone xml:id="ocrx_word_131" ulx="610" uly="1591" lrx="786" lry="1632">Testes.</tei:zone>
+                                <tei:zone xml:id="ocrx_word_132" ulx="808" uly="1588" lrx="1045" lry="1630">Miroslaw</tei:zone>
+                                <tei:zone xml:id="ocrx_word_133" ulx="1066" uly="1589" lrx="1123" lry="1630">de</tei:zone>
+                                <tei:zone xml:id="ocrx_word_134" ulx="1144" uly="1587" lrx="1327" lry="1629">Paxino</tei:zone>
+                                <tei:zone xml:id="ocrx_word_135" ulx="1350" uly="1598" lrx="1459" lry="1639">erga</tei:zone>
+                                <tei:zone xml:id="ocrx_word_136" ulx="1481" uly="1584" lrx="1752" lry="1637">Taxinszky</tei:zone>
+                                <tei:zone xml:id="ocrx_word_137" ulx="1774" uly="1583" lrx="1826" lry="1637">(!)</tei:zone>
+                                <tei:zone xml:id="ocrx_word_138" ulx="1850" uly="1582" lrx="2158" lry="1634">Stanislaum,</tei:zone>
+                            </tei:line>
+                            <tei:line xml:id="ocr_line_22" ulx="170" uly="1653" lrx="2158" lry="1713;">
+                                <tei:zone xml:id="ocrx_word_139" ulx="170" uly="1665" lrx="421" lry="1706">Mathiam.</tei:zone>
+                                <tei:zone xml:id="ocrx_word_140" ulx="451" uly="1665" lrx="636" lry="1704">Testes:</tei:zone>
+                                <tei:zone xml:id="ocrx_word_141" ulx="663" uly="1661" lrx="869" lry="1703">Mathias</tei:zone>
+                                <tei:zone xml:id="ocrx_word_142" ulx="894" uly="1659" lrx="1165" lry="1713">Zoleezsky,</tei:zone>
+                                <tei:zone xml:id="ocrx_word_143" ulx="1192" uly="1659" lrx="1426" lry="1700">secundus</tei:zone>
+                                <tei:zone xml:id="ocrx_word_144" ulx="1451" uly="1656" lrx="1628" lry="1698">Paulus</tei:zone>
+                                <tei:zone xml:id="ocrx_word_145" ulx="1653" uly="1654" lrx="1956" lry="1708">Zoleczszky,</tei:zone>
+                                <tei:zone xml:id="ocrx_word_146" ulx="1981" uly="1653" lrx="2158" lry="1695">tercius</tei:zone>
+                            </tei:line>
+                        </tei:zone>
+                        <tei:zone type="cell" ulx="0" uly="0" lrx="2596" lry="3760">
+                            <tei:line xml:id="ocr_line_23" ulx="0" uly="0" lrx="2596" lry="3760">
+                                <tei:zone xml:id="ocrx_word_147" ulx="0" uly="0" lrx="2596" lry="3760"/>
+                            </tei:line>
+                        </tei:zone>
+                    </tei:zone>
+                </tei:zone>
+            </tei:zone>
+        </tei:surface>
+    </tei:sourceDoc>
+
+</tei:TEI>

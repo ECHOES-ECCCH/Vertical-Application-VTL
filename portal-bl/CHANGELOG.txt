@@ -1,0 +1,345 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## [1.4.1]() - 2021-07-06
+
+<small>[Compare with 1.3.0]()</small>
+
+### Fixed
+- Fix hocr import from multiple files. if ppageno is equal 0, filename will be taken into account. 'page' removed from regexp as it doesn't  apply to real data from uwr. ([537422e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/537422e232a42344310948ad77883e7c1f090d70) by Aleksandra Nowak).
+
+
+## [1.3.0]() - 2021-05-25
+
+<small>[Compare with first commit]()</small>
+
+### Added
+- Add facebook class as username - as debug on test ([08341b7](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/08341b769d1c93174852d063c65ae2fe8d3055a7) by Katarzyna Jóźwiak).
+- Add packages needed for audit ([ab0899b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ab0899b0a698d8a5d1c4605129f4197c09ce398a) by Aleksandra Nowak).
+- Add filetype to domain messages ([dbe610b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/dbe610b71e3bec37cf08d6cacfac7b0495551f9a) by jbrek).
+- Add exposed headers ([f580a6b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f580a6bb5339ae3dca5f68c2a6959d19b9ac87b6) by Bartosz Szymendera).
+- Added list of allowed domains loaded from properties, without reloading ([ba7a4a4](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ba7a4a460eaffbd9580e792d067567960b7b7966) by rpidhainyi).
+- Added test case for accessing method using remember-me token and csrf token ([f9752c4](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f9752c4859f2c1c96c645e28de80c16a5d5d00da) by rpidhainyi).
+- Added csrf token generation based on remember-me token, added csrf token validation to remember-me security filter ([62d1c34](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/62d1c3427ff35c34a6aa8c72ef15dd5bb33cf076) by rpidhainyi).
+- Add test ([e0849d7](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/e0849d7a5d7b74184cf794aaa80095e178af78eb) by jbrek).
+- Added allowed uris to csrf filter ([d228c40](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d228c407c1574c67dce5808a81a081a891b83de5) by rpidhainyi).
+- Added nullable computation for header ([7c1ee79](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/7c1ee79e9574bebfd70c9bdbf61ad469b6fd0796) by rpidhainyi).
+- Added csrf filter and service to generate tokens ([75b841a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/75b841abec0173b08d40bebc33dbe246afda691c) by rpidhainyi).
+- Added concatenation of users for statistics count ([dad46cc](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/dad46ccf71342ad7c47854e66de0b8fb6b5364a6) by rpidhainyi).
+- Added modification of new content for verse contnet ([62fcc39](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/62fcc399ac47835d7020c1a20387a03d76094721) by rpidhainyi).
+- Added setting author of last modification when verse status changes ([08a5a72](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/08a5a723979a20011607ad99c4c1fe4279143223) by rpidhainyi).
+- Added it case for adfs user login/registration and email change ([236097b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/236097bad4f0df60a4f5a6b0fe5bdb4753ec1333) by rpidhainyi).
+- Added hashpasword field to users entity, and added setting field to true when users resets password ([80482f6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/80482f68d537d7435f09f0f575963f994e0bce5d) by rpidhainyi).
+- Addede replacement for null string to empty string ([0b076c1](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0b076c12d818f4342ee9d569aa471bf7a0bbf648) by rpidhainyi).
+- Added it case for statistics functionality ([5f89fc5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/5f89fc52b75dce2750c934748e4c808b7f3cf8c8) by rpidhainyi).
+- Added initial data to bloody yaml ([ae02a16](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ae02a16f1a5c77bc7e2407ddd2298bb63a559c36) by rpidhainyi).
+- Added statistics service and test cases ([08b7d45](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/08b7d450d848635ea1a89f544b80a040eba4a3cd) by rpidhainyi).
+- Added number of changed chars statistic ([6dd8e3b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/6dd8e3bc35fe6fd1b175fbe8c4dcbfd63972470c) by rpidhainyi).
+- Added setting of verse status modification author and tests ([0e7e9f0](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0e7e9f0051d3aada72f7fe5982546bfdfb2666ea) by rpidhainyi).
+- Added sender to mail , added test case for email ([9e23bad](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/9e23bad685481b200140beb4fc980927ec7be8eb) by rpidhainyi).
+- Added user with vlt gmail email ([b42d3f6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b42d3f664bd4f106553cad16c3c2438794555552) by rpidhainyi).
+- Added end point for mail sending ([d2ce790](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d2ce790e6c1c28f3598635f779c3771d616da22b) by rpidhainyi).
+- Added mail sender , communication mail dto, test for mail sending behavior from service ([4db99e0](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/4db99e02a1633fa7c646eb97da9c23257cb9f90c) by rpidhainyi).
+- Add test, small fix ([67846fa](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/67846fa8e224b12cb7b66d4416ea9b5fde57955d) by jbrek).
+- Add quota validation to /transcriptions/{transcriptionid}/add-pages ([597c512](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/597c512fceb6562a734ec26cee9351f8a69536ad) by jbrek).
+- Add description ([9b18c67](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/9b18c675c0ca24f70a7ce7e4f768019e53aa7d4b) by jbrek).
+- Add reloading trigger ([ec3e688](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ec3e688df959a233d0e8bb6ac3e075a4dc8af409) by jbrek).
+- Added transcription id and format to request what checks file existance on starage -> faster look up ([f3feb2f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f3feb2f3bc4c38ee9bc0815f34ceaa6bcb533a04) by rpidhainyi).
+- Added implementation of storage aware interface by iiiftoolsrepository ([2b6984f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/2b6984f61259d710adac3323335ace7fa1417c55) by rpidhainyi).
+- Added success handler with http 200 when logout performed, adjusted it case ([ef7dfdf](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ef7dfdf77a8a7d775888adc56345f6fee6499621) by rpidhainyi).
+- Added sign-out functinality, with default redirect , and deletion of remember-me cookie ([8a006ed](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/8a006ed712825e4dc94a40782f00c3fce72a56c8) by rpidhainyi).
+- Added file upload to performance tests, controller is distbled ([1c43dd6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/1c43dd6cf78bae8c29244fb3a4b035437b90fc7d) by rpidhainyi).
+- Added file with jvm configuration ([1dbc28a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/1dbc28aded7d35fcb9f436a0b0a290bb9f42cb54) by rpidhainyi).
+- Added imports to test ([1797423](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/179742304593a8ef4d0cc9281d57def0b5a40bfd) by rpidhainyi).
+- Added performence tests in jmeter ([37b21cd](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/37b21cded60f13c5f0f42e4fdf00ebb7e0ff94f2) by rpidhainyi).
+- Added addition of bearer token when authentication succed whith remembermeauthenticationfilter ([4bbfa36](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/4bbfa36f3cf6c7c02105504fbce8c68181d3fb5f) by rpidhainyi).
+- Add training services docker-compose ([f27895e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f27895e0d9eda8c4aaea83866d20bf8acd7a729d) by jbrek).
+- Add proper urls ([0ce2856](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0ce2856639e92ebc2cc35eedc9d1069d3066b428) by jbrek).
+- Added request param redirecturl , generation cookie with redirect url, and redirect hadeling when authentication was successful ([0075a18](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0075a18a295ad46632e58ad56e34d50fb798df13) by rpidhainyi).
+- Add no args constructor for tests ([3a05a2d](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/3a05a2d0da81abd61276f1bdc7d8b0f73901923a) by jbrek).
+- Add test for last modifier ([a538d94](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a538d942cbff51fd261ac3d2413a953b26e35f9a) by jbrek).
+- Add if statments for not authenticated user ([bdeadec](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/bdeadeca8ddaa9c57864115a961504d47b9048a0) by jbrek).
+- Add some unit tests, implementation of page.lastmodificationdate ([d14f932](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d14f932f106945e2d75c02adec9a4981dc2eb099) by jbrek).
+- Added itcase for ebook export and mock for export service registry ([ae9bee6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ae9bee6578838bcfd8ad4b5d8affe6657a43eb8c) by rpidhainyi).
+- Add unit test ([e38aee9](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/e38aee948cf7988671d122a2f6c523b4c505e4d2) by jbrek).
+- Add proper pagination, add itegration test ([204887b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/204887b0e03b146aeac44c32cf56fde7799acfbd) by jbrek).
+- Additional cases added to test ([9f8e3e3](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/9f8e3e3e7c1320209507ac4eee2e85773deb6c99) by Aleksandra Nowak).
+- Add data to dev-data.yml ([50f036b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/50f036b315e72bc4ea1b87415b624a939b71ca3c) by jbrek).
+- Added root path to cookie ([4e22d4d](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/4e22d4d18a1a1cfc1cfd00fe5052c76c0befded5) by rpidhainyi).
+- Added cookies token  when successfully loged in via oauth2 ([b15bbb4](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b15bbb4fbe109421929592ce2f97e40d61467b66) by rpidhainyi).
+- Added exception for parsing exception case, added test to check proper exception is thrown ([474e3e0](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/474e3e021b43a4aec7a441fffa8953ff68f9c9d7) by rpidhainyi).
+- Add code to test ([83913ff](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/83913ff820b178b6d86469d2676863db0c8f881f) by jbrek).
+- Added tests for parametrs getter, description for controller ([6e2c0c6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/6e2c0c6694472c9efd81367cdcdd6041ff64a1fa) by rpidhainyi).
+- Add super-admin to logic ([db3f9b1](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/db3f9b18e84f2870ee721e94ff529bbd46160ff0) by jbrek).
+- Add admin to logic, fix tests ([ee65be5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ee65be5a1db21ea90f5d9a7b659683ff8b9352ae) by jbrek).
+- Added exception with error code for case with creation mode different thatn webform ([e5314d7](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/e5314d72bcd4ad872684cc1a066096cdd51d73e3) by rpidhainyi).
+- Added routing to /api/ while singing suing oauth2 ([d90b164](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d90b16416ccd512b68d8e0138f58536bebcbb4ca) by rpidhainyi).
+- Added shredpage variable that idicates that page is shared among transcription ([ade047e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ade047e9ee7aa77a6a33c6bb8fdebe822f9bdcf0) by rpidhainyi).
+- Added dirty oauth2 with facebook ([aa0c8fd](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/aa0c8fd441cb3d9101870dfe0b0317645530a42b) by rpidhainyi).
+- Added dirty implementation of oauth2 with google ([232e1db](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/232e1db01f5627e278e021e646ab43729bded527) by rpidhainyi).
+- Added default supplier whitch throw exception in case not task set for hash, and no exporter implementation found for ebook type ([3250275](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/325027504851b5d8596944e0fa0221c62f6a1848) by rpidhainyi).
+- Added verse, coments deletion when page deleted ([72f0cb6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/72f0cb66d71c3f853d02f7665b4a6da2fd867ade) by rpidhainyi).
+- Added access check for pages import and exception for no existing transcription ([3766ff8](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/3766ff8e7acc892b7e968da76d1547617f21fbe3) by rpidhainyi).
+- Added deletion method for page and test case ([a05cb6f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a05cb6f2fe5c797114f9140177c6bb4166bc9033) by rpidhainyi).
+- Added delete method to pageserviec ([4e39afe](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/4e39afee34447fe7e1b1f44702ef8309e8500559) by rpidhainyi).
+- Added test to verify lastmodification date after  metadata have been changed ' ([626af5c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/626af5ced61da6b2c07e12f5ef3054d1b98f69bb) by rpidhainyi).
+- Adde thread safety to exportservice impl ([87a3b45](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/87a3b45f93509d05794b9c67779c140b5cdba7f0) by rpidhainyi).
+- Added lastmodification date change when changes of transcription related elements flushed to db ([cecba8f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/cecba8ff7b4397792d1b4e483982f7cc59777433) by rpidhainyi).
+- Added read access check in ebbok service proxy ([73aad95](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/73aad95ebf1004d58e4686d9a4fe8b952ae6796b) by rpidhainyi).
+- Added scheduled cache cleaning ([46a6389](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/46a638974ff4b085c00f956a10e83c451d4f6f81) by rpidhainyi).
+- Added access proxy for ebook import, handeling of failed task ([d1ed177](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d1ed177b7344d29c716974b7f27b0230474c021f) by rpidhainyi).
+- Added mock implementation of registry ([deaded6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/deaded6aaa1f42941c6b3eb78bc7ae9bbd0fe007) by rpidhainyi).
+- Added trst case for export finished with exception ([af696d9](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/af696d9102497a3d63a3567d57d51be54b33197a) by rpidhainyi).
+- Added ebook exporter interface ([a317457](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a317457491306b405da8880f8ec1654c7a810deb) by rpidhainyi).
+- Added service for transcription to ebook export , with asynch export , test cases for export modul ([0b103f5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0b103f593056a37bcc1b3c2203292ca1bf473136) by rpidhainyi).
+- Added exception handeling for unsupportable file type and unrecognizable page , and test cases ([11843f6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/11843f6942abd958682f173f07ec66256e09efad) by rpidhainyi).
+- Added test case for import verses from hocr zip ([e138a91](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/e138a919771cc69e288dced5c3f09671264fb487) by rpidhainyi).
+- Added unstaged files ([0197640](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/019764024e098b547f93dfcfc930cb7b48dbe5fe) by rpidhainyi).
+- Added tests data for import hocr from zip ([f68a73b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f68a73bac1f2f0a0cf59f85a09ad8ea18a8841e9) by rpidhainyi).
+- Added implemantation of import zip with multiple hocrs ([3d1aabe](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/3d1aabe117283e349574d3683a4d06fc71545f0a) by rpidhainyi).
+- Added page loading from repository based on given attributes ([6f61579](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/6f61579b65276758368e6bbe2bfb7bb9d4a50c68) by rpidhainyi).
+- Added exception throw when no links phound for transcription creation ([7344960](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/7344960fa757ae97986fa8693c3955f777c05809) by rpidhainyi).
+- Added test case for page recognition by relativapageno and path and ppgageno , and implementation ([b45ac03](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b45ac039fb4eb67d12b66879ffde184f62ba4f61) by rpidhainyi).
+- Added test for extraction from zip and implementation to pass the test ([f206a0c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f206a0c0912d5f0c0e2948a30a4660f83c6c2697) by rpidhainyi).
+- Add else to if ([665c52f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/665c52fdf47d4006ca8d0db62a1029468f784cca) by Katarzyna Jóźwiak).
+- Added thumbnail size property loading form properties ([41e6492](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/41e6492d08bf0108598a747d8f1a663cf8545abd) by rpidhainyi).
+- Added handeling for case when manifest doesnt containe image w/h ([0741aee](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0741aeeb78bba9532aa776f0911ef26c668f2e7a) by rpidhainyi).
+- Added ignore to test what doest ass due to change n iiiftools ([5e2c9aa](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/5e2c9aa81a1d9838969a2c108e0ac5ef3a847bc9) by rpidhainyi).
+- Added test case for incorect manifest.json ([3d04b92](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/3d04b9291b684ae7226c5f8ad3c334ed4b46b54b) by rpidhainyi).
+- Added handeling of linked publication, added e2e test case for import of linked mets publication ([bd0812b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/bd0812b96bc82c2bfcb9b205dd61f340a0e34b4d) by rpidhainyi).
+- Added redusing of inusable links (textx/xml in images) ([a5b71bc](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a5b71bc227307a6d8661a4fbfec38da244592268) by rpidhainyi).
+- Added thumbnail to pubicationlinks ([f085b23](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f085b233e32469f6aad371d3d40e8918cf0c9eb3) by rpidhainyi).
+- Added parsing for manifest what collect weight and heights form manifest and urls ([d2a7abf](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d2a7abf59355c6e3de01930eec01d48232fec75e) by rpidhainyi).
+- Added ordinary handler for non manifest links ([70ce404](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/70ce4045cf18419224f9e752a72de5b3c7859dc8) by rpidhainyi).
+- Added test for manifest file in publication, added dump implementation to pass the test ([76fb448](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/76fb44833b1daf83a48c87ca1ebe560b5beb53f2) by rpidhainyi).
+- Add container names ([5855ca7](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/5855ca7fdb214dbcd2c8e7fd60ca746563772aff) by jbrek).
+- Added @ignore for suspicion test ([15cc566](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/15cc566a3d0ff2829dc84cc89d55fdc05069381a) by rpidhainyi).
+- Added test case for exception throw ([1280136](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/1280136ccfff258c81a03e2f3eac2c12bea69b5c) by rpidhainyi).
+- Added exception throw when no supported file type found ([23116c6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/23116c6c8cdaa27a87950a8d3a38364522fe34fe) by rpidhainyi).
+- Added api description , and changed retutn type of imports method ([5024eb8](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/5024eb80301665464fb6455c893f9a227a777b90) by rpidhainyi).
+- Added mapper for iiif manifest json, mapper added to registry. added unit test ([6ebc244](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/6ebc244e1f55ddb3629622bd1d54624d58dda463) by rpidhainyi).
+- Add prefix /admin to admin actions ([f9b9dd6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f9b9dd6320ab513e77d3635106b74d87d0f966ea) by jbrek).
+- Add /admin to url ([d73896f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d73896f5982f1604334647c132d388396207ee4d) by jbrek).
+- Additional tests + implementation ([0b12a69](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0b12a699251a54a178a9cc89f24a8e2bf469532a) by jbrek).
+- Added tests what verifies smth but no idea what it verifies ([33d5937](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/33d59378ac1b1974d09d146adc491f7f87dc8ed2) by rpidhainyi).
+- Added integration test for iiiftoolsrepository fixed tests , two tests marked as ignore in transcriptioncontrolleritcase ([e406a39](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/e406a3939efb1417bf8616e672930f7d0a6625a3) by rpidhainyi).
+- Add script to run and copy vtl-storage to containers ([7c3f9d6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/7c3f9d68db904c7d2c5de4775ceb94df848f65ad) by jbrek).
+- Added savetranscriptionfiles in iiifrepository to save files from given list of links ([8f3875f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/8f3875fac553076ae89bf5cb8dac31952096a62d) by rpidhainyi).
+- Adding more pages to test data ([02ca7fa](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/02ca7fa04fd8aef92b6bd61f7405c6e150e43ba1) by Aleksandra Nowak).
+- Add files, change in docker-compose, commentout loading images ([efa182f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/efa182f76209d5022dbb32134485949bfddc2638) by jbrek).
+- Added filtering for complex file types what are not processed ([f68ba2f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f68ba2f9d49cdbd4513f63c2b75f57b33fd50210) by rpidhainyi).
+- Added filetype and resourceurl to transcriptioncore, added linkmappers structure, adjusted tests ([8c9e497](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/8c9e4977dae71fe2b9945a387cdad7a1cca613b7) by rpidhainyi).
+- Added exception if case wrond xml type is given ([037e7e0](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/037e7e0bd0a7a9a449bf255583ccfd1ddf8ea2db) by rpidhainyi).
+- Added xml validation and exceptionfor malformed ([8b32048](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/8b32048aa90ecde3704ed3e439f641facb4e0fd3) by rpidhainyi).
+- Added integration test for general case ([6db44ef](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/6db44efec679f0511d0c1af70fcf432f22f6c89a) by rpidhainyi).
+- Added redirect handling and validation to xml repository, added unit tests ([0c8e5cb](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0c8e5cb6b2743139ecada8733884e54f60e444b5) by rpidhainyi).
+- Added integration test for mets ([d2aa715](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d2aa7155a159aab9505d0aa34014cfa6cab51b6e) by rpidhainyi).
+- Added mapping configuration to read properties ([2917c68](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/2917c68fa8ea92eec468d38c56163e6d35a778fc) by rpidhainyi).
+- Added setcreator i setration frm mapping ([66ae67e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/66ae67eca3c0867bea3a1df151274997a11a06fd) by rpidhainyi).
+- Added sax implementation for xml parsing dubling core format ([a270279](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a270279b38880dc63cfc464b61adc811d0e3c2a9) by rpidhainyi).
+- Added constructor to xml repository, fixed misspels ([5bd1796](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/5bd1796563b6a3b755e0b624aecb9ce94a879d30) by rpidhainyi).
+- Added filed validation exeption handeling in main controller advice, adjusted tests ([9237ffb](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/9237ffbfbe6805abfe29f0de02bb5fbba11756af) by rpidhainyi).
+- Added central reequest validation handler , added validator for userpasswordcore, adjusted tests ([de73e02](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/de73e0253543ac4c1fde4b4b0030f917de53d9aa) by rpidhainyi).
+- Added method for token validation ([65e8db5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/65e8db5399ae6d7a2318ff423b3ba7947273e77f) by rpidhainyi).
+- Added captacha validation and adjusted test cases ([88057e3](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/88057e3eb9d193224942dee64eb175c14b016cab) by rpidhainyi).
+- Added imports controller and importtranscriptiondto ([749e296](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/749e29613e3ee0ac2a8fc5fdedea81446fa924c9) by rpidhainyi).
+- Added quilifiers for mailbuilder implementations, adjusted tests ([0919345](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/09193451497b008b632913facad88b7e320cfa12) by rpidhainyi).
+- Added resetpasswordmailbuilder, and passwordmailbuilder implementatins of mailbuilder , added html filef for emails content ([7d0ef5d](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/7d0ef5d13e116b6438afa02f0e05106a76070c7f) by rpidhainyi).
+- Added request url, lang , added enum formater for static file language ([af10902](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/af10902f5e6890047acea23325abb068a40379a6) by rpidhainyi).
+- Added url decoder to remember me service implementation ([ac77710](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ac777101193bd19e9325f43ce26edb1df4a105bc) by rpidhainyi).
+- Added set-cokkie to exposed headers in security config ([7b87307](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/7b87307bda4f6e913acd4eda505f6992e4a7b917) by rpidhainyi).
+- Added set-cookie header to spring cors security ([a5fa3f5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a5fa3f5fe1017a279e774f728fb90cdcf3d93676) by rpidhainyi).
+- Added issue description in authentication filter ([c1725a0](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/c1725a0d58e5e85a8f01f7e7b9116af80a0a5406) by rpidhainyi).
+- Addd loading statics from vlt-config, added md files ([d60d0a1](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d60d0a1540b965502f87064af5d3b7a7fe72aaae) by rpidhainyi).
+- Added unit test for mailbuilder and persistancetoken provider ([9c965e2](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/9c965e26c1e2056b22ff72bfc4cfe1b773c63f2b) by rpidhainyi).
+- Added deletion of token when user was activated, fixed token validation ([c7e54bb](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/c7e54bb8f90ac2348913458a2b6b4b60665be33d) by rpidhainyi).
+- Added deletion of token after password was reset ([8486fa9](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/8486fa9814d488ba587e58da4c8e6ceb4421faf8) by rpidhainyi).
+- Added persistence token repository for holding different types of token, and changed token provider to work with persistence token, registration and reset pasword service ([a9a4a24](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a9a4a245b50de5d1eb5063bcf8cb4d8095d6aae8) by rpidhainyi).
+- Added mail builder interface and dump implementation ([32b40e5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/32b40e52f5cda4fbe8fb72fab25408631bcf721c) by rpidhainyi).
+- Added resetpasswordservie, refactored validators ([3a237a8](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/3a237a8d4bdffa47f63e5d6338b6fb01747357a8) by rpidhainyi).
+- Added security groups to user model , added super admin acces to disable user method , changed userdatails service implemantatuion to provide innfo about authorities base on user sevcurity groups , added tests for cases described above ([c059171](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/c05917171bd58559b39e92da073a1b9f1d5515e9) by rpidhainyi).
+- Added native remember-me access adn added todos to modify ([2f53ded](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/2f53dedb245130fda66f07e8fee673df98f6f4a0) by rpidhainyi).
+- Add exception ([63df289](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/63df289bc778df5fe1e6c499d4089df27bc6aa6b) by jbrek).
+- Added tests for rememebr me token authentication , added expiration time validation for remember me token ([3adaa81](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/3adaa814706ea4fb3921a73f2c3341065c5154bc) by rpidhainyi).
+- Added token provider for remeber me authentification strategy ([462d619](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/462d6197cf2494324b933b960910fc01278d4f62) by rpidhainyi).
+- Added loginservice with static login method ([1399dbe](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/1399dbebf0aed8fa0169497ef6773b84c4ae037b) by rpidhainyi).
+- Added ignore on tests what not pass due to irrelewant data ([334f57f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/334f57f28198ffe760f5c244872df75101301486) by rpidhainyi).
+- Added response status to authentificationcontrollerexceptionhandler ([dee7cef](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/dee7cef5028297c9e232cd97d9509b996ffc1fdd) by rpidhainyi).
+- Added centralised exception handeling ([99b3dfd](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/99b3dfd7ddad43e34e138eb43901502bc75c8eb4) by rpidhainyi).
+- Added controller advice for all controller and specific controller advice ([a0bdda0](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a0bdda0a31dd3fe249147add81c07eda00753721) by rpidhainyi).
+- Added implementation of wtl-48 with tests , generic enum fofmatter, lack of md files examples ([1954f4e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/1954f4e6dd07caea51960b3d6b21f8378b620787) by rpidhainyi).
+- Add some group tests, some fail ([fd5e771](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/fd5e7710550bee7e48162787c6a89c398a78639d) by Katarzyna Jóźwiak).
+- Add add pages tests ([b7d048b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b7d048b5ebb3e9220062b2a4bc3502e2ce08971a) by Katarzyna Jóźwiak).
+- Add getpage test - negative case ([6ed3fa7](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/6ed3fa7316052503a9afab8e2c7f5065fd9033b7) by Katarzyna Jóźwiak).
+- Add getpage test ([d75d69a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d75d69a5bb338be464bae811bb1ed27628070a61) by Katarzyna Jóźwiak).
+- Add i18n emaildoesnotexistexception ([eb50258](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/eb5025814e0762f08a916258c23ff18d6975f893) by Katarzyna Jóźwiak).
+- Add exceptions to validatetoken ([10a169b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/10a169b78d154a3ef4d695f18ad6e4032d49e952) by Katarzyna Jóźwiak).
+- Add boundingbox to pages ([9e3475e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/9e3475e621c85f75eb04e5dc1ac607b5d1f691ec) by Katarzyna Jóźwiak).
+- Add schema of adding pages test ([0566d91](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0566d91e6364885ff99e12e85df4f4b8cb5c77de) by Katarzyna Jóźwiak).
+- Add completegroup test - in getting group by id ([ea82e1c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ea82e1c01ef86762487206b025c7e62ab1174bd7) by Katarzyna Jóźwiak).
+- Add group exceptions tests ([0f476c6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0f476c6e4296f81532b63abe56802b3d26e5d40d) by Katarzyna Jóźwiak).
+- Add transcriber user ([cc74be7](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/cc74be7e53508f6cd5746529359eb9fe882dc02e) by Katarzyna Jóźwiak).
+- Add to dev data ([1090bbe](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/1090bbee3b2fe08ada386815d6785564fd1b1252) by Katarzyna Jóźwiak).
+- Add getting first 10 transcription by modification date to main page + test ([976e12a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/976e12ab509962db38f974e657d336b250184ac8) by Katarzyna Jóźwiak).
+- Add ignore addnotations to methods testing auth ([9b1fa77](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/9b1fa77c3e833a6cedd5bb0da288e78028be7f36) by Katarzyna Jóźwiak).
+- Add updategroup endpoint ([8f3ff37](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/8f3ff37b7a4ba691d876f68da47b772cc0808004) by kjozwiak).
+- Add updateuser endpoint ([29e7f82](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/29e7f821286b438aa4de9b1701165fda4831e65f) by kjozwiak).
+- Add adduseretogroup endpoint and change urls convention to separated-words ([e11e60e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/e11e60e90227e8d69f80d1f0488758e5bd47d17a) by kjozwiak).
+- Add getting user in group by groupid ([b64d6d5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b64d6d55af1b60d817a3bec417197eda87047448) by kjozwiak).
+- Add get user usergrub by username ([3888328](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/38883282d0fc24517bac7419b99912ab43f93c84) by kjozwiak@man.poznan.pl).
+- Add failing test ([eb63cc6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/eb63cc6f28aec56ac69bac77f19963749c286d2a) by kjozwiak@man.poznan.pl).
+- Add testclass schema ([31288a1](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/31288a11c350e7e23b6d3831729277b044571905) by kjozwiak@man.poznan.pl).
+
+### Changed
+- Changed allowed domains ([6363d2d](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/6363d2df550d3305173276422be72014d2f234ca) by rpidhainyi).
+- Changed verse content savign, changed mapping of staistics to dto ([ed210ee](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ed210ee67ee6051fc0b0e5ef382f9d169872dac4) by rpidhainyi).
+- Changed email for tests ([514747a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/514747a961f66edeb23617e60bc24f71d6e14b15) by rpidhainyi).
+- Changed mail content ([e726b13](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/e726b1358b31b6e7d6047fb616072c25a4fa0bd7) by rpidhainyi).
+- Change charste ([659a55e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/659a55ebfadd1f30f32e669f3cddabb78489647a) by Katarzyna Jóźwiak).
+- Changed redirecturi for oauth2 ([0f4dc24](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0f4dc2412f920d47a65f0869eda41cd14792eb50) by rpidhainyi).
+- Change chmod in container instead of disk ([972e5e6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/972e5e664aeca45e45e31246b2eb0ca07f26b145) by jbrek).
+- Changed facebook app credentials to anable oauth2 log-in ([7bb0575](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/7bb05750020ed151891d2e5e4ebff549fe8f35cc) by rpidhainyi).
+- Change in test data ([81ddc84](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/81ddc843850eeb0390cf9c00f53da6b8d4e33562) by Aleksandra Nowak).
+- Changed oauth2authorizationrepository, changed return url parametr name ([db8ea86](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/db8ea86dc0f275d1eaf7f105e056e25f3985cac1) by rpidhainyi).
+- Changed controller urls, breaked encapsulation, fixed bug with exception handeling for case when hash doesnt exest ([d74fddc](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d74fddce2da671c0c0424cfd01c0976f9942ae85) by rpidhainyi).
+- Change message location ([1a74120](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/1a741201e3c923d088934b4a9d3ac71c28fd4a96) by jbrek).
+- Change field name to be complient with pl.psnc.vtl.portal.controllers.users.usercontroller#updatemypassword (per frontend team request) ([4918aee](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/4918aeea2b1c5dcad7cbfbba0fedf14cac31e7ae) by Aleksandra Nowak).
+- Change logic ([5d20032](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/5d2003267114a05fff535e8ddafdd73d7bf07f86) by jbrek).
+- Change of test to itcase, some fixes ([ac6e268](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ac6e2688d3e7ddb9e99af56fe2fce4374a63ef00) by jbrek).
+- Changed event listener ([d67026a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d67026ae4356ca05af877257ddc7a125f1b086ca) by rpidhainyi).
+- Changed conversion strategy for tables ([3348939](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/33489398cc6cff31712dc717036f0d5deedaca29) by pWoz).
+- Changed conversion strategy for caption ([11ed012](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/11ed012ddd2338107b795bc7beee4c075daa2b91) by pWoz).
+- Changed conversion strategy for headers and footer. ([41925f4](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/41925f4e33c32e07981a96667b57fd19fcd5aeef) by pWoz).
+- Change 'if' to 'switch' ([718b1cc](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/718b1ccace00e8c6de1ee95c640f6aec70b53bbb) by jbrek).
+- Change exception, refactor ([7721990](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/77219906bb33e24e15aa891e525727169429e463) by jbrek).
+- Change name of variable in verseocrrequestmodel ([95f42ca](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/95f42ca4a54fdb224d7863d98dcb6a11c0fa412d) by jbrek).
+- Changed interface for link mapping to return list of link objects each of them contains info about url, and additional information about image weight and height and thumbnailurl ([476e496](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/476e496e9bade59ef44297f9b358b400a7036e1a) by rpidhainyi).
+- Changed return type of linkmapperstrategy ([5f207f6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/5f207f61430a41b17b526161e15df71d9f636d28) by rpidhainyi).
+- Change long to userid ([cb98ad5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/cb98ad5c6fea8ccf05d0696bf398364236d9e998) by jbrek).
+- Change variables from primitve to object ([b24c5d3](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b24c5d3c55c564424a80ad723c9ac7808beda36f) by jbrek).
+- Change add user to transcription/group to recive email instead of userid ([5e90fbf](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/5e90fbfb10f06e7fa822707a4ba2665c18dd14aa) by jbrek).
+- Changed urlvalidator to class with sttic mehtods ([d1a23fb](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d1a23fb98da0adcd900aa55439d8ad9ba37eea34) by rpidhainyi).
+- Change time of live of reset password token ([b4d4566](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b4d45660a71912a4c3f5373b43f0ec25c100f864) by Aleksandra Nowak).
+- Changed enum implementation to class with map fieldname - function ([1eb8e80](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/1eb8e80e43965f2132ce5510667f80493198a237) by rpidhainyi).
+- Changed emails content ([12fd393](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/12fd393b2b6822729008869b86504543898c515f) by rpidhainyi).
+- Changed return type of xmlrepository ([61ea427](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/61ea427e12f09a45267011401ca482708ce130fc) by rpidhainyi).
+- Changed mail structur and token placeholder value ([d8ffbe7](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d8ffbe7ee6cbb6f63cf0b48856b39d85a8e2f884) by rpidhainyi).
+- Changed error in file name ([f47d452](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f47d452dce6bfd7c621ff31d1258ff4687e06900) by rpidhainyi).
+- Changed token provider ([65585c4](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/65585c41f3fa3da40c2cf40abdb1e2379ccfdb19) by rpidhainyi).
+- Changed name of integration test to ends with itcase ([449f910](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/449f910f06242ccf3424b4896c21c5ae5055d097) by rpidhainyi).
+- Changed updateuser method , fixed user it test suit ([de66792](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/de66792bc6746960f8ae60ccc8b1d0df814890e3) by rpidhainyi).
+- Changed tests and transcriptionservice and groupaccessservice ([3895cc8](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/3895cc8eb23191e599b39fd2708c5397f24ddca5) by rpidhainyi).
+- Changed security logic, added remember-me option for the moment it hold plain email , changed filter chain , deleted authentification controller replaced with registation controller, do not pass 'integration tests'  due to the problem with webconfig - spring checks all requests ([5d31158](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/5d31158d860ea9cdf2ce049e91e8c2956f575aad) by rpidhainyi).
+- Changed authentification controller , added ignore to integration test what fail due to incorrect initial data loading ([8d84b20](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/8d84b20692951dc4b5764f1e07658b6c2967089a) by rpidhainyi).
+- Changed initial data, changed user id to user email , refactored authentification service ([67439fb](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/67439fb0d3438817f9f3338d73962d670dcb759a) by rpidhainyi).
+- Changet itcase, removed imports ([1779e6a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/1779e6a2f0be39fec051f4e330ba33dd8d62740c) by rpidhainyi).
+- Changed package names, modified tests, added webconfig permit all for path with static files ([79865be](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/79865be57f0930c2546c09b5935f5cd3dc33ff91) by rpidhainyi).
+- Change creastepages into void ([2783830](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/278383059a45e69c92181a84368f4e404e5d3fb5) by Katarzyna Jóźwiak).
+- Change transcriptionactorroles to actorroles ([b0dde1f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b0dde1f2cd43ff4e96ab0f4c7e87913273993f05) by Katarzyna Jóźwiak).
+- Changes ([bab88c1](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/bab88c1319676827f9747e31712dc27eea9ae481) by Katarzyna Jóźwiak).
+
+### Fixed
+- Fix tests ([c73e90d](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/c73e90de47e5d0f72dba3e927dc0e51c7a28cc29) by Michał).
+- Fix conflicts ([59f855c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/59f855c3841b7f8ef6d2013fb4da6eda6bd1ef3a) by Michał).
+- Fix ports for pionier-id container ([5da30c6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/5da30c6c2fcfb1bd1dab6591d7bce885702da499) by Aleksandra Nowak).
+- Fix test ([dbfafcd](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/dbfafcd55ddcfc2b03c7960fed13bbe1a4bbc18f) by Michał).
+- Fix - added the same line in two pr ([3a295a3](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/3a295a3a056734b83ce5c5ac0689493384b7972d) by Michał).
+- Fix hocrparserexception and teiparserexception messagecode ([ff8b203](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ff8b203d9ec445f7fb135728df5648c9c54e551f) by jbrek).
+- Fix ([4d3fdac](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/4d3fdac870630b97648bf116131408c0878491f6) by jbrek).
+- Fix allowed domains for cross-origin policy ([3371fb6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/3371fb64ca285934a3d5334980c2f1f729af8cfb) by Aleksandra Nowak).
+- Fix parse exception ([45de5b5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/45de5b53a99768f9a7e26935bd055c8403d1865b) by Aleksandra Nowak).
+- Fix errors ([b13defe](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b13defec42fb2f4222400453ba9a701eba3d991d) by Aleksandra Nowak).
+- Fixed bug with registration via platform and using adfs to authenticate ([f5f4969](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f5f4969c35235bd65d7c4100ee5cbfac125ec486) by rpidhainyi).
+- Fixed security and verify access ([c05d3f2](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/c05d3f20c6dc6da9124b76888b791586d1387bd8) by rpidhainyi).
+- Fixed token validation ([d2c21f7](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d2c21f79a7b6d14d6e86c08b285d3e91ce4c16d3) by rpidhainyi).
+- Fixed null values in statistics ([f2a2120](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f2a212081ae0243c74f60bb9a7f8c576a58f2adb) by rpidhainyi).
+- Fixed bug with cahce , when transcription changed but exports same ebook ([003dec9](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/003dec9c1b239fbee3232e94d565be77e850991c) by rpidhainyi).
+- Fixed bug with number of inserted chars counting , added it case ([6400b1d](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/6400b1d38d855a2882ead69f0357e459c706ab35) by rpidhainyi).
+- Fixed url creation for iiif-tools ebook storage ([41b18fe](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/41b18fe12b464809acf9c06ea387557c858a8dce) by rpidhainyi).
+- Fix permissions ([b4c2566](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b4c2566aa80da1a753480bcd3bf00285d04474e5) by jbrek).
+- Fix chmod ([dcb819c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/dcb819c36bf8b718a374da5dcbc1cdb542d5665c) by jbrek).
+- Fix conlicts and wltf-199 ([a32b260](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a32b260a025781713f3a7f8003c1c935982b3c54) by Michał).
+- Fix conlicts ([824bdb4](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/824bdb4afa3cec3acf8d9b5a41e63564943a00d7) by Michał).
+- Fix conslicts ([037b212](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/037b21291634c3d7ad437a09305e14277aa16715) by Michał).
+- Fix test, wlt-291 ([64e417e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/64e417e0bdc69b4cbd84daaa50783e98724f1ae9) by jbrek).
+- Fix for hocr converters factory ([0ba78fe](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0ba78fe0aa7b3f7035ec0dcfba29a7f0fb262cf8) by pWoz).
+- Fix conflict and small amadements ([e031ad6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/e031ad6fef0aa69aeaca6a6f0a821e91f72e3bf8) by Michał).
+- Fix for hocr area converter ([a2bc426](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a2bc426a69fa623122aeb87a24b08a75b08ee7d8) by pWoz).
+- Fixed typo in user role ([1031d09](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/1031d0991836192c405ede4ac315f9641164f824) by Aleksandra Nowak).
+- Fix for external server ([a6772f2](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a6772f22a89736a31ed7ab5f4827dcbb90dacc90) by jbrek).
+- Fix unit test ([0efde7b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0efde7b257791aa1982c2086f6b9133790ea9f8c) by jbrek).
+- Fixed typos , added deletion of user tokens after one was used, added e2e test ([0141615](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/014161510746a63df4c4cfda3f12fe08a84add52) by rpidhainyi).
+- Fix faulty iiifurls in test data ([b4ee751](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b4ee75193f088d0e58ac32407aa0b0fb3a950a32) by Aleksandra Nowak).
+- Fix conflitcs ([118799e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/118799ecc57b3255483de959f73205a2ec0aac8d) by Michał).
+- Fixed bug with default in map ([0ebc829](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0ebc829d8b1016385969203c154c90c565d6529f) by rpidhainyi).
+- Fix image to image caption ([be45d72](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/be45d722df085939a9d63c756f8e8c4abe6a8c07) by jbrek).
+- Fixes in verseno (dev-data.yml, test-data.yml) ([e4bc46b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/e4bc46bdae2a048fcb31632a4731c3ca0940a3cf) by Aleksandra Nowak).
+- Fix setting boundingbox dimensions ([4877e04](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/4877e04caec410eb06d04d2a8f0174c5f4f3ea6b) by Aleksandra Nowak).
+- Fix typo + languages in english have to be  capitalized ([cb54d17](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/cb54d17b7e58a46b7f9894c5bf8288b15a70a566) by Aleksandra Nowak).
+- Fix for content generator factory ([07a8326](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/07a832637cba6539fee32c5d3769d4d6d4ee54ab) by pWoz).
+- Fix setting iiifurl in import, fix test and test data ([4ee8ef7](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/4ee8ef714f6334e1caa59b09ecc562544b5cff4d) by Aleksandra Nowak).
+- Fixed deletion method ([193f440](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/193f440bf4f57dc948cd73c2562c398283f38613) by rpidhainyi).
+- Fixed merge conflicts ([30b6349](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/30b6349f94e336504fd5644336b1047e96bb86d8) by rpidhainyi).
+- Fixed accessors ([2875e1f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/2875e1fbdc394ee804673986ffc77b51a5e0fdb7) by rpidhainyi).
+- Fixed bug with adding imutable collection to entity field ([1ff3103](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/1ff31034c1945b4a0ca68be99c38f4c4eab8a0c5) by rpidhainyi).
+- Fix, switch back to list ([a41ae7b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a41ae7b32e4c68284db1038a68328ace11a728c8) by jbrek).
+- Fixed removed formatting ([554109d](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/554109d5adb944f9494120e5c1d3c683a054f020) by rpidhainyi).
+- Fixed content export (parameter handling) ([cde8435](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/cde84351b0762b5e11e22b1875f6b836e8b98bc5) by Aleksandra Nowak).
+- Fix tiff again ([d57fc33](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d57fc3349dcad9ca7fbd22606861cb6d0aa4cee7) by Michał).
+- Fix conflict with wlt-147 ([1ccdda4](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/1ccdda46b8232f0a2b89a81e602fe31b7c471149) by Michał).
+- Fixed misspel and typo in error message ([574bfa4](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/574bfa4038d747acab2064afbcbb577c717143f7) by rpidhainyi).
+- Fixed conflict with develop ([6a145a3](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/6a145a36233df6def9bdbd08cf4b253236e427e5) by rpidhainyi).
+- Fix verse mapping from response ([29c9dc0](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/29c9dc0c90bdfea7da50878c3fee73da6054be27) by jbrek).
+- Fixed bug with json path for nullable node ([2793302](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/27933025bd064bc4129412cfa3eeed0adc1d0e37) by rpidhainyi).
+- Fixed hocr test files ([ec27a32](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ec27a32139644a7989ab68868aafbb1f4ad87d5a) by Tomasz Hoffmann).
+- Fixed test ([5fc4acf](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/5fc4acf49a2e4fcffdf6177b2102bff52cbdb6d3) by rpidhainyi).
+- Fix wordid, filename ([9cd37da](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/9cd37da69dad130fa8d7dbb9466cb2a05e9614ea) by jbrek).
+- Fixed testsm, moved page saving to saveall method after collection all pages ([cc398d7](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/cc398d71c19fb74ef5919157560646b8ebcb5191) by rpidhainyi).
+- Fix url, remove exception, save user ([8369d3a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/8369d3abd1fe831c7c28dcbe4e9250390ee67eef) by jbrek).
+- Fixed conflicts with develop ([0bd9e4c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/0bd9e4c05dff6f123f3aa47dea267fc56a50270c) by rpidhainyi).
+- Fix policy ([b9cc395](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b9cc395068e60bc935f9eb6d91133de9b459388c) by Katarzyna Jóźwiak).
+- Fix for transcriptioncontroller tests ([c28851d](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/c28851dd5c544c00d8906260d64b36918ce6b21a) by pWoz).
+- Fix in test data ([b78b137](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b78b137de3204f7dd737089e4f9f4cd27ea92230) by Aleksandra Nowak).
+- Fixed bug with oai mapping to externalid ([3d561c1](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/3d561c1dab5f9804be62a8456f415f552dd0898b) by rpidhainyi).
+- Fixed conflicts and added implementation of wlt-122 and wlt-125 ([9117a4d](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/9117a4d437f937858766ce3027b5d8ccae0d2347) by rpidhainyi).
+- Fixed bug with captcha validation in response processing ([86b9cad](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/86b9cad150628205c094004c66feabb19bcfc52d) by rpidhainyi).
+- Fix in jenkinsfile (crontab related) ([c276551](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/c276551619ab8fe579c43860ab05f1ea3e68aafb) by Aleksandra Nowak).
+- Fixed bug with static object call ([f98a0ac](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f98a0aced371e4f298e2ba1e41d3811eca3780c4) by rpidhainyi).
+- Fixed bug with sending html in plaine text ([d621122](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/d621122f5f271a276299e37266e09259d584e765) by rpidhainyi).
+- Fixed misspels ([423f86d](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/423f86d13d1de2a1d3dd8184e3efc51c298f6b38) by rpidhainyi).
+- Fixed conflict ([97229fa](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/97229fad70bee940931e1cfe6af75e72a7d1aa83) by rpidhainyi).
+- Fixed bug with value of remeber-me header ([a21edec](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a21edec5cfa2c6780f8c9c7a38f68be0224052d5) by rpidhainyi).
+- Fixed userregistrationrequest validator to match established with client contract ([1723941](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/1723941a13600bfe35231b5d552b5a5671dffcc9) by rpidhainyi).
+- Fixed conflicts , added ignore to group tests ([89da41e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/89da41e9237dda065c554d6418e381d72e378c6b) by rpidhainyi).
+- Fixed misspell in facke auth controller ([fe231db](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/fe231db895a0c3ff8d6708999f75964e47fb6758) by rpidhainyi).
+- Fixed bug with auth supper_admin ([79b3e1c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/79b3e1ced8b168740ddd1e9692c035fbeb30edc0) by rpidhainyi).
+- Fixed usernames in services , replaced with email ([a2d1e84](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/a2d1e840a06be55178e988e9f535bb20d5cc14ca) by rpidhainyi).
+- Fixed commnet service to work with user email as an id , fixed test suit for comment controller ([ce98644](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/ce9864427bb0011bc3a1a2de4fcd583658a7e7e1) by rpidhainyi).
+- Fixed bugs with remmebr me when jwt token is present , for now remember me works only on url what allow acces for isremembermeauthenticated() ([4d36a7c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/4d36a7cb2cde935fb1bb23cbc78db8fe170e91b2) by rpidhainyi).
+- Fixed bug with firing filte chain even if permitall() is set ([e59d71c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/e59d71c3906cb09c0fcb29b7c61dab2a56a44030) by rpidhainyi).
+- Fixed getting new page number ([4e974f5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/4e974f5d6ddd0a64bcbf3cf66cd9fac69276eb7d) by Katarzyna Jóźwiak).
+
+### Removed
+- Remove logs ([f53025f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f53025f0c4ca0aca0a44daec31f67f0ee77d4102) by Michał).
+- Remove duplicated line (created because of an unnecessary merge) ([445d35a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/445d35a16fc8298a609d5925e39e2cdbccd4f2db) by Aleksandra Nowak).
+- Remove unnecesseary adnotation ([29a6da9](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/29a6da9f7485b6c3eb2f5c6eab665ea2b7723f22) by jbrek).
+- Remove unused imports ([9098169](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/909816918b380cb6a27b36b88c75592f101c693f) by jbrek).
+- Remove imports ([251204c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/251204cda287ebaa46f490fa30ae511e28e42f3c) by jbrek).
+- Remove unnecessary import ([b1e9e5a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/b1e9e5aff151146790cfe8ee22d5a90ab5e24a85) by jbrek).
+- Remove comments when verses are deleted ([204b8d4](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/204b8d4c7f17d2388cfd8317a3c83682f37fb679) by Aleksandra Nowak).
+- Remove super-admin from logic ([5fd85e3](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/5fd85e3f07023ec77e1e76545a28582cee8e2ff1) by jbrek).
+- Remove tei from different branch ([c06168e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/c06168e9b367cce9a8d1d8b45699434c82371a6a) by jbrek).
+- Remove test ([7804c43](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/7804c4315b6676160b00c8b366c46e9bbcd20997) by jbrek).
+- Removed @ignore from test ([f4f6042](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/f4f60421f00d1712c1fc33f479d8d763b143e521) by rpidhainyi).
+- Remove unnecesary logger ([c5b2d6b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/c5b2d6bd7d571e83fde967ab9c8e7b43086cf473) by jbrek).
+- Remove last \n from content ([3b72164](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/3b721645b2bf070dceb26abb57f14e206654e679) by jbrek).
+- Removed code duplication for createtranscription method, added priate scopes for hadnleer strategies ([8fa9153](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/8fa915381c4aef115ee1e8f50b9e42fef410304e) by rpidhainyi).
+- Remove volumes to refersh data ([30daf6d](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/30daf6db366cd484f4d492d6a6a36016e6e126d2) by Michał).
+- Removed unused attr parametr form method ([c1dcfac](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/c1dcfac2863ecc643c97d1a04ebc475256b38dc9) by rpidhainyi).
+- Remove swagger petstore ([52ae441](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/52ae441453785e3a1c46bbee5002e4a6654e5949) by Aleksandra Nowak).
+- Remove changes in verseservice.moveversetofixedposition ([c207264](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-bl/commit/c207264b26b72b5c210480f5dce6cee7c621f97f) by jbrek).
+
+

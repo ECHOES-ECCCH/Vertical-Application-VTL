@@ -1,0 +1,65 @@
+{
+  "@context": "http://iiif.io/api/image/2/context.json",
+  "@id": "http://localhost:5555/iipsrv/iipsrv.fcgi/?IIIF=t1/page250_Page0000.tif",
+  "protocol": "http://iiif.io/api/image",
+  "width": 2596,
+  "height": 3760,
+  "sizes": [
+	{
+	  "width": 81,
+	  "height": 117
+	},
+	{
+	  "width": 162,
+	  "height": 235
+	},
+	{
+	  "width": 324,
+	  "height": 470
+	},
+	{
+	  "width": 649,
+	  "height": 940
+	},
+	{
+	  "width": 1298,
+	  "height": 1880
+	}
+  ],
+  "tiles": [
+	{
+	  "width": 128,
+	  "height": 128,
+	  "scaleFactors": [
+		1,
+		2,
+		4,
+		8,
+		16,
+		32
+	  ]
+	}
+  ],
+  "profile": [
+	"http://iiif.io/api/image/2/level1.json",
+	{
+	  "formats": [
+		"jpg"
+	  ],
+	  "qualities": [
+		"native",
+		"color",
+		"gray"
+	  ],
+	  "supports": [
+		"regionByPct",
+		"sizeByForcedWh",
+		"sizeByWh",
+		"sizeAboveFull",
+		"rotationBy90s",
+		"mirroring",
+		"gray"
+	  ]
+	}
+  ]
+}

@@ -1,0 +1,32 @@
+spring:
+  datasource:
+#    data: "classpath:data.sql"
+    driver-class-name: "org.postgresql.Driver"
+    url: "jdbc:postgresql://localhost:5432/wlt_portal_db"
+    username: wlt_portal
+    password: wlt_portal
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        connection:
+          charset: UTF-8
+        dialect: pl.psnc.vtl.portal.conf.fts.CustomPostgreSQLDialect
+        hbm2ddl:
+          import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
+vtl:
+  iiif-server-url: ${IIIF_SERVER_ENDPOINT:http://iiif-server:8080/}
+  iiif-server-public-url: ${IIIF_SERVER_PUBLIC_ENDPOINT:https://iiif-server-bsa-bad.apps.paas-dev.psnc.pl/}
+  iiif-tools-url: ${IIIF_TOOLS_ENDPOINT:http://iiif-tools:5556/}
+  ocr-tools-url: ${OCR_TOOLS_ENDPOINT:http://ocr-tools:5557/}
+
+  conf-dir: ./vtl-config/
+  student:
+    partial-match-groups: 1,2
+
+quota:
+  space: 3000

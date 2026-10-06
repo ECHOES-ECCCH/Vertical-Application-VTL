@@ -1,0 +1,44 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title>Awazymyz, 1999, 10 (2 (3))</tei:title>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:publisher>
+                    <tei:orgName>Związek Karaimów Polskich</tei:orgName>
+                </tei:publisher>
+                <tei:date when="2016-11-07"/>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:biblStruct>
+                    <tei:monogr>
+                        <tei:title type="main" level="j">Awazymyz</tei:title>
+                        <tei:imprint>
+                            <tei:pubPlace>Wrocław</tei:pubPlace>
+                            <tei:date when="1999"/>
+                            <tei:biblScope unit="volume">10</tei:biblScope>
+                            <tei:biblScope unit="issue">2 (3)</tei:biblScope>
+                        </tei:imprint>
+                        <tei:ptr target="http://czasopisma.karaimi.org/index.php/awazymyz/issue/view/3"/>
+                    </tei:monogr>
+                    <tei:relatedItem type="journal" target="journals/Jo.20"/>
+                </tei:biblStruct>
+                <tei:msDesc>
+                    <tei:msIdentifier>
+                        <tei:repository>KARAIM-LITERATURE</tei:repository>
+                        <tei:idno>No.3.Jo.20</tei:idno>
+                    </tei:msIdentifier>
+                </tei:msDesc>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+        <tei:revisionDesc status="approved">
+            <tei:change when-iso="2018-04-22T09:42" who="admin"/>
+        </tei:revisionDesc>
+    </tei:teiHeader>
+    <tei:text>
+        <tei:body>
+            <tei:p/>
+        </tei:body>
+    </tei:text>
+</tei:TEI>

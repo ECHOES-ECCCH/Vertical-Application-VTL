@@ -1,0 +1,359 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title xml:lang="pol-Latn" type="main" copyOf="1">Modlitewnik</tei:title>
+                <tei:principal>
+                    <tei:persName sameAs="Per.115">Michał Németh</tei:persName>
+                </tei:principal>
+                <tei:principal>
+                    <tei:persName sameAs="Per.47">Anna Sulimowicz</tei:persName>
+                </tei:principal>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:publisher>
+                    <tei:orgName>Związek Karaimów Polskich</tei:orgName>
+                </tei:publisher>
+                <tei:date when="2017-01-13"/>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:biblStruct type="print">
+                    <tei:monogr>
+                        <tei:title xml:lang="pol-Latn" type="main" id="1">Modlitewnik</tei:title>
+                        <tei:editor role="publisher">
+                            <tei:persName>—</tei:persName>
+                        </tei:editor>
+                        <tei:editor role="copyist">
+                            <tei:persName sameAs="Per.397">Jeszua Josef Mordkowicz</tei:persName>
+                        </tei:editor>
+                        <tei:textLang mainLang="kdr-gal-Hebr"/>
+                        <tei:textLang mainLang="heb-Hebr"/>
+                        <tei:imprint>
+                            <tei:pubPlace>Halicz</tei:pubPlace>
+                            <tei:date when="Przed 1851"/>
+                        </tei:imprint>
+                    </tei:monogr>
+                </tei:biblStruct>
+                <tei:msDesc>
+                    <tei:msIdentifier>
+                        <tei:repository>KARAIM-MANUSCRIPTS-POLISH-COLLECTIONS</tei:repository>
+                        <tei:idno>Man.506</tei:idno>
+                        <tei:msName>JSul.III.72</tei:msName>
+                    </tei:msIdentifier>
+                    <tei:msContents>
+                        <tei:msItem n="1">
+                            <tei:locus from="1&#160;r" to="7&#160;r"/>
+                            <tei:textLang mainLang="heb-Hebr"/>
+                            <tei:title>modlitwy na Wielką Sobotę, język hebrajski</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="2">
+                            <tei:locus from="7&#160;v" to="8&#160;v"/>
+                            <tei:incipit>מֵן סִינִיק אוּמָהסִי יִשְרָאֵלְנִין</tei:incipit>
+                            <tei:incipit type="transliteration">Men synyk ummasy Israelnin</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.399">Mosze syn Icchaka Cic (Cuc) Ora</tei:persName>
+                            </tei:editor>
+                            <tei:note>język archaiczny: miejscami zachowane pierwotne ö , ü , zob. np. jüregim (7 v o )</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład hymnu religijnego (  [pijut] ) na język karaimski</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="3">
+                            <tei:locus from="9&#160;r" to="38&#160;r"/>
+                            <tei:textLang mainLang="heb-Hebr"/>
+                            <tei:title>modlitwy na wieczerzę święta Pesach w języku hebrajskim</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="4">
+                            <tei:locus from="9&#160;r" to="80&#160;r"/>
+                            <tei:textLang mainLang="heb-Hebr"/>
+                            <tei:title>modlitwy wieczorne i poranne na święto Pesach, modlitwy na soboty oraz modlitwy i błogosławieństwa na wszystkie święta w języku hebrajskim</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="5">
+                            <tei:locus from="80&#160;v" to="94&#160;v"/>
+                            <tei:textLang mainLang="heb-Hebr"/>
+                            <tei:title>modlitwy na Sefirat ha-Omer i Szewii Aceret w języku hebrajskim</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="6">
+                            <tei:locus from="94&#160;v" to="95&#160;r"/>
+                            <tei:incipit>בִײִנֵיא דוּנְײָנִין שִירָה אַײְטָײְם</tei:incipit>
+                            <tei:incipit type="transliteration">Bijine dunjanyn sira ajtajm</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.405">Mordechaj syn Nisana z Trok</tei:persName>
+                            </tei:editor>
+                            <tei:note>język archaiczny: miejscami zachowane pierwotne ö , ü , zob. np. dört (7 v o ), znaki wokalizacyjne dodane innego koloru atramentem</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład pieśni (  [šira] ) na język karaimski</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="7">
+                            <tei:locus from="95&#160;v" to="105&#160;v"/>
+                            <tei:textLang mainLang="heb-Hebr"/>
+                            <tei:title>dalszy ciąg modlitw na Szewii Aceret w języku hebrajskim</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="8">
+                            <tei:locus from="106&#160;r" to="124&#160;v"/>
+                            <tei:textLang mainLang="heb-Hebr"/>
+                            <tei:title>modlitwy wieczorne i poranne na święto Szawuot w języku hebrajskim</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="9">
+                            <tei:locus from="124&#160;v"/>
+                            <tei:incipit>ביוּגיוּן סִינַי טַװגָא</tei:incipit>
+                            <tei:incipit type="transliteration">Bügün Sinaj tavha</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.375">Aharon syn Jehudy</tei:persName>
+                            </tei:editor>
+                            <tei:note>język archaiczny: miejscami zachowane pierwotne ö , ü , zob. np. bügün (124 v o )</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski pieśni religijnej (  [zemer] ) na święto Szawuot</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="10">
+                            <tei:locus from="124&#160;v" to="134&#160;r"/>
+                            <tei:textLang mainLang="heb-Hebr"/>
+                            <tei:title>dalszy ciąg modlitw na święto Szawuot w języku hebrajskim</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="11">
+                            <tei:locus from="134&#160;v" to="136&#160;v"/>
+                            <tei:note>Księga Rut, język hebrajski</tei:note>
+                            <tei:textLang mainLang="heb-Hebr"/>
+                            <tei:title>Księga Rut,  język hebrajski</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="12">
+                            <tei:locus from="137&#160;r" to="138&#160;v"/>
+                            <tei:incipit>אֲדֹנָי טֶנְרִישִי יִשְרָאֵלנִין</tei:incipit>
+                            <tei:incipit type="transliteration">Adonaj Tenrisi Israelnin</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.483">Jeszua Josef syn Moszego Mordkowicz</tei:persName>
+                            </tei:editor>
+                            <tei:note>język archaiczny: miejscami zachowane pierwotne ö , ü , zob. np. üčün (137 r o )
+
+tłumacza kopista (Jeszua Josef syn Moszego Mordkowicz)</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski hymnu religijnego (  [pijut] ) na święto Szawuot</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="13">
+                            <tei:locus from="138&#160;v" to="140&#160;r"/>
+                            <tei:incipit>אַדֹנָי בִײִ יִשְרָאֵלנִין</tei:incipit>
+                            <tei:incipit type="transliteration">Adonaj biji Israelnin</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.3164">szwagier kopisty</tei:persName>
+                            </tei:editor>
+                            <tei:note>przekład na język karaimski hymnu religijnego (pijut) na święto Szawuot</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski hymnu religijnego (  [pijut] ) na święto Szawuot</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="14">
+                            <tei:locus from="140&#160;v"/>
+                            <tei:note>hymn religijny (pijut) na święto Szawuot, język hebrajski</tei:note>
+                            <tei:textLang mainLang="heb-Hebr"/>
+                            <tei:title>hymn religijny (  [pijut] ) na święto Szawuot,  język hebrajski</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="15">
+                            <tei:locus from="141&#160;r" to="141&#160;v"/>
+                            <tei:incipit>אֵי קָײָם טֶנְרְישִי יַעֲקֹבְנוּן</tei:incipit>
+                            <tei:incipit type="transliteration">E kajjam Tenrisi Jaakovnun</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.542">Mordechaj syn Szemoela (hazzan w Haliczu w latach 1734–1764)</tei:persName>
+                            </tei:editor>
+                            <tei:note>przekład na język karaimski hymnu religijnego (pijut) na święto Szawuot</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski hymnu religijnego (  [pijut] ) na święto Szawuot</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="16">
+                            <tei:locus from="141&#160;v" to="142&#160;v"/>
+                            <tei:incipit>יוֹחְטוּר טֶנְרִיסִי כִיבִיכ יִשְרָאֵלְנִין</tei:incipit>
+                            <tei:incipit type="transliteration">Joχtur Tenrisikibik Israelnin</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.434">Simcha z Kukizowa syn Chananiela (z Derażna)</tei:persName>
+                            </tei:editor>
+                            <tei:note>przekład na język karaimski hymnu religijnego (pijut) na Szemini Aceret</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski hymnu religijnego (  [pijut] ) na Szemini Aceret</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="17">
+                            <tei:locus from="142&#160;v" to="143&#160;v"/>
+                            <tei:incipit>אֲדוֹנַײְדִי בִײִ יִשְרָאֵלְנִין</tei:incipit>
+                            <tei:incipit type="transliteration">Adonajdy biji Israelnin</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.434">Simcha z Kukizowa syn Chananiela z Derażna</tei:persName>
+                            </tei:editor>
+                            <tei:note>przekład na język karaimski hymnu religijnego (pijut) na Szemini Aceret</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski hymnu religijnego (  [pijut] ) na Szemini Aceret</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="18">
+                            <tei:locus from="143&#160;v" to="144&#160;r"/>
+                            <tei:incipit>קַײָם טֶנְרִי יוּלוּבְצוּמוּז  בִיזְנִין</tei:incipit>
+                            <tei:incipit type="transliteration">Kajjam Tenri juluvcumuz biznin</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.434">Simcha hazzan (z Kukizowa syn Chananiela z Derażna)</tei:persName>
+                            </tei:editor>
+                            <tei:note>przekład na język karaimski hymnu religijnego (pijut) na święto Sukkot</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski hymnu religijnego (  [pijut] ) na święto Sukkot</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="19">
+                            <tei:locus from="144&#160;r" to="145&#160;v"/>
+                            <tei:incipit>אֵיגֵיר אַײְטְסָם שִירָה אוֹחוּיוּם</tei:incipit>
+                            <tei:incipit type="transliteration">Eger ajtsam sira uχujum</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.434">Simcha z Kukizowa syn Chananiela z Derażna</tei:persName>
+                            </tei:editor>
+                            <tei:note>przekład na język karaimski hymnu religijnego (pijut) na Szemini Aceret</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski hymnu religijnego (  [pijut] ) na Szemini Aceret</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="20">
+                            <tei:locus from="145&#160;v" to="146&#160;r"/>
+                            <tei:incipit>מַחְטָבְלוּדוּ אוֹל טֶנְרִי הָ֜ כִי אוֹל בִײִכְרֵיכְטִי</tei:incipit>
+                            <tei:incipit type="transliteration">Maχtavludu ol TenriH ki ol bijikrekti</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.434">Simcha z Kukizowa syn Chananiela z Derażna</tei:persName>
+                            </tei:editor>
+                            <tei:note>przekład na język karaimski hymnu religijnego (pijut) na Szemini Aceret</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski hymnu religijnego (  [pijut] ) na Szemini Aceret</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="21">
+                            <tei:locus from="146&#160;v" to="147&#160;r"/>
+                            <tei:incipit>קַײָם אַָװַלְגִי טֶנְרִי</tei:incipit>
+                            <tei:incipit type="transliteration">Kajjam avalhy Tenri</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.434">Simcha z Kukizowa syn Chananiela z Derażna</tei:persName>
+                            </tei:editor>
+                            <tei:note>przekład na język karaimski hymnu religijnego (pijut) na Szemini Aceret</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski hymnu religijnego (  [pijut] ) na Szemini Aceret</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="22">
+                            <tei:locus from="147 r"/>
+                            <tei:textLang mainLang="heb-Hebr"/>
+                            <tei:title>krótki tekst błogosławieństwa, język hebrajski</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="23">
+                            <tei:locus from="148&#160;r" to="226 v"/>
+                            <tei:note>modlitwy wieczorne i poranne oraz błogosławieństwa na święto Jom Terua i soboty, język hebrajski</tei:note>
+                            <tei:textLang mainLang="heb-Hebr"/>
+                            <tei:title>modlitwy wieczorne i poranne oraz błogosławieństwa na święto Jom Terua i soboty,  język hebrajski</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="24">
+                            <tei:locus from="226&#160;v" to="227&#160;r"/>
+                            <tei:incipit>יוֹחְטוּר טֶנְרִישִי כִיבִיכ יִשְרָאֵלְנִין</tei:incipit>
+                            <tei:incipit type="transliteration">Joχtur Tenrisi kibik Israelnin</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.434">Simcha z Kukizowa syn Chananiela z Derażna</tei:persName>
+                            </tei:editor>
+                            <tei:note>przekład na język karaimski hymnu religijnego (pijut) na Jom Terua</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski hymnu religijnego (  [pijut] ) na Jom Terua</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="25">
+                            <tei:locus from="227&#160;r" to="227&#160;v"/>
+                            <tei:incipit>אֲדוֹנָיְדִי בִײִ יִשְרָאֵלְנִין</tei:incipit>
+                            <tei:incipit type="transliteration">Adonajdy biji Israelnin</tei:incipit>
+                            <tei:editor>
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.434">Simcha z Kukizowa syn Chananiela z Derażna</tei:persName>
+                            </tei:editor>
+                            <tei:note>przekład na język karaimski hymnu religijnego (pijut) na Jom Terua</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski hymnu religijnego (  [pijut] ) na Jom Terua</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="26">
+                            <tei:locus from="228&#160;r"/>
+                            <tei:note>modlitwy wieczorne i poranne oraz błogosławieństwa na święto Sukkot, na Szemini Aceret, na święta doroczne oraz na soboty, język hebrajski</tei:note>
+                            <tei:textLang mainLang="heb-Hebr"/>
+                            <tei:title>modlitwy wieczorne i poranne oraz błogosławieństwa na święto Sukkot, na Szemini Aceret, na święta doroczne oraz na soboty,  język hebrajski</tei:title>
+                        </tei:msItem>
+                    </tei:msContents>
+                    <tei:physDesc>
+                        <tei:objectDesc>
+                            <tei:supportDesc material="paper">
+                                <tei:support>Papier żeberkowy, kremowy</tei:support>
+                                <tei:extent>
+                                    <tei:measure unit="page">261 kk.</tei:measure>
+                                    <tei:note>Numeracja: Brak</tei:note>
+                                    <tei:dimensions type="leaf" unit="mm">
+                                        <tei:width>175</tei:width>
+                                        <tei:height>111</tei:height>
+                                    </tei:dimensions>
+                                </tei:extent>
+                                <tei:condition>Po kompleksowej konserwacji, końcowe karty oraz k. 249 postrzępione</tei:condition>
+                            </tei:supportDesc>
+                            <tei:layoutDesc>
+                                <tei:layout columns="1" ruledLines="25"/>
+                            </tei:layoutDesc>
+                        </tei:objectDesc>
+                        <tei:typeDesc>
+                            <tei:typeNote medium="ink">Czarny, brązowy</tei:typeNote>
+                        </tei:typeDesc>
+                        <tei:scriptDesc>
+                            <tei:scriptNote script="VOCALIZED"/>
+                            <tei:scriptNote script="Square Semi-cursive Cursive"/>
+                        </tei:scriptDesc>
+                        <tei:additions>
+
+                        </tei:additions>
+                        <tei:bindingDesc>
+                            <tei:condition>Brak</tei:condition>
+                        </tei:bindingDesc>
+                    </tei:physDesc>
+                </tei:msDesc>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+        <tei:facsimile/>
+        <tei:revisionDesc status="approved">
+            <tei:change when-iso="2019-11-26T22:51:04" who="admin"/>
+        </tei:revisionDesc>
+        <tei:profileDesc>
+            <tei:abstract>
+                <tei:p>Końcowe karty oraz k. 249 postrzępione. Karty 38 v o , 147 v o puste. Na karcie 136 v o adnotacja (wyraźnie inną ręką niż kopisty tekstu głównego; być może tą samą ręką jest napisany tekst na k. 147 r o ) mówiąca o tym, że rękopis ten został skradziony w 5639 A.M. (tj. ok. 1879) i był w posiadaniu Szałoma starca syna Icchaka starca, aż do 5646 A.M. (tj. ok. 1886), do momentu wykrycia kradzieży, gdy został on wyceniony przez wuja kopisty Simchę syna Moszego ribbi, który powiedział o tym fakcie kopiście, a ten wykupił rękopis od złodzieja za 4 srebrne ruble (użycie rubli wskazuje na to, że wykup rękopisu miał miejsce w Łucku). Simcha syn Moszego to Simcha Mordkowicz (1828–1906), przyrodni brat Jeszui Josefa Mordkowicza (zob. niżej), zaś autorem adnotacji jest bratanek Simchy, Szemoel Mordkowicz syn Mordechaja Szałoma (1848–1930) późniejszy hazzan w Haliczu w latach 1924–1926. W nagłówku do hymnu religijnego zaczynającego się na k. 138 v o znajdziemy informację, że tłumaczem pijutu był szwagier kopisty, Josef syn teścia kopisty Abrahama hazzana (Leonowicza). To, oraz dukt pisma i znaki pisarskie jednoznacznie identyfikują kopistę: był nim Jeszua Josef Mordkowicz (1802–1884). We wspomnianym nagłówku Abraham Leonowicz jest wspomniany jako osoba żyjąca, co pozwala nam datować rękopis na okres sprzed 1851 roku (wg wg odpisu ksiąg metrykalnych Abraham Leonowicz zmarł 28 stycznia 1851 A.D.).</tei:p>
+                <tei:p>Tom drukowany zawiera wkładki rękopiśmiennicze.</tei:p>
+            </tei:abstract>
+        </tei:profileDesc>
+    </tei:teiHeader>
+    <tei:text>
+        <tei:body>
+            <tei:p n="begin">לשבת הגדול</tei:p>
+            <tei:p n="end">מַלָך ...</tei:p>
+        </tei:body>
+    </tei:text>
+</tei:TEI>

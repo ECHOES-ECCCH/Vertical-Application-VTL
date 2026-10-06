@@ -1,0 +1,63 @@
+server:
+  servlet:
+    session:
+      cookie:
+        same-site: none
+        secure: true
+spring:
+  datasource:
+    #        data: "classpath:data.sql"
+    driver-class-name: "org.postgresql.Driver"
+    url: "jdbc:postgresql://${POSTGRES_HOST}:5432/wlt_portal_db"
+    username: ${POSTGRES_USER:wlt_portal}
+    password: ${POSTGRES_PASSWORD:wlt_portal}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        connection:
+          charset: UTF-8
+        dialect: pl.psnc.vtl.portal.conf.fts.CustomPostgreSQLDialect
+        hbm2ddl:
+          import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  security:
+    oauth2:
+      client:
+        registration:
+          bad:
+            client-id: ${OAUTH_CLIENT_ID:wlt-portal-ui-bsa-bad.apps.paas-dev.psnc.pl} 
+            client-authentication-method: none
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/api/oauth2/callback/{registrationId}"
+            scope:
+              - ${OAUTH_CLIENT_SCOPE:wlt-portal-bl-bsa-bad.apps.paas-dev.psnc.pl}
+              - email
+              - profile
+              - roles
+              - web-origins
+            provider: bad
+          bad_register:
+            client-id: ${OAUTH_CLIENT_ID:wlt-portal-ui-bsa-bad.apps.paas-dev.psnc.pl} 
+            client-authentication-method: none
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/api/oauth2/callback/{registrationId}"
+            scope: profile,email,roles,web-origins,${OAUTH_CLIENT_SCOPE:wlt-portal-bl-bsa-bad.apps.paas-dev.psnc.pl}
+            provider: bad_register
+vtl:
+  iiif-server-url: ${IIIF_SERVER_ENDPOINT:http://iiif-server:8080/}
+  iiif-server-public-url: ${IIIF_SERVER_PUBLIC_ENDPOINT:https://iiif-server-bsa-bad.apps.paas-dev.psnc.pl/}
+  iiif-tools-url: ${IIIF_TOOLS_ENDPOINT:http://iiif-tools:5556/}
+  ocr-tools-url: ${OCR_TOOLS_ENDPOINT:http://ocr-tools:5557/}
+
+  conf-dir: /var/vtl-config/
+  student:
+    partial-match-groups: 1,2
+
+quota:
+  space: ${BAD_USER_DEFAULT_QUOTA:3000}
+  apply-from-claims: false
+

@@ -1,0 +1,246 @@
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 6h
+  forward-headers-strategy: framework
+  tomcat.internal-proxies: .*
+
+
+spring:
+  datasource:
+    data: "classpath:data.sql"
+    driver-class-name: "org.postgresql.Driver"
+    initialization-mode: always
+    url: "jdbc:postgresql://127.0.0.1:5432/wlt_portal_db"
+    username: wlt_portal
+    password: wlt_portal
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: pl.psnc.vtl.portal.conf.fts.CustomPostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+          batch_size: 100
+        order_inserts: true
+        order_updates: true
+        types:
+          print:
+            banner: false
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+    async:
+      request-timeout: 180000
+  mail:
+    address: ${MAIL_SENDER_ADDRESS:no-reply@bad.bsa.pcss.pl}
+    host: ${MAIL_SERVER_HOST:smtp.man.poznan.pl}
+    port: ${MAIL_SERVER_PORT:587}
+    username: ${MAIL_USER:webapp-162}
+    password: ${MAIL_PASSWORD:wrong-password}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            provider: keycloak
+            client-id: ${KEYCLOAK_CLIENT_ID:wlt}
+            client-secret: ${KEYCLOAK_CLIENT_SECRET}
+            redirect-uri: "{baseUrl}/api/oauth2/callback/{registrationId}"
+            authorization-grant-type: authorization_code
+            scope: ${KEYCLOAK_SCOPE:email,profile,roles,web-origins,openid}
+          keycloak_register:
+            provider: keycloak_register
+            client-id: ${KEYCLOAK_CLIENT_ID:wlt}
+            client-secret: ${KEYCLOAK_CLIENT_SECRET}
+            redirect-uri: "{baseUrl}/api/oauth2/callback/{registrationId}"
+            authorization-grant-type: authorization_code
+            scope: ${KEYCLOAK_SCOPE:email,profile,roles,web-origins,openid}
+        provider:
+          keycloak:
+            token-uri: ${KEYCLOAK_REALM_URL}/protocol/openid-connect/token
+            authorization-uri: ${KEYCLOAK_REALM_URL}/protocol/openid-connect/auth
+            user-info-uri: ${KEYCLOAK_REALM_URL}/protocol/openid-connect/userinfo
+            jwk-set-uri: ${KEYCLOAK_REALM_URL}/protocol/openid-connect/certs
+            user-name-attribute: sub
+          keycloak_register:
+            token-uri: ${KEYCLOAK_REALM_URL}/protocol/openid-connect/token
+            authorization-uri: ${KEYCLOAK_REALM_URL}/protocol/openid-connect/registrations
+            user-info-uri: ${KEYCLOAK_REALM_URL}/protocol/openid-connect/userinfo
+            jwk-set-uri: ${KEYCLOAK_REALM_URL}/protocol/openid-connect/certs
+            user-name-attribute: sub
+#          facebook:
+#            authorizationUri: https://www.facebook.com/v3.0/dialog/oauth
+#            tokenUri: https://graph.facebook.com/v3.0/oauth/access_token
+#            userInfoUri: https://graph.facebook.com/v3.0/me?fields=id,first_name,middle_name,last_name,name,email,verified,is_verified,picture.width(250).height(250)
+  servlet:
+    session:
+      cookie:
+        secure: true
+        http-only: true
+        same-site: none
+    multipart:
+      max-file-size: ${MAX_FILE_SIZE:100MB}
+      max-request-size: ${MAX_REQUEST_SIZE:101MB}
+
+springdoc:
+  version: '@api.version@'
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+    disable-swagger-default-url: true
+  swagger-ui:
+    path: /swagger-ui.html
+    display-request-duration: true
+    groups-order: DESC
+    operationsSorter: method
+    disable-swagger-default-url: true
+vtl:
+  auth:
+    jwt:
+      secret-key: JWTSuperSecretKey
+      max-age: 604800000
+    remember-me:
+      secret-key: key
+      max-age: 604800000
+    cors:
+      domains: ${CORS:http://localhost:3000,http://localhost:8080,https://wlt2-test.bu.uni.wroc.pl/}
+      domain-patterns-public: "*"
+      max-age: 3600
+    csrf:
+      secret-key: key
+    password-reset-token-max-age: 1800000
+    private-key-filename: privatekey.pem
+  oauth2:
+    entitlements-role-pattern: ${KEYCLOAK_ENTITLEMENTS_ROLE_PATTERN:}
+  pagination:
+    transcriptions:
+      default-perpage: 4
+      maximal-perpage: 100
+      list-count: 10
+    pages:
+      default-perpage: 24
+      maximal-perpage: 100
+    users:
+      default-perpage: 24
+      maximal-perpage: 100
+    layers:
+      minimal-layer: 1
+      maximal-layer: 30
+  thumbnail:
+    width: 300
+    height: 300
+  training-example:
+    image-padding: 3
+  iiif-server-pct: 48.2
+  iiif-server-url: ${IIIF_SERVER_ENDPOINT:http://localhost:5555/}
+  iiif-server-public-url: ${IIIF_SERVER_PUBLIC_ENDPOINT:http://localhost:5555/}
+  iiif-tools-url: ${IIIF_TOOLS_ENDPOINT:http://localhost:5556/}
+  ocr-tools-url: ${OCR_TOOLS_ENDPOINT:http://localhost:5557/}
+  ocr-default-level: WORD
+  ocr-training-url: ${OCR_TRAINING_ENDPOINT:http://localhost:5558/}
+  conf-dir: ./vtl-config/
+  imports-domains: ${IMPORT_DOMAINS_CHECK:false}
+  cache: 900000
+  verses:
+    payload:
+      max-size-bytes: 5_000_000
+
+captcha:
+  secret-key: ${CAPTCHA_SECRET_KEY:6Lcqy-UqAAAAADYKn-w00PmzkrPu4KSQXVBL0KGQ}
+quota:
+  space: 3000
+  transcription: ${TRANSCRIPTION_QUOTA:400}
+bsadbad:
+  registration-email: false
+  sso-logout: ${KEYCLOAK_REALM_URL}/protocol/openid-connect/logout
+  post-logout-redirect-uri:
+
+export:
+  external-editor-for-domains: ${EXTERNAL_EDITOR_FOR_DOMAINS:https://digilab.uwr.edu.pl}
+  transcription-started-path: ${EXTERNAL_EDITOR_TRANSCRIPTION_STARTED_PATH:}
+  transcription-finished-path: ${EXTERNAL_EDITOR_TRANSCRIPTION_FINISHED_PATH:}
+  trust-self-signed-certificates: false
+  export-transcription-username: ${EXTERNAL_EDITOR_USER:wlt_user}
+  export-transcription-password: ${EXTERNAL_EDITOR_PASS:6KhqDLmL3pvTQS9VBz8A}
+  export-rejected-email-title: "Eksport transkrypcji został odrzucony. | Transcription export was rejected. | Der Export der Transkription wurde abgelehnt."
+
+management:
+  health:
+    defaults:
+      enabled: false
+    db:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+
+opensearch:
+  shortName: "BŚA BAD"
+  descriptionSummary: "Ariadna Rozpoznawanie Tekstów Historycznych jest częścią systemu Ariadna"
+  description: "Ariadna Rozpoznawanie Tekstów Historycznych jest częścią systemu Ariadna. System Ariadna został opracowany przy współpracy z Poznańskim Centrum Superkomputerowo-Sieciowym afiliowanym przy Instytucie Chemii Bioorganicznej PAN, a za jego rozwój odpowiada Zespół Bibliotek Cyfrowych PCSS."
+  tag: "BAD"
+  contact: ${BAD_ADMIN_CONTACT:admin@man.poznan.pl}
+  port: ""
+  url: ${BAD_BASE_URL:https://bsa.bad.pcss.pl}
+  idUrlFragment: "transcription"
+  longName: "BAD Web Search"
+  developer: "BAD - team"
+  attribution: "PCSS 2023, All Rights Reserved"
+  syndicationRight: "open"
+  adultContent: "false"
+  language: "pl-PL"
+  outputEncoding: "UTF-8"
+  inputEncoding: "UTF-8"
+  fbcSearchAddinsFormat: "xsd"
+
+oai-repository:
+  name: "OAI-PMH Repository of Ariadna's Historical Texts Service"
+  adminEmails: ${BAD_ADMIN_CONTACT:admin@man.poznan.pl}
+  baseUrl: ${BAD_BASE_URL:https://bsa.bad.pcss.pl}
+  description: "<oai-identifier xmlns=\"http://www.openarchives.org/OAI/2.0/oai-identifier\"  
+                 xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+                 xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/oai-identifier
+                 http://www.openarchives.org/OAI/2.0/oai-identifier.xsd\">
+                 <scheme>oai</scheme>
+                 <repositoryIdentifier>bsa.bad.pcss.pl</repositoryIdentifier>
+                 <delimiter>:</delimiter>
+                 <sampleIdentifier>oai:bsa.bad.pcss.pl:1234</sampleIdentifier> 
+                 </oai-identifier>"
+  max:
+    list:
+      identifiers: 100
+      records: 100
+  identifier:
+    domain: bsa.bad.pcss.pl
+  record-metadata:
+    fieldValues:
+      publisher:
+        pl: "Śląski Agregator - Serwis Pracy Badawczej"
+        en: "Silesian Aggregator - Research Work Service"
+      type:
+        pl: "transkrypcja"
+        en: "transcription"
+      rights:
+        pl: "Zgodnie z polityką prywatności Serwisu Pracy Badawczej Ariadna"
+        en: "According to privacy policy of Research Work Service"
+    langCodeToXmlLang:
+      pol: "pl"
+      eng: "en"
+

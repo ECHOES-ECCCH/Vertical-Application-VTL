@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Miniatury :: GSL_GSL_8033_II_50206</title>
+    <script type="text/javascript" src="thumbnail/js/jquery.min.js"></script>
+    <script type="text/javascript" src="thumbnail/js/jquery.unveil.js"></script>
+    <script type="text/javascript">var appVer = "prod";</script>
+    <script type="text/javascript" src="thumbnail/js/main.js"></script>
+    <link href="thumbnail/css/main.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div id="myPage">
+        <div id="myBar"><div>
+            <label for="cbxThumbType">obraz &nbsp;</label>
+            <div style="display: inline-block; padding: 0 5px 0 0; margin-left: -5px;">
+                <div style="display: inline-block; padding: 0; line-height: 50%;">
+                    <input type="checkbox" id="cbxTypeT" name="typeT" checked onChange="refreshView()"/><label for="cbxTypeT" class="cbx_label">treść</label><br />
+                    <input type="checkbox" id="cbxTypeC" name="typeC" checked onChange="refreshView()" /><label for="cbxTypeC" class="cbx_label">oprawa</label>
+                </div><div style="display: inline-block; padding: 0; line-height: 50%;">
+                <input type="checkbox" id="cbxTypeW" name="typeW" checked onChange="refreshView()" /><label for="cbxTypeW" class="cbx_label">znak wodny</label><br />
+                <input type="checkbox" id="cbxTypeS" name="typeS" checked onChange="refreshView()" /><label for="cbxTypeS" class="cbx_label">specjalny</label>
+            </div>
+            </div>
+            <label for="selThumbSize">rozmiar &nbsp;</label>
+            <select id="selThumbSize" name="thumbSize" onChange="refreshView()">
+                <option value="small" >małe</option>
+                <option value="medium" selected="selected">średnie</option>
+                <option value="big" >duże</option>
+            </select>&nbsp;&nbsp;
+            <label for="selBrowser">przeglądarka&nbsp;</label>
+            <select id="selBrowser" name="browser">
+                <option value="seadragon" selected="selected">seadragon</option>
+                <option value="mooviewer" >mooviewer</option>
+                <option value="leaflet" >leaflet</option>
+            </select><a class="downloadLink" id="lnkManifestIIIF" style="margin-left: 0.5em" target="_blank" href="http://localhost:8787/minifest-linked"><img src="thumbnail/images/logo_iiif_grey.png" title="pobierz manifest IIIF" /></a>
+            <span id="logo"><a href="//www.uni.wroc.pl" title="Uniwersytet Wrocławski"><img src="thumbnail/images/logo_uwr.png"></a>&nbsp;
+            <a href="//www.bu.uni.wroc.pl" title="Biblioteka Uniwersytecka"><img src="thumbnail/images/logo_buwr.png">
+            </a></span>
+        </div></div>
+        <ul id="thumbList"><li id='current' class='current thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","1")' title='strona 1'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0001/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0001/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                1</span>
+        </li><li id='liImg2' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","2")' title='strona 2'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0002/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0002/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                2</span>
+        </li><li id='liImg3' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","3")' title='strona 3'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0003/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0003/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                3</span>
+        </li><li id='liImg4' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","4")' title='strona 4'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0004/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0004/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                4</span>
+        </li><li id='liImg5' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","5")' title='strona 5'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0005/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0005/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                5</span>
+        </li><li id='liImg6' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","6")' title='strona 6'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0006/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0006/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                6</span>
+        </li><li id='liImg7' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","7")' title='strona 7'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0007/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0007/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                7</span>
+        </li><li id='liImg8' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","8")' title='strona 8'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0008/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0008/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                8</span>
+        </li><li id='liImg9' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","9")' title='strona 9'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0009/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0009/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                9</span>
+        </li><li id='liImg10' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","10")' title='strona 10'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0010/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0010/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                10</span>
+        </li><li id='liImg11' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","11")' title='strona 11'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0011/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0011/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                11</span>
+        </li><li id='liImg12' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","12")' title='strona 12'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0012/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0012/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                12</span>
+        </li><li id='liImg13' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","13")' title='strona 13'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0013/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0013/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                13</span>
+        </li><li id='liImg14' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","14")' title='strona 14'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0014/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0014/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                14</span>
+        </li><li id='liImg15' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","15")' title='strona 15'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0015/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0015/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                15</span>
+        </li><li id='liImg16' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","16")' title='strona 16'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0016/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0016/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                16</span>
+        </li><li id='liImg17' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","17")' title='strona 17'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0017/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0017/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                17</span>
+        </li><li id='liImg18' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","18")' title='strona 18'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0018/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0018/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                18</span>
+        </li><li id='liImg19' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","19")' title='strona 19'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0019/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0019/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                19</span>
+        </li><li id='liImg20' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","20")' title='strona 20'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0020/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0020/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                20</span>
+        </li><li id='liImg21' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","21")' title='strona 21'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0021/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0021/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                21</span>
+        </li><li id='liImg22' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","22")' title='strona 22'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0022/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0022/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                22</span>
+        </li><li id='liImg23' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","23")' title='strona 23'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0023/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0023/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                23</span>
+        </li><li id='liImg24' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","24")' title='strona 24'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0024/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0024/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                24</span>
+        </li><li id='liImg25' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","25")' title='strona 25'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0025/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0025/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                25</span>
+        </li><li id='liImg26' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","26")' title='strona 26'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0026/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0026/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                26</span>
+        </li><li id='liImg27' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","27")' title='strona 27'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0027/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0027/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                27</span>
+        </li><li id='liImg28' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","28")' title='strona 28'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0028/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0028/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                28</span>
+        </li><li id='liImg29' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","29")' title='strona 29'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0029/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0029/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                29</span>
+        </li><li id='liImg30' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","30")' title='strona 30'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0030/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0030/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                30</span>
+        </li><li id='liImg31' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","31")' title='strona 31'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0031/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0031/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                31</span>
+        </li><li id='liImg32' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","32")' title='strona 32'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0032/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0032/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                32</span>
+        </li><li id='liImg33' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","33")' title='strona 33'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0033/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0033/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                33</span>
+        </li><li id='liImg34' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","34")' title='strona 34'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0034/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0034/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                34</span>
+        </li><li id='liImg35' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","35")' title='strona 35'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0035/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0035/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                35</span>
+        </li><li id='liImg36' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","36")' title='strona 36'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0036/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0036/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                36</span>
+        </li><li id='liImg37' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","37")' title='strona 37'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0037/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0037/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                37</span>
+        </li><li id='liImg38' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","38")' title='strona 38'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0038/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0038/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                38</span>
+        </li><li id='liImg39' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","39")' title='strona 39'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0039/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0039/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                39</span>
+        </li><li id='liImg40' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","40")' title='strona 40'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0040/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0040/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                40</span>
+        </li><li id='liImg41' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","41")' title='strona 41'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0041/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0041/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                41</span>
+        </li><li id='liImg42' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","42")' title='strona 42'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0042/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0042/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                42</span>
+        </li><li id='liImg43' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","43")' title='strona 43'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0043/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0043/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                43</span>
+        </li><li id='liImg44' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","44")' title='strona 44'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0044/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0044/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                44</span>
+        </li><li id='liImg45' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","45")' title='strona 45'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0045/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0045/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                45</span>
+        </li><li id='liImg46' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","46")' title='strona 46'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0046/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0046/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                46</span>
+        </li><li id='liImg47' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","47")' title='strona 47'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0047/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0047/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                47</span>
+        </li><li id='liImg48' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","48")' title='strona 48'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0048/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0048/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                48</span>
+        </li><li id='liImg49' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","49")' title='strona 49'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0049/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0049/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                49</span>
+        </li><li id='liImg50' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","50")' title='strona 50'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0050/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0050/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                50</span>
+        </li><li id='liImg51' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","51")' title='strona 51'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0051/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0051/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                51</span>
+        </li><li id='liImg52' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","52")' title='strona 52'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0052/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0052/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                52</span>
+        </li><li id='liImg53' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","53")' title='strona 53'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0053/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0053/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                53</span>
+        </li><li id='liImg54' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","54")' title='strona 54'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0054/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0054/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                54</span>
+        </li><li id='liImg55' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","55")' title='strona 55'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0055/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0055/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                55</span>
+        </li><li id='liImg56' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","56")' title='strona 56'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0056/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0056/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                56</span>
+        </li><li id='liImg57' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","57")' title='strona 57'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0057/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0057/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                57</span>
+        </li><li id='liImg58' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","58")' title='strona 58'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0058/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0058/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                58</span>
+        </li><li id='liImg59' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","59")' title='strona 59'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0059/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0059/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                59</span>
+        </li><li id='liImg60' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","60")' title='strona 60'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0060/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0060/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                60</span>
+        </li><li id='liImg61' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","61")' title='strona 61'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0061/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0061/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                61</span>
+        </li><li id='liImg62' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","62")' title='strona 62'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0062/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0062/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                62</span>
+        </li><li id='liImg63' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","63")' title='strona 63'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0063/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0063/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                63</span>
+        </li><li id='liImg64' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","64")' title='strona 64'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0064/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0064/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                64</span>
+        </li><li id='liImg65' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","65")' title='strona 65'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0065/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0065/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                65</span>
+        </li><li id='liImg66' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","66")' title='strona 66'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0066/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0066/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                66</span>
+        </li><li id='liImg67' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","67")' title='strona 67'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0067/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0067/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                67</span>
+        </li><li id='liImg68' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","68")' title='strona 68'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0068/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0068/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                68</span>
+        </li><li id='liImg69' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","69")' title='strona 69'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0069/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0069/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                69</span>
+        </li><li id='liImg70' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","70")' title='strona 70'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0070/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0070/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                70</span>
+        </li><li id='liImg71' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","71")' title='strona 71'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0071/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0071/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                71</span>
+        </li><li id='liImg72' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","72")' title='strona 72'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0072/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0072/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                72</span>
+        </li><li id='liImg73' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","73")' title='strona 73'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0073/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0073/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                73</span>
+        </li><li id='liImg74' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","74")' title='strona 74'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0074/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0074/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                74</span>
+        </li><li id='liImg75' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","75")' title='strona 75'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0075/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0075/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                75</span>
+        </li><li id='liImg76' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","76")' title='strona 76'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_0076/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_0076/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                76</span>
+        </li><li id='liImg77' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","77")' title='strona 77'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_C001/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_C001/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                77</span>
+        </li><li id='liImg78' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","78")' title='strona 78'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_C002/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_C002/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                78</span>
+        </li><li id='liImg79' class=' thumbnail medium'>
+            <a href='javascript: openPage("GSL_GSL_8033_II_50206","79")' title='strona 79'>
+                <img src='/thumbnail/images/bg.png' data-src='iiif/image-api/GSL_GSL_8033_II_50206_C007/full/200,/0/default.jpg' /></a>
+            <span class='pager'>
+                <a href='iiif/image-api/GSL_GSL_8033_II_50206_C007/full/full/0/default.jpg' title='pobierz w pełnej rozdzielczości'><img  target='_blank' src='/thumbnail/images/download-arrow.png' /></a>
+                79</span>
+        </li></ul></div><script type="text/javascript">
+
+    //funcja pomocnicza
+    function getValue(url,varname) {
+
+    var i = 0;
+    var value = false;
+
+    var qparts = url.split("?");
+    if (qparts.length > 1) {
+    var query = qparts[1];
+    var vars = query.split("&");
+    for (i=0;i<vars.length;i++) {
+    var parts = vars[i].split("=");
+    if (parts[0] == varname) {
+    value = parts[1];
+    break;
+    }
+    }
+    value = unescape(value);
+    value.replace(/\+/g," ");
+    }
+    return value;
+    }
+
+    function refreshView() {
+
+    var type_t = ($("#cbxTypeT").is(":checked")) ? "1" : "0";
+    var type_c = ($("#cbxTypeC").is(":checked")) ? "1" : "0";
+    var type_s = ($("#cbxTypeS").is(":checked")) ? "1" : "0";
+    var type_w = ($("#cbxTypeW").is(":checked")) ? "1" : "0";
+
+    var thumb_size = $("#selThumbSize").val();
+    var browser = $("#selBrowser").val();
+    var source = "GSL_GSL_8033_II_50206";
+    window.location.href = window.location.protocol+"//"+ window.location.host + window.location.pathname + "?s=" + source + "&view=thumbnails&thumb_size=" + thumb_size + "&browser=" + browser + "&type_t=" + type_t + "&type_c=" + type_c + "&type_s=" + type_s + "&type_w=" + type_w;
+    }
+
+
+    $(document).ready(function() {
+    $("img").unveil().unveil(200);
+    });
+
+</script><script type='text/javascript'>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-68938953-1', 'auto');
+    ga('send', 'pageview');
+</script></body></html>

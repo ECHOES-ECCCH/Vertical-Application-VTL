@@ -1,0 +1,16 @@
+{
+  "reactAppApi":"https://bad.bsa.pcss.pl/api" ,
+  "ariadnaWwwUrl":"https://www.bsa.pcss.pl" ,
+  "ariadnaWwwMySubjectsUrl":"https://www.bsa.pcss.pl" ,
+  "ariadnaWwwMyCollectionsUrl":"https://www.bsa.pcss.pl" ,
+  "wordpressApi":"https://dace-ui-bsa-www.apps.paas-dev.psnc.pl/wp" ,
+  "ariadnaUserManagement":"https://keycloak-dev.apps.paas-dev.psnc.pl/auth/admin/BSA/console/#/realms/BSA/users" ,
+  "ariadnaEduUrl":"https://edu.bsa.pcss.pl" ,
+  "ariadnaEduMyProjectsUrl":"https://edu.bsa.pcss.pl" ,
+  "ariadnaWolUrl":"https://wol.bsa.pcss.pl" ,
+  "ariadnaWolMyProjectsUrl":"https://wol.bsa.pcss.pl" ,
+  "ariadnaDictionary": "https://www.bsa.pcss.pl/slownik" ,
+  "authorization": "EXTERNAL",
+  "authorizationLoginUrl": "/oauth2/authorization/bad",
+  "authorizationRegisterUrl": "/oauth2/authorization/bad_register"
+}

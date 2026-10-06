@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title id="1" level="m" type="main">PageId_1</title>
+                    </monogr>
+                </biblStruct>
+                <msDesc>
+                    <msIdentifier>
+                        <repositiory>VTL-REPO</repositiory>
+                        <idno>VTL-T1</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <titleStmt>
+                <title copyOf="1" level="m" type="main">PageId_1</title>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <sourceDoc>
+        <surface id="page_1" ulx="0" uly="0" lrx="2595" lry="3759">
+            <zone type="list">
+                <zone ulx="1" uly="1" lrx="9" lry="10" type="item">
+                    <line ulx="1" uly="1" lrx="9" lry="10">Ala ma kota1</line>
+                </zone>
+                <zone ulx="3" uly="1" lrx="7" lry="12" type="item">
+                    <line ulx="3" uly="1" lrx="7" lry="12">Ala ma kota2</line>
+                </zone>
+                <zone ulx="5" uly="4" lrx="110" lry="105" type="item">
+                    <line ulx="5" uly="4" lrx="110" lry="105">Ala ma kota3</line>
+                </zone>
+                <zone ulx="1" uly="1" lrx="9" lry="10" type="item">
+                    <line ulx="1" uly="1" lrx="9" lry="10">Ala ma kota4</line>
+                </zone>
+                <zone ulx="1" uly="1" lrx="9" lry="10" type="item">
+                    <line ulx="1" uly="1" lrx="9" lry="10">Ala ma kota5</line>
+                </zone>
+            </zone>
+        </surface>
+    </sourceDoc>
+</TEI>

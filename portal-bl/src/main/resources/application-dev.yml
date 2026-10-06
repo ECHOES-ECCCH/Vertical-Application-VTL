@@ -1,0 +1,30 @@
+
+spring:
+    #    mail:
+    #        address: webapp-032@man.poznan.pl
+    #        host: smtp.man.poznan.pl
+    #        port: 587
+    #        username: webapp-032
+    #        password: WLT_SuperSecretPass1
+    #        properties:
+    #            mail:
+    #                smtp:
+    #                    auth: true
+    #                    starttls:
+    #                        enable: true
+  mvc:
+    async:
+      request-timeout: 3600000
+vtl:
+  auth:
+    cors:
+      domains: http://192.168.56.101:3000,http://localhost:3000
+  # when running portal-bl outside docker, to get iiif-server ip:
+  # docker exec -it wlt-iiif-server hostname -i
+  # change it here or add domain iiif-server with this ip to /etc/hosts
+  iiif-server-url: ${IIIF_SERVER_ENDPOINT:http://iiif-server:8080/}
+  iiif-server-public-url: http://192.168.56.101:5555/
+  iiif-tools-url: ${IIIF_TOOLS_ENDPOINT:http://iiif-tools:5556/}
+export:
+  external-editor-for-domains: ${EXTERNAL_EDITOR_FOR_DOMAINS:https://192.168.56.102,https://127.0.0.1:4443}
+  trust-self-signed-certificates: true

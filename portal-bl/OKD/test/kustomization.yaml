@@ -1,0 +1,28 @@
+resources:
+  - ../dev
+
+configMapGenerator:
+  - name: wlt-portal-ui-config
+    behavior: replace
+    files:
+      - config/config.json
+    options:
+      disableNameSuffixHash: true
+  - name: wlt-portal-bl-config
+    behavior: merge
+    envs:
+      - config/wlt-portal-bl.env
+    options:
+      disableNameSuffixHash: true
+
+patchesStrategicMerge:
+  - routes.yaml
+  - pvcs.yaml
+
+patches:
+  - target:
+      kind: DeploymentConfig
+    patch: |-
+      - op: add
+        path: /metadata/labels/app
+        value: BAD

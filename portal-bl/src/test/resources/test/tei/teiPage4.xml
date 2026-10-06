@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title id="1" level="m" type="main">PageId_4</title>
+                    </monogr>
+                </biblStruct>
+                <msDesc>
+                    <msIdentifier>
+                        <repositiory>VTL-REPO</repositiory>
+                        <idno>VTL-T1</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <titleStmt>
+                <title copyOf="1" level="m" type="main">PageId_4</title>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <sourceDoc>
+        <surface id="page_4" ulx="0" uly="0" lrx="2595" lry="3759">
+            <zone ulx="50" uly="100" lrx="2100" lry="150" type="head">
+                <line ulx="50" uly="100" lrx="2100" lry="150">Pisarz 14, ks. III r. 1427; pisarz 15, ks. IV r 1429 i pisarz 16, ks. IV r. 1430</line>
+            </zone>
+            <zone ulx="2300" uly="100" lrx="2400" lry="200" type="pageNum">
+                <line ulx="2300" uly="100" lrx="2400" lry="200">250</line>
+            </zone>
+            <zone type="table">
+                <zone type="row">
+                    <zone ulx="200" uly="920" lrx="800" lry="1020" type="cell">
+                        <line ulx="200" uly="700" lrx="800" lry="800">Tako mÿ pomosſÿ bog ÿſzwynntyj</line>
+                        <line ulx="200" uly="810" lrx="800" lry="910">kryfz Jakotho ſwathczimi ikao ka-</line>
+                        <line ulx="200" uly="920" lrx="800" lry="1020">tha|rzina nyqgdt bogushewa</line>
+                    </zone>
+                    <zone ulx="1000" uly="920" lrx="1800" lry="1020" type="cell">
+                        <line ulx="1000" uly="700" lrx="1800" lry="800">Tako mi pomoży Bog i święty</line>
+                        <line ulx="1000" uly="810" lrx="1800" lry="910">krzyż, jako to świadczymy, jako</line>
+                        <line ulx="1000" uly="920" lrx="1800" lry="1020">Katarzyna mnidy Boguszewa żpmna</line>
+                    </zone>
+                </zone>
+                <zone type="row">
+                    <zone ulx="200" uly="1150" lrx="800" lry="1250" type="cell">
+                        <line ulx="200" uly="1040" lrx="800" lry="1140">poſzagu &lt;em&gt;deece marcarun grossoru&lt;/em&gt;</line>
+                        <line ulx="200" uly="1150" lrx="800" lry="1250">&lt;em&gt;latorym yney | nyulos &lt;/em&gt; wdom</line>
+                    </zone>
+                    <zone ulx="1000" uly="1150" lrx="1800" lry="1250" type="cell">
+                        <line ulx="1000" uly="1040" lrx="1800" lry="1140">podsagu - - - - i nie wnmisła w dom</line>
+                        <line ulx="1000" uly="1150" lrx="1800" lry="1250">Dobiesław&amp;lt;w&amp;gt;ow Grodzi&amp;lt;e&amp;gt;go</line>
+                    </zone>
+                </zone>
+                <zone type="row">
+                    <zone ulx="200" uly="1270" lrx="1800" lry="1370" type="cell">
+                        <line ulx="200" uly="1270" lrx="1800" lry="1370">{Grodzedz testumus rotha Baranmek}</line>
+                    </zone>
+                </zone>
+            </zone>
+            <zone ulx="150" uly="1700" lrx="2000" lry="1800" type="divHead1">
+                <line ulx="150" uly="1700" lrx="2000" lry="1800">Przciwko Hance z Kiszkowa o &lt;em&gt;czterrze&lt;/em&gt; grzywny  przez dziweięc skot</line>
+            </zone>
+            <zone ulx="150" uly="1820" lrx="450" lry="1920" type="divHead1">
+                <line ulx="150" uly="1820" lrx="450" lry="1920">rękojmią</line>
+            </zone>
+            <zone ulx="150" uly="1980" lrx="2000" lry="2080" type="divHead2">
+                <line ulx="150" uly="1980" lrx="2000" lry="2080">Mirosław Maćka Stanisława Jędrzeja</line>
+            </zone>
+            <zone ulx="150" uly="2100" lrx="2000" lry="2200" type="divHead3">
+                <line ulx="150" uly="2100" lrx="2000" lry="2200">Zapisa łacińska z rkp. po nastęþnej rocie, odnoszącej się do in-</line>
+            </zone>
+            <zone ulx="150" uly="2220" lrx="2000" lry="2320" type="divHead3">
+                <line ulx="150" uly="2220" lrx="2000" lry="2320">nej sprawy.</line>
+            </zone>
+        </surface>
+    </sourceDoc>
+</TEI>

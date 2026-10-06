@@ -1,0 +1,46 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/ip_whitelist: 0.0.0.0/0
+  name: bad-api
+spec:
+  host: bad.bsa.pcss.pl
+  path: /api
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/ip_whitelist: 0.0.0.0/0
+  name: bad-ebooks
+spec:
+  host: bad.bsa.pcss.pl
+  path: /ebooks
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/ip_whitelist: 0.0.0.0/0
+  name: bad-iiif
+spec:
+  host: bad.bsa.pcss.pl
+  path: /iipsrv
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: bad-pgadmin4
+spec:
+  host: pgadmin4-bs-agregator.apps.paas-dev.psnc.pl
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/ip_whitelist: 0.0.0.0/0
+  name: bad-ui
+spec:
+  host: bad.bsa.pcss.pl
+---

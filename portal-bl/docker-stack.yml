@@ -1,0 +1,131 @@
+version: "3"
+
+services:
+  wlt-portal-bl:
+    container_name: wlt-portal-bl
+    image:  gitlab.pcss.pl:5005/bsa-bad/wlt-portal-bl:latest
+    ports:
+      - 8080:8080
+      - 9998:9998
+      - 9010:9010  #JMX port
+    depends_on:
+      - postgresql
+      - iiif-server
+      - iiif-tools
+      - ocr-tools
+    environment:
+      SPRING_ACTIVE_PROFILE: dev
+      JAVA_OPTS:
+        -server
+        -XX:+AlwaysPreTouch
+        -XX:+UseG1GC
+        -XX:MaxGCPauseMillis=200
+        -XX:ParallelGCThreads=20
+        -XX:ConcGCThreads=5
+        -XX:+ExplicitGCInvokesConcurrent
+        -XX:InitiatingHeapOccupancyPercent=70
+        -XX:+UseStringDeduplication
+        -XX:MaxMetaspaceSize=1G
+        -XX:ReservedCodeCacheSize=384m
+        -XX:+UseCodeCacheFlushing
+        -Dfile.encoding=UTF-8
+        -XX:+HeapDumpOnOutOfMemoryError
+        -XX:HeapDumpPath=/var/dumps/jvm`date`.hprof
+        -Dcom.sun.management.jmxremote
+        -Dcom.sun.management.jmxremote.port=9010
+        -Dcom.sun.management.jmxremote.local.only=false
+        -Dcom.sun.management.jmxremote.authenticate=false
+        -Dcom.sun.management.jmxremote.ssl=false
+    volumes:
+      - vtl-config:/var/vtl-config
+
+  postgresql:
+    container_name: wlt-postgresql
+    image: postgres:9.6
+    ports:
+      - 5432:5432
+    volumes:
+      - postgresql-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: wlt_portal_db
+      POSTGRES_USER: wlt_portal
+      POSTGRES_PASSWORD: wlt_portal
+
+  iiif-server:
+    container_name: wlt-iiif-server
+    image: gitlab.pcss.pl:5005/bsa-bad/wlt-portal-bl/iiif-server:latest
+    ports:
+      - 5555:80
+    volumes:
+      - vtl-storage:/var/www
+
+  iiif-tools:
+    container_name: wlt-iiif-tools
+    image: gitlab.pcss.pl:5005/bsa-bad/wlt-iiif-tools:latest
+    ports:
+      - 5556:5556
+      - 9995:9995
+    volumes:
+      - vtl-storage:/var/vtl-storage
+    environment:
+      SPRING_ACTIVE_PROFILE: dev
+
+  ocr-tools:
+    container_name: wlt-ocr-tools
+    image: gitlab.pcss.pl:5005/bsa-bad/wlt-ocr-tools:latest
+    ports:
+      - 5557:5557
+      - 9999:9999
+    volumes:
+      - vtl-storage:/var/vtl-storage
+    environment:
+      SPRING_ACTIVE_PROFILE: dev
+      OCR_TRAINING_ENDPOINT: http://ocr-training-service:5558
+
+  sp:
+    image: gitlab.pcss.pl:5005/bsa-bad/wlt-portal-bl/sp:latest
+    ports:
+      - 443:443
+      - 80:80
+
+  pionier-id:
+    image: gitlab.pcss.pl:5005/bsa-bad/wlt-portal-bl/pionier-id:latest
+    ports:
+      - 8443:443
+      - 880:80
+
+  ocr-training-service:
+    image: gitlab.pcss.pl:5005/bsa-bad/wlt-ocr-training:latest
+    container_name: wlt-ocr-training-service
+    volumes:
+      - vtl-ocr-training-tess-data:/var/vtl
+    ports:
+      - 5558:5558
+      - 9997:9995
+    environment:
+      SPRING_ACTIVE_PROFILE: dev
+      OCR_TRAIN_DB_HOST: ocr-training-db
+      OCR_TRAIN_DB_PORT: 5432
+      OCR_TRAIN_DB_USER: vtl_ocr_user
+      OCR_TRAIN_DB_PASS: vtl_ocr_pass
+      IIIF_SERVER_ENDPOINT: http://iiif-server
+
+  ocr-training-db:
+    image: postgres:12.2
+    container_name: wlt-ocr-training-postgres
+    volumes:
+      - vtl-ocr-training-db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: vtl_ocr_training
+      POSTGRES_USER: vtl_ocr_user
+      POSTGRES_PASSWORD: vtl_ocr_pass
+    ports:
+      - 5432:5432
+
+volumes:
+  postgresql-data:
+  vtl-storage:
+  vtl-config:
+  vtl-ocr-training-tess-data:
+  vtl-ocr-training-db-data:
+
