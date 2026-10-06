@@ -1,0 +1,12 @@
+databaseChangeLog:
+    - changeSet:
+          id: 00002-WLT_278-1
+          author: swolarz
+          comment: Add last retry datetime column to pending OCR corrections table
+          changes:
+              - addColumn:
+                    tableName: pending_ocr_corrections
+                    columns:
+                        - column:
+                              name: last_retry
+                              type: timestamp

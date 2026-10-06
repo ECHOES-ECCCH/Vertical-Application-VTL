@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: 00011-WTT_427-training_examples_iiif_url-1
+      author: swolarz
+      description: Add column for iiif image url field in training examples table
+      changes:
+        - addColumn:
+            tableName: ocr_training_examples
+            columns:
+              - column:
+                  name: iiif_img_url
+                  type: varchar(512)
+                  constraints:
+                    unique: true
+                    nullable: false
