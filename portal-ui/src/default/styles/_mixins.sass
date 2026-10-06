@@ -1,0 +1,78 @@
+=placeholder
+    $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input"
+    @each $placeholder in $placeholders
+        &:#{$placeholder}
+            @content
+
+=round-border($val)
+    border-radius: $val
+
+=opacity($opacity)
+    opacity: $opacity
+    $opacity-ie: $opacity * 100
+    filter: alpha(opacity=$opacity-ie) //IE8
+
+=list-column($count, $gap, $column-rule)
+    -moz-column-count: $count
+    -moz-column-gap: $gap
+    -webkit-column-count: $count
+    -webkit-column-gap: $gap
+    column-count: $count
+    column-gap: $gap
+    -webkit-column-rule: $column-rule
+    -moz-column-rule: $column-rule
+    column-rule: $column-rule
+
+=columns-avoid
+    -webkit-column-break-inside: avoid
+    page-break-inside: avoid
+    break-inside: avoid
+    column-fill: balance
+    -moz-column-fill: balance
+    -webkit-column-fill: balance
+
+=linear-gradient($color1, $color2)
+    background: -webkit-linear-gradient(top, $color1 22%, $color2 100%)
+    background: -o-linear-gradient(top, $color1 22%, $color2 100%)
+    background: -ms-linear-gradient(top, $color1 22%, $color2 100%)
+    background: -moz-linear-gradient(top, $color1 22%, $color2 100%)
+    background: linear-gradient(to bottom, $color1 22%, $color2 100%)
+
+=text-elipsis
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    word-wrap: break-word
+
+=absolute-center
+    position: absolute
+    margin: auto
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+
+=transition-all
+    transition-property: all
+    transition-duration: 300ms
+    transition-timing-function: ease-in
+
+=box-shadow($value)
+    -webkit-box-shadow: $value
+    -moz-box-shadow: $value
+    box-shadow: $value
+
+=font-kolor1
+    color: $kolor1
+
+=font-kolor2
+    color: $kolor2
+
+=font-kolor3
+    color: $kolor3
+
+=font-kolor4
+    color: $kolor4
+
+=font-kolor5
+    color: $kolor5

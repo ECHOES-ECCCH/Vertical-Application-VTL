@@ -1,0 +1,72 @@
+$col-xxs: 576px
+$col-xs: 768px
+$col-desktop: 992px
+$col-large: 1200px
+$col-xlarge: 1366px
+$col-xxlarge: 1800px
+
+=mobile-micro
+    @media screen and (max-width: 380px)
+        @content
+
+=mobile-small
+    @media screen and (max-width: 575.98px)
+        @content
+
+=small-devices
+    @media screen and (min-width: $col-xxs)
+        @content
+
+=small-devices-only
+    @media screen and (min-width: $col-xxs) and (max-width: 767.98px)
+        @content
+
+=mobile
+    @media screen and (max-width: $col-xs)
+        @content
+
+=tablet
+    @media screen and (min-width: $col-xs)
+        @content
+
+=tablet-only
+    @media screen and (min-width: $col-xs) and (max-width: 991.98px)
+        @content
+
+=touch
+    @media screen and (max-width: 991.98px)
+        @content
+
+=desktop
+    @media screen and (min-width: $col-desktop)
+        @content
+
+=desktop-only
+    @media screen and (min-width: $col-desktop) and (max-width: 1199.98px)
+        @content
+
+=touch-sec
+    @media screen and (max-width: 1199.98px)
+        @content
+
+=widescreen
+    @media screen and (min-width: $col-large)
+        @content
+
+//bootstrap breakpoints finishes here
+
+=widescreen-only
+    @media screen and (min-width: $col-large) and (max-width: $col-xlarge - 1)
+        @content
+
+=hd
+    @media screen and (min-width: $col-xlarge)
+        @content
+
+=hd-only
+    @media screen and (min-width: $col-xlarge) and (max-width: $col-xxlarge - 1)
+        @content
+
+=fullhd
+    @media screen and (min-width: $col-xxlarge)
+        @content

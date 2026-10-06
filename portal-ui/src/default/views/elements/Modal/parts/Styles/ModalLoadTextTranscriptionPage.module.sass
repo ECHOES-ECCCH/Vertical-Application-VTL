@@ -1,0 +1,60 @@
+@import "@Styles/_breakpoints.sass"
+    
+p.modal-loadtext--body 
+    font-size: 1rem
+
+
+.modal-loadtext
+    &--footer
+        margin-top: 20px
+        width: 100%
+        display: flex
+        justify-content: right
+        gap: 30px
+
+        +touch
+            flex-direction: column
+
+    &--button
+        padding: 10px 30px
+
+    &--dropbox
+        font-size: 1rem
+        box-shadow: none
+        background: none
+        border: none
+        border-radius: 0
+        padding: 2px 2px 0px 2px
+        border-bottom: 2px solid #6F6F6F 
+        margin-top: 15px
+        margin-bottom: 60px
+
+        & :global(button.btn)
+            background-color: #ffffff
+            border: none
+            padding-left: 0
+
+		
+    &--inputfile
+        cursor: pointer
+        font-size: 1rem
+        padding: 10px 30px
+        border: 0
+        box-shadow: 0 0 0 2px #005ca9
+        background: #005CA9
+        color: #ffffff
+        border-radius: 0
+        line-height: 1.5
+
+        &:hover
+            background: #ffffff
+            color: #005CA9
+            box-shadow: 0 0 0 2px #005CA9
+            border-color: #005CA9
+        
+
+    &--dropbox-container
+        margin-top: 40px
+        
+        & :global(label)
+            font-size: 1rem

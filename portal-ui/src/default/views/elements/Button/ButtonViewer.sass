@@ -1,0 +1,401 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/viewer/_viewer-colors.sass"
+
+.btn
+    &-override
+        vertical-align: inherit
+        border: 0
+        line-height: inherit
+        border-radius: 0
+        font-weight: inherit
+        text-align: inherit
+
+    &-primary
+        &.viewer-header__menu-button
+            background-color: $viewerColorPrimary500
+            box-shadow: 0 0 0 2px $viewerColorPrimary500
+            border-color: $viewerColorPrimary500
+
+        &.verse
+            box-shadow: 0 0 0 2px $viewerColorPrimary500
+            &:hover, &:focus
+                box-shadow: 0 0 0 2px $viewerColorPrimary500
+
+        &.verse-annotation
+            box-shadow: 0 0 0 2px $viewerColorAnnotation100
+            &:hover, &:focus
+                box-shadow: 0 0 0 2px $viewerColorAnnotation100
+
+    &-primary, &-third
+        &.verse
+            margin: 0
+            padding: 0
+            border-radius: 0
+            height: 100%
+            border: 0
+
+    &-primary.verse
+        width: 40px
+
+    &-third.verse
+        width: 36px
+
+    &-verse-block-options
+        padding: 0
+        margin: 0
+        color: white
+        font-size: 1.5rem
+        border-color: transparent
+
+        &:hover, &:focus
+            color: white
+            background: transparent
+            border-radius: 2px
+
+        &::after
+            display: none
+
+        &[disabled]
+            opacity: 1
+            pointer-events: none
+
+        i
+            display: flex
+
+    &-verse-status-options
+        padding: 0
+        margin: 0
+        color: white
+        font-size: 1.5rem
+        border-color: transparent
+
+        &:hover, &:focus
+            color: white
+            background: transparent
+            border-radius: 2px
+
+        &::after
+            display: none
+
+        &[disabled]
+            opacity: 1
+            pointer-events: none
+
+    &-verseinfo
+        padding: 0
+        margin: 0
+        color: white
+        width: 26px
+        border-color: transparent
+
+        &:hover, &:focus
+            color: white
+            border-radius: 2px
+
+        &::after
+            display: none
+
+        &[disabled]
+            opacity: 1
+            pointer-events: none
+
+    &-verse
+        padding: 0
+        margin: 0
+        width: 100%
+        display: flex
+        border-radius: 0px
+        align-items: center
+
+        &:hover, &:focus
+            box-shadow: 0 0 0 1px #1C7CD5
+
+        &.active
+            & + button
+                display: flex
+
+    &-verse-edit
+        padding: 0
+        margin: 0
+        display: none
+        background: #0E60CB
+        color: white
+        border-radius: 0
+        position: absolute
+        right: 0
+        top: 0
+
+        border: 0
+        width: 40px
+        height: 100%
+
+        align-items: center
+        justify-content: center
+
+        i
+            font-size: 1.2rem
+
+        &:hover
+            color: white
+            background: #1C7CD5
+
+    &-verse-music-add
+        padding: 0px 10px
+        margin: 0
+        display: none
+        background: $viewerColorMusic
+        color: white
+        border-radius: 0
+        position: absolute
+        right: 0
+        top: 0
+
+        border: 0
+        height: 100%
+
+        align-items: center
+        justify-content: center
+
+        font-size: 0.875rem
+
+        &:hover, &:focus
+            color: white
+            background: $viewerColorMusic
+
+    &-verse-music-remove
+        padding: 0px 10px
+        margin: 0
+        display: none
+        background: $viewerColorMusic
+        color: white
+        border-radius: 0
+        position: absolute
+        right: 100px
+        top: 0
+
+        border: 0
+        height: 100%
+        width: 100px
+
+        align-items: center
+        justify-content: center
+
+        font-size: 0.875rem
+
+        &:hover, &:focus
+            color: white
+            background: $viewerColorMusic
+
+    &-verse-music-download
+        padding: 0px 10px
+        margin: 0
+        display: none
+        background: $viewerColorMusic
+        color: white
+        border-radius: 0
+        position: absolute
+        right: 0px
+        top: 0
+
+        border: 0
+        height: 100%
+        width: 100px
+
+        align-items: center
+        justify-content: center
+
+        font-size: 0.875rem
+
+        &:hover, &:focus
+            color: white
+            background: $viewerColorMusic
+
+    &-verse-content
+        padding: 0
+        margin: 0
+        display: flex
+        align-items: center
+
+        width: 100%
+        height: auto
+        line-height: inherit
+        color: white
+        font-size: 0.875rem
+        border: 0
+        position: relative
+
+        &:hover, &:focus
+            color: white
+
+    &-verse-content
+        padding: 0
+        margin: 0
+        display: flex
+        align-items: center
+
+        width: 100%
+        height: auto
+        line-height: inherit
+        color: white
+        font-size: 0.875rem
+        border: 0
+        position: relative
+
+        &:hover, &:focus
+            color: white
+
+    &-viewer-full
+        @extend .btn-override
+        color: #DDDDDD
+        font-size: 0.875rem
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        line-height: 1.0
+        padding: 2px
+
+        &:hover, &:focus, &:active
+            color: $viewerColorWhite
+
+        &:hover, &:focus
+            background: #1A73E8
+
+        &:active
+            background: #0E60CB
+
+    &-viewer-title
+        @extend .btn-override
+        overflow-y: hidden
+        padding: 0 15px
+        height: 35px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #1E2026
+        color: $viewerColorGrey100
+        font-size: 0.6875rem
+        flex: 1
+        +widescreen
+            font-size: 1rem
+            flex: 0 0 285px
+            background-color: transparent !important
+            justify-content: flex-start
+            padding-left: 15px
+
+        &:hover, &:focus, &:active
+            color: $viewerColorWhite
+
+        &:hover, &:focus
+            background: #1A73E8
+
+        &:active
+            background: #0E60CB
+
+    &-viewer-button-category
+        @extend .btn-override
+        height: 36px
+        width: 36px
+        border-radius: 4px
+        background: transparent
+        border: none
+        color: #DDDDDD
+        overflow: visible
+        padding: 0px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 1.35rem
+        margin: 0 3px
+        position: relative
+        outline: 0
+
+        &:hover,
+        &:active,
+        &:focus
+            background: transparent
+            color: #DDDDDD
+
+        &:focus
+            border: #005CA9 solid 3px
+
+            .expand-category
+                top: -1px
+                left: -21px
+
+        .expand-category
+            position: absolute
+            top: 2px
+            left: -18px
+            font-size: 1.35rem
+
+    &-viewer-button
+        @extend .btn-override
+        height: 36px
+        width: 36px
+        border-radius: 4px
+        background-color: $viewerColorGrey800
+        border: solid 1px #595959
+        color: #F2F2F3
+        overflow: hidden
+        padding: 0px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 1.35rem
+        margin: 0 3px
+        position: relative
+        outline: 0
+        box-shadow: 0px 4px 4px 0px #00000040
+
+        &--active
+            @extend .btn-viewer-button
+            background: #1E2026
+
+            &:hover
+                background: #1E2026
+                text-decoration: none
+                box-shadow: none
+
+        &:hover
+            background: #1E2026
+            text-decoration: none
+
+        &:focus, &:hover
+            box-shadow: none
+            outline: 0
+
+        &[disabled]
+            color: #959595
+            pointer-events: none
+
+        +touch-sec
+            font-size: 0.6875rem
+
+        &::after
+            position: absolute
+            right: 3px
+            bottom: 1px
+            transform: rotate(45deg)
+            opacity: 0.8
+
+    &-viewer-editSelection
+        font-size: 0.75rem
+        background: #1A73E8
+        color: $viewerColorWhite
+        padding: 0 5px 3px 5px
+
+        i
+            font-size: 1.2rem
+            position: relative
+            top: 2px
+
+        &:hover, &:focus
+            background: #0E60CB
+            color: $viewerColorWhite
+
+        &:disabled
+            pointer-events: none
+            background: #535353
+            color: $viewerColorWhite
+            border-color: #535353

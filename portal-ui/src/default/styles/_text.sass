@@ -1,0 +1,163 @@
+.text
+    &--override
+        margin: 0
+        padding: 0
+
+    &--title
+        @extend .text--override
+        font-weight: bold
+        font-size: 1.75rem
+
+    &--header
+        @extend .text--override
+        font-size: 1.25rem
+        font-weight: bold
+
+        &--smaller
+            font-size: 1.125rem
+
+    &--heading
+        @extend .text--override
+        font-size: 1rem
+        font-weight: bold
+
+    &--body
+        font-size: 1rem
+        line-height: 1.625rem
+
+    &__link
+        letter-spacing: 1px
+        font-weight: 500
+
+        font-size: 1.125rem
+        line-height: 1.75rem
+        +desktop
+            font-size: 1.25rem
+            line-height: 1.5rem
+
+    &--heading-main
+        font-size: 1.75rem
+        line-height: 3.375rem
+
+    &__heading--home
+        @extend .text--heading-main
+        font-weight: 500
+        margin: 0
+
+    &--heading-sub
+        font-size: 1.5625rem
+        line-height: 2.1875rem
+
+    &--small
+        font-size: 0.93rem
+    
+    &--gray
+        color: #666666
+
+    &--level
+        &-title
+            @extend .text--override
+            color: #6E6E6E
+            font-size: 0.875rem
+            text-transform: uppercase
+            font-weight: 700
+            margin-bottom: 5px
+
+        &-desc
+            color: #707070
+            font-size: 0.875rem
+            line-height: 1.5rem
+
+
+
+.paragraph
+    &__mb
+        &--35
+            margin-bottom: 35px
+
+
+.text
+    &--heading-big
+        font-size: 3rem
+        line-height: 3.5rem
+
+        +tablet
+            font-size: 5rem
+            line-height: 5.5rem
+
+        +desktop
+            font-size: 7rem
+            line-height: 8.5rem
+
+    &--heading-main
+        font-size: 1.75rem
+        line-height: 3.375rem
+
+    &--heading-sub
+        font-size: 1.5625rem
+        line-height: 2.1875rem
+
+    &--title
+        font-size: 1.125rem
+        line-height: 1.75rem
+
+        +desktop
+            font-size: 1.25rem
+            line-height: 2.25rem
+
+    &--description
+        font-size: 1rem
+        line-height: 1.625rem
+
+        +desktop
+            font-size: 1.125rem
+            line-height: 1.75rem
+
+    &--body
+        font-size: 1rem
+        line-height: 1.625rem
+
+
+    &--color-blue
+        color: #005CA9
+
+    &--color-black
+        color: #000000
+
+    &--color-anthracit
+        color: #6F6F6F
+
+    &--color-grey
+        color: #c0c0c0
+
+    &--color-white
+        color: #ffffff
+
+
+
+    &--primary-font
+        font-family: 'Readex Pro', sans-serif
+
+    &--secondary-font
+        font-family: 'Roboto', sans-serif
+
+
+
+
+    &__link
+        letter-spacing: 1px
+        font-weight: 500
+
+        font-size: 1.125rem
+        line-height: 1.75rem
+        +desktop
+            font-size: 1.25rem
+            line-height: 1.5rem
+
+
+    &__heading--home
+        @extend .text--heading-main
+        font-weight: 500
+        margin: 0
+
+

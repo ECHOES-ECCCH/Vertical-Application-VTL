@@ -1,0 +1,47 @@
+# build
+FROM node:14.18.3-alpine as build
+
+WORKDIR /usr/src/app
+
+COPY package.json /usr/src/app/package.json
+ENV PATH /usr/src/app/node_modules/.bin:${PATH}
+
+
+COPY craco.config.js ./craco.config.js
+COPY jsconfig.json ./jsconfig.json
+COPY src ./src
+COPY public ./public
+#COPY .env.docker .env.docker
+
+RUN apk update && apk add --no-cache git && \
+ echo "{"  > /tmp/buildinfo.json && \
+ echo "\"commitId\":\"$(git rev-parse --short HEAD)\""  >> /tmp/buildinfo.json && \
+ echo ","  >> /tmp/buildinfo.json && \
+ echo "\"buildDate\":\"$(date +%s)\""  >> /tmp/buildinfo.json && \
+ echo "}"  >> /tmp/buildinfo.json 
+
+RUN npm install --force --silent
+RUN npm install npm@7.24.2 -g
+#RUN npm audit fix
+RUN npm run build
+
+# serve
+FROM nginx:1.19.0-alpine
+
+ENV TZ=Europe/Warsaw
+
+#needed for audit scripts
+RUN apk add dmidecode ipmitool nfs-utils procps sysstat samba bash
+COPY --from=build /usr/src/app/build /usr/share/nginx/html
+COPY --from=build /tmp/buildinfo.json /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+RUN rm /usr/share/nginx/html/config/config.json && \
+    mv /usr/share/nginx/html/config/dev_config.json /usr/share/nginx/html/config/config.json 
+RUN chgrp -R 0 / 2> /dev/null || true && \
+    chmod -R g=u / 2> /dev/null || true
+
+
+EXPOSE 8080
+
+CMD ["nginx", "-g", "daemon off;"]

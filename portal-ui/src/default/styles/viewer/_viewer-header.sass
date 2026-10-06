@@ -1,0 +1,365 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/_mixins.sass"
+@import "@Styles/viewer/_viewer-colors.sass"
+@import "@Styles/_colors.sass"
+
+.viewer-header
+    &__main
+        background: $viewerColorBlack
+        color: $viewerColorWhite
+        display: flex
+        align-items: center
+        height: 50px
+
+        &--mobile-close
+            background-color: $viewerColorPrimary500
+
+    &__title
+        flex: 1
+        padding: 0 20px
+        min-width: 0
+
+        +touch-sec
+            padding: 0 13px
+
+    &__prev-page, &__next-page
+        margin: 10px
+        font-size: 0.875rem
+
+        span
+            color: $viewerColorGrey100
+            cursor: pointer
+            text-decoration: underline
+            white-space: nowrap
+
+    &__page-number
+        white-space: nowrap
+        input
+            height: 20px
+            width: 32px
+            text-align: center
+            background-color: $viewerColorBlack
+            color: #D5D5D7
+            border-radius: 4px
+            border: solid #D5D5D7 1px
+
+    &__divider
+        border-left: 1px solid $viewerColorGrey700
+        height: 33px
+        margin: 0 7px
+
+    &__div2tooltip
+        display: flex
+        height: 100%
+
+    &__logo
+        position: relative
+        height: 100%
+
+        border-right: solid 1px $viewerColorGrey700
+
+        &--image
+            height: 30px
+
+        &--href
+            padding: 0 18px
+            display: flex
+            align-items: center
+            height: 100%
+            width: 130px
+            transition: background 0.15s
+
+            +touch
+                padding: 0 8px 0 13px
+
+            &:focus, &:hover, &:active
+                img
+                    filter: brightness(0) invert(1)
+
+            &:focus, &:hover
+                background: #1A73E8
+
+            &:active
+                background: #0E60CB
+
+    &__how-to-start
+        +widescreen
+            margin-left: auto
+
+        &-dropdown
+            &__button
+                font-size: 1rem
+                height: auto
+                width: auto
+                border: none
+                padding: 0
+                margin: 0
+                font-weight: 400
+                line-height: 20px
+                color: $colorMidnightBlue300
+                display: flex
+                align-items: center
+
+                &::after
+                    font-family: 'fontello'
+                    content: '\e81a' // chevron-down
+                    color: $colorMidnightBlue300
+                    border: none
+                    font-size: 20px
+                    margin-right: -7px
+
+                &:hover, &:focus:not(:focus-visible)
+                    background-color: transparent
+                    color: $colorWhite
+                    &::after
+                        color: $colorWhite
+
+                &:focus, &:active
+                    background: transparent
+                    color: $colorMidnightBlue300
+                    &::after
+                        color: $colorMidnightBlue300
+
+                &[aria-expanded="true"]
+                    &::after
+                        transform: rotate(180deg)
+
+                +touch
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    width: 100%
+                    height: 38px
+                    font-size: 1rem
+                    background-color: transparent
+                    padding-left: 0
+                    margin-left: 0
+                    color: $colorMidnightBlue500
+                    font-size: 0.875rem
+
+                    &::after
+                        color: $colorMidnightBlue500
+
+                    &:hover, &:focus:not(:focus-visible)
+                        background-color: transparent
+                        color: $colorMidnightBlue700
+                        &::after
+                            color: $colorMidnightBlue700
+
+                    &[aria-expanded="true"]
+                        &::after
+                            transform: rotate(180deg)
+
+                &:focus
+                    outline: none
+
+            &__menu
+                border-radius: 0px 0px 5px 5px
+                box-shadow: 0px 3px 6px 0px #00000029
+                background-color: $colorMidnightBlue700
+                +touch
+                    background-color: $colorWhite
+
+            &__item
+                color: $colorMidnightBlue300 !important
+                padding: 0.5rem 2rem 0.5rem 1rem !important
+                font-size: 0.875rem
+                &:hover
+                    color: $colorBlack !important
+
+                +touch
+                    color: $colorMidnightBlue500 !important
+
+
+    &__info
+        padding: 0 10px
+        margin-left: 12px
+        height: 100%
+        display: flex
+        align-items: center
+        border-left: solid 1px $viewerColorGrey700
+
+        +touch
+            padding: 0 8px
+
+        a
+            border: none !important
+
+    &__close
+        width: 30px
+        height: 30px
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &:hover
+            background: transparent !important
+
+        i
+            color: white
+            font-size: 2rem
+            line-height: 18px
+
+            &:before
+                margin: 0
+                width: auto
+
+    &__mobile-dropdown-menu
+        width: 100vw
+        height: calc(100vh - 100px)
+        bottom: 50px !important
+        transform: unset !important
+        position: fixed !important
+        top: unset !important
+        background-color: $viewerColorBlack !important
+        overflow-y: scroll
+        padding: 0 !important
+
+        .dropdown-item
+            padding: 24px 16px !important
+            font-size: 1rem !important
+            background-color: $viewerColorBlack
+            border-bottom: #4D5561 solid 1px
+
+        &__search-input
+            justify-content: center
+            position: fixed
+            bottom: 0
+            height: 50px
+            background-color: $viewerColorGrey900
+            display: flex
+            width: 100%
+            padding: 5px
+
+    &__dropdown
+        height: 100%
+
+        .dropdown-menu
+            background: $viewerColorGrey800
+            padding: 12px 0px
+            position: relative
+            border-radius: 0
+
+        .dropdown-item
+            color: $viewerColorWhite
+            padding: 5px 22px
+            font-size: 0.875rem
+            display: flex
+            align-items: center
+
+            &:hover, &:focus
+                color: $viewerColorWhite
+                background: #1E2026
+
+                span
+                    background: #1E2026
+
+    &__nav
+        border-top: solid 1px $viewerColorGrey700
+        border-bottom: solid 1px $viewerColorGrey700
+        padding: 5px 0
+        background: $viewerColorGrey900
+        color: $viewerColorGrey100
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 60px
+
+        +touch-sec
+            padding: 7px 0
+
+        &--left, &--right
+            display: flex
+            align-items: center
+
+        &--viewer-layers
+            overflow-x: auto
+            overflow-y: hidden
+            margin-left: 10px
+            margin-right: auto
+
+            &::-webkit-scrollbar
+                height: 7px
+
+            &::-webkit-scrollbar-thumb
+                background: #8e8e8e
+                border-radius: 10px
+
+        &--right
+            padding: 0 9px
+
+            +touch-sec
+                overflow-x: auto
+
+            &::-webkit-scrollbar
+                height: 7px
+
+            &::-webkit-scrollbar-thumb
+                background: #8e8e8e
+                border-radius: 10px
+
+            +desktop
+                padding: 0 11px
+
+    &__menu-button
+        height: 40px
+        padding: 1px 15px
+        margin: 0px 10px
+        background-color: $viewerColorPrimary500
+
+        i
+            margin-right: 3px
+            color: $viewerColorWhite
+
+        span
+            color: $viewerColorWhite
+
+        &::after
+            display: none
+
+    &__button
+        &--auto-transcribe
+            +touch-sec
+                display: none !important
+            i
+                margin-left: -5px
+
+        &--pages
+            i.icon-chevron-double-right
+                margin-right: -5px
+
+            i.icon-chevron-double-left
+                margin-left: -5px
+
+        &--correct-transcription
+            display: flex
+            align-items: center
+            & > div
+                width: 20px
+                position: relative
+                height: 15px
+                i
+                    color: inherit
+
+        &--download
+            &::after
+                display: none
+
+        &--touch
+            margin-left: 3px
+            +touch
+                display: none
+
+    &__text
+        &--title
+            font-size: 1rem
+            margin: 0
+            line-height: 1.5rem
+            color: $viewerColorGrey100
+
+            +text-elipsis
+
+            strong
+                color: #B0B0B0
+                +mobile
+                    display: none

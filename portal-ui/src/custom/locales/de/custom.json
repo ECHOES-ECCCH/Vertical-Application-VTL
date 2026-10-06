@@ -1,0 +1,17 @@
+{
+	"financed": {
+		"text": "ECHOES ist ein von der Europäischen Kommission im Rahmen der Finanzhilfevereinbarung Nr. 101157364 – ECHOES finanziertes Projekt. Finanziert durch UK Research and Innovation (UKRI) im Rahmen der Horizon Europe-Finanzierungsgarantie Nr. 10110142 und Nr. 10110466 der britischen Regierung."
+	},
+	"modals": {
+		"createDigitalTwin": {
+			"title": "Digital Twin erstellen",
+			"bodyHTML": "Dieser Vorgang erstellt ein Digital Twin für das Projekt.<br>Wollen Sie wirklich fortfahren?",
+			"button": "Erstellen"
+		}
+	},
+	"transcription": {
+		"details" : {
+			"createDigitalTwin": "Digital Twin erstellen"
+		}
+	}
+}

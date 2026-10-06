@@ -1,0 +1,165 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/viewer/_viewer-colors.sass"
+
+.layers
+	&__dropdown
+		&__toggle
+			width: 300px
+			background-color: $viewerColorBlack
+			border: 1px solid #B3B6B9
+			border-radius: 5px
+			height: 40px
+			display: flex
+			align-items: center
+			cursor: pointer
+
+			+hd
+				width: 400px
+
+			&:focus,
+			&:focus-within,
+			&:hover,
+			&:active
+				background-color: $viewerColorGrey800
+				border-color: $viewerColorPrimary500
+
+			&--shown
+				border-radius: 5px 5px 0px 0px 
+
+			&--text
+				margin-left: 16px
+				color: $viewerColorGrey100
+				font-size: 1rem
+				pointer-events: none
+				overflow-x: hidden
+				white-space: nowrap
+				text-overflow: ellipsis
+
+			&--icon
+				margin-left: auto
+				margin-right: 8px
+				color: $viewerColorPrimary500
+				font-size: 24px
+				pointer-events: none
+
+		&__menu
+			padding: 0
+			width: 300px
+			color: white
+			border-radius: 0px 0px 5px 5px 
+			background-color: $viewerColorGrey800
+			max-height: 154px
+			overflow-y: scroll
+			top: -2px !important
+			border: none
+
+			+hd
+				width: 400px
+
+			&::-webkit-scrollbar
+				width: 15px
+				background-color: $viewerColorGrey800
+				border-radius: 0px 0px 5px 0px
+				border: solid 5px transparent
+
+			&::-webkit-scrollbar-thumb 
+				border-radius: 10px
+				box-shadow: inset 0 0 10px 10px #D5D5D7
+				border: solid 5px transparent
+
+			&--eye
+				margin-left: auto
+				margin-right: 8px
+				font-size: 20px
+				cursor: pointer
+
+				&-disabled
+					margin-left: auto
+					margin-right: 8px
+					font-size: 20px
+					pointer-events: none
+					color: $viewerColorGrey100
+					opacity: 0.5
+
+			&--list
+				padding: 0
+				margin: 0
+				margin-left: 20px
+				list-style-type: none
+
+				& li 
+					display: flex
+					margin-top: 11px
+					margin-bottom: 11px
+				
+
+	&__container
+		display: flex
+		flex-direction: row
+		align-items: center
+		font-size: 0.9375rem
+		margin: 10px
+
+		&__title
+			padding-right: 10px
+			text-align: right
+			font-size: 0.875rem
+			color: white
+		
+		&__wrapper
+			display: flex
+			justify-content: space-between
+			white-space: nowrap
+		
+			&--input
+				cursor: pointer
+				margin-right: 5px 
+				
+			&--label
+				margin-right: auto
+				margin-bottom: 0
+				cursor: pointer 
+
+			&--hide-btn
+				font-size: 0.9375rem
+				background-color: transparent
+				border: none
+				cursor: pointer 
+				padding: 0
+				margin-left: 5px
+				margin-right: 15px
+				padding-bottom: 0.2rem
+				color: #B0B0B0
+				text-decoration: underline
+				box-shadow: none !important
+
+				&:focus, &:active, &:hover
+					border: none
+					color: #B0B0B0 !important
+					background-color: transparent !important
+
+				&:disabled
+					background-color: transparent
+					text-decoration: none
+
+			&--show-single-layer
+				background-color: transparent
+				border: none
+				cursor: pointer 
+				padding: 0
+				padding-left: 5px
+				padding-right: 15px
+				padding-bottom: 0.2rem
+				color: #7C7C7C
+				text-decoration: none !important
+				box-shadow: none !important
+
+				&:focus, &:active, &:hover
+					border: none
+					color: $viewerColorWhite
+					background-color: transparent
+
+				&:disabled
+					color: $viewerColorWhite
+					background-color: transparent 
+					opacity: 1

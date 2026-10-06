@@ -1,0 +1,392 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/viewer/_viewer-colors.sass"
+
+.modal
+    background: rgba(241,241,241,1.0)    
+
+    &-dialog
+        margin: 0 auto
+        padding: 0 
+        max-width: 775px
+        width: 100%
+
+    &-backdrop
+
+        &.show
+            display: none
+
+    &-title
+        font-size: 1.25rem
+
+    &-content
+        box-shadow: 2px 2px 12px black
+        max-width: calc(100% - 30px)
+        margin: auto
+        background: #ffffff
+        color: #373A3C
+        font-size: 0.9375rem
+        line-height: 1.75rem
+        border-color: #D5D5D5
+        border-radius: 0
+        padding: 40px 40px
+        border: none
+
+    &-header
+        background: none
+        padding: 4px 12px
+        border-bottom: 0
+        margin: 1px
+        border-radius: 0
+
+        .close
+            color: #005CA9
+            opacity: 1
+            text-shadow: none
+            box-shadow: none
+
+            &:hover
+                background-color: transparent !important
+
+    &-footer
+        border-top: 0
+
+        +tablet
+            padding-top: 7px
+
+            .btn-primary
+                min-width: 190px
+
+    &-body
+        padding: 12px
+
+        p
+            margin: 0
+
+            &:not(:last-child)
+                margin-bottom: 28px
+
+    &__button
+        &--submit
+            padding: 10px 30px
+
+        &--cancel
+            margin-right: 15px
+            padding: 10px 30px
+
+        &--addcomment
+            font-size: 1rem
+
+        &--option
+            margin-right: 15px
+            margin-bottom: 15px
+
+    &__contact
+        margin: 20px 90px 30px
+
+    &__index
+        &--title
+            display: flex
+            justify-content: space-between
+            align-items: baseline
+
+        &--divider
+            margin-bottom: 0px
+            border-color: #575454
+
+        &__typeahead
+            border-radius: 0
+            background-color: #666666
+
+            &--choose-label
+                margin-bottom: 0 !important
+                padding-left: 20px
+                opacity: 0.6
+                color: #ffffff
+
+            &__item
+                &--label
+                    color: #ffffff
+                &--count
+                    color: #ffffff
+                    opacity: 0.6
+
+                &:hover, &:focus
+                    background-color: #1E2026
+                    
+                    
+
+
+        &__content
+            &__item
+                display: flex
+                justify-content: space-between
+                margin-bottom: 5px
+
+                &:last-child
+                    margin-bottom: 20px
+            &__actions
+                display: flex
+                justify-content: flex-end
+                &--edit
+                    margin-right: 10px
+        &--title
+            display: flex
+            justify-content: space-between
+            align-items: baseline
+
+        &--addbox
+            margin: 30px 0 0
+
+        &--buttons
+            display: flex
+            justify-content: flex-end
+            position: relative
+
+        &--limit
+            position: absolute
+            top: -15px
+            left: 0
+            font-size: 0.9rem
+            color: #A0A0A0
+
+        &--list
+            margin: 30px -35px 0 0
+            padding-right: 35px
+            max-height: 300px
+            overflow-y: auto
+
+        &--item
+            border-top: 1px solid #575454
+            margin: 0 0 10px
+            padding: 5px 0 0
+            line-height: 1.75rem
+
+        &--upper
+            color: #A0A0A0
+            display: flex
+            justify-content: flex-end
+
+        &--lower
+            word-wrap: break-word
+
+        &--email
+            margin-left: 10px
+
+        &--delete
+            margin-left: 10px
+
+        &--id
+            margin-left: 10px
+
+    &__comment
+        &--title
+            display: flex
+            justify-content: space-between
+            align-items: baseline
+
+        &--addbox
+            margin: 30px 0 0
+
+        &--buttons
+            display: flex
+            justify-content: flex-end
+            position: relative
+
+        &--limit
+            position: absolute
+            top: -15px
+            left: 0
+            font-size: 0.9rem
+            color: #A0A0A0
+
+        &--list
+            margin: 30px -35px 0 0
+            padding-right: 35px
+            max-height: 300px
+            overflow-y: auto
+
+        &--item
+            border-top: 1px solid #575454
+            margin: 0 0 10px
+            padding: 5px 0 0
+            line-height: 1.75rem
+
+        &--upper
+            color: #A0A0A0
+            display: flex
+            justify-content: flex-end
+
+        &--lower
+            word-wrap: break-word
+
+        &--email
+            margin-left: 10px
+
+        &--delete
+            margin-left: 10px
+
+        &--id
+            margin-left: 10px
+
+    &__text
+        &--comment-title
+            font-weight: bold
+            font-size: 1rem
+
+    &__alert 
+        border: 1px solid black
+        border-radius: 5px
+        padding: 15px
+        color: #161615
+        background-color: #EAF1F5
+        border-color: #B5D3ED
+
+    &-logo
+        filter: brightness(0)
+        display: flex
+        align-self: flex-start
+        margin: 20px 0 50px
+        height: 60px
+
+
+    &-viewer
+        background: rgba(0,0,0,0.75)
+        
+        .modal-header
+            .close
+                color: #ffffff
+
+        .modal-dialog
+            max-width: 585px
+            width: 100%
+
+        .modal-content
+            background: $viewerColorGrey900
+            color: #FFFFFF
+
+        .modal__index__content__item
+            margin-top: 10px
+            margin-bottom: 5px
+
+            &--value-name
+                color: #c0c0c0
+
+            &--value-value
+                color: #ffffff
+
+                a, a:hover, a:focus
+                    text-decoration: underline
+                    color: #ffffff
+
+        &__select
+            background: #424242
+            color: #DDDDDD
+            display: inline-block
+            border-color: #656565
+            font-size: inherit
+            width: auto
+            cursor: pointer
+
+            &:hover, &:focus
+                background: #424242
+                color: #DDDDDD
+
+            option
+                background: #424242
+                color: #dddddd
+
+                &[data-default]
+                    display: none
+
+        &__button
+            &--cancel
+                margin-right: 15px
+                
+
+        .btn-link
+            color: #ffffff !important
+
+            &:hover
+                background-color: #aaaaaa
+
+        textarea
+            resize: none
+            border-radius: 0
+            border-top: none
+            border-left: none
+            border-right: none
+
+            &:focus, &:hover
+                border-bottom: 2px solid #008af9
+                background-color: #666666
+
+        .form-control
+            background-color: $viewerColorGrey900
+            color: #FFFFFF
+            display: inline-block
+            border-color: #656565
+            font-size: inherit
+            margin-bottom: 10px
+            border-left: none
+            border-top: none
+            border-right: none
+            border-radius: 0
+            width: 100%
+            
+            &:focus, &:hover
+                border-bottom: 2px solid #008af9
+                background-color: #666666
+                color: #FFFFFF
+
+    &-index
+        .modal-dialog
+            max-width: 985px
+            width: 100%
+
+    &-comments  
+        .modal-dialog
+            max-width: 985px
+            width: 100%
+
+        .form-row
+            height: 75px
+
+        textarea
+            background: #DDDDDD
+            resize: none
+            border-radius: 0
+
+    &-download
+        .modal-dialog
+            max-width: 985px
+            width: 100%
+
+    &-spinner
+        &__loading
+            +loader(#656565)
+
+    &__resources
+        &--list
+            border: 1px solid #D5D5D5
+            overflow-y: auto
+            list-style: none
+            margin: 15px 0 0
+            height: 360px
+            padding: 15px 10px 10px 15px
+            border-radius: 4px
+            &-item
+                color: #373A3C
+                font-size: 1rem
+                line-height: 1.75rem
+        &--input
+            border: 1px solid #D5D5D5
+            color: #373A3C
+            font-size: 1.125rem
+            width: 100%
+            border-radius: 4px
+            padding: 7px 15px
+            &::placeholder
+                color: #919598
+                
+
+        

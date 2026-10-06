@@ -1,0 +1,47 @@
+@import "@Styles/_breakpoints.sass"
+
+.modal_container 
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	z-index: 9999
+
+	.inner_modal 
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-wrap: wrap
+		width: 800px
+		height: 316px
+		box-shadow: 0px 3px 6px #00000029
+		border: 1px solid #E5E5E5
+		background-color: #ffffff
+
+		.modal_body 
+			display: flex
+			flex-direction: column
+			justify-content: start
+			align-items: flex-start
+			height: 65%
+			padding: 50px 77px 77px 77px
+
+			h4
+				font-size: 1.25rem
+				margin-bottom: 28px
+	
+		.modal_foot 
+			display: flex
+			justify-content: flex-end
+			align-items: flex-end
+			padding: 0 77px 30px 77px
+			width: 100%
+			button 
+				padding: 12px 50px
+  
+

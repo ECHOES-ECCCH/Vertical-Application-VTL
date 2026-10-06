@@ -1,0 +1,18 @@
+@import "@Styles/_breakpoints.sass"
+    
+p.modal-download--body 
+    font-size: 1rem
+
+
+.modal-download
+    &--footer
+        margin-top: 20px
+        width: 100%
+        display: flex
+        gap: 25px
+
+        +touch
+            flex-direction: column
+
+        & :global(.btn-primary)
+            min-width: 148px

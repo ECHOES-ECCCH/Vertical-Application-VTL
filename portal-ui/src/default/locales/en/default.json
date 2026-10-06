@@ -1,0 +1,1743 @@
+﻿﻿{
+  "headers": {
+    "logoAlt": "Logo",
+    "title": "Virtual Transcription Laboratory",
+    "description": "Virtual Transcription Laboratory is a tool that allows you to create digital text based on scans. The results can be used to prepare a digital object in standards such as: hOCR, TEI, PDF, eBook. The tool allows the transcription of objects imported from Digital Libraries, also using the IIIF standard.",
+    "descriptions": {
+      "title": "How do I get started with text?",
+      "item1": " on the VTL website - creating projects is possible only for authorized users.",
+      "item2_1": "Click ",
+      "item2_2": ", to go to the form where you are obliged to complete the project information and source files.",
+      "item3": "Define a text layer and specify whether it will be for transcription, transliteration, or translation.",
+      "item4": "Add source files from your device or import them from an online publication.",
+      "item5": "Build a team by adding project participants in the Contributors tab.",
+      "item6": "Get started with text, moderate changes, and share results with other members of the VTL community."
+    },
+    "help": "How to transcribe?",
+    "menu": {
+      "transcriptions": "Transcriptions",
+      "logIn": "Sign in",
+      "createAccount": "Create account",
+      "myAccount": "My account",
+      "myProfile": "My profile",
+      "logOut": "Log out",
+      "myAccountMenu": {
+        "general": "General",
+        "myAccount": "My account",
+        "myProfile": "My profile",
+        "historyTexts": "Historical texts recognition",
+        "historyTextsMyProjects": "My projects",
+        "profile": "Profile",
+        "management": "Management",
+        "myProjects": "My projects",
+        "serviceManagement": "Service management",
+        "usersManagement": "User management"
+      },
+      "projects": "Projects",
+      "myProjects": "My projects",
+      "allProjects": "All projects",
+      "newProject": "Create project"
+    },
+    "informations": "Information",
+    "informationsMenu": {
+      "contactInfo": "Info",
+      "contact": "Contact",
+      "helpersInfo": "Additional information",
+      "howTo": "How to use the service?",
+      "pageMap": "Page map",
+      "privacyInfo": "Legal info",
+      "privacy": "Privace policy",
+      "availability": "Accessibility statement",
+      "terms": "Regulations"
+    }
+  },
+  "footer": {
+    "links": {
+      "privacyPolicy": "Privacy policy",
+      "contact": "Contact"
+    },
+    "rights": {
+      "copyright": "Copyright",
+      "client": "Virtual Transcription Laboratory",
+      "createdBy": "was created by ",
+      "pcss": {
+        "title": "PSNC",
+        "url": "https://www.man.poznan.pl/online/en/"
+      }
+    }
+  },
+  "financed": {
+    "text": "[Project financing information]"
+  },
+  "form": {
+    "cancel": "Cancel",
+    "change": "Change",
+    "email": "E-mail",
+    "password": "Password",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "repeatedNewPassword": "Repeat new password",
+    "repeatedPassword": "Repeat password",
+    "rememberMe": "Remember me",
+    "forgotPass": "Forgot password",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "createNewTranscription": "Create new transcription",
+    "createImportedTranscription": "Confirm project import",
+    "saveTranscription": "Save transcription",
+    "publishTranscription": "Publish transcription",
+    "passwordTip": "When setting a password, remember that the correct password should contain: uppercase letter, lowercase letter, number or special character and consist of min. 8 characters",
+    "delete": "Delete",
+    "inputFile": {
+      "selectFile": "Select file",
+      "selectFiles": "Select files",
+      "changeFile": "Change file",
+      "sendFile": "Send file",
+      "selectedFile": "Selected file",
+      "startSendingFile": "Start upload"
+    },
+    "messages": {
+      "invalidEmail": "Incorrect e-mail address",
+      "correctEmail": "Correct e-mail address",
+      "emptyEmail": "Email field can't be empty",
+      "invalidUrl": "Incorrect file URL",
+      "emptyUrl": "URL field cannot be empty",
+      "duplicateEmail": "This e-mail address already exists, please enter another one or select option remind password",
+      "emailNotExists": "This email address does not appear in our database. Check the correctness of this address.",
+      "emailExistsInGroup": "This user is already a member of this group.",
+      "incorrectPassword": "Correct password should contain: uppercase letter, lowercase letter, number or special character and consist of min. 8 characters",
+      "invalidPassword": "Invalid password",
+      "correctPassword": "Correct password",
+      "fillPassword": "Password field can't be empty",
+      "fillField": "This field cannot be empty",
+      "privatePolicy": "You must accept the privacy policy",
+      "confirmPassword": "Passwords must match",
+      "nonExistingEmail": "Email address not found",
+      "error": "Error occured",
+      "notAcceptedRegulations": "You have to accept the regulations",
+      "passwordChangeFailure": "Password change failed",
+      "differentPasswords": "Passwords should match",
+      "requiredField": "This field is required",
+      "wrongFileType": "Wrong file format",
+      "wrongFilesType": "Wrong files format",
+      "wrongFileProvided": "Wrong file provided",
+      "uploadSuccess": "The file has been uploaded correctly.",
+      "uploadFailed": "File not uploaded. Try again.",
+      "fileCouldNotBeAdded": "Selected file could not be added",
+      "transcriptionUserAlreadyExists": "The user already has access to this transcription",
+      "noUserWithGivenEmail": "No user found with the email address provided",
+      "invalidRange": "The range provided is invalid.",
+      "minumumOnetitle": "At least one title is required",
+      "unrecognizablePage": "The following page cannot be recognized",
+      "unrecognizablePages": "The following pages cannot be recognized",
+      "fileTooLarge": "The file you are trying to upload has exceeded the designated 100MB limit. Try shrinking the file and upload it again.",
+      "quotaExceeded": "File not uploaded. You have used the MB limit available for your account. Check the limit on the 'My profile' page.",
+      "quotaTranscriptionExceeded": "File not uploaded. You have used the MB limit available for this project.",
+      "emptySubject": "Subject field cannot be empty",
+      "emptyMessage": "Message field cannot be empty",
+      "downloadFailed": "File download failed.",
+      "filesAlreadyExist": "Files already exist",
+      "fileAlreadyExists": "File already exists",
+      "pagesNotEqual": "Incompatible number of transcription pages with the number of pages in the file.",
+      "minimumOneTag": "At least one tag is required",
+      "requiredProjectName": "Project name is required",
+      "requiredIIIFurl": "IIIF url is required",
+      "requiredReleaseDate": "Release date is required",
+      "requiredDescription": "Project description is required",
+      "requiredKeywords": "Keywords are required",
+      "requiredDocumentSrc": "Source document info is required",
+      "requiredDocumentOrigin": "Source documents origin is required",
+      "requiredSourceFileTypes": "Source document type is required",
+      "fileCannotBeProcessed": "File cannot be processed",
+      "requiredInfo": "*required field",
+      "malformedURL": "Given URL is not valid",
+      "requiredPageRange": "Page range is required",
+      "invalidPageRange": "Given page range is invalid",
+      "linkLess": "Given source does not contain files."
+    },
+    "importSelect": {
+      "title": "Choose how to add new image files",
+      "importIIIF": "IIIF url address",
+      "importLocal": "Local graphic files"
+    },
+    "inputIIIF": {
+      "label": "Enter url address to IIIF source",
+      "placeholder": "Url address to IIIF source"
+    },
+    "requiredInfo": "*field is mandatory",
+    "save": "save changes"
+  },
+  "auth": {
+    "confirmBox": {
+      "title": "Log in or register",
+      "message": "This feature is only available to logged users. Create an account or log in to get the most out of VTL.",
+      "register": "Create an account"
+    },
+    "login": {
+      "title": "Login",
+      "alternativeLoginHead": "Alternative login",
+      "alternativeLoginPrivacy": "Privacy policy",
+      "alternativeLoginAvailability": "Accesibility policy",
+      "alternativeLogin": {
+        "uwrad": {
+          "title": "Active Directory"
+        },
+        "pionierid": {
+          "title": "Pionier ID"
+        },
+        "facebook": {
+          "title": "Facebook"
+        },
+        "google": {
+          "title": "Google"
+        }
+      },
+      "isNotValid": "Invalid email or password. Please try again or click \"I forgot my password\" to reset it.",
+      "isValid": "You have logged in correctly. You can now use the website.",
+      "isTokenValid": "Your account has been created.<br>You can now login.",
+      "isTokenNotValid": "The activation link is no longer active. Try to create an account again.",
+      "signOut": "You have been successfully logged out."
+    },
+    "register": {
+      "title": "Sign up",
+      "acceptedRegulations": {
+        "t1": "I have read the ",
+        "link": "Privacy Policy",
+        "t2": " and accept its content."
+      },
+      "info": "After creating the account, a message will be sent to the e-mail address provided with a link to activate the account.",
+      "emailSent": {
+        "head": "Thank you for registering an account",
+        "text": "A message will be sent to the e-mail address containing the activation link for your account in the Virtual Transcription Laboratory.",
+        "info": "Click the link in the e-mail to complete the registration.",
+        "backToHome": "Back to home page"
+      }
+    },
+    "account": {
+      "title": "My profile",
+      "email": "E-mail",
+      "contactEmail": "Contact e-mail",
+      "password": "Password",
+      "changeEmail": "Change e-mail",
+      "changePassword": "Change password",
+      "passwordChange": "Password change",
+      "myGroup": "My groups",
+      "createNewGroup": "Create new group",
+      "groupAdministrator": "Groups in which I am an administrator",
+      "groupEdit": "Edit",
+      "groupRest": "Other groups I belong to",
+      "groupCreator": "Creator",
+      "groupBlank": "You are not currently assigned to any groups.",
+      "function": "Function",
+      "manageSSOAccount": "Manage the SSO account",
+      "manageSSOAccountLink": "Go to the SSO system",
+      "manageSSOAccountLinkTooltip": "Changes in account properties will be visible after logging in again.",
+      "adminConsole": "Admin console",
+      "passwordChangeAlert": "Password has been changed",
+      "diskSpace": "Disk space",
+      "increase": "Ask for increase",
+      "mb": "MB"
+    },
+    "remind": {
+      "title": "Forgot my password",
+      "instruction": "To set a new password, enter your e-mail address. A message will be sent to the provided address containing the activation link to change the password. Click this link and set a new password.",
+      "send": "Send",
+      "cancel": "Cancel",
+      "emailSent": "An activation link has been sent to the e-mail address provided.",
+      "error": "Password change failed",
+      "changeMessage": "Password change message",
+      "changedDescription": "A message will be sent to the e-mail address provided in the form containing an activation link authorizing the user to change the password.",
+      "backToHome": "Back to home page"
+    },
+    "passwordChange": {
+      "title": "Password change",
+      "warning": "All fields are required",
+      "instruction": "The correct password should contain: uppercase letter, lowercase letter, number or special character and consist of min. 8 characters",
+      "newPassword": "New password",
+      "repeat": "Repeat new password",
+      "error": "Cannot change password",
+      "success": "The password has been successfully changed. You can login now."
+    },
+    "deleteUser": {
+      "success": "Your user account has been successfully deleted."
+    }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Admin console",
+      "description": "Management of users of the Virtual Transcription Laboratory",
+      "listDescription": "Virtual Transcription Laboratory user list",
+      "projects": "Projects",
+      "project": "Project",
+      "users": "Users",
+      "status": "Status",
+      "active": "Active",
+      "disabled": "Disabled",
+      "superadministrator": "Superadministrator",
+      "transcriptions": "Transcriptions",
+      "searchPlaceholder": "Search for user",
+      "searchTranscriptionPlaceholder": "Search for transcripts",
+      "noMatch": "No users matching search criteria",
+      "limit": "Limit:",
+      "used": "Used: ",
+      "usedHeader": "Used",
+      "transcriptionsLink": "Link to user projects",
+      "changeLimit": "Change limit",
+      "no": "No",
+      "email": "E-mail address",
+      "userProjects": "User projects",
+      "userLimits": "Per user limit",
+      "projectLimits": "Per project limit",
+      "descriptionUser": "Manage the file size limits that are granted to the user by default. You can set limits per project or per user.",
+      "descriptionProject": "Manage the file size limits that are assigned to projects and users by default.",
+      "searchUsersPlaceholder": "Enter the user's email address"
+    },
+    "userTranscriptions": {
+      "description": "Managing VTL user objects ",
+      "descriptionComment": "(User objects can be managed only by a user with Super Administrator role).",
+      "listDescription": "Transcription list of user ",
+      "noTranscriptions": "No results matching the query",
+      "open": "Open",
+      "delete": "Delete",
+      "no": "No",
+      "projectName": "Project name",
+      "members": "Participants",
+      "none": "none",
+      "searchForProject": "Search for a project"
+    }
+  },
+  "group": {
+    "headerGroup": "Group",
+    "headerGroupCreateNewOne": "Create new group",
+    "deleteGroup": "Remove group",
+    "groupName": "Group name:",
+    "groupNameInputPlaceholder": "Enter group name",
+    "groupNameExists": "The group of given name already exists.",
+    "groupUserRole": "Role:",
+    "groupUserEmail": "E-mail:",
+    "removeUser": "Remove",
+    "addUserHead": "Add user",
+    "addUserText": "Enter e-mail of user, You want to give access to the object",
+    "addButton": "Add group",
+    "addToButton": "Add to group",
+    "addUserPlaceholder": "kowalski@poczta.pl"
+  },
+  "roles": {
+    "admin": "Admin",
+    "transcribent": "Transcribent",
+    "verifier": "Verifier",
+    "third": "Third",
+    "changeEmail": "Change e-mail",
+    "changePassword": "Change password",
+    "passwordChange": "Password change",
+    "myGroup": "My groups",
+    "createNewGroup": "Create new group",
+    "groupAdministrator": "Groups in which I am an administrator",
+    "groupEdit": "Edit",
+    "groupRest": "Other groups I belong to",
+    "groupCreator": "Creator",
+    "groupBlank": "You are not currently assigned to any groups.",
+    "function": "Function",
+    "adminConsole": "Admin console",
+    "passwordChangeInfo": "After creating the account, a message will be sent to the e-mail address provided with a link to activate the account.",
+    "passwordChangeAlert": "Password has been changed"
+  },
+  "actorRoles": {
+    "author": "Author",
+    "editor": "Editor",
+    "translator": "Translator",
+    "copyist": "Copyist",
+    "publisher": "Publisher",
+    "contributor": "Contributor"
+  },
+  "languages": {
+    "pol": "Polish",
+    "eng": "English",
+    "deu": "German",
+    "fra": "French",
+    "lat": "Latvian",
+    "rus": "Russian"
+  },
+  "types": {
+    "print": "Print",
+    "manuscript": "Manuscript"
+  },
+  "transcriptions": {
+    "header": {
+      "title": "Transcriptions",
+      "titleMy": "My transcriptions",
+      "descr": "List of transcribed digital objects shared by VTL users",
+      "login": "Log in to see all ",
+      "myTranscriptionsLink": "My transcriptions",
+      "searchResultsText": "Search results for: ",
+      "createNew": "Create new transcription"
+    },
+    "scope": {
+      "select": "Show:",
+      "myAll": "all projects",
+      "creatorOnly": "created by me",
+      "memberOnly": "available to me",
+      "publicAndPrivate": "public and private",
+      "publicOnly": "public only",
+      "privateOnly": "private only"
+    },
+    "search": {
+      "placeholder": "Search in transcribed objects",
+      "searchingPhrase": "Searching phrase: ",
+      "searchBt": "Search",
+      "noTranscriptionsFound": "There are no transcripts matching provided search criteria.",
+      "description": "Check the spelling of the phrase you typed, or try typing the search phrase in a different way.",
+      "userHasNoTranscriptions": "You have no transcriptions yet.",
+      "userHasNoTranscriptionsCreator": "You do not have any created projects yet.",
+      "userHasNoTranscriptionsMember": "You do not have any available projects yet."
+    },
+    "sort": {
+      "sortBy": "Sort by: ",
+      "publicationDate": "publication date",
+      "editionDate": "date of editing",
+      "sortTitles": "title A-Z",
+      "hitCount": "hit count",
+      "advancement": "advancement"
+    },
+    "paging": {
+      "title": "Projects per page:"
+    },
+    "item": {
+      "transcriptionAdvancementFull": "Transcription advancement",
+      "transcriptionAdvancementShort": "Advancement",
+      "name": "Name: ",
+      "fullOCR": "100% OCR",
+      "noMatches": "No matches in text",
+      "foundMatches": "Found matches",
+      "matchesInText": "Matches in text",
+      "expandMatches": "Expand",
+      "foldMatches": "Collapse",
+      "on": "on",
+      "page": "one page",
+      "pages": "pages",
+      "pageNo": "Page ",
+      "show": "Show",
+      "work": "Work upon text"
+    },
+    "dropdown": {
+      "btn": "Actions",
+      "transcribe": "Transcribe",
+      "loadText": "Upload text",
+      "download": "Export text layers",
+      "hocrDownload": "Download hOCR",
+      "textDownload": "Download text",
+      "teiDownload": "Download TEI with coordinates",
+      "markAsEmpty": "Mark page as blank",
+      "deletePage": "Delete page"
+    },
+    "description": {
+      "title": "Title: ",
+      "author": "Author: ",
+      "lastEdited": "Last edited: ",
+      "files": "Pages in project: ",
+      "transcriptionAdvance": "Transcription advancement: ",
+      "verificationAdvance": "Verification advancement: ",
+      "showMore": "Show more",
+      "projectAuthor": "Project author: ",
+      "type": "Document type: ",
+      "timePeriod": " | Document time range: ",
+      "releaseDate": "Release date: ",
+      "sourcePublishDate": "Published on: ",
+      "layersDesc": "Text layers determine the type of processing of the source file. They may concern, for example: transcription, transliteration or translation. You can create up to three different layers in a single project. Define their name and describe. ",
+      "name": "Project name:  ",
+      "verificationDesc": "Browse text-level indexes of people, places, and passwords. By clicking on the selected file, you will be taken to its text layers, where the index was found."
+    },
+    "layers": {
+      "addNew": "Add layer",
+      "delete": "Remove",
+      "layer": "Layer",
+      "edit": "Change name and description",
+      "layerName": "Text layer name ",
+      "layerNamePlaceholder": "E.g. Transcription, Transliteration, Translation",
+      "layerDescription": "Description of the text layer ",
+      "layerDescriptionSub": "Supplemental information about the text layer.",
+      "info": "* Fields marked with an asterisk are mandatory",
+      "toManyWarning": "You can't create another layer anymore. You can create up to three layers per project. If you want to add a layer in turn, delete or edit one of the three existing layers, or create a new project.",
+      "no": "No",
+      "name": "Text layer name",
+      "desc": "Description of the text layer "
+    },
+    "addLayerPage": {
+      "title": "Add new text layer",
+      "addLayerStep1": "1. Name and describe the text layer",
+      "layerName": "Text layer name",
+      "layerDescription": "Text layer description",
+      "layerDescriptionInfo": "Enter supplementary information about the text layer, e.g. who of the participants will complete it",
+      "addLayerStep2": "2. Indicate the layer content",
+      "step2option1": "Texts (e.g. transcripts, transliterations, translations)",
+      "step2option2": "Image annotations",
+      "addLayerStep3": "3. Whether to duplicate the text areas from the first text layer:",
+      "step3option1": "Don't duplicate text areas",
+      "step3option2": "Duplicate empty text areas",
+      "step3option3": "Duplicate text areas with text (if any exists)",
+      "addLayerStep4": "4. Duplicate the text structure (i.e. the division of the text into different parts: introduction, chapters, sections, paragraphs) from the first text layer?",
+      "step4option1": "Do not duplicate text structure",
+      "step4option2": "Duplicate the text structure",
+      "addlayerbt": "Add text layer",
+      "layerAddedToast": "New layer added successfully. You can start working on it!"
+    },
+    "varification": {
+      "goToVerification": "Go to moderation",
+      "columns": [
+        "Page",
+        "Text areas",
+        " Transcribed",
+        "For acceptance",
+        " Accepted",
+        "Rejected",
+        "Last Edited",
+        " "
+      ]
+    }
+  },
+  "staticPage": {
+    "accessibilityStatement": "Accessibility statement",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy policy",
+    "regulations": "Terms and conditions"
+  },
+  "transcriptionHelpPage": {
+    "title": "How to transcribe?",
+    "header": "How to use the service?",
+    "readOn": "Read on",
+    "howToStart": {
+      "title": "How to start transcribing?",
+      "desc": "To transcribe pages in the Virtual Transcription Laboratory you must:",
+      "step": {
+        "step1title": " in the VTL service",
+        "step1desc": "After registration, a message containing a link to activate the account will be sent to the e-mail address provided in the form. Click on it or copy it to the browsers address bar. The activation link is valid for limited time.",
+        "step1link": "Create an account",
+        "step2title": " after activating your account.",
+        "step2link": "Log in",
+        "step3title": " to start, select from the main menu option ",
+        "step3link": "New transcription",
+        "step3desc": "Enter the data one by one or import the object description with files from an external source. After entering the data, accept the regulations and confirm the completion of the transcription description by clicking the Create new transcription button.",
+        "step4title": "Enter a description of the new transcription, accept the terms and then click \"Create a new transcription\"",
+        "step4desc": "After clicking \"Create a new transcription\", a message will appear on the screen saying that you have successfully created a new transcription. You are now automatically on the page with the new transcription and you can add the pages of this transcription to be transcribed.",
+        "step5title": "The new transcription will appear on the screen immediately. You can now add pages to transcribe.",
+        "step5desc": "Every transcription you create is located in the Transcripts / My Transcriptions tab. You must be logged in to view the <a href=\"/my-transcriptions\"> My Transcriptions page </a>. By default, the newly created transcription is not available to other Adiadna users, both logged in and not logged in.",
+        "step6title": "If you want your transcription to be visible to other users, go to the Permissions tab on the My transcription page",
+        "step7title": "After adding transcription pages, you can start automatically transcribing all added pages, or you can transcribe each file individually.",
+        "step7desc": "If you want to automatically transcribe each page separately, first click on the page tile. A new window will open for transcribing the page you selected, one of the options is \"Automatic transcription\" of the visible page. The Automatically transcribe option is one of the most important tools available in VTL. Otherwise it is called OCR (Optical Character Recognition) or optical character recognition on a document scan. It can be said that OCR extracts text from an image.",
+        "step8title": "Click the selected page and go to the transcription window.",
+        "readMore": "After creating a new transcription and adding transcription pages to it, you can start working with the file. To do this, click on the selected page. The selected page will appear in a new window with all the tools you need to transcribe the page file. If you want to know how to work with a file on the transcription page, read on ",
+        "step2desc": "After completing the registration form, you will receive a link to the e-mail address provided, after clicking on which you activate your account. It will then be possible to log in - using the data provided during account registration.",
+        "step6desc": "From now on, you can start working with the text, which you can proceed to alone or with a team. Add project participants by clicking on the \"Participants\" option and assign them a role in the project. The scope of permissions depends on the role assigned:",
+        "preEndDesc1": "Participant",
+        "endDesc1": " - has full possibilities of editing text layers,",
+        "preEndDesc2": "Moderator",
+        "endDesc2": " - in addition to the participant's rights, it also has the ability to moderate, i.e. accept and reject changes made in text layers by users with the role of \"participant\", including their own changes,",
+        "preEndDesc3": "Administrator",
+        "endDesc3": " - has full capabilities of project management, moderation of changes and editing text layers."
+      }
+    },
+    "howToTranscribe": {
+      "title": "How to transcribe?",
+      "desc": "Description of tools and how to work with the file on the transcription window page.",
+      "section": {
+        "workWithFile": "Work with file.",
+        "workOnWindow": "Work on a window with a transcribed object",
+        "workOnWindowDescription": "Description of the operation of the transcribed object window tools",
+        "workWithWindow": "Work with the transcription window",
+        "workWithWindowDescription": "Click on the line ruler you want to transcribe. The verse will be highlighted. The blue frame of the edited line appears in both the transcribed object view and the transcription view. Thanks to this you will be able to see on the transcribed object which page row you are editing."
+      },
+      "steps": {
+        "step1title": "Automatic transcription.",
+        "step1desc": "Automatic transcription not only translates all verses or paragraphs of the page again. You can automatically transcribe only verses that have not yet been transcribed. You can define such settings after clicking the „Automatically transcribe” button.",
+        "step2title": "Collapsing and expanding windows",
+        "step2desc": "You can collapse the transcription window and view the entire page of the transcribed object or vice versa. To do this, click the \"Collapse\" button, because again see both windows click \"Expand\".",
+        "step3title": "Swap pages",
+        "step3desc": "This feature allows you to swap pages with the transcription of the transcribed object.",
+        "step4title": "Correct transcription",
+        "step4desc": "If all the verses are considered transcribed correctly, you do not need to click each row separately to indicate that all transcription is correct. Just click the \"Correct transcription\" button and all lines will be marked as correctly transcribed on the right.",
+        "step5title": "File Download",
+        "step5desc": "Each file can be saved after transcribing the first verse in the form of hOCR, text or TEI format with coordinates.",
+        "step6title": "Page switching",
+        "step6desc": "In the workspace, you can navigate to the next files using the navigation on the right: \"Previous file\", \"Next file\".",
+        "step1extra_1p": "Switch pages",
+        "step1extra_1": " - allows you to swap sides of both windows.",
+        "step1extra_2p": "Collapse/Expand",
+        "step1extra_2": " - allows you to hide one window in favor of expanding the other and vice versa.",
+        "step3extra_1": "Remember:",
+        "step3extra_2": " OCR software is not as effective as a human, so in doubtful cases (difficulty reading the text) and in order to avoid errors, it is always worth verifying the OCR result."
+      },
+      "icons": {
+        "addTranscriptionArea": "Add transcription area",
+        "addTranscriptionAreaInfo": "Use this tool to select additional lines or select entire paragraphs yourself.",
+        "zoomIn": "Zoom in",
+        "zoomOut": "Zoom out",
+        "fullScreen": "Full screen",
+        "fitToWindow": "Adjust to window width",
+        "workWithTranscriptionWindow": {
+          "italic": "Italic",
+          "bold": "Bold",
+          "symbol": "Special signs",
+          "quote": "End of paragraph",
+          "listElementEnd": "List element end",
+          "listEnd": "End of list",
+          "page": "Header, footer, page number",
+          "pageHeader": "Heading",
+          "pageFooter": "Footer",
+          "pageNumber": "Page number",
+          "header": "Title",
+          "header1": "End of I degree title",
+          "header2": "End of II degree title",
+          "header3": "End of 3rd degree title",
+          "image": "Illustration ",
+          "imageDescription": "Caption under the illustration",
+          "table": "Table",
+          "elementTableCell": "Table Cell",
+          "elementTableVerse": "Table Row",
+          "elementTable": "Table",
+          "verseAutoTranscription": "Transcribe automatically selected row",
+          "verseComment": "Add a comment to the selected row",
+          "verseDelete": "Delete the entire line",
+          "verseClear": "Clear the text in the line field",
+          "verseUp": "Move the line up",
+          "verseDown": "Move the line down"
+        }
+      },
+      "descPoint1": "Global tools for working with text",
+      "descPoint2": "Tools for working with the source file",
+      "descPoint3": "Tools for working with text layers",
+      "instruction_1": "The Historical Text Recognition Service provides users with tools to improve the processing of documents into digital text. In this way, it is possible to perform, for example, <b>transcription</b> (manual or with the help of automatic character recognition), <b>translation</b> or <b>transliteration</b>.",
+      "instruction_2": "The results of working with the text can then be published on the site, thus creating a digital database of historical documents that can be searched for and viewed by other users.",
+      "instruction_3": "A special workspace is used to implement projects, into which users upload document source files and perform various types of text conversions. Projects can be carried out <b>independently</b> or <b>as a team</b>.",
+      "instruction_4": "Thanks to the possibility of creating <b>multiple text layers,</b> you can create e.g. transcription and translation of the source document at the same time. In addition to entering text into layers, the user has the ability to import text files, mark elements of the logical structure (headings, paragraphs, lists, tables, etc.), as well as <b>build indexes of passwords, places and people</b>.",
+      "instruction_5": "The results of the work can be shared with other members of the VTL community - by publishing the project on the site - but it can also be exported for private use."
+    },
+    "howToVerify": {
+      "title": "How to verify?",
+      "desc": "The task of the transcription verifier is to check the transcription for correctness and quality of the text.",
+      "section": {
+        "howToAssignRole": "How do you assign a verifier role to a user?",
+        "howToStart": "How to start verification?",
+        "verification": "Verification",
+        "verificationDescription1": "Verifier tools in the transcription window. The verifier has all the tools transscribers and developers have in the transcription window. In addition, the verifier has more options by marking the correctness of row verification. Transcription validation by the transcript:",
+        "verificationDescription2": "How to select a correctly verified row?",
+        "verificationDescription3": "After verifying the transcription, the transcript will no longer have the rights to edit the transcribed content. Only the creator and verifier will have such functionality.",
+        "howToStart_desc": "You can enter moderation mode both from the details of your own project and from the workspace, where you can work with text:",
+        "howToAssignRole_desc": "The user who created the project is assigned the Administrator role, which gives them both participant and moderator privileges for the project. As an administrator, you can moderate the changes yourself or you can assign this role to another user - without losing it yourself. Here's how:"
+      },
+      "assignRolesSteps": {
+        "step1": "The transcription verifier is designated by its creator. The creator can verify his transcription himself or assign the role of verifier to the person to whom he shared the object. The author sets such permissions on the Privileges tab on the My Transcription page.",
+        "step2": "Verifier role assignment. Users who have access to the object have a transcript role by default, which means that by default they only have access to the creator object. For a selected person to be able to verify an object, their role must be changed to Verifier.",
+        "step2desc": "When you add another user to your project, you are automatically assigned a participant role that gives you the ability to edit text layers. To change the role, expand the menu in the table next to its/its data and select the role: Moderator.",
+        "step1desc": "This tab is located on the details page of the project you created. There you can add project participants, check and change their role, as well as get acquainted with the statistics of the work of individual participants."
+      },
+      "startVeryficationSteps": {
+        "step1": "To verify, click the Transcription Verification tab on the My Transcription page.",
+        "step2": "Select the page you want to verify from the list and click the Verify button. A transcription window will open, where you will be able to verify the transcribed text.",
+        "step2desc": "The ability to change modes is in the drop-down menu, located in the top bar of the workspace - next to the file name",
+        "step1desc": "In the Moderation view there is a table in which, in addition to summarizing the number of areas in the state: \"For approval\", \"Accepted\" and \"Rejected\", there is a link to the Moderation Mode."
+      },
+      "veryficationIcons": {
+        "correct": "Row marked by transcript as correctly transcribed.",
+        "incorrect": "The verse marked by the transcriptor as incorrectly transcribed or one which he could not complete transcribing.",
+        "untranscribed": "Non-transcribed or unverified version of the transcript."
+      },
+      "selectionIcons": {
+        "firstClick": "First click of the verifier will mark the correct transcription regardless of whether the transcript has marked the line as correct or incorrect. The verifier may view the incorrect row as correctly transcribed.",
+        "secondClick": "Second click of the verifier will show that the transcription of the verse is incorrect.",
+        "thirdClick": "The third click of the verifier returns to the state of selection by the transcribenta before verification. "
+      },
+      "desc_3": "What tools does the moderator use?",
+      "desc_1": "How do I assign a moderator role to a project participant?",
+      "desc_2": "How do I enter moderation mode?"
+    },
+    "about": {
+      "title": "About the service"
+    }
+  },
+  "functionList": {
+    "SUPER_ADMIN": "Superadministrator",
+    "ADMIN": "Administrator",
+    "USER": "User"
+  },
+  "cookies": {
+    "text": "We use cookies in order to facilitate the use of our site. Check information on ",
+    "link": "Cookies and the Privacy Policy.",
+    "agree": "Agree"
+  },
+  "pagination": {
+    "next": "Next",
+    "previous": "Previous",
+    "of": " of "
+  },
+  "breadcrumbs": {
+    "home": "Home page",
+    "account": "My profile",
+    "accountMyProfile": "My account - My profile",
+    "group": "Group",
+    "transcriptions": "Transcriptions",
+    "searchResults": "Search results",
+    "addPages": "Add new files",
+    "transcriptionImport": "Import transcription",
+    "transcriptionEdit": "Edit transcription",
+    "transcriptionNew": "New transcription",
+    "addTextPage": "Load page text",
+    "addTextPages": "Load pages text",
+    "transcriptionsUser": "My transcriptions",
+    "adminConsole": "Admin console",
+    "adminUserTranscriptions": "User transcriptions",
+    "contributors": "Contributors",
+    "layers": "Text layers"
+  },
+  "viewer": {
+    "header": {
+      "transcriptionPage": "Page",
+      "closeMenu": "Close menu",
+      "transcriptionObject": "Transcription object",
+      "howToStart": "How to start work with text?",
+      "viewObject": "Object view",
+      "menu": "Menu",
+      "undo": "Undo (shortcut: Ctrl + Z)",
+      "redo": "Redo (shortcut: Ctrl + Y)",
+      "workWithTextStructure": "Work with text structure",
+      "workWithTextStructureTooltip": "This mode allows usage of TEI marks, for example <div> (division of text into different parts)",
+      "pages": {
+        "next": "Next",
+        "fromNumber": "from",
+        "prev": "Previous",
+        "page": "page"
+      },
+      "swapPanels": "Swap panels",
+      "correctTranscription": "Correct transcription",
+      "autoTranscribe": "Transcribe automatically",
+      "download": "Download results",
+      "import": "Upload text to page",
+      "chooseFormat": "Choose format",
+      "downloadhOCR": "hOCR",
+	  "downloadALTO": "ALTO",
+      "downloadText": "TXT",
+      "downloadTEI": "TEI P5",
+      "setHistoricalPageNumber": "Set historic page number",
+      "markAsEmpty": "Mark page as blank",
+      "layerManagement": "Manage text layers"
+    },
+    "footer": {
+      "search": "Search",
+      "searchResults": {
+        "foundNumberPart1": "Found",
+        "foundNumberPart2": "hits on",
+        "foundNumberPart3": "pages for phrase",
+        "previousResult": "Previous resuls",
+        "nextResult": "Next result",
+        "page": "Page"
+      }
+    },
+    "editor": {
+      "acceptAllVerses": "Accept all verses",
+      "rejectAllVerses": "Reject all verses"
+    },
+    "panels": {
+      "fold": "Fold",
+      "expand": "Expand",
+      "editorHelp": {
+        "start": "Keyboard shortcuts:",
+        "previousVerse": "↑ - select the previous verse/word",
+        "nextVerse": "↓ - select the next verse/word",
+        "previousVerse10": "Page Up - select 10 verses/words up",
+        "nextVerse10": "Page Down - select 10 verses/words down",
+        "firstVerse": "Home - select the first verse/word",
+        "lastVerse": "End - select the last verse/word",
+        "addNextVerse": "Shift + ↓ - add the next verse/word to selection",
+        "addPreviousVerse": "Shift + ↑ - add the previous verse/word to selection",
+        "addNext10Verses": "Shift + Page Up - add the next 10 verses/words to selection",
+        "addPrevious10Verses": "Shift + Page Down - add the previous 10 verses/words to selection",
+        "addToFirstVerses": "Shift + Home - add all verses/words above to selection",
+        "addToLastVerses": "Shift + End - add all verses/words below to selection",
+        "enterVerse": "→ - expand the word list of the selected verse and select the first word",
+        "exitVerse": "← - collapse the word list and select the verse of the selected word",
+        "moveVersesDown": "Alt + ↓ - move selected verses one position down",
+        "moveVersesUp": "Alt + ↑ - move selected verses one position up",
+        "moveVerses10Down": "Alt + Shift + ↓ - move selected verses 10 positions down",
+        "moveVerses10Up": "Alt + Shift + ↑ - move selected verses 10 positions up",
+        "deleteVerses": "DEL - delete selected verses/words"
+      },
+      "title": {
+        "osd": "Transcribed object",
+        "editor": "Transcription",
+        "student": "Learning"
+      },
+      "selection": {
+        "edit": "Edit selection",
+        "save": "Finish editing"
+      }
+    },
+    "block": {
+      "delete": "Remove marker"
+    },
+    "status": {
+      "inEdit": "Edition in progress",
+      "verification": "To be verified",
+      "accepted": "Accepted",
+      "rejected": "Rejected"
+    },
+    "music": {
+      "downloadMusic": "Download",
+      "deleteMusic": "Remove",
+      "addMusic": "Add music note transcription"
+    },
+    "words": {
+      "expand": "Expand",
+      "collapse": "Collapse"
+    },
+    "tooltip": {
+      "header": {
+        "correctTranscription": "Mark all verses as correctly transcribed",
+        "downloadTooltip": "Download the page below in the selected format (hOCR, Text, TEI with coordinates)",
+        "homeBt": "Go to the VTL home page",
+        "prevPage": "Go to the previous page of this transcription object",
+        "nextPage": "Go to the next page of this transcription object",
+        "switchBt": "Swap the pages of the presented Transcription and Transcribed Object pages",
+        "autoBt": "Automatic transcription of the visible page. Existing changes to the form will not be saved",
+        "collapseObject": "Collapse the visible area of the transcribed object",
+        "collapseTranscription": "Collapse the visible Transcription area",
+        "expandObject": "Expand the area of the transcribed object",
+        "expandTranscription": "Expand the Transcription area"
+      },
+      "osdMenu": {
+        "addVerseArea": "Add text area for verse (shortcut: W)",
+        "addWordArea": "Add text area for word (shortcut: S)",
+        "addMusicArea": "Add music notes area (shortcut: N)",
+        "addAnnotationArea": "Add annotation area",
+        "addAnnotationPoint": "Add annotation point",
+        "removeArea": "Remove transcription area",
+        "zoomIn": "Zoom in (shortcut: Numpad +)",
+        "zoomOut": "Zoom out (shortcut: Numpad -)",
+        "fullScreen": "Display in full screen (shortcut: F)",
+        "fitToPage": "Adjust to window height (shortcut: R)",
+        "editArea": "Start editing the selected area"
+      },
+      "blocks": {
+        "heading-1": "Level 1 Heading",
+        "heading-2": "Level 2 Heading",
+        "heading-3": "Level 3 Heading",
+        "paragraph": "Paragraph",
+        "table": "Table",
+        "table-row": "Table Row",
+        "table-cell": "Table Cell",
+        "list": "List",
+        "list-item": "List Item",
+        "annotation": "Footnote",
+        "header": "Header",
+        "footer": "Footer",
+        "page-no": "Page Number",
+        "div-prologue": "Prologue",
+        "div-part": "Part",
+        "div-chapter": "Chapter",
+        "div-section": "Chapter section",
+        "add": "Added text",
+        "add-above": "Added text above",
+        "add-below": "Added text below",
+        "add-margin": "Added text on the margin",
+        "del": "Deleted part of text",
+        "subst": "Fixed phrase <subst>",
+        "image": "Image",
+        "caption": "Image caption"
+      },
+      "blocksErrors": {
+        "invalidParent": "Block of this type desn't belong in parent block of this type",
+        "rootNotAllowed": "Block of this type cannot be at the root of the hierarchy",
+        "versesNotAllowed": "Block of this type should not contain verses directly",
+        "onlyOneVerse": "Block of this type should contain only one verse"
+      },
+      "menu": {
+        "style": {
+          "BOLD": "Bold",
+          "ITALIC": "Italic",
+          "STRIKETHROUGH": "Strike",
+          "UNDERLINE": "Underline"
+        },
+        "charmap": "Special characters",
+        "elementListItem": "List Item",
+        "elementList": "List",
+        "list": "List",
+        "pageDescription": "Header, Footer, Page number",
+        "verseHeader": "Header",
+        "verseFooter": "Footer",
+        "pageNumber": "Page number",
+        "titleH": "Title",
+        "titleH1": "Level 1 heading",
+        "titleH2": "Level 2 heading",
+        "titleH3": "Level 3 heading",
+        "image": "Image",
+        "imageCaption": "Image caption",
+        "table": "Table",
+        "elementTableCell": "Table cell",
+        "elementTableRow": "Table row",
+        "elementTable": "Table",
+        "verseAutoTranscription": "Transcribe automatically selected verse",
+        "addComment": "Add a comment to the selected verse",
+        "verseDelete": "Delete entire verse",
+        "wordDelete": "Delete word",
+        "versesDelete": "Delete multiple lines",
+        "deleting": "Deleting",
+        "verseClear": "Clear the text in the verse",
+        "verseUp": "Move verse up (Alt + ↑)",
+        "verseDown": "Move verse down (Alt + ↓)",
+        "verseUp10": "Move verses up 10 places (Alt + Shift + ↑)",
+        "verseDown10": "Move verses down 10 places (Alt + Shift + ↓)",
+        "setAsPerson": "Person",
+        "setAsPlace": "Place",
+        "setAsTerm": "Term",
+        "categoryTextFormatting": "Text formatting",
+        "categoryTextStructure": "Text structuring",
+        "categoryTeiStructure": "Text structuring for TEI",
+        "categoryIndexes": "Indexes",
+        "categoryIndexesTextStructureError": "Indexes are available only when not working with text structure",
+        "categoryVerseEdition": "Verse edition",
+        "div": "Divide text into <div> parts",
+        "div-prologue": "Prologue",
+        "div-part": "Part, Book",
+        "div-chapter": "Chapter",
+        "div-section": "Chapter Section",
+        "subscript": "Footnote",
+        "paragraph": "Paragraph",
+        "del": "Deleted part of text <del>",
+        "add": "Added text <add>",
+        "add-def": "Added text",
+        "add-above": "Added text above",
+        "add-below": "Added text below",
+        "add-margin": "Added text on the margin",
+        "subst": "Fixed phrase <subst>",
+        "gap": "Unreadable word <gap>"
+      }
+    },
+    "layers": {
+      "button": "Working with layers ",
+      "container": {
+        "title": "Select the layer to work",
+        "titleReadOnly": "Show layer",
+        "layer": "Layer ",
+        "show": "Show",
+        "hide": "Hide"
+      }
+    },
+    "verse": {
+      "info": {
+        "delete": "Delete"
+      }
+    }
+  },
+  "error": {
+    "error404": {
+      "title": "Error 404",
+      "description": "We're sorry. The page you requested cannot be found.",
+      "backText": "Back to ",
+      "backLinkText": "previous page",
+      "homeText": "Go to ",
+      "homeLinkText": "main page"
+    },
+    "error403": {
+      "title": "Access denied",
+      "description": "You do not have permission to this page.",
+      "backText": "Back to ",
+      "backLinkText": "previous page",
+      "homeText": "Go to ",
+      "homeLinkText": "main page"
+    },
+    "error409": {
+      "operationInProgress": "The operation cannot be invoked because another operation is in progress on this project."
+    },
+    "error500": {
+      "title": "Error 500",
+      "description": "We are sorry, this page cannot be displayed at this time due to an internal server error.",
+      "reloadLinkText": "Reload page"
+    }
+  },
+  "modals": {
+    "acceptAllVerses": {
+      "title": "Accept all verses",
+      "body": "If you change status of all verses to accepted there will be no possibility to change status of verses to previus status. Are you sure you want to accept all verses?",
+      "button": "Accept all verses"
+    },
+    "rejectAllVerses": {
+      "title": "Reject all verses",
+      "body": "If you change status of all verses to rejected there will be no possibility to change status of verses to previus status. Are you sure you want to reject all verses?",
+      "button": "Reject all verses"
+    },
+    "viewerResize": {
+      "title": "Transcribing file",
+      "body": "<p> Unfortunately, at this time your device does not meet the necessary requirements to use all transcription tools. </p> <p> All transcription functions are available at resolutions above 1200px. Below this resolution, only automatic transcription is available . </p> <p> To be able to edit lines, change or rotate the device to get the proper screen resolution. </p> ",
+      "button": "I understand"
+    },
+    "viewerExportTextLayers": {
+      "title": "Download results"
+    },
+    "pastedTooLongText": {
+      "title": "Pasted text is too long",
+      "body": "<p>The text you have pasted is too long. It has been trimmed to 4000 characters.</p>",
+      "button": "I understand"
+    },
+    "autoTranscribeVerse": {
+      "title": "Transcribe the verse automatically",
+      "bodyHTML": "Automatic line transcription will clear the current text.<br>Are you sure you want to transcribe the line again?",
+      "select": {
+        "title": "Recognition profile",
+        "default": "Select language..."
+      },
+      "button": "Start"
+    },
+    "autoTranscribePage": {
+      "title": "Transcribe pages automatically (OCR)",
+      "titleSinglePage": "Transcribe page automatically (OCR)",
+      "textLayerLabel": "Text layer",
+      "body": "This function creates an automatic transcription of the selected page",
+      "select": {
+        "titleProfile": "Recognition profile",
+        "titleRange": "Recognition range",
+        "default": "Select language...",
+        "ocrMode": {
+          "update": "Fill in only empty text areas",
+          "override": "Overwrite the existing transcription page"
+        },
+        "asterisk": "*It is best to use this function in the layer, where tranascription is being realised."
+      },
+      "checkbox": {
+        "handleColumns": "Handle layout with columns (slower)"
+      },
+      "button": "Start"
+    },
+    "trainOCR": {
+      "title": "Train OCR",
+      "selectRange": "Select range of pages to be used for OCR training:",
+      "rangeLabel": "Comma separated list of page nambers and/or page ranges",
+      "rangeExample": "for example, 1,2 - 6,8",
+      "selectLanguage": "Select language:",
+      "button": "Train OCR",
+      "radio": {
+        "pagesAll": "All Pages",
+        "pagesRange": "Pages in range"
+      },
+      "select": {
+        "selectLayer": "Select layer with transcription:"
+      },
+      "successAlert": "Successfully prepared training examples based on {{0}} verses."
+    },
+    "autoTranscribePages": {
+      "title": "Transcribe pages automatically (OCR)",
+      "body": "This function creates automatic transcription of pages within the given range",
+      "radio": {
+        "pagesAll": "All pages",
+        "pagesRange": "Pages in scope"
+      },
+      "input": {
+        "placeholder": "1,2-6,8",
+        "label": "Separate page numbers and / or page ranges"
+      },
+      "select": {
+        "titleProfile": "Recognition profile",
+        "titleRange": "Recognition range",
+        "default": "Choose language ...",
+        "selectLayer": "Wybierz warstwę tekstową*, w której chcesz rozpoznać tekst",
+        "asterisk": "*Najlepiej użyć tej funkcji w warstwie tekstowej, w której realizowana jest transkrypcja.",
+        "ocrMode": {
+          "emptyonly": "Only files without transcription",
+          "update": "Fill in only empty text areas",
+          "override": "Overwrite existing transcription"
+        }
+      },
+      "checkbox": {
+        "handleColumns": "Handle layout with columns (slower)"
+      },
+      "button": "Start",
+      "notice": "The duration of the transcription depends on the number of pages to be transcribed. In the case of multi-page objects it may take up to several hours. If you cannot devote that amount of time, we recommend that you start transcribing from single pages."
+    },
+    "deleteTranscription": {
+      "title": "Delete project",
+      "bodyHTML": "This function deletes the entire transcription object, both the description and all files.<br>Are you sure you want to continue?",
+      "button": "Delete"
+    },
+    "deleteTranscriptionPage": {
+      "title": "Delete page from project",
+      "body": "Are you sure you want to delete this page from the project?",
+      "button": "Delete"
+    },
+    "markTranscriptionPageAsEmpty": {
+      "title": "Mark page as empty",
+      "body": "After marking page as empty, all verses present on this page will be removed.<br> Page marked as empty will not be taken into account when counting transcription progress.<br>If a verse is added to the page, the empty marker will be removed.<br>Are you sure you want to continue?",
+      "button": "Mark as empty"
+    },
+    "downloadTranscriptionPage": {
+      "title": "Export text layers from page",
+      "body": "Select  format",
+      "button1": "hOCR",
+      "button2": "ALTO",
+      "button3": "TXT",
+      "button4": "TEI P5"
+    },
+    "loadTextTranscriptionPage": {
+      "title": "Upload text into page",
+      "body": "Select target text layer",
+      "bodyInfo": "Add files in format: hOCR, TXT or TEI.",
+      "buttonAdd": "Add file",
+      "button": "Upload text"
+    },
+    "publishTranscription": {
+      "title": "Publish project",
+      "bodyHTML": "Publishing project will make it visible to all the website users. Are you sure you want to publish the project?",
+      "button": "Publish project"
+    },
+    "depublishTranscription": {
+      "title": "Stop publishing",
+      "bodyHTML": "This will make project no longer possible to view it by website users (except project participants). Are you sure you want to stop publishing the project?",
+      "button": "Stop publishing"
+    },
+    "groupDeleteUser": {
+      "title": "Delete user",
+      "bodyHTML": "This function will delete user from the group.<br> Are you sure you want to continue?",
+      "button": "Delete user"
+    },
+    "groupDeleteGroup": {
+      "title": "Delete group",
+      "bodyHTML": "This function will delete entire group and you won't be able to restore it in a future. <br> Are you sure you want to continue?",
+      "button": "Delete group"
+    },
+    "permissionsDeleteGroup": {
+      "title": "Delete group.",
+      "bodyHTML": "By deleting the group, the object for this group will no longer be available.",
+      "button": "Delete"
+    },
+    "permissionsDeleteUser": {
+      "title": "Delete user.",
+      "bodyHTML": "By deleting the user, the object for this user will no longer be available.",
+      "button": "Delete"
+    },
+    "downloadResults": {
+      "title": "Download results",
+      "download": "Download",
+      "btOptions": {
+        "alto": "ALTO",
+        "altoZipLayers": "ALTO ZIP, 1 file per layer",
+        "altoZipPages": "ALTO ZIP, 1 file per page",
+        "hocr": "hOCR",
+        "hocrZipLayers": "hOCR ZIP, 1 file per layer",
+        "hocrZipPages": "hOCR ZIP, 1 file per page",
+        "tei": "TEI P5",
+        "teiZipLayers": "TEI P5 ZIP, 1 file per layer",
+        "teiZipPages": "TEI P5 ZIP, 1 file per page",
+        "text": "TXT",
+        "textZipLayers": "TXT ZIP, 1 file per layer",
+        "textZipPages": "TXT ZIP, 1 file per page"
+      },
+      "getEbook": "Download eBook",
+      "options": {
+        "mobi": "MOBI",
+        "epub": "ePUB",
+        "pdf": "PDF"
+      },
+      "chooseLayers": "Choose layer",
+      "text": "Select whether you want to export a project with all text layers or a single text layer.",
+      "selectFormat": "Select format:",
+      "layerOptions": {
+        "all": "Download all text layers",
+        "specified": "Download specified text layer"
+      },
+      "selectLayer": "Select layer",
+      "generateCoverPage": "Generate a cover page based on the metadata."
+    },
+    "regulations": {
+      "title": "Regulations regarding the publication of transcripts in VTL",
+      "button": "I understand"
+    },
+    "commentsVerse": {
+      "titleAdd": "Add comment",
+      "titleVerse": "Comments to the verse",
+      "button": "Add comment",
+      "clear": "Clear",
+      "commentsInAVerse": "Comments in a row",
+      "label": "Comment",
+      "limit": "Character limit",
+      "previousComments": "Earlier comments",
+      "failed": "Adding comment failed",
+      "delete": "Delete"
+    },
+    "commentsDelete": {
+      "title": "Confirm delete comment",
+      "bodyHTML": "This function will delete the user's comment on the verse. <br> Are you sure you want to continue?",
+      "button": "Delete comment"
+    },
+    "deleteVerse": {
+      "title": "Confirm delete verse",
+      "bodyHTML": "This function will delete the selected verse along with its comments and indexes. <br> Are you sure you want to continue?",
+      "button": "Delete verse"
+    },
+    "deleteWord": {
+      "title": "Confirm word deletion",
+      "bodyHTML": "The selected word will be deleted.<br>Are you sure you want to continue?",
+      "button": "Delete word"
+    },
+    "deleteVerses": {
+      "title": "Delete multiple verses",
+      "bodyHTML": "This will delete verses from currently active layer, along with their comments and indexes.",
+      "button": "Delete",
+      "input": {
+        "placeholder": "1,6-8,12",
+        "label": "Select the range of verses you want to delete:",
+        "error": "Invalid range of verses"
+      }
+    },
+    "importAvailableSources": {
+      "title": {
+        "mets": "List of available import sources for METS",
+        "iiif": "List of available import sources for IIIF",
+        "tei": "List of available import sources for TEI"
+      },
+      "desc": {
+        "mets": "List of sources from which you can import objects into VTL by providing a link to METS metadata.",
+        "iiif": "List of sources from which you can import objects into VTL by providing a link to the IIIF manifesto.",
+        "tei": "List of sources from which you can import objects into VTL by providing a link to the TEI file."
+      },
+      "search": "Search for source",
+      "close": "Close"
+    },
+    "contactAuthor": {
+      "title": "Contact the transcription creator",
+      "subject": "Subject",
+      "message": "Message",
+      "button": "Send",
+      "sendMsg": "Message has been sent",
+      "notSendMsg": "Message not sent"
+    },
+    "listOfIndex": {
+      "title": {
+        "persons": "Persons indexes",
+        "places": "Places indexes",
+        "terms": "Terms indexes"
+      },
+      "personName": "Person name",
+      "placeName": "Place name",
+      "termName": "Term name",
+      "urlAddress": "URL address of project",
+      "notAccessible": "No connection to project",
+      "termMeaning": "Meaning of the term",
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteIndexTitle": "Delete index",
+      "deleteButton": "Delete",
+      "bodyHTML": "Are you sure?<br/>If the index is not assigned to any other text area, it will be deleted.",
+      "chooseFrom": "Select one of already existing:"
+    },
+    "setAsPerson": {
+      "titleAdd": "Add person",
+      "tileEdit": "Edit person",
+      "titleVerse": "Set verse as person",
+      "button": "Set as person",
+      "cancel": "Cancel",
+      "label": "Person",
+      "limit": "Character limit",
+      "previousPerson": "Earlier persons",
+      "failed": "Adding person failed",
+      "delete": "Delete person"
+    },
+    "setAsPlace": {
+      "titleAdd": "Add place",
+      "titleEdit": "Edit place",
+      "titleVerse": "Set verse as place",
+      "button": "Set as place",
+      "cancel": "Cancel",
+      "label": "Place",
+      "placeUrlLabel": "Reference to geolocation",
+      "limit": "Character limit",
+      "previousPlace": "Earlier places",
+      "failed": "Adding place failed",
+      "delete": "Delete place"
+    },
+    "setAsTerm": {
+      "titleAdd": "Add term",
+      "titleEdit": "Edit term",
+      "titleVerse": "Set verse as term",
+      "button": "Set as term",
+      "cancel": "Cancel",
+      "label": "Term",
+      "termDescriptionLabel": "Meaning of term",
+      "limit": "Character limit",
+      "previousTerm": "Earlier terms",
+      "failed": "Adding term failed",
+      "delete": "Delete term"
+    },
+    "addNewLayer": {
+      "title": "Text layers details",
+      "layerTitle": "Text layers",
+      "layerName": "Name:",
+      "layerDescription": "Description:",
+      "edit": "Edit",
+      "delete": "Delete",
+      "addNew": {
+        "maxLength": "You reached the maximum amout of text layers.",
+        "title": "Add layer",
+        "save": "Save",
+        "form": {
+          "nameRequired": "Text layer name is required"
+        }
+      },
+      "deleteModal": {
+        "title": "Delete text layer",
+        "body": "Are you sure you want to delete text layer?",
+        "subBody": "."
+      },
+      "exit": "Finish preview"
+    },
+    "importTextToLayer": {
+      "title": "Upload text to pages",
+      "titleSinglePage": "Upload text to page",
+      "chooseLayer": "Choose layer, to which you want to upload text",
+      "addFileInFormat": "Add file in format hOCR, TXT or TEI.",
+      "importText": "Start uploading"
+    },
+    "addPages": {
+      "title": "Add pages to project",
+      "quotaInfo": "Remember, that you can only add pages which size is smaller than: 10 MB"
+    },
+    "deleteTranscriptionLayer": {
+      "title": "Delete text layer",
+      "bodyHTML": "Deleting a type layer will cause the irreversible loss of changes made to it. Are you sure you want to delete this text layer?",
+      "button": "Delete layer"
+    },
+    "editTranscriptionLayer": {
+      "title": "Edit text layer",
+      "button": "Delete layer"
+    },
+    "removeMusicNotesFromVerse": {
+      "title": "Delete music notes transcription",
+      "removeFile": "Are you sure you want to delete the selected music notes transcription?",
+      "button": "Delete music notes transcription"
+    },
+    "historicalPageNumber": {
+      "title": "Set historic page number",
+      "label": "Historic page number",
+      "button": "Set historic page number"
+    },
+    "addSubst": {
+      "button": "Add identifier",
+      "label": "Mark identifier",
+      "body2": "By setting the same number for the deleted text fragment (“del”) and added (“add”) you will bind both of those words into one fix. If you want to bind them as part of different fix, as an identifier set unused earlier number.",
+      "title": "Add identifier to \"subst\" mark",
+      "body1": "Assign a number to \"subst\" mark, to differentiate between fixes with this mark."
+    }
+  },
+  "transcription": {
+    "details": {
+      "instructionHeader": "Instruction for transcription members",
+      "instructionText": "Moderation should be done only when the page is 100% transcribed.",
+      "public": "Publish",
+      "transcriptionChangeError": "Operation on the project has caused an unexpected error.",
+      "reversePublic": "Stop publishing",
+      "publicInfo": "The publication of the project will make it available for preview to all users of the VTL service. Make sure that all required information is completed.",
+      "myTranscription": "My transcription",
+      "analyticLevel": "ANALYTICAL LEVEL",
+      "analyticLevelDescription": "- contains bibliographic elements describing the position (e.g. article or chapter) published in a monograph or journal, and not as an independent publication",
+      "monographicLevel": "MONOGRAPH LEVEL",
+      "monographicLevelDescription": "- contains bibliographic elements describing the item (e.g. a book, manuscript or magazine) published as an independent element (i.e. as a separate physical object)",
+      "textLevel": "TEXT PROFILE LEVEL",
+      "textLevelDescription": "- contains a description of the non-bibliographic aspects of the text",
+      "metadata": "Source object metadata",
+      "collapse": "Collapse metadata",
+      "expand": "Expand metadata",
+      "title": "Title:",
+      "author": "Author:",
+      "language": "Language:",
+      "type": "Type:",
+      "redactor": "Editor:",
+      "numberOfChapter": "Chapter number:",
+      "numberOfNotebook": "Issue number:",
+      "pageRange": "Page range:",
+      "publisher": "Publisher:",
+      "placeOfPublication": "Publication (creation) place:",
+      "dateOfPublication": "Publication (creation) date:",
+      "isbn": "ISBN:",
+      "keywords": "Keywords:",
+      "summary": "Summary:",
+      "links": "Links:",
+      "importAdress": "Import address ",
+      "externalId": "External Identifier ",
+      "details": "Details",
+      "permissions": "Permissions",
+      "remove": "Delete project",
+      "start": "Start transcription",
+      "continue": "Continue transcription",
+      "transcriptionComplete": "Transcription completed",
+      "verificationComplete": "Transcription verified",
+      "transcriptionFiles": "Research project files",
+      "transcriptionPages": "Image files: ",
+      "transcriptionLayers": "Text layers: ",
+      "contact": "Contact the Transcription Creator",
+      "edit": "Edit description",
+      "dateOfCreation": "Date of creation: ",
+      "sendEmail": "Send e-mail",
+      "addNewPages": "Add new pages",
+      "trainOCR": "Train OCR",
+      "verify": "Transcription verification",
+      "returnToMyTranscripts1": "See all ",
+      "returnToMyTranscripts2": "My transcriptions",
+      "workWithPages": "Work with pages",
+      "workWithText": "Work with text",
+      "identifierLevel": "IDENTIFIER LEVEL",
+      "EISBN": "e-ISBN:",
+      "EISSN": "e-ISSN:",
+      "ISSN": "ISSN:",
+      "pages": "Number of pages:",
+      "volumeNumber": "Volume number:",
+      "importAdressDesc": "This is the URL of the system from which the object was imported.",
+      "externalIdDesc": "This is the identifier of the object that was assigned to it in the external system, with the possibility of using it.",
+      "indexes": "Indexes",
+      "contributors": "Contributors",
+      "moderation": "Moderation",
+      "automaticallyTranscribe": "Transcribe pages automatically (OCR)",
+      "loadText": "Upload text to pages",
+      "deleteTextLayer": "Delete text layer",
+      "addTextLayer": "Text layers details",
+      "downloadResults": "Download results",
+      "transcriptionLayersCount": "Text layers in this project: ",
+      "noPagesInfo1": "To begin working with text, ",
+      "noPagesInfo2": "add source files",
+      "noPagesInfoLoading": "Pages will be visible after their processing ends",
+      "workWithProject": "Work with project",
+      "moreOptions": "More options"
+    },
+    "addPages": {
+      "title": "Add new pages",
+      "description": "Select, whether you want to add a source file from your device (in format: JPG, PNG, DjVu, TIFF) or import files from existing online publications (through IIIF protocol):",
+      "confirm": "Send file",
+      "messages": {
+        "success": "The file has been uploaded correctly.",
+        "failed": "File not uploaded. Try again."
+      }
+    },
+    "addText": {
+      "titlePage": "Load page text",
+      "titlePages": "Load pages text",
+      "descriptionPage": "Select and then upload your transcription file in hOCR or TEI format with coordinates.",
+      "descriptionPages": "Select and then upload your transcription file in hOCR (Zip) or TEI format with coordinates (Zip)."
+    },
+    "new": {
+      "title": "New research project",
+      "importedTitle": "Imported project",
+      "beforeImport": "Wypełnij poniższe pola lub ",
+      "import": "Import metadata and files from an on-line digital object",
+      "sourceObjectMetadata": "Metadata",
+      "reference": "Links",
+      "terms": "To create an object you must read and accept the ",
+      "termsPart2": " and accept its conditions",
+      "termsRegLink": "Regulations",
+      "termsNew1": "I got acquainted with ",
+      "termsNew2": " and I accept its content.",
+      "termsNew3": "I am aware that in the case of copyright infringement, I will be held responsible for it, not the operators of the service.",
+      "termsLink": "Regulations",
+      "importSucced": "Transcription imported successfully.",
+      "alertSuccess": "Transcription created successfully. Now you can add files to the new transcription. To do this, click \"Add new files\"",
+      "alertPublishSuccess": "Project published successfully.",
+      "alertEdit": "The changes you made in transcription description have been saved successfully.",
+      "alertError": "There was an error creating a new transcription",
+      "frameTitle": "Notice",
+      "frameText": "By clicking 'Create project,' you will be redirected to a page with project details and automatically assigned one text layer. There, you will be able to specify text layers, add source files, participants, and begin working with the text. Until you publish the project, only its participants will have access to it.",
+      "frameTextPublish": "The published project can be stopped from being published at any time by going into its details and clicking the 'Stop Publishing' button.",
+      "publicProjectLabel": "Public project",
+      "section1": "1. Information required always",
+      "section2": "2. Information required for the publication of the project",
+      "section2_1": "Source file information",
+      "section3": "3. Information visible to project participants",
+      "section4": "4. Additional information"
+    },
+    "import": {
+      "title": "Import transcription",
+      "subtitle": "Import object from an external system.",
+      "description": "This function will load all object's metadata and files",
+      "selectLabel": "Choose metadata format",
+      "urlLabel": "Enter object URL",
+      "urlSublabel": "Provide a link to the website from which you want to import the source object along with its description",
+      "remember": "Remember to read and accept the regulations after importing the metadata. Then create a new transcription.",
+      "startImport": "Start import",
+      "checkList": "Check the list of available sources",
+      "searchSource": "Search for source",
+      "errors": {
+        "importserrorurlmalformed": "URL malformed",
+        "importserrorurlsecured": "URL secured",
+        "importserrorurlunresponsive": "The object at given address is not resposive",
+        "importserrorurlnotprocessable": "The object at given address cannot be processed",
+        "importserrorurlnotfound": "Object at given URL not found",
+        "importstextformatmalformed": "Object format malformed",
+        "importstextformatwrongtype": "Object has wrong type",
+        "importstextformatunsupportedtypes": "Unsuppored object",
+        "importstextformatlinkless": "Object at given address has no link",
+        "domainerrornotavailableiiif": "This address does not require our source database from which you can import IIIF Manifest files.",
+        "domainerrornotavailabletei": "This address does not require our source database from which you can import TEI files.",
+        "domainerrornotavailablemets": "This address does not require our source database from which you can import METS files."
+      }
+    },
+    "edit": {
+      "title": "Edit transcription"
+    },
+    "form": {
+      "title": "Title:",
+      "select": "Select",
+      "titlePlaceholder": "If you do not know the original title, you can suggest your own or enter incipit",
+      "role": "Role:",
+      "firstAndLastName": "First and Last Name:",
+      "none": "none",
+      "firstAndLastNamePlaceholder": "Jan Kowalski (1934-1999)",
+      "language": "Language:",
+      "languageSelect": "Select language",
+      "type": "Type:",
+      "typeSelect": "Select type",
+      "chapterNumber": "Chapter number:",
+      "volumeNumber": "Volume number:",
+      "notebookNumber": "Issue number:",
+      "pagesRange": "Page range:",
+      "pagesRangePlaceholder": "E.g.: 13-18:",
+      "pagesNumber": "Number of pages:",
+      "publisher": "Publisher:",
+      "publicationPlace": "Publication (creation) place:",
+      "publicationDate": "Publication (creation) date:",
+      "publicationDatePlaceholder": "E.g .: 1789 or the second half of the 18th century",
+      "signature": "Signature:",
+      "isbn": "ISBN:",
+      "eisbn": "e-ISBN:",
+      "issn": "ISSN:",
+      "eissn": "e-ISSN:",
+      "keywords": "Keywords:",
+      "keywordsPlaceholder": "Separate the keyword string with a semicolon",
+      "summary": "Summary:",
+      "link": "Link:",
+      "appendAnotherLink": "Add another link",
+      "appendAnotherPerson": "Add another person"
+    },
+    "verification": {
+      "transcriptionVerification": "Transcription verification",
+      "stats": "Transcribers statistics",
+      "title": "Title:",
+      "author": "Author:",
+      "advancement": {
+        "main": "Advanced verification:",
+        "toVerify": "Pages to verify at this property:",
+        "verified": "Verified rows:",
+        "correct": "Correct:",
+        "incorrect": "Incorrect:"
+      },
+      "table": {
+        "number": "No.",
+        "name": "Page name",
+        "versesNumber": "Number of rows",
+        "verified": "Verified",
+        "correct": "Correct",
+        "incorrect": "Incorrect",
+        "lastEdition": "Last edition",
+        "verification": "Verification",
+        "verify": "Verify"
+      }
+    },
+    "permissions": {
+      "title": "Contributors",
+      "objectAuthority": "Object authority",
+      "publicAvailability": "Publicly available",
+      "privateAvailability": "Not publicly available",
+      "projectName": "Title: ",
+      "author": "Author: ",
+      "status": "Object status on the VTL website:",
+      "shareObject": "Share the object with selected VTL users and groups",
+      "users": "Project contributors",
+      "groups": "Groups that have access to the object:",
+      "addGroupName": "Enter group name",
+      "addUserTitle": "Add user",
+      "addGroupTitle": "Add group",
+      "addUserEmail": "Users e-mail address",
+      "addUserInfo": "You can only add users that have the account in the VTL system",
+      "addUserPlaceholder": "Enter e-mail address",
+      "addUserButton": "Add user",
+      "requiredFields": "Fields with asterisk are necessary",
+      "email": "E-mail",
+      "emailAddress": "E-mail address",
+      "role": "Role",
+      "activity": "Activity regarding text areas",
+      "deleteUser": "Delete",
+      "groupPlaceholder": "Institute of History",
+      "filled": "Filled: ",
+      "corrected": "Corrected: ",
+      "accepted": "Accepted: ",
+      "rejected": "Rejected: ",
+      "pageInfo": {
+        "firstLine": "Add project participants and assign them one of the following roles:",
+        "userRole": "Participant",
+        "userRoleInfo": " - has full possibilities of editing text layers,",
+        "modRole": "Moderator",
+        "modRoleInfo": " - in addition to the participant's permissions, it also has the ability to moderate - accept and reject changes made in text layers,",
+        "ownerRole": "Administrator",
+        "ownerRoleInfo": " - has full capabilities of project management, moderating changes and editing text layers."
+      }
+    },
+    "stats": {
+      "transcribersStats": "Transcribers statistics",
+      "title": "Title:",
+      "author": "Author:",
+      "userName": "User name",
+      "charactersEntered": "Number of characters entered",
+      "transcribedVerses": "Number of transcribed verses",
+      "correctlyVerifiedVerses": "Number of correctly verified verses",
+      "contact": "Contact",
+      "noStats": "This object does not have statistics yet, for a user to transcribe in the statistics, he must click the correct transcription of the selected page. This can be done by clicking the \"Correct transcription\" button in the transcription window or by marking the correctness of each line separately by clicking on the checkbox located just after the line. ",
+      "howTo": "Learn more about how to transcribe"
+    },
+    "indexes": {
+      "transcriptionIndex": "Index",
+      "goToInfoButtonText": "< Go back to transcription details",
+      "title": "Indexes",
+      "projectName": "Project name: ",
+      "author": "Project owner: ",
+      "pageInfo": "Look at added indexes of: people, places and terms. By clicking on the file, you will move to it's text layers, where the given index was found.",
+      "header": {
+        "chosenIndex": "Chosen index",
+        "instancesInProject": "Indexes in the project"
+      },
+      "filters": {
+        "letterLabel": "Select first letter: ",
+        "numberLabel": "Select file: ",
+        "selectDefaultLetter": "A-Z",
+        "selectDefaultFile": "All",
+        "selectDefault": "Select",
+        "searchTermPlaceholder": "Search term",
+        "searchPlacePlaceholder": "Search place",
+        "searchPersonPlaceholder": "Search person",
+        "resetFilters": "Reset filters",
+        "noOptionsMessage": {
+          "alphabet": "-",
+          "pages": "No pages"
+        },
+        "availableTags": [
+          {
+            "tag": "person",
+            "label": "People"
+          },
+          {
+            "tag": "place",
+            "label": "Places"
+          },
+          {
+            "tag": "term",
+            "label": "Terms"
+          }
+        ]
+      },
+      "empty": {
+        "person": "No person was yet added to index",
+        "term": "No term was yet added to index",
+        "place": "No place was yet added to index",
+        "general": "Indexes can be added to work with text view. Click on text you want to highlight as index and choose \"Index\" from list of tools to work with source files."
+      }
+    },
+    "alert": {
+      "processingOK": "Operation completed successfully.",
+      "processingFailed": "Operation failed. Please try again or contact the administrator.",
+      "processingOCR": "Automatic transcription in progress...",
+      "processingImport": "New project pages import in progress...",
+      "processingIIIFImport": "Pages import from IIIF in progress...",
+      "processingLocalImport": "Pages import from uploaded files in progress..."
+    },
+    "metadata": {
+      "fieldTitle": {
+        "info": " Information about the project",
+        "sourcesInfo": " Information about the source files",
+        "projectName": "Project name",
+        "projectDescription": "Project description",
+        "documentsTimeRange": "Documents time range",
+        "documentsTimeRangeStart": "Documents start time:",
+        "documentsTimeRangeEnd": "Documents end time:",
+        "tags": "Keywords",
+        "sourceFileTypes": "Source files type",
+        "sourceFileInfo": "Source files Information",
+        "sourceFileOriginInfo": "Source files origin information",
+        "projectCollectionName": "Project collection",
+        "projectCoordinatorContact": "Project coordinator contact",
+        "projectColaboratorInstruction": "Project collaborator instruction",
+        "projectImported": "Imported",
+        "releaseDate": "Release date",
+        "creator": "Projects author",
+        "manifest": "IIIF Manifest Link:",
+        "sourceFileTypeWebsite": "website",
+        "sourceFileTypeInternal": "own document",
+        "contactName": "Contact details for the project coordinator",
+        "collection": "Collection",
+        "copyLink": "Copy the link"
+      },
+      "fieldTitleWithRequiredInfo": {
+        "projectName": "Project name (generally required)",
+        "projectDescription": "Project description (required when publishing project)",
+        "documentsTimeRange": "Documents time range (required when publishing project)",
+        "releaseDate": "Release date",
+        "documentsTimeRangeStart": "Range start",
+        "documentsTimeRangeEnd": "Range end",
+        "tags": "Keywords (required when publishing project)",
+        "tagsSublabel": "Enter keywords separated by semicolons.",
+        "sourceFileTypes": "Source files type (required when publishing project)",
+        "sourceFileInfo": "Source files Information (required when publishing project)",
+        "additionalInformation": "Source files origin information (required when publishing project)",
+        "projectCollectionName": "Project collection (optional)",
+        "projectCoordinatorContact": "Project coordinator contact (optional)",
+        "projectColaboratorInstruction": "Project collaborator instruction (visible only for contributros)",
+        "required": "*",
+        "pasteURLAddress": "Paste the URL of the page where the files came from."
+      },
+      "fieldPlaceholder": {
+        "projectName": "Project name...",
+        "projectDescription": "Project description...",
+        "documentsTimeRange": "Documents time range...",
+        "tags": "Separate the keywords with a semicolon...",
+        "sourceFileTypes": "Source files type...",
+        "sourceFileInfo": "Source files Information...",
+        "additionalInformation": "Source files origin information...",
+        "projectCollectionName": "Project collection...",
+        "projectCoordinatorContact": "Project coordinator contact...",
+        "projectColaboratorInstruction": "Project collaborator instruction...",
+        "releaseDate": "for example: 1923 or 1923-1926"
+      },
+      "richText": {
+        "inline": {
+          "bold": "Bold",
+          "italic": "Italic",
+          "underline": "Underline",
+          "monospace": "Monospace"
+        },
+        "list": {
+          "unordered": "Unordered",
+          "ordered": "Ordered",
+          "indent": "Indent",
+          "outdent": "Outdent"
+        },
+        "remove": "Reset"
+      }
+    }
+  },
+  "main": {
+    "search": {
+      "title": "Search for a project",
+      "additionalInfo": "Additional info about searching for a project",
+      "filters": [
+        "Search everywhere",
+        "Search in descritpions",
+        "Search in texts"
+      ],
+      "inputPlaceholder": "Input search text...",
+      "searchbtn": "Search",
+      "seeAll": "See all projects",
+      "seeMine": "See all your projects"
+    },
+    "lastTranscribed": {
+      "title": "Recently transcribed in VTL",
+      "seeAll": "See all shared",
+      "transcriptions": "Transcriptions",
+      "noTranscriptions": "No transcriptions found"
+    },
+    "myLastTranscription": {
+      "title": "My last transcription",
+      "seeAll": "See all",
+      "transcriptions": "My transcriptions"
+    }
+  },
+  "title": "VLT - Virtual Transcription Laboratory"
+}

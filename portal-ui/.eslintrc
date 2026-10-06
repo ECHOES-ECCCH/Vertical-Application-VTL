@@ -1,0 +1,95 @@
+{
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true
+	},
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+
+	"settings": {
+		"react": {
+			"createClass": "createReactClass", // Regex for Component Factory to use,
+			// default to "createReactClass"
+			"pragma": "React", // Pragma to use, default to "React"
+			"version": "detect", // React version. "detect" automatically picks the version you have installed.
+			// You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
+			// default to latest and warns if missing
+			// It will default to "detect" in the future
+			"flowVersion": "0.53" // Flow version
+		},
+		"propWrapperFunctions": [
+			// The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.
+			"forbidExtraProps",
+			{ "property": "freeze", "object": "Object" },
+			{ "property": "myFavoriteWrapper" }
+		],
+		"linkComponents": [
+			// Components used as alternatives to <a> for linking, eg. <Link to={ url } />
+			"Hyperlink",
+			{ "name": "Link", "linkAttribute": "to" }
+		]
+	},
+
+	"plugins": ["react"],
+
+	"extends": ["eslint:recommended", "plugin:react/recommended", "standard-jsx"],
+
+	"rules": {
+		"react/jsx-no-bind": [
+			"error",
+			{
+				"allowArrowFunctions": true,
+				"allowBind": false,
+				"ignoreRefs": true
+			}
+		],
+		"react/no-did-update-set-state": "error",
+		"react/no-unknown-property": "error",
+		"react/no-unused-prop-types": "error",
+		"react/prop-types": "error",
+		"react/react-in-jsx-scope": "error",
+		"react/prefer-es6-class": 0,
+		"react/jsx-filename-extension": 0,
+		"react/jsx-tag-spacing": [0, "always"],
+		"react/jsx-curly-spacing": [0, "always"],
+		"indent": ["error", "tab", {
+			"SwitchCase": 1,
+			"ignoredNodes": ["TemplateLiteral"]
+		}],
+		"react/jsx-indent": [2, "tab"],
+		"react/jsx-first-prop-new-line": [0],
+		"react/jsx-max-props-per-line": [1, { "maximum": 4, "when": "always" }],
+		"react/jsx-indent-props": [2, "tab"],
+		"react/no-array-index-key": [1],
+		"no-multiple-empty-lines": [
+			"error",
+			{
+				"max": 1,
+				"maxBOF": 0,
+				"maxEOF": 1
+			}
+		],
+		"no-console": "error",
+		"no-debugger": "error",
+		"no-underscore-dangle": [
+			"error",
+			{
+				"allowAfterThis": true,
+        		"allowAfterSuper": true
+			}
+		],
+		"no-unused-vars": "warn",
+		"no-return-assign": [1],
+		"no-param-reassign": [1],
+		"no-shadow": [1],
+		"space-in-parens": [0, "always"],
+		"comma-dangle": ["error", "always-multiline"],
+		"array-bracket-spacing": [0, "always"],
+		"semi": ["error", "always"]
+	}
+}

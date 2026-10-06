@@ -1,0 +1,15 @@
+{
+  "short_name": "WLT",
+  "name": "Wirtualne Laboratorium Transkrypcji",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#217ACC",
+  "background_color": "#ffffff"
+}

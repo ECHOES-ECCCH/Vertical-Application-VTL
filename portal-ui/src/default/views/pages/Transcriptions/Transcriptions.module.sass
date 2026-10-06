@@ -1,0 +1,73 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/_font-colors.sass"
+
+.transcriptions
+    &__header
+        &--columns
+            display: flex
+            justify-content: space-between
+            align-items: baseline
+            +mobile
+                flex-direction: column
+
+            & a
+                margin-left: auto
+
+        &--title
+            margin: 60px 0 15px
+            font-size: 1.75rem
+            font-weight: bold
+
+        &--search-result
+            font-size: 1.125rem
+
+        &--search-number
+            font-size: 1rem
+
+        &--transcr-number
+            font-weight: normal
+
+        &--description
+            font-size: 1rem
+
+    &__transcr-container
+        margin: 40px auto
+        width: 100%
+        display: grid
+        grid-template-columns: 1fr
+        grid-row-gap: 20px
+
+    &__error
+        padding-top: 3rem
+        padding-left: 3rem
+        padding-bottom: 10rem
+        font-weight: bold
+        font-size: 1.125rem
+        display: flex
+        background-color: white
+        margin-bottom: 200px
+
+    &__search
+        margin-top: 30px
+        width: 550px
+        max-width: 100%
+        margin-left: auto
+        margin-right: 0
+        +mobile
+            margin-top: 20px
+
+    &__select
+        margin-top: 40px
+        position: relative
+        z-index: 400
+        width: 350px
+        +mobile
+            margin-top: 0
+            width: 100%
+    &__pagination-wrapper
+        position: relative
+        z-index: 0
+        +mobile
+            margin-top: -40px
+    &__no-pagination-wrapper
+        margin-top: 50px

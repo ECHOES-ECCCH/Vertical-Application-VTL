@@ -1,0 +1,215 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/_font-colors.sass"
+.static-page
+    background: #FFF
+    &__header
+        margin-top: 70px
+        font-size: 1.75rem
+
+    &__content
+        padding: 50px 0
+        h1
+            font-size: 1.75rem
+            margin-bottom: 40px
+            color: #373A3C
+            font-weight: 700
+            +touch
+                font-size: 1.25rem
+                margin-bottom: 25px
+        p
+            font-size: 1rem
+            line-height: 1.5rem
+            margin-left: 1rem
+            margin-bottom: 40px
+            color: #373A3C
+            +touch
+                font-size: 0.875rem
+                line-height: 1.25rem
+                margin-bottom: 15px
+        .tab-content
+            border: 1px solid #A8A8A8
+            padding: 90px 30px
+
+        &--tabs
+            border: none
+            margin-bottom: 0
+            +mobile
+                margin-bottom: 40px
+            .nav-link
+                padding: 20px 25px
+                color: #005CA9
+                font-size: 1.25rem
+                &.active
+                    pointer-events: none
+                    color: #ffffff
+                    background-color: #005CA9
+
+                &:hover, &:focus, &.active
+                    border: 1px solid transparent
+                    outline: none
+
+        &--instruction
+            max-width: 1168px
+            margin: auto
+            &-container
+                margin: 0 auto
+
+            ul
+                padding-left: 95px
+                font-size: 1rem
+
+                &.descList
+                    padding-left: 0
+
+                li
+                    padding-top: 14px
+                    list-style: inside
+
+            ol
+                font-weight: 700
+                padding-left: 30px
+                counter-reset: custom-counter
+                +widescreen-only
+                    padding-left: 15px
+                +touch-sec
+                    padding-left: 15px
+
+                > li
+                    padding-left: 65px
+                    font-weight: 400
+                    counter-increment: custom-counter
+                    list-style: none
+                    &::before
+                        content: counter(custom-counter)
+                        text-align: center
+                        color: #ffffff
+                        background-color: #4A4A4A
+                        font-weight: bold
+                        font-size: 1rem
+                        position: absolute
+                        margin-left: -95px
+                        margin-top: 0
+                        padding: 14px
+                        width: 55px
+
+            h1
+                font-weight: 700
+            h2
+                font-size: 1.375rem
+                line-height: 1.875rem
+                font-weight: 700
+                margin-bottom: 20px
+                +mobile
+                    font-size: 1.125rem
+                    margin-bottom: 10px
+            h3
+                font-size: 1.125rem
+                font-weight: bold
+                line-height: 1.625rem
+                margin-bottom: 20px
+                +mobile
+                    font-size: 1rem
+            p
+                font-size: 1rem
+                line-height: 2rem
+                &.static-page__content--instruction-desc
+                    margin: 65px 0 10px
+                    font-size: 1.125rem
+                    +mobile
+                        margin: 30px 0 35px
+                        font-size: 1rem
+
+            img
+                max-width: 100%
+                margin: 25px auto 65px
+                background: #F8F8F8
+                +mobile
+                    margin: 20px auto 40px
+
+        &--section
+            margin-bottom: 50px
+
+            h2
+                margin-top: 40px
+                margin-bottom: 40px
+
+        &--read-on
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            margin-top: 70px
+            +mobile
+                margin-top: 35px
+            +mobile-small
+                flex-direction: column
+            &-description
+                font-size: 1.125rem
+                +mobile-small
+                    font-size: 1rem
+                &--btn
+                    font-size: 1.125rem
+                    +mobile
+                        font-size: 1rem
+            &-text
+                font-size: 1.125rem
+                margin-right: 15px
+                +mobile
+                    font-size: 1rem
+                +mobile-small
+                    margin-bottom: 10px
+                    margin-right: 0
+            &-btn
+                padding: 10px 55px
+                +mobile
+                    font-size: 0.875rem
+                    padding: 10px 30px
+        &--icons
+            &-list
+                list-style: none
+                padding: 0
+                margin: 0
+            &-item
+                display: flex
+                padding-bottom: 20px
+                +mobile-small
+                    flex-direction: column
+                i
+                    align-self: flex-start
+                    background: #535353
+                    color: #FFF
+                    border: 1px solid #4A4A4A
+                    border-radius: 4px
+                    min-height: 34px
+                    min-width: 32px
+                    margin-right: 15px
+                    font-size: 1.3rem
+                    &.red
+                        color: #cb2e25
+                    &.green
+                        color: #54a554
+                    &.empty
+                        width: 24px
+                        height: 24px
+                        +mobile-small
+                            margin-bottom: 10px
+                &--text
+                    display: flex
+                    flex-direction: column
+                    font-size: 1.125rem
+                    line-height: 1.875rem
+
+                &--subtext
+                    font-size: 0.875rem
+                    line-height: 1.375rem
+
+                &--sublist
+                    padding: 0
+                    list-style: none
+                    margin-top: 20px
+                    li
+                        font-size: 0.75rem
+
+                &--set
+                    display: flex
+                    +mobile-small
+                        margin-bottom: 10px

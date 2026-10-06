@@ -1,0 +1,201 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/_font-colors.sass"
+$bg-img: url("~@Assets/images/header.jpg")
+
+.main
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background-image: $bg-img
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: right
+    background-color: #161616
+    padding: 0
+    height: 577px
+    +touch
+        height: auto
+        padding: 35px 16px 35px
+        background-position: left
+    &__container
+        width: 100%
+        display: flex
+        justify-content: center
+        +touch
+            flex-direction: column
+
+    &__item
+        &--first
+            width: 620px
+            margin-right: 10rem
+            +hd
+                width: 750px
+            +fullhd
+                width: 950px
+            +touch
+                width: 100%
+        &--second
+            width: 416px
+            +hd
+                width: 416px
+            +fullhd
+                width: 524px
+            +touch
+                width: 100%
+
+    &__description
+        position: relative
+        -webkit-backdrop-filter: blur(15px)
+        backdrop-filter: blur(15px)
+        background: hsla(0, 0%, 100%, .1)
+        padding: 50px 34px
+        color: #FFF
+        margin-bottom: 25px
+        text-align: left
+        font-size: 1rem
+        +touch
+            width: 100%
+        +mobile
+            padding-left: 15px
+            padding-right: 15px
+        +mobile-small
+            width: 320px
+        +mobile-micro
+            width: 300px
+        & hr
+            border-color: #ffffff
+
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            filter: blur(20px)
+            z-index: -1
+
+        &--title
+            font-size: 2.5rem
+            font-weight: 200
+            color: #ffffff
+            margin-bottom: 1rem
+            white-space: nowrap
+            +touch-sec
+                font-size: 1.75rem
+                white-space: break-spaces
+
+        &--text-title
+            font-size: 1.75rem
+            font-weight: 200
+            color: #ffffff
+            margin-bottom: 22px
+            +touch-sec
+                font-size: 1.25rem
+            +touch
+                margin-top: 30px
+                font-size: 1.875rem
+                line-height: 1.375rem
+                margin-bottom: 34px
+
+        &--text
+            font-size: 1rem
+            line-height: 1.625rem
+            margin-bottom: 29px
+            min-height: 120px
+            font-weight: 200
+            +widescreen-only
+                font-size: 0.875rem
+                line-height: 1.35rem
+            +touch-sec
+                font-size: 0.875rem
+                line-height: 1.35rem
+            +mobile
+                font-size: 0.8125rem
+                line-height: 1.25rem
+
+        &--upper-button
+            white-space: nowrap
+            margin-right: 37px
+            padding: 12px 70px
+            border-width: 2px
+            background-color: #ffffff
+            color: #005CA9
+            &:hover
+                color: #ffffff
+                background-color: #005CA9
+                border-color: #FFF
+            +mobile
+                font-size: 0.875rem
+                padding: 10px 38px 9px 31px
+
+        &--link
+            font-size: 1.25rem
+            color: #ffffff
+            text-decoration: underline
+            &:active,
+            &:hover,
+            &:focus
+                text-decoration-thickness: 2px
+                color: #FFF
+            +touch
+                font-size: 0.875rem
+                margin-bottom: 15px
+
+        &--buttons
+            display: flex
+            align-items: center
+            +touch
+                flex-direction: column-reverse
+                align-items: flex-start
+
+        &--down-button
+            white-space: nowrap
+            margin-right: 37px
+            padding: 12px 70px
+            border-width: 2px
+            background-color: #ffffff
+            color: #005CA9
+            &:hover
+                color: #ffffff
+                background-color: #005CA9
+
+.description
+    background-color: #F5F5F5
+    padding: 0px 40px 36px 40px
+
+    &__header
+        margin-top: 56px
+        margin-bottom: 20px
+        font-size: 1.75rem
+        color: #161615
+        font-weight: bold
+
+    &__items
+        display: flex
+        flex-flow: wrap
+        justify-content: space-between
+
+    &__item
+        padding: 20px 20px 20px 0px
+        width: 500px
+        display: flex
+        font-size: 1rem
+        & span
+            background-color: #4A4A4A
+            color: #ffffff
+            display: inline-block
+            text-align: center
+            min-width: 36px
+            height: 36px
+            line-height: 36px
+            margin-right: 14px
+        & p
+            margin-top: -4px
+            font-size: 1rem
+
+            +touch
+                margin-bottom: 0
+                color: #4A4A4A

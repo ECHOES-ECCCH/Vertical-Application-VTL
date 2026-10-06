@@ -1,0 +1,17 @@
+---
+- name: Build docker image
+  docker_image:
+    build:
+      path: "../../"
+      args:
+        REACT_APP_LOGIN_SP_AD_URL: "{{REACT_APP_LOGIN_SP_AD_URL}}"
+        REACT_APP_LOGIN_SP_AD_URL_LOGOUT: "{{REACT_APP_LOGIN_SP_AD_URL_LOGOUT}}"
+        REACT_APP_GA_TAG_ID: "{{REACT_APP_GA_TAG_ID}}"
+        REACT_APP_CAPTCHA_SITEKEY: "{{REACT_APP_CAPTCHA_SITEKEY}}"
+        REACT_APP_LOGIN_SP_PIONIERID_URL: "{{REACT_APP_LOGIN_SP_PIONIERID_URL}}"
+        REACT_APP_LOGIN_GOOGLE: "{{REACT_APP_LOGIN_GOOGLE}}"
+        REACT_APP_LOGIN_FACEBOOK: "{{REACT_APP_LOGIN_FACEBOOK}}"
+    name:  "{{registryPath}}{{imageName}}:{{imageTag}}{{suffix}}"
+    tag: "{{imageTag}}{{suffix}}"
+    push: yes
+    source: build

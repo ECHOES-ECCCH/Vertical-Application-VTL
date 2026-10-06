@@ -1,0 +1,125 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## [1.3.3]() - 2021-07-13
+
+<small>[Compare with 1.3.2]()</small>
+
+### Fixed
+- Fix all to word ([fe81457](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/fe814574b7bc507388ca52e209b4fa9a76cd64f4) by Maciej Góra).
+
+
+## [1.3.2]() - 2021-07-06
+
+<small>[Compare with first commit]()</small>
+
+### Added
+- Add tooltip to editor verseinfo ([7f7e0b8](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/7f7e0b87aba3732d56b581a7be5895806cd19ca9) by Maciej Góra).
+- Add react_app_login_sp_ad_url_logout to ansible's inventories ([a3f5edb](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/a3f5edb8fd4de75dca4d44657b24daffb7b29585) by Aleksandra Nowak).
+- Add react_app_login_sp_ad_url_logout to dockerfile ([19c3065](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/19c30652a7599e41dec67272520b01b88a6a0420) by Aleksandra Nowak).
+- Add react_app_login_sp_ad_url_logout to jenkinsfile ([8ff8aef](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/8ff8aef0a1a77dabe1f87cc747bf7475295bf8aa) by Aleksandra Nowak).
+- Add logout popup ([13caaf6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/13caaf63c146ae9f3ecb027a77304b957fac7f56) by Bartosz Szymendera).
+- Add boundaries to move and scale overlay ([d0c0411](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/d0c041180fbcdc306a73c73fa631023dd6731884) by Maciej Góra).
+- Add env tz=europe/warsaw to dockerfile ([97c918e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/97c918e88f3ace040c62e260d80e175c45649e84) by Katarzyna Jóźwiak).
+- Add packages needed for audit ([f30aa74](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/f30aa74b82a3d0e5239eca306176044fc3386943) by Aleksandra Nowak).
+- Added deleting verse after pressing the delete key ([f735db1](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/f735db1008d9dc63fbf8d30a72a25fb92689e41b) by Lucyna Hernet).
+- Add the proper width of input field in create group ([4506470](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/4506470cefd61546f4c83c3be99b24e4ca6de2f7) by Maciej Góra).
+- Add space beneath elements if the bottom pagination is not displayed ([ddeed33](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/ddeed3372a35bf8310eedd6faee0a607fb451014) by Maciej Góra).
+- Addpages fix ([7e5e7d9](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/7e5e7d995e37da908ba8edbea57d6b1f478affbf) by Bartosz Szymendera).
+- Add english homebt ([53d8ab6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/53d8ab6caa8ef94bcb65c389f9e5c8be495bc776) by Maciej Góra).
+- Added id to env and dockerfile ([3a77255](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/3a77255993d4f430ac78673579980c77e8d12135) by Lucyna Hernet).
+- Added viewmode and btn style ([97d6622](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/97d6622b5c1f95cf1021db45b4743ba84e1a8d51) by Lucyna Hernet).
+- Added inputs ([c5b7e2a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/c5b7e2a3f79026304257b65e3cff4f42565cba60) by Lucyna Hernet).
+- Added links ([c0f9b62](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/c0f9b62f6d2540b9fe5aaa1ace133fe2ef2836aa) by Lucyna Hernet).
+- Add last modification and progress bars ([0eaf892](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/0eaf892d046a91c7140ef8c3b68231ecb162d9fc) by Maciej Góra).
+- Add pagination ([ea000d5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/ea000d5b7dbcd1762e6df7ed1cf3f2b78ab0d2d8) by Maciej Góra).
+- Add modal ([9b870e5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/9b870e5b4a8999862f98ec44a9faaba24618dfcc) by Maciej Góra).
+- Add internal error page ([863a3ad](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/863a3ad387d024b9463d9fddc6a9826c3157bbd4) by Maciej Góra).
+- Add axios interceptor(?) ([5db10a8](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/5db10a815a4d98f51c4ae554d2372139e4211505) by Maciej Góra).
+- Add ontoggledrawmode to viewerosdmenu ([ecba8f8](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/ecba8f8b90297330ec3d844de12d3f9f0b8b858b) by Maciej Góra).
+- Add overlay ([a697164](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/a69716478be7fbc2e412a569eb75b3b3a4fbf4e9) by Maciej Góra).
+- Add show more button ([ebc9ee1](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/ebc9ee136c074d89a59195d1ef9a228ab1a8de22) by Maciej Góra).
+- Add group with undefined name issue fixed ([2fc9cde](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/2fc9cde6ba3c41a22ae09368c09580c536ed3f35) by Maciej Góra).
+- Add user ([8770815](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/8770815e522849213715b0995409c1de0f5ff559) by Maciej Góra).
+- Add emailexists to dicts ([0017462](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/0017462c38274f4e922153224d20d8216b85b44c) by Maciej Góra).
+- Add captcha data to request ([b501ed9](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/b501ed935458082aab0e2013f22c252c0034115d) by Maciej Góra).
+- Add alert functionality to login page ([630151a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/630151a1a42e1b7ea6aba413ed060a1c7c6c203d) by Maciej Góra).
+- Add close button ([fdebc8e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/fdebc8e90833689a4a95e1c0d590e5faa69ac2d3) by Maciej Góra).
+- Add arrow over dropdown menu ([09fb556](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/09fb55632eac4ef0033595236fa6ba8dda4f75ed) by Maciej Góra).
+- Add prop-types ([6f25fd3](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/6f25fd312dbc937d398682ed19bd68352985f024) by Maciej Góra).
+- Add styling to login page ([d64ffd1](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/d64ffd1a1fc91a74c2a3f466268e84c2dad3dafd) by Maciej Góra).
+- Add language context ([4cf3984](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/4cf3984743a6987f4f67bb63894c907416207369) by Maciej Góra).
+- Add external login buttons ([2e47cf5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/2e47cf5ea0f5675661115c3442ec8d52c776d84c) by Maciej Góra).
+
+### Changed
+- Changelog added ([0fedd93](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/0fedd935119535841389b006f20a3c69b4480890) by Aleksandra Nowak).
+- Changes ([2580878](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/2580878d33312bd2af86eceb85cab4ca96f994ea) by Lucyna Hernet).
+- Change date ([bde45e4](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/bde45e4e863eb19bac563bef1d3ab6acd1b23d27) by Bartosz Szymendera).
+- Change update ocr mode to override ([f7ec048](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/f7ec0486167fd7c6b28e9cb0b5bcf82fb5f7b1f0) by Bartosz Szymendera).
+- Change ([01a4a1e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/01a4a1e5fe984588ecff0e0700d10a6a08202b2d) by Lucyna Hernet).
+- Changes in mobile styling ([1d44c54](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/1d44c54db2dfd6731b20697e0066049599462eac) by Lucyna Hernet).
+- Changes in links and added id level ([516e595](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/516e5957a475ca38686125dc77577bb3b1b39c5d) by Lucyna Hernet).
+- Changes in if statements ([0f4f90a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/0f4f90a78f829b8f64185851b4200d552897e7b4) by Lucyna Hernet).
+- Changes + lint ([43c2eb6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/43c2eb6b3cd5fd51d6e50ecc3c8511bdc2f66fa8) by Lucyna Hernet).
+- Changes from pr ([bcd3000](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/bcd300054997f1591ebc41b6af9e626b506705cc) by Lucyna Hernet).
+- Change names of all newtranscription files ([a58b160](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/a58b160b7ab60afa7ff5d88c9cb02da8b4391b17) by Maciej Góra).
+- Change title to my transccriptions ([d14a0c1](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/d14a0c1fde0b4fa601d25065566eee8847c1a8d2) by Maciej Góra).
+- Change role permissions ([2d38d86](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/2d38d865d1c94d16f91259a5577a7c74013fcb99) by Maciej Góra).
+- Change data for change password endpoint ([d52f04b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/d52f04bf350d189f3712fa91ba2200bcca22a76e) by Bartosz Szymendera).
+- Change group name or set name of newly created group ([7da3457](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/7da34577164c40675e7e827437397a07e75e2e1c) by Maciej Góra).
+
+### Fixed
+- Fixed tooltips and restored old package json ([fa17211](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/fa1721102fbee638833e47d031b664bb7e3d3609) by Maciej Góra).
+- Fix? ([facc13c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/facc13cded0595fd1f63a0f5be5a408f7b739e1f) by Bartosz Szymendera).
+- Fix ([ce45649](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/ce4564965c48716034e63c8d949cfbea0c29cf06) by Bartosz Szymendera).
+- Fix undefined variable ([be8943e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/be8943e7c2e2330924cf1c77a0e6b754f3e9de79) by Aleksandra Nowak).
+- Fix audit errors on build ([80cd6e6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/80cd6e65bf810f38f13a09097d2c31f3fac60615) by Aleksandra Nowak).
+- Fix in generate-ui-image playbook ([2681908](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/26819089f758339dcd79cc25998987194e935d0c) by Aleksandra Nowak).
+- Fix settings for sp ([62aec66](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/62aec6663e5eb2d1ca9fa6656d191e8c6145bc91) by Aleksandra Nowak).
+- Fixes ([4384bb0](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/4384bb0a762d6d36be15439c4ac83eafd3664315) by Bartosz Szymendera).
+- Fix conflict from develop and style changes ([facdde8](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/facdde879381a1bb8054f804ddcede1b443f4c78) by Lucyna Hernet).
+- Fix with size of font ([d22b983](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/d22b98303c21f6e490bc70c3119cf586c506894b) by Lucyna Hernet).
+- Fixes from wltf-491,492,493,494 & 495 ([40af7fb](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/40af7fb4fadbf57d44b312e52432557976136f56) by Lucyna Hernet).
+- Fixes from 490, 495 496 ([b816959](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/b8169593895217a46353c3e99940c240a49eede7) by Lucyna Hernet).
+- Fix with put data in modify-content ([e8566c8](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/e8566c8705bdcbf4254890f4a0003cccf3405411) by Lucyna Hernet).
+- Fixes with links and externalurl ([7266b37](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/7266b379c7a2a860c904a3c9f73243b1ab55898a) by Lucyna Hernet).
+- Fixes from 409, 410 & 411 ([4816974](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/48169749cba7ed99c6821527fca88bf2de0eddbe) by Lucyna Hernet).
+- Fix and lint ([e955730](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/e955730bbdd41ef2f4382887f44374d1877299fc) by Lucyna Hernet).
+- Fix add page - response ([d980471](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/d980471020a997c7b81a0fcb772efe0118b65821) by Bartosz Szymendera).
+- Fix and lints ([00c1709](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/00c1709c94765295122e2080f7122810c8d920b6) by Lucyna Hernet).
+- Fixes from pr without input styling ([f36a596](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/f36a596df6b2fedeb028ee7f74bf36897e7e79ff) by Lucyna Hernet).
+- Fix from pr ([0db4994](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/0db499499c22c7e285c73f39e531e18ad5498b3a) by Lucyna Hernet).
+- Fix wltf-187 ([60efcda](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/60efcda0b0378d4016ebb816b75d5dc4338ee05c) by Bartosz Szymendera).
+- Fixed after api changes ([f63148b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/f63148b33e01f597df3e25fd8c965a7b42087db1) by Bartosz Szymendera).
+- Fix router bug ([8448bf0](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/8448bf0ed00239f54b324c5f18e732749a13c5a4) by Maciej Góra).
+- Fix bounding box error ([5ad824a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/5ad824af859a5ad56cad898d45e5d8e3ec17a448) by Maciej Góra).
+- Fixed ([d469b49](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/d469b49766fbe1667e417e7a1d7db340c9b3ce42) by Maciej Góra).
+- Fix in jenkinsfile (crontab related) ([7b5e469](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/7b5e469687a3e0c4e13b1da45cba04a19d89fa87) by Aleksandra Nowak).
+- Fix transcription page ([f012a32](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/f012a32c8cdaccbca6859acd5ba57b34ad050978) by Bartosz Szymendera).
+- Fixed captcha issue ([6f3c601](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/6f3c601db02c49f80a560836c738e8049fbeb310) by Maciej Góra).
+- Fix conflicts from develop ([7a21f72](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/7a21f7233f6b76d1d80dfea164796234a2a32966) by Lucyna Hernet).
+- Fix jenkins build ([b64c44c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/b64c44c494dfa7e105343b65c4965029f6559851) by Aleksandra Nowak).
+- Fix for docker build ([8ad8186](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/8ad81863b6b5e046be29689f14830942d227408b) by Aleksandra Nowak).
+- Fix app.js ([7988e95](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/7988e95dd91c9e66693900995e64c02b2d14e053) by Bartosz Szymendera).
+
+### Removed
+- Remove cleartranscriptiondata ([90a0c3f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/90a0c3f9aff1194ff5bc743759df1820c247ca23) by Maciej Góra).
+- Remove whitespace on start and end of transcription keyword ([3735baf](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/3735baff0aca3bd5b8fb7fa6fddcdfdc4a8b127b) by Maciej Góra).
+- Remove 404 handling from axios interceptor ([d7e238b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/d7e238b044e7cc47e16c441f6b6cd4b4a016c700) by Maciej Góra).
+- Remove <p> from string sent to api ([6e88f15](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/6e88f15e6a4677e93f32f054dd4cf93592a8be8d) by Maciej Góra).
+- Remove devtools ([0322fa2](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/0322fa264402ac7e47fb4955113bdd0145ff0838) by Bartosz Szymendera).
+- Remove group ([ac31c3f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/ac31c3f4cfa28e796d153c6f70c66373a4f23d8d) by Maciej Góra).
+- Remove console.log + lints ([5813ee9](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/5813ee9f4e924f8653a261cbdd592a90b9e4c824) by Mateusz Szutkowski).
+- Remove alert data on reload with option to leave data in store (props: leavealert=true) ([8bc6a83](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/8bc6a831942418a51007ee9ca2f44133c18e0afe) by Maciej Góra).
+- Remove initialstate from main index.js ([d114e87](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/d114e87c6f1bc89859fdb122275b939afa491214) by Bartosz Szymendera).
+- Remove temp img ([64635db](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/64635db875cc7baaaf0e07a1f2c926315757b27c) by Bartosz Szymendera).
+- Remove pagetype support ([4d2cdd8](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/4d2cdd832f2470bb3a5b5979ac3a653166aa94ec) by Maciej Góra).
+- Remove loginformfields.js ([194b241](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/194b241a4dd5f8d7a5502119c75b99968ee0a7da) by Maciej Góra).
+- Remove external data object for loginform ([2d458c8](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/2d458c8f66c2d1f250e30c387302b89b0c9ad3d9) by Maciej Góra).
+- Remove bootstrap classes ([03bdab5](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/03bdab58285b9cf9171dd5266b5233550475233d) by Maciej Góra).
+- Remove verse formatting ([2b8880d](ssh://git@git.man.poznan.pl:7999/wlt/wlt-portal-ui/commit/2b8880d05168eb71976e3f9f99286473fc67c6fa) by Anna Cieplicka).
+
+
