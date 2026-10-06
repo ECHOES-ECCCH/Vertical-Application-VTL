@@ -1,0 +1,56 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## 1.0.1
+
+<small>[Compare with latest]()</small>
+
+### Added
+- Add packages needed for audit ([8a241f7](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/8a241f757dba73acae60ddb646b3ed85799e3d03) by Aleksandra Nowak).
+- Added folder deletion after tests ([0b99ab2](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/0b99ab2ecba23a5cb073d408ce76f9900e8b2e30) by rpidhainyi).
+- Added tests for file deletion and storage clean up ([dc4ea49](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/dc4ea4974f7b5d4508905bc4b2ff01ec44ccb856) by rpidhainyi).
+- Added bean for scheduled clean up tast, moved rate to configurations, fixed bug with string forrmating ([d65ba2d](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/d65ba2df6c87ecc42aef3a6c609dec02f759fc6e) by rpidhainyi).
+- Added scheduled task to clean up ebooks older than one week ([f2f43ea](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/f2f43ea20d0738999b88c19f57d0584eb273ebff) by rpidhainyi).
+- Added ebooks deletion when transcription is deleted ([4c0fb9b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/4c0fb9b9c740d5c423b37b76b2d6006eb0e695c0) by rpidhainyi).
+- Added look up for exported ebook ([9c1638b](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/9c1638b66237de4b0419618145c220e6e1361fca) by rpidhainyi).
+- Added changes, changed controller ([c0773e0](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/c0773e0226f634680569e3881690d7de78d502a3) by rpidhainyi).
+- Added delete page file functionality ([ae98f65](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/ae98f6533d645d1bc70f700d998cb2af7145a7c5) by rpidhainyi).
+- Add  poppler-utils ([58d92d0](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/58d92d07423edf534927a75b036965996b104d06) by Katarzyna Jóźwiak).
+
+### Changed
+- Change diretory paths ([d8da8f8](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/d8da8f860e42aefa35c7ccb6fb4fcc2c410a635c) by Katarzyna Jóźwiak).
+- Change ([d965bf3](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/d965bf323caf4fd4a3bfca224639279739006639) by Katarzyna Jóźwiak).
+- Changed delete to post coz httpclien doesnt allow body in delete ([3aad1e9](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/3aad1e9a2644b2d552af8627e3b3f45a65699993) by rpidhainyi).
+- Changes in downloadfiles method ([ae2d91e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/ae2d91e7f971108268a10f182a8425c2f348f551) by jbrek).
+- Change downloadfiles to return hashmap<string,string> ([4583271](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/45832718f389896db79b2fa07dc1f96d36abb32b) by jbrek).
+- Change iiifservercontroller.downloadfiles to return list of filenames ([59595ba](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/59595badd28e1f37650824808101fc25384d6701) by jbrek).
+- Change transcriptions ids in tests ([55dea57](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/55dea574f5e3641205d14ddd51b76828eac5ae5c) by jbrek).
+- Change download way ([8228285](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/8228285e754c6fe31e3e6055e37cd6afb809bced) by Katarzyna Jóźwiak).
+
+### Fixed
+- Fixed import of big IIIF files by an option of setting read and connection timeouts separately 
+- Fix conflicts and other ([f9ad048](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/f9ad048faf331188bb48ac857c4f4014d3e78cdc) by Michał).
+- Fixed conflicts ([a0255da](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/a0255daee9ac1a9a21cef4dcf885f072126d20ca) by rpidhainyi).
+- Fixed deletion of transcription ebook folder ([8b8e35a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/8b8e35a6108caeddf8e06539f9674b382abc43d1) by rpidhainyi).
+- Fixed testfor folder deletion ([8a58553](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/8a58553c703ab9f54d029e6c085e60f4a09b513c) by rpidhainyi).
+- Fixed bug in checking iiif-urls ([bf6ece6](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/bf6ece6cbbec8b10e0da888617b35ae9e37d2fa3) by Tomasz Hoffmann).
+- Fixed ebook location ([357a30f](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/357a30fee7690d663f0f386bedfc266a71940022) by rpidhainyi).
+- Fixed some bugs todo: clean code ([8088553](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/80885531ca838da9761b4a9c858fe5ddd046f41a) by Tomasz Hoffmann).
+- Fixed build ([91d3e77](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/91d3e77a3c90069eb0c10cab4210475799ead762) by rpidhainyi).
+- Fixed np with relativeno on page deletion ([bcc711a](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/bcc711a9a36f64feb6f5ab0c32ababce90fed6b3) by rpidhainyi).
+- Fix in jenkinsfile (crontab related) ([e7fa31e](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/e7fa31e01b03bbb4f57a2076e1131af37859cc9e) by Aleksandra Nowak).
+- Fixed tiff script ([11f5c32](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/11f5c32a1b598b0b74737e9e03ede5137042a942) by Tomasz Hoffmann).
+- Fixed docker volume problem with scripts directory ([eaa98d7](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/eaa98d7d4053ce8cadc0e058bda5c22deadfdf7f) by Tomasz Hoffmann).
+- Fixed pages script ([cda3674](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/cda3674ea8e50a0e114eab8aaf31d6637cb3a1f4) by Tomasz Hoffmann).
+- Fix test ([cbccc78](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/cbccc78f94f690a493a6c480be4a95869f08213b) by jbrek).
+
+### Removed
+- Remove sorting files comparator ([ba55519](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/ba555196c7e9e1f7c00573dbb3b765194836b2d1) by jbrek).
+- Remove ugly directory ([950dd9c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/950dd9c4f076de2770d00127856bd588ca14c02b) by Aleksandra Nowak).
+- Remove unnecesseary import ([74a3f11](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/74a3f112f113f2c13a93b2c9cb072a7dfc57bf63) by jbrek).
+- Removed unnecessary exceptions classes ([8443cd0](ssh://git@git.man.poznan.pl:7999/wlt/wlt-iiif-tools/commit/8443cd09492196cc961339a227b595f436d95cf8) by Tomasz Hoffmann).
+
+

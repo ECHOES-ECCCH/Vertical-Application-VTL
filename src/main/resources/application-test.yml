@@ -1,0 +1,6 @@
+
+vtl:
+  iiif-tools:
+    storage: /var/vtl-storage
+    scripts: /var/vtl-scripts
+    cache: /var/vtl-storage/cache

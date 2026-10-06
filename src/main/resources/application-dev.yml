@@ -1,0 +1,10 @@
+
+vtl:
+    iiif-tools:
+        storage: /var/vtl-storage
+        cache: /var/vtl-storage/cache
+        scripts: /var/vtl-scripts
+        max-retries: 3
+        timeout:
+            read: 30000
+            connection: 4000
