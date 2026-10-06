@@ -1,0 +1,14 @@
+databaseChangeLog:
+    - changeSet:
+          id: 00004-WLT_296-1
+          author: swolarz
+          comment: Add transcription language column to pending OCR corrections table
+          changes:
+              - addColumn:
+                    tableName: pending_ocr_corrections
+                    columns:
+                        - column:
+                              name: lang
+                              type: varchar(8)
+                              constraints:
+                                  nullable: false

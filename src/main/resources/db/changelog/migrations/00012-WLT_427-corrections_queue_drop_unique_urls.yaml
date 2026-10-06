@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: 00012-WLT_427-corrections_queue_urls-1
+      author: swolarz
+      description: Drops unique constraint for the corrections queue
+      changes:
+        - dropUniqueConstraint:
+            tableName: pending_ocr_corrections
+            constraintName: pending_ocr_corrections_iiif_image_url_key
