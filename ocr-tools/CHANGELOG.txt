@@ -1,0 +1,24 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## 1.0.1
+
+<small>[Compare with latest]()</small>
+
+### Added
+- Add env tz=europe/warsaw to docerfile ([36c58af](ssh://git@git.man.poznan.pl:7999/wlt/wlt-ocr-tools/commit/36c58af03fe14f11ef91541d29ab5a99fa2b0c8f) by Katarzyna Jóźwiak).
+
+### Fixed
+- Fix long time of recognition for objects with multiple selections
+- Fix text in test ([a370263](ssh://git@git.man.poznan.pl:7999/wlt/wlt-ocr-tools/commit/a37026340a1bbd0fc664c35f48ca185451edb5fc) by jbrek).
+- Fix ([9556990](ssh://git@git.man.poznan.pl:7999/wlt/wlt-ocr-tools/commit/95569902a37c3651d31caa3c8c3f89cb4fda4c6d) by jbrek).
+- Fix method name ([88dafb3](ssh://git@git.man.poznan.pl:7999/wlt/wlt-ocr-tools/commit/88dafb3f75b4f3ad5bf52983eac1ac65673896a5) by jbrek).
+- Fix in jenkinsfile (crontab related) ([de67b67](ssh://git@git.man.poznan.pl:7999/wlt/wlt-ocr-tools/commit/de67b6723fe5fa9b86ac02c1344a459a8aad3056) by Aleksandra Nowak).
+
+### Removed
+- Remove unused imports ([68d1c3c](ssh://git@git.man.poznan.pl:7999/wlt/wlt-ocr-tools/commit/68d1c3c94c305e8db711f66a74a9511b1f144fab) by jbrek).
+
+
