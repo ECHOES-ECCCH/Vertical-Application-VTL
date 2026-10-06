@@ -1,0 +1,47 @@
+@import "@Styles/_breakpoints.sass"
+
+.home-transcriptions
+    &__header
+        display: flex
+        align-items: baseline
+        color: #161615
+        margin-top: 92px
+        +touch
+            flex-direction: column
+            align-items: flex-start
+            margin-top: 70px
+        &--title
+            font-size: 1.75rem
+            margin-bottom: 0
+            margin-left: auto
+            margin-right: auto
+            font-weight: 700
+            text-align: center
+
+        &--link
+            margin-left: 3px
+
+            &-container
+                font-size: 1.125rem
+                flex: 1
+                +touch
+                    font-size: 0.875rem
+                    margin-top: 10px
+                +mobile
+                    font-size: 0.75rem
+
+        &--search
+            +touch
+                margin: 10px 0 0
+                width: 100%
+            +desktop
+                flex: 0 0 180px
+            +widescreen
+                flex: 0 0 370px
+            +fullhd
+                flex: 0 0 500px
+
+    &__transcriptions
+        display: grid
+        grid-row-gap: 30px
+        margin-top: 40px

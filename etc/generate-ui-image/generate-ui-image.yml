@@ -1,0 +1,10 @@
+---
+- hosts: "local"
+  vars:
+    registry: "registry.apps.man.poznan.pl"
+    project: "wlt"
+    imageTag: "{{ tag | default('latest') }}"
+    imageName: "wlt-portal-ui"
+  roles:
+    - docker-login
+    - generate-image

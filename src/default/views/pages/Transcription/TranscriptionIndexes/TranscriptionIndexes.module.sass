@@ -1,0 +1,261 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Pages/Transcription/TranscriptionVerification/TranscriptionVerification.module.sass"
+
+.indexes
+    padding: 35px 0 310px
+    &__go-back
+        color: #161615
+        text-decoration: underline
+        font-size: 0.875rem
+
+    &__title
+        border-bottom: 1px solid #DDDDDD
+        padding-bottom: 10px
+        color: #373A3C
+        @extend .verification__title
+        &--container
+            @extend .verification__title--container
+    &__info
+        padding-top: 10px
+        @extend .verification__info
+        &--container
+            @extend .verification__info--container
+        &--label
+            font-size: 0.9rem
+            @extend .verification__info--label
+        &--author
+            font-size: 0.9rem
+            font-weight: bolder
+            @extend .verification__info--author
+            color: #161615
+        &--title
+            font-size: 0.9rem
+            @extend .verification__info--title
+            color: #161615
+
+    &__filters
+        margin-top: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        &--label
+            margin-bottom: 0
+            margin-right: 5px
+        &--reset
+            font-size: 1.6rem
+            color: #3a3a3a
+            text-decoration: underline
+            &:hover
+                color: #161615
+        &--dropdown-alphabet
+            width: 50px
+            margin-right: 10px
+            display: inline-block
+        &--dropdown-pages
+            width: 100px
+            margin-right: 10px
+            display: inline-block
+
+    &__header
+        display: flex
+        height: 50px
+        width: 100%
+        background-color: #4a4a4a
+        margin-top: 20px
+        color: white
+        align-items: center
+
+        &--chosen-index
+            min-width: 300px
+            margin-left: 10px
+
+        &--indexes-in-project
+            width: 100%
+            margin-left: 10px
+            +touch
+                display: none
+
+    &__table
+        display: flex
+        margin-top: 10px
+        +touch
+            flex-direction: column
+
+        &--search-input
+            margin-left: 5px
+            margin-bottom: 30px
+            max-width: 500px
+            border-radius: 0px
+            border: 0px
+            border-bottom: 2px solid #4a4a4a
+            display: flex
+
+            & input
+                padding: 6px 10px 6px 15px
+                background: transparent
+                border: none
+                width: 450px
+
+                &::-webkit-input-placeholder
+                    font-style: normal
+
+                &:focus-visible
+                    border: none
+                    outline: none
+
+            & i
+                color: #717171
+                margin: auto
+
+        &--aside
+            display: flex
+            flex-direction: column
+            background-color: #FFFFFF
+            border: 1px solid #A8A8A8
+            min-width: 300px
+            padding: 20px 20px
+            color: #404040
+
+            &-element
+                padding: 10px 5px
+
+                & .tag-type
+                    color: #005ca9
+                    cursor: pointer
+                    margin: 5px 0px
+                    &-active
+                        color: black
+                        font-weight: 700
+                    &:hover
+                        text-decoration: underline
+                    &:first-child
+                        padding-top: 0px
+
+                    &--count
+                        font-weight: normal
+                        color: black
+
+        &--content
+            width: 100%
+            margin-left: 0
+            padding: 20px 20px
+            background-color: #F9F9F9
+            border: 1px solid #A8A8A8
+            border-left: none
+
+            &-indicator
+                display: flex
+                &-letter
+                    font-size: 1rem
+                    width: 50px
+                    height: 50px
+                    display: flex
+                    justify-content: center
+                    line-height: 50px
+                    color: white
+                    background-color: #4A4A4A
+                &-line
+                    flex-grow: 1
+                    border-bottom: 1px solid #A8A8A8
+                    padding: 0.4rem 0.3rem
+                    margin-left: 100px
+                    +mobile
+                        margin-left: 0
+        &--item
+            border: 1px solid #DDDDDD
+            background-color: #F4F4F4
+            margin-bottom: 6px
+            color: #373A3C
+            border-radius: 4px
+            display: grid
+            grid-template-columns: 1fr 215px 280px 320px
+            +touch-sec
+                display: flex
+                flex-direction: column
+            &-label
+                display: none
+                font-size: 0.75rem
+                color: #555858
+                margin-right: 10px
+                +touch-sec
+                    display: flex
+                    flex: 0 1 240px
+                +mobile
+                    flex: 1
+
+            &-default
+                padding: 15px 12px 0
+                position: relative
+                font-size: 0.75rem
+                +touch-sec
+                    flex: 1
+                    display: flex
+                    flex-direction: row
+                    align-items: baseline
+                    &:last-child
+                        padding-bottom: 15px
+                +mobile
+                    flex-direction: column
+
+                +widescreen
+                    padding: 15px 12px
+                    font-size: 0.875rem
+                +widescreen
+                    &::before
+                        content: ''
+                        width: 1px
+                        height: calc(100% - 30px)
+                        display: block
+                        background: #DDDDDD
+                        position: absolute
+                        left: 0
+                        padding: 15px 0
+                        top: 15px
+            &-name
+                @extend .indexes__table--item-default
+                display: flex
+                &::before
+                    display: none
+                &-container
+                    display: flex
+                    flex-direction: column
+                &-email
+                    font-size: 0.9375rem
+                    font-weight: 700
+                &-contact
+                    font-size: 0.875rem
+                    margin-top: 5px
+                    i::before
+                        margin-left: 0
+
+    &__no-stats
+        font-size: 0.875rem
+        line-height: 1.5rem
+        margin-top: 40px
+
+    &__list
+        &--item
+            display: flex
+            margin-top: 10px
+            color: #161615
+            +mobile
+                flex-direction: column
+
+        &--item-name
+            width: 160px
+            font-weight: bold
+
+        &--item-pages
+            padding-left: 26px
+            display: flex
+            width: 100%
+            flex-flow: row wrap
+            +mobile
+                padding-left: 0
+
+        &--item-link
+            margin-right: 10px
+            color: #005ca9
+
+        &--item-count
+            color: black

@@ -1,0 +1,85 @@
+{
+	"name": "wlt",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"axios": "^0.27.2",
+		"bootstrap": "^4.3.1",
+		"draft-convert": "^2.1.12",
+		"draft-js": "^0.11.7",
+		"file-saver": "^2.0.2",
+		"html-react-parser": "^2.0.0",
+		"i18next": "^21.6.14",
+		"i18next-browser-languagedetector": "^6.1.3",
+		"i18next-http-backend": "^1.4.0",
+		"jwt-decode": "^2.2.0",
+		"moment": "^2.29.3",
+		"named-urls": "^2.0.0",
+		"openseadragon": "^4.1.1",
+		"path-browserify": "^1.0.1",
+		"react": "^18.2.0",
+		"react-bootstrap": "^1.0.1",
+		"react-bootstrap-typeahead": "^6.0.0",
+		"react-dom": "^18.2.0",
+		"react-draft-wysiwyg": "^1.14.7",
+		"react-ga4": "^2.1.0",
+		"react-hook-form": "^7.44.2",
+		"react-i18next": "^11.16.1",
+		"react-markdown": "^8.0.7",
+		"react-moment": "^1.1.2",
+		"react-redux": "^7.1.3",
+		"react-redux-loading-bar": "^5.0.4",
+		"react-router-dom": "^5.1.2",
+		"react-scripts": "^5.0.0",
+		"react-slick": "^0.29.0",
+		"react-tooltip": "^5.27.0",
+		"redux": "^4.0.4",
+		"redux-thunk": "^2.3.0",
+		"sass": "^1.62.1",
+		"slick-carousel": "^1.8.1",
+		"universal-cookie": "^4.0.3",
+		"use-debounce": "^3.4.1"
+	},
+	"scripts": {
+		"analyze": "source-map-explorer 'build/static/js/*.js'",
+		"styleguide": "styleguidist server",
+		"styleguide:build": "styleguidist build",
+		"start": "craco start",
+		"build": "craco build",
+		"test": "craco test",
+		"lint": "eslint --env browser \"src/**/*.js\"",
+		"lint:fix": "eslint --env browser \"src/**/*.js\" --fix"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@babel/plugin-proposal-private-property-in-object": "7.21.0",
+		"@craco/craco": "^7.0.0",
+		"@hookform/devtools": "^4.3.1",
+		"eslint": "^8.36.0",
+		"eslint-config-standard-jsx": "^8.1.0",
+		"eslint-config-standard-react": "^9.2.0",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-node": "^10.0.0",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-react": "^7.14.3",
+		"eslint-plugin-standard": "^4.0.1",
+		"eslint-webpack-plugin": "^4.0.0",
+		"immutable": "^4.0.0",
+		"normalize.css": "^8.0.1"
+	},
+	"proxy": "http://localhost:8080"
+}

@@ -1,0 +1,327 @@
+@import "@Styles/_breakpoints.sass"
+
+.navbar
+    justify-content: center
+    margin-bottom: 0px
+    padding: 0px
+    transition: none
+
+    +touch-sec
+        justify-content: flex-end
+        position: initial
+
+    &-light .navbar-nav .nav-link
+        color: #373A3C
+        flex: 1
+        text-align: center
+        border-right: 1px solid #E5E5E5
+        &.navbar__collapsed
+            position: absolute
+            overflow-x: hidden
+    &__opened
+        overflow: hidden
+    &__text
+        +desktop
+            padding: 0 20px 15px 20px
+        +touch
+            padding: 25px 0 0
+        &--link
+            color: #1A73E8 !important
+
+        &--black
+            color: #373A3C !important
+
+        &--nowrap
+            white-space: nowrap
+
+    .navbar-collapse
+        transition: none
+        +desktop
+            box-shadow: 0px 3px 6px rgb(0, 0, 41)
+            border-radius: 4px
+            background-color: #fff
+        &.sticky
+            box-shadow: none
+            border-left: 1px solid #E5E5E5
+
+            .navbar__menu--login
+                .nav-link
+                    +desktop
+                        border-top-right-radius: 0px
+                        border-bottom-right-radius: 0px
+
+        &.show
+            .navbar__menu--item,
+            .navbar__menu--dropdown,
+            .navbar__menu--login
+                +touch
+                    width: 100%
+                    margin-bottom: 3px
+                    background-color: #F4F4F4
+                    color: #1A73E8
+                    font-size: 1.125rem
+                .dropdown-menu
+                    padding: 0px
+                    .dropdown-item
+                        +touch
+                            padding: 35px 15px 35px 27px
+                            font-size: 1.125rem
+                        +desktop
+                            &:hover, &:focus, &:active
+                                background-color: #1A73E8 !important
+                                padding: 20px
+                                color: #fff
+
+            .navbar__menu--login
+                .nav-link
+                    +touch
+                        background-color: #F4F4F4
+                        color: #1A73E8
+                .dropdown-menu
+                    +touch
+                        padding: 25px
+            .navbar__menu--title
+                +touch
+                    display: flex
+
+    &__menu
+        font-size: 1.063rem
+        justify-content: space-around
+        width: 100%
+        align-items: center
+        display: flex
+
+        .navbar__menu--dropdown
+            .nav-link
+                +touch
+                    color: #1A73E8
+                    &:active
+                        color: #383B3C
+            &:first-child
+                .nav-link
+                    +desktop
+                        border-top-left-radius: 4px
+                        border-bottom-left-radius: 4px
+            &:last-child
+                .nav-link
+                    +desktop
+                        border-top-right-radius: 4px
+                        border-bottom-right-radius: 4px
+        &--title
+            display: none
+            font-size: 1.125rem
+            font-weight: bold
+            padding: 35px 30px
+            width: 100%
+            &-active
+                display: flex
+        &--hamburger
+            border: 0
+            padding: 0
+            &:focus
+                outline: 0
+            span
+                width: 22px
+                height: 3px
+                background-color: #005CA9
+                margin: 4px 0
+                display: block
+
+            +touch
+                display: block
+
+            +desktop
+                display: none
+
+        .navbar-collapse
+            +touch-sec
+                position: absolute
+                width: 100%
+                right: 0
+                top: 0px
+                height: 100vh
+                background: #FFF
+                z-index: 1020
+                transition: none
+
+        .dropdown-menu
+            margin-top: 4px
+            min-width: 260px
+            +touch-sec
+                border-radius: 0
+                margin: 0
+                border: 0
+
+            .navbar-nav
+                text-align: left
+                width: 100%
+                position: absolute
+                top: 0px
+                height: 500px
+                padding: 0px
+                background-color: #fff
+
+        .nav-link
+            background: #FFF
+            padding: 12px 8px
+            +desktop
+
+                &.active
+                    border-top: 4px solid #1C7CD5
+                    padding-top: 8px
+            +touch
+                background-color: transparent
+                text-align: left !important
+                padding: 35px 15px 35px 22px
+                border-left: 7px solid #DDDDDD
+            &:hover, &:focus, &:active
+                background-color: #F4F4F4
+
+        &--dropdown
+            flex: 1 1
+            &-title
+                display: flex
+                flex-direction: column
+                +touch
+                    flex-direction: row
+                    justify-content: space-between
+                    align-items: center
+                i
+                    bottom: 7px
+                    height: 10px
+                    margin-top: -10px
+                    display: none
+                    +touch
+                        display: block
+                        margin-top: -15px
+                        color: #373A3C
+
+            &:hover,
+            &:focus
+                .navbar__menu--dropdown-title i
+                    display: block
+
+            &.show
+                .navbar__menu--dropdown-title i
+                    display: block
+                    transform: rotate(180deg)
+                    margin-top: 3px
+                    margin-bottom: -13px
+
+            &-item
+                display: flex
+                justify-content: space-between
+                color: #1A73E8
+                &.active
+                    color: #373A3C
+            &-active
+                .nav-link
+                    +desktop
+                        border-top: 4px solid #1C7CD5
+                        padding-top: 8px
+                    +touch
+                        border-left-color: #1C7CD5
+
+        &--login
+            flex: 1
+            border-radius: 4px
+            .nav-link
+                background-color: #1A73E8
+                border-right: none !important
+                +desktop
+                    border-radius: 0 4px 4px 0
+                &:hover, &:focus
+                    +touch
+                        color: #373A3C !important
+                &:active
+                    background-color: #F4F4F4 !important
+                    color: #373A3C !important
+            &.nav-item
+                &, &.show
+                    .nav-link
+                        color: #fff
+                        background-color: #1A73E8
+                        &:hover, &:focus
+                            +desktop
+                                background-color: #0E60CB
+                                color: #fff
+
+        .dropdown-toggle
+            &::after
+                display: none
+
+        .dropdown-menu
+            padding: 0px
+            +touch-sec
+                border: none
+                position: relative
+
+            &::before,
+            &::after
+                +desktop
+                    content: ''
+                    display: block
+                    position: absolute
+                    bottom: 100%
+                    width: 0
+                    height: 0
+            &::before
+                right: 20px
+                border: 4px solid transparent
+                border-bottom-color: rgba(0,0,0,0.15)
+            &::after
+                right: 21px
+                border: 3px solid transparent
+                border-bottom-color: #fff
+
+            .dropdown-item
+                padding: 20px 15px
+                background-color: #FFF
+                &:first-child
+                    +desktop
+                        border-radius: 4px 4px 0 0
+
+                &:last-child
+                    +desktop
+                        border-radius: 0 0 4px 4px
+                &:active
+                    background-color: #F4F4F4
+                    color: #373A3C
+                +desktop
+                    &:hover, &:focus
+                        background-color: #1A73E8
+                        color: #fff
+                    &:active
+                        color: #373A3C
+                        background-color: #F4F4F4
+                &.active
+                    background-color: #FFF
+                    color: #373A3C
+                    +desktop
+                        &:active
+                            background-color: #F4F4F4
+                        &:hover, &:focus
+                            background-color: #1A73E8
+                            color: #fff
+                    +touch
+                        background-color: #fff
+                        &:hover, &:focus
+                            background-color: #fff
+
+            .dropdown-divider
+                margin: 0px
+
+            .btn
+                width: calc(100% - 40px)
+                margin: 20px
+                +touch
+                    width: 100%
+                    padding: 19px 15px
+                    margin: 0
+
+.navbar-nav
+    +desktop
+        > .nav-item:nth-child(2)
+            border-radius: 4px 0 0 4px
+            > .nav-link
+                border-radius: 4px 0 0 4px

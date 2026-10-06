@@ -1,0 +1,98 @@
+@import '@Styles/_breakpoints.sass'
+@import '@Styles/_colors.sass'
+
+.modal-dropdown
+	height: 3rem
+	position: relative
+	font-size: 1rem
+	margin-top: 0.5rem
+
+	& >[class*="dropdown-toggle"]
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 100%
+		background-color: $colorWhite
+		padding: 1rem
+		border: 1px solid $colorGrey600
+		color: $colorGrey700
+		width: 100%
+		font-size: inherit
+		text-overflow: ellipsis
+		white-space: nowrap
+		overflow: hidden
+
+		&::after
+			font-family: 'fontello'
+			content: '\e81a'
+			color: $colorPrimary500
+			border: none
+			font-size: 25px
+			font-style: normal
+
+		&[aria-expanded="true"]
+			border-radius: 5px 5px 0 0
+			color: $colorBlack
+			&::after
+				content: '\e821' // chevron-down
+
+		&:active,&:focus,&:hover
+			border-color: $colorPrimary500
+			outline: 0
+			box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25)
+
+	& >[class*="dropdown-menu"]
+		border-radius: 0 0 5px 5px
+		box-shadow: 0px 3px 6px 0px #00000029
+		max-height: 300px
+		overflow-y: auto
+		font-size: inherit
+		&::before, &::after
+			display: none !important
+			border: none !important
+
+	& *[class*="dropdown-item"]
+		font-size: inherit
+		color: $colorBlack
+		padding: 0.5rem 1rem
+		
+
+	& *[class*="dropdown-item__active"]
+		font-size: inherit
+		color: $colorPrimary500
+		>i
+			position: relative
+			left: 0
+			&::before
+				margin: 0 8px 0 0
+
+	&--language
+		display: inline-block
+		@extend .modal-dropdown
+		max-width: 200px
+		margin-right: 1rem
+		margin-bottom: 1rem
+
+.dropdown__wrapper
+	margin-top: 2rem
+	&--first
+		margin-top: 1rem
+	
+	& > button
+		margin-right: 0.5rem
+
+.modal__notice
+	margin-top: 2rem
+	margin-bottom: 1rem
+	padding: 0 1rem
+
+.form-buttons
+	margin-top: 3rem
+	display: flex
+	justify-content: flex-end
+	gap: 1rem
+	>button
+		margin: 0
+		height: 48px
+	+mobile
+		flex-direction: column-reverse

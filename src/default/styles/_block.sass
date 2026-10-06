@@ -1,0 +1,74 @@
+.block
+    margin: 70px auto 30px
+    
+    &--650
+        max-width: 650px
+
+    &--750
+        max-width: 750px
+
+    &--1020
+        max-width: 1020px
+
+    &--1260
+        max-width: 1260px
+    
+
+    &__header
+        display: flex
+        align-items: baseline
+        
+        &--space-between
+            justify-content: space-between
+    &__content
+        margin-top: 50px
+
+    &__select
+        margin-top: 20px
+        margin-bottom: 30px
+        width: 100%
+        border: none
+
+        &:focus-visible
+            outline: none
+
+
+    &__form
+        &--inputfile
+            margin-top: 50px
+ 
+        &--buttons
+            margin-top: 60px
+            display: flex
+            justify-content: flex-end
+            align-items: center
+
+            +mobile-small
+                flex-direction: column-reverse
+
+    &__divider
+        border-top: 1px solid #DDDDDD
+        margin: 65px 0
+        +touch
+            margin: 25px 0
+
+    &__underlined
+        border-bottom: 2px solid #DDDDDD
+
+    &__button
+        &--cancel
+            margin-right: 20px
+            padding: 10px 30px
+
+            +mobile-small
+                margin-top: 20px
+
+        &--submit
+            padding: 10px 30px
+
+    &__line
+        border-color: #DDDDDD
+
+        &--m35
+            margin: 35px 0
+

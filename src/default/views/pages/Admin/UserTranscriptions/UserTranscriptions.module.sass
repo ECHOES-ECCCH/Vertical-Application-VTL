@@ -1,0 +1,124 @@
+@import '@Styles/_breakpoints.sass'
+
+.transcriptions
+    &__header
+        margin-top: 20px
+        margin-bottom: 20px
+        color: #4a4a4a
+
+    &--search-input
+        margin-left: auto
+        margin-bottom: 30px
+        width: 500px
+        border-radius: 0px
+        border: 0px
+        border-bottom: 2px solid #4a4a4a
+
+        & input
+            padding: 6px 10px 6px 15px
+            background: transparent
+            border: none
+            width: 450px
+
+            &::-webkit-input-placeholder
+                font-style: normal
+
+            &:focus-visible
+                border: none
+                outline: none
+
+        & i
+            color: #717171
+
+.transcription-list
+    &__no-pagination-wrapper
+        margin-top: 0
+
+    &__wrapper
+
+    &__item-header
+        @extend .transcription-list__item
+        color: #fff
+        background: #4A4A4A
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        grid-template-columns: 40px 1fr 1fr 160px
+        grid-template-areas: 'order project authors buttons'
+
+    &__item
+        border: 1px solid #D5D5D5
+        display: grid
+        height: 60px
+        font-size: 0.875rem
+        margin-bottom: 5px
+        grid-template-columns: 40px 1fr 1fr 160px
+        grid-template-areas: 'order project authors buttons'
+
+        &--element
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            overflow: hidden
+            padding: 0 15px
+
+        &--order
+            @extend .transcription-list__item--element
+            grid-area: order
+            justify-content: center
+            border-right: 1px solid #D5D5D5
+            +touch
+                justify-content: center
+                border-right: 1px solid #D5D5D5
+
+        &--order-header
+            @extend .transcription-list__item--element
+            grid-area: order
+            justify-content: center
+            +touch
+                justify-content: center
+
+        &--project
+            @extend .transcription-list__item--element
+            grid-area: project
+            border-right: 1px solid #D5D5D5
+
+        &--project-header
+            @extend .transcription-list__item--element
+            grid-area: project
+
+        &--authors
+            @extend .transcription-list__item--element
+            grid-area: authors
+            border-right: 1px solid #D5D5D5
+            flex-flow: wrap
+            overflow: auto
+
+        &--single-author
+            margin-right: 5px
+
+        &--authors-header
+            @extend .transcription-list__item--element
+
+        &--buttons
+            @extend .transcription-list__item--element
+            grid-area: buttons
+            background: #fff
+            justify-content: space-around
+            border: none
+            padding: 0
+
+        &--link
+            color: #005ca9
+            text-decoration: none
+
+        &--btn
+            width: 100%
+            height: 100%
+            text-align: center
+            border-radius: 0
+            font-size: 0.875rem
+
+        &--btn-left
+            @extend .transcription-list__item--btn
+            text-align: left

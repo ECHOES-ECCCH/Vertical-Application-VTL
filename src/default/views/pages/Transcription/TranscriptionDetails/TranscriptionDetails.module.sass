@@ -1,0 +1,311 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/_font-colors.sass"
+
+.transcription
+    color: #373A3C
+    &__header
+        margin-top: 2rem
+        margin-bottom: 1rem
+    &__section
+        margin-top: 0px
+        &--border
+            border-bottom: 2px solid #DDDDDD
+    &__section:last-child
+        margin-bottom: 2rem
+    &__title
+        font-size: 1.75rem
+        font-weight: bold
+    &__metadata
+        margin-top: 2rem
+        font-size: 1.5625rem
+        font-weight: normal
+    &__main
+        padding-bottom: 1rem
+        +touch
+            padding-bottom: 0px
+        &--first
+            margin-top: -92px
+            +touch
+                margin-top: 0px
+        &--collapsed
+            display: none
+        &--button-wrapper
+            justify-content: space-between
+            display: flex
+            padding-top: 1rem
+            position: relative
+            +touch
+                padding-top: 23px
+            &--button-collapse
+                color: #005CA9
+                text-decoration: none
+                border: none
+                appearance: none
+                transition: none
+                display: flex
+                flex-wrap: nowrap
+                font-size: 0.8rem
+                outline: 0 !important
+                outline-color: white !important
+                &:hover
+                    color: #005CA9
+                    border: none
+                    outline: 0 !important
+                    outline-color: white !important
+                &:focus
+                    box-shadow: none !important
+
+    &__alert
+        &--margin-bottom
+            margin-bottom: 45px
+
+    &__meta
+        display: flex
+        flex-direction: row
+        margin-bottom: 1rem
+        align-items: baseline
+        +touch
+            flex-direction: column
+
+        &--details-wrapper
+            flex: 0 1 225px
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-start
+            margin-bottom: 0.5rem
+
+            +touch
+                flex-direction: column
+                gap: 0px
+                margin-bottom: 10px
+            &-first
+                margin-top: -45px
+
+            &--click-to-copy
+                text-decoration: none
+                color: #1A73E8
+                cursor: pointer
+
+                &:hover
+                    text-decoration: underline
+
+            &--title
+                font-size: 1rem
+                color: #404040
+                padding-right: 0.5rem
+            &--break
+                flex-basis: 100%
+                width: 0
+                height: 0
+            &--rich
+                & > *
+                    margin-bottom: 0
+            &--rich
+                p
+                    font-size: 1rem
+
+        &--collapsed
+            margin-top: -44px
+            display: flex
+            flex-direction: row
+            margin-bottom: 16px
+            +desktop-only
+                padding-right: 200px
+
+            +touch
+                flex-direction: column
+                margin-top: 12px
+        &--title
+            font-size: 1.25rem
+            font-weight: bold
+            flex: 1
+            margin-bottom: 0
+        &--name
+            flex: 0 1 225px
+            clear: both
+            font-size: 1rem
+            font-weight: bold
+            margin-bottom: 0
+            +touch
+                flex: 1 1
+        &--value
+            flex: 1
+            font-size: 1rem
+            margin-bottom: 0
+        &--links
+            flex: 1
+            font-size: 1rem
+            text-decoration: underline
+            color: #373A3C
+            &-container
+                @extend .transcription__meta--value
+                display: flex
+                flex-direction: column
+                .transcription__meta--links
+                    line-height: 2rem
+            i
+                vertical-align: top
+                font-size: 0.625rem
+
+    &__description
+        &--title
+            font-size: 0.875rem
+            color: #6E6E6E
+            font-weight: bold
+            margin-top: 73px
+            +touch
+                margin-top: 33px
+        &--text
+            font-size: 0.875rem
+            color: #707070
+            margin-bottom: 27px
+    &__additionalText
+        font-size: 0.875rem
+        text-align: right
+        &--gray
+            color: #555858
+        &--box
+            margin-top: 24px
+            margin-bottom: 26px
+    &__link
+        padding: 7px 25px
+        &--active
+            @extend .transcription__link
+            box-shadow: inset 0px 4px 0 0px #1C7CD5
+            background-color: #FCFCFC
+    &__backLink
+        font-size: 0.875rem
+        margin-bottom: 34px
+    &__desktopNav
+        display: flex
+        justify-content: flex-end
+        margin-bottom: 1rem
+        +touch
+            display: none
+    &__mobileNav
+        display: none
+        +touch
+            display: block
+            text-align: right
+        &--dropdown
+            margin-bottom: 27px
+        &--dropdown-menu
+            width: 100%
+            text-align: center
+            a
+                color: #1C7CD5
+                padding: 5px
+        &--additional-button
+            @extend .transcription__link
+
+.pages-list
+    padding-top: 80px
+    &__wrapper
+        background-color: #F4F4F4
+
+    &__alert
+        position: relative
+        width: 100%
+        margin: -55px auto 30px
+        border: 1px solid black
+        border-radius: 5px
+        padding: 15px 40px
+        color: #1A73E8
+        background-color: #F2F9FC
+        border-color: #CDE1F8
+
+    &__head
+        margin-bottom: 35px
+        +fullhd
+            display: flex
+            align-items: baseline
+            justify-content: flex-end
+        &-column
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: center
+            margin-bottom: 2rem
+
+    &__header
+        font-size: 1.5rem
+        font-weight: bold
+        color: #373A3C
+        margin-bottom: 0
+        +fullhd
+            margin-bottom: 0
+        &--thin
+            font-weight: normal
+        &--thick
+            font-weight: normal
+            margin-bottom: 1.25rem
+            display: flex
+            justify-content: space-between
+
+            +touch
+                flex-direction: column
+
+            &--item
+                margin-right: 2rem
+                display: flex
+                &--key
+                    font-weight: normal
+                    margin-right: 1rem
+                &--value
+                    font-weight: bold
+                    display: flex
+                    align-items: center
+                &--progress-bar
+                    width: 150px
+
+                    +touch
+                        width: 100px
+
+                    display: flex
+                    align-items: center
+                    margin-right: 1rem
+
+    &__modification-date
+        width: 100%
+        font-size: 0.875rem
+        text-align: right
+        margin-top: 47px
+
+    &__grid
+        width: 100%
+        padding: 30px 0
+        display: grid
+        grid-column-gap: 10px
+        grid-row-gap: 30px
+        justify-content: space-between
+        grid-template-columns: repeat(1, minmax(150px, 250px) )
+
+        @media screen and (max-width: 530px)
+            max-width: 400px
+
+        @media screen and (min-width: 420px)
+            grid-template-columns: repeat( 2, minmax(150px, 250px) )
+
+        @media screen and (min-width: 630px)
+            grid-template-columns: repeat( 3, minmax(150px, 240px) )
+
+        +tablet
+            grid-template-columns: repeat(4, minmax(130px, 200px))
+
+        +desktop
+            grid-template-columns: repeat( auto-fill, max(190px) )
+
+        +hd
+            grid-template-columns: repeat( auto-fill, max(180px) )
+
+        +fullhd
+            grid-template-columns: repeat( auto-fill, max(225px) )
+
+    &__no-page
+        margin: 40px 0
+
+.manifest
+    &__image
+        height: 1rem
+        margin-top: -0.25rem
+        margin-right: 0.5rem

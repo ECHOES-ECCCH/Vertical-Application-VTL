@@ -1,0 +1,21 @@
+{
+    "reactAppApi":"https://eccch-wp8-wlt-api.apps.dcw1.paas.psnc.pl/api",
+    "knowledgeBaseProxyUrl":"https://echoes-api-echoes-demo-devel.apps.dcw1.paas.psnc.pl/hdt",
+
+    "googleAnalyticsTagId": "",
+    "googleReCaptchaV3SiteKey": "6Lc5KeQqAAAAABzny2ySR4UgbTvs1pc20tIXJQ6U",
+
+    "accessibilityStatement": "/accessibilitystatement",
+    "daceUrl": "",
+
+    "authorization": "FORMS",
+    "authorizationLoginUrl": "/oauth2/authorization/bad",
+    "authorizationRegisterUrl": "/oauth2/authorization/bad_register",
+    "accountUrl": "",
+
+    "activeDirectoryLoginProviderUrl": "",
+    "pionierIdLoginProviderUrl": "",
+    "facebookLoginEnabled": false,
+    "googleLoginEnabled": false
+
+}

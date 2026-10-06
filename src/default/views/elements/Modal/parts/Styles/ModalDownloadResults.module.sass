@@ -1,0 +1,95 @@
+@import '@Styles/_breakpoints.sass'
+
+.modal-grid
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 15px
+    grid-row-gap: 20px
+    grid-auto-rows: minmax(35px, auto)
+    +mobile
+        grid-template-columns: 1fr 1fr
+    +mobile-small
+        grid-template-columns: auto
+    +tablet-only
+        grid-auto-rows: 60px
+
+    &--dropdown
+        &-btn
+            align-items: center
+            font-size: 0.875rem
+            padding: 6px 10px 7px
+            width: 100%
+            height: 100%
+            text-align: left
+            outline: 0
+            box-shadow: none !important
+            color: #004C9B !important
+            background: none !important
+            border: none !important
+            padding-left: 0 !important
+            text-decoration: underline !important
+
+            &:hover
+                color: #161615 !important
+
+            &[aria-expanded="true"]
+                background: white
+                color: #373A3C
+
+            &::after
+                margin-left: 10px
+                position: relative
+                top: 1px
+
+        &-list
+            width: 100%
+            top: 7px !important
+
+            &::before,
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                bottom: 100%
+                width: 0
+                height: 0
+
+            &::before
+                right: 22px
+                border: 5px solid transparent
+                border-bottom-color: #DDDDDD
+
+            &::after
+                right: 23px
+                border: 4px solid transparent
+                border-bottom-color: #FFF
+
+        &-item
+            color: #217ACC
+            padding: 5px 10px
+            white-space: normal
+            font-size: 0.875rem
+            &:hover
+                background: #DFEAF4 !important
+            &:focus
+                color: #217ACC
+                background: #F2F2F2
+            &:active
+                background: #F2F2F2
+                color: #373A3C
+
+.modal-btn
+    padding: 11.25px 30px
+    font-size: 1.0625rem
+    color: #ffffff
+    background-color: #005CA9
+    border: 2px solid #005CA9
+    border-radius: 0
+
+    +mobile
+        width: 140px
+        padding: 5px 0
+        font-size: 0.8125rem
+    &:hover
+        background-color: #ffffff
+        color: #005CA9

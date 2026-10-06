@@ -1,0 +1,56 @@
+@import "@Styles/_breakpoints.sass"
+
+.breadcrumbs
+    width: 100%
+    padding: 10px 0
+    overflow: hidden
+    &__list
+        list-style: none
+        padding: 0
+        margin: 0
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        overflow-y: hidden
+        overflow-x: hidden
+        padding: 10px 2px
+        &-item
+            font-size: 0.9375rem
+            line-height: 1.1rem
+            display: flex
+            align-items: baseline
+            flex: 0 1 auto
+            &:before
+                font-size: 1.125rem
+                color: #555858
+            &:first-of-type
+                margin-left: 0
+                flex: 0 0 auto
+                &:before
+                    content: none
+            &--home
+                color: #005CA9
+                font-size: 0.9375rem
+                &:hover
+                    color: #217ACC
+                &:active
+                    color: #4D4D4D
+                &:focus
+                    outline: 1px solid #217ACC
+            &--link
+                color: #005CA9
+                &:hover
+                    color: #217ACC
+                &:active
+                    color: #005CA9
+                &:focus
+                    outline: 1px solid #217ACC
+            &--label
+                color: #161615
+            &--scroll
+                display: block
+                white-space: nowrap
+                overflow: hidden
+                max-width: 320px
+                text-overflow: ellipsis
+                align-items: baseline

@@ -1,0 +1,314 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/_font-colors.sass"
+
+.verification
+    margin-top: 40px
+
+    &__status
+        margin-top: 10px
+        margin-bottom: 30px
+
+    &--container
+        background-color: #F5F5F5
+        padding-bottom: 200px
+
+    &__title
+        font-size: 1.75rem
+        font-weight: 700
+        margin: 0
+
+        &--container
+            display: flex
+            justify-content: space-between
+            align-items: center
+            border-bottom: 1px solid #DDDDDD
+            padding-bottom: 10px
+            +mobile
+                flex-direction: column
+                align-items: flex-start
+    &__stats
+        &-link
+            font-size: 0.875rem
+    &__info
+        color: #4A4A4A
+        font-size: 0.875rem
+        &--container
+            display: flex
+            align-items: center
+            margin-bottom: 5px
+            &:last-child
+                margin-bottom: 0
+        &--label
+            font-size: 0.875rem
+            margin-right: 10px
+        &--author
+            font-size: 0.875rem
+
+        &--title
+            font-size: 1rem
+            font-weight: 700
+            i
+                color: #555858
+
+    &__advancement
+        font-size: 1rem
+        display: flex
+        flex-wrap: wrap
+        width: fit-content
+        margin-left: auto
+        justify-content: flex-end
+        flex-direction: column
+        align-items: flex-end
+        +touch
+            margin-right: auto
+        &--item
+            display: grid
+            grid-template-columns: 1fr 10px auto 90px auto 90px auto 90px auto 90px
+            gap: 14px
+            margin-bottom: 25px
+            +touch-sec
+                grid-template-columns: 1fr 10px auto 70px auto 70px auto 70px auto 70px
+            +touch
+                grid-template-columns: 1fr 1fr
+
+        &--label
+            color: #555858
+
+            &-main
+                color: #555858
+                font-weight: 700
+                margin-bottom: 16px
+                align-self: start
+            &-container
+                display: flex
+                margin-left: 15px
+                align-items: center
+                margin-top: 5px
+                +fullhd
+                    margin-left: 20px
+        &--value
+            background-color: #4A4A4A
+            padding: 3px 6px
+            color: #FFFFFF
+            border-radius: 0
+            min-width: 22px
+            text-align: center
+            height: fit-content
+            &-all
+                color: #555858
+                margin-left: 5px
+            &-correct
+                color: #23A532
+            &-incorrect
+                color: #C92D20
+        &--layer-name
+            width: auto
+
+    &__table
+        &--caption
+            padding: 15px
+            margin-top: 3px
+            background-color: #0B8087
+            color: white
+            text-indent: 30px
+
+        &--header
+            margin-top: 0
+            margin-bottom: 10px
+            border: none
+            padding: 16px
+            color: #555858
+            display: none
+            font-size: 0.75rem
+            background-color: #4A4A4A
+            color: #FFFFFF
+            +touch-sec
+                display: none !important
+
+            &-verification
+                padding-left: 20px
+            &-lp
+                flex: 0 1
+        &--row
+            display: grid
+            +widescreen
+                grid-template-columns: 85px 120px 120px 120px 120px 120px 1fr 260px
+                font-size: 0.875rem
+            +hd
+                grid-template-columns: 85px 170px 170px 170px 170px 170px 1fr 260px
+                font-size: 1rem
+            +fullhd
+                font-size: 1rem
+                grid-template-columns: 85px 180px 180px 180px 180px 180px 1fr 280px
+
+            & > div
+                line-break: anywhere
+
+        &--content
+            padding: 0
+            margin: 15px 0 40px
+            +touch-sec
+                margin-top: 40px
+        &--col-desc
+            display: inline-block
+            min-width: 10rem
+            +widescreen
+                display: none
+        &--item
+            margin-top: 4px
+            border: 1px solid #A8A8A8
+            border-right: none
+            background-color: #FFFFFF
+
+            color: #373A3C
+
+            & > div:not(&__buttons)
+                border-right: 1px solid #A8A8A8
+                padding: 0
+
+            & > div:not(&__buttons)
+                padding: 25px 16px
+                +touch-sec
+                    padding: 5px 16px
+
+            &__button
+                display: flex
+                height: calc(100%)
+                width: calc(100%)
+                gap: 20px
+                justify-content: center
+                align-items: center
+                box-shadow: 0 0 0 1px #005CA9
+
+            &-label
+                display: none
+                font-size: 0.75rem
+                color: #555858
+                margin-right: 10px
+                +touch-sec
+                    display: flex
+                    flex: 0 1 100px
+                +mobile
+                    flex: 1
+
+            &-lp
+                font-size: 0.75rem
+                padding: 15px 12px 0
+                color: #555858
+                font-weight: 700
+                +widescreen
+                    font-size: 0.875rem
+                    padding: 15px 12px 15px 20px
+            &-img
+                background-color: #55595C
+                height: 45px
+                width: 52px
+                border-radius: 4px
+                display: flex
+                align-items: center
+                justify-content: center
+                background-size: cover
+                i
+                    display: none
+                    font-size: 2rem
+                    color: #696D6F
+                img
+                    display: none
+                &-error
+                    i
+                        display: block
+
+                &-container
+                    padding-top: 15px
+                    flex: 0 1 50px
+                    +touch-sec
+                        flex: 1
+                        padding: 15px 12px 0
+            &-name
+                color: #1C7CD5
+                font-size: 0.875rem
+                font-weight: 700
+                flex: 1
+                word-wrap: break-word
+                +hd-only
+                    width: 100px
+
+                &-container
+                    flex: 1
+                    display: flex
+                    &::before
+                        content: none
+            &-edition
+                display: flex
+                padding-bottom: 15px
+                +touch-sec
+                    flex: 1
+                +widescreen
+                    flex: 0 1 220px
+                    min-height: 70px
+                +hd
+                    flex: 0 1 220px
+                +fullhd
+                    flex: 0 1 220px
+                &-container
+                    display: flex
+                    flex-direction: column
+                &-email
+                    font-size: 0.875rem
+                &-date
+                    font-size: 0.75rem
+                    color: #555858
+            &-verification
+                background-color: #FFF
+                color: #217ACC
+                text-align: center
+                padding-bottom: 15px
+                display: flex
+                align-items: center
+                justify-content: center
+                border-radius: 0 4px 4px 0
+
+                +touch-sec
+                    border-top: 1px solid #DDDDDD
+                    border-radius: 0 0 4px 4px
+                &:hover,
+                &:focus
+                    text-decoration: none
+                    background-color: #217ACC
+                    color: #FFF
+                &:active
+                    background-color: #0E60CB
+                +touch-sec
+                    flex: 1
+                +widescreen
+                    flex: 0 1 120px
+                +hd
+                    flex: 0 1 180px
+                +fullhd
+                    flex: 0 1 275px
+                &::before
+                    height: 100%
+                    top: 0
+
+.clearfix
+    clear: both
+
+.tabs
+    clear: both
+    display: flex
+    gap: 0
+
+    &__item
+        padding: 15px 50px
+        color: #005CA9
+        background-color: #FFFFFF
+        border: none
+
+        &--active
+            background-color: #0B8087
+            color: #FFFFFF !important
+            text-decoration: none !important
+            &:active
+            &:hover
+            &:visited
+                color: #FFFFFF !important

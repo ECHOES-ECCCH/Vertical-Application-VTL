@@ -1,0 +1,38 @@
+
+stages:
+  - docker-build
+  - deploy
+
+docker-build:
+  stage: docker-build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"${CI_REGISTRY}\":{\"auth\":\"$(printf "%s:%s" "${CI_REGISTRY_USER}" "${CI_REGISTRY_PASSWORD}" | base64 | tr -d '\n')\"}}}" > /kaniko/.docker/config.json
+    - >-
+      /kaniko/executor
+      --cache
+      --context "${CI_PROJECT_DIR}"
+      --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+      --destination "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}"
+    - echo "docker-build successfull!"
+
+deploy:
+  stage: deploy
+  needs:
+    - docker-build
+  only:
+    - eccch-wp8
+  image:
+    name: gcr.io/go-containerregistry/crane:debug
+    entrypoint: [""]
+  variables:
+    GIT_STRATEGY: none
+    REGISTRY: registry.paas.psnc.pl
+    TARGET: registry.paas.psnc.pl/wlt/wlt-portal-ui:echoes
+  script:
+    - crane auth login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - crane auth login -u robot-wlt+gitlab -p $REGISTRY_WLT_TOKEN $REGISTRY
+    - crane cp ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA} ${TARGET}

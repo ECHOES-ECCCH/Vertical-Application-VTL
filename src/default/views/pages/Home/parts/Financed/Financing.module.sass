@@ -1,0 +1,57 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/_mixins.sass"
+@import "@Styles/_text.sass"
+@import "@Styles/_font-colors.sass"
+
+$mod1Img: url('~@Assets/images/financial/financial-1.svg')
+$mod2Img: url('~@Assets/images/financial/financial-2.svg')
+$mod3Img: url('~@Assets/images/financial/financial-3.svg')
+
+.financing
+    background: #f5f5f5
+
+    &__img_1
+        width: 270px
+        height: 125px
+        background-repeat: no-repeat
+        background-image: $mod1Img
+
+    &__img_2
+        width: 270px
+        height: 125px
+        background-repeat: no-repeat
+        background-image: $mod2Img
+
+    &__img_3
+        width: 270px
+        height: 125px
+        background-repeat: no-repeat
+        background-image: $mod3Img
+
+    &__container
+        padding-top: 45px
+        padding-bottom: 45px
+        border-top: 1px solid #ccc
+
+    &__content
+        margin-top: 60px
+
+    &__footer
+        display: grid
+        grid-gap: 100px
+        +desktop
+            grid-template-columns: repeat(3, auto)
+        justify-content: center
+        margin-top: 55px
+        align-items: center
+
+    &__text
+        &--header
+            @extend .text__heading--home
+            text-align: center
+
+        &--content
+            @extend .text--body
+            text-align: center
+            max-width: 800px
+            margin: 0 auto

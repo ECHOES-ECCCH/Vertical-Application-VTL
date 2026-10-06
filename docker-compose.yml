@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  wlt-portal-ui:
+    build:
+      context: .
+      dockerfile: DockerfileDev
+      args:
+    ports:
+      - 3000:8080
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development

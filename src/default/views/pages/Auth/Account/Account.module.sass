@@ -1,0 +1,144 @@
+@import '@Styles/_breakpoints.sass'
+@import '@Styles/_auth.sass'
+@import '@Styles/_font-colors.sass'
+.account
+
+    &__header
+        &--title
+            margin: 60px 0 15px
+            font-size: 1.75rem
+            font-weight: bold
+            margin-bottom: 40px
+
+    .container
+        background: #F5F5F5 0% 0% no-repeat padding-box
+
+    &__grid
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 20px
+        padding-bottom: 30px
+
+        +touch
+            grid-template-columns: 1fr 1fr
+
+        +mobile-small
+            grid-template-columns: 1fr
+
+        &--item
+            height: 242px
+            border-right: 1px solid #CCCCCC
+            display: grid
+            grid-template-columns: 120px 1fr
+
+            &:nth-child(3n)
+                border: none
+
+            +touch
+                &:nth-child(3n)
+                    border-right: 1px solid #CCCCCC
+
+                &:nth-child(2n)
+                    border: none
+
+            +mobile-small
+                border: none
+
+            h4
+                font-size: 1.25rem
+
+            a
+                display: inline-block
+                margin-top: 20px
+                color: #005CA9
+
+            img
+                margin-left: 10px
+
+    &__table
+        &--row
+            +tablet
+                display: grid
+                grid-template-columns: 160px auto
+                align-items: baseline
+            margin: 10px 0
+            grid-gap: 10px
+
+        &--value
+            &-split
+                display: flex
+                flex-direction: column
+                +tablet
+                    flex-direction: row
+                    justify-content: space-between
+        &--additional-text
+            color: #6D7274
+
+    &__groups
+        margin-top: 75px
+        +desktop
+            margin-top: 150px
+
+        &--title
+            +tablet
+                display: flex
+                justify-content: space-between
+
+        &--admin, &--rest, &--blank
+            margin-top: 25px
+
+    &__adminlist
+        margin: 20px 0 60px
+
+        &--item
+            margin: 10px 0
+            border: 1px solid #D5D5D5
+            border-radius: 5px
+            display: grid
+            grid-template-columns: 50px auto
+            +tablet
+                grid-template-columns: 50px auto 125px
+
+            &-bg
+                background: #ECEEEF
+                &:not(:last-child)
+                    border-right: 1px solid #D5D5D5
+
+            & > div
+                padding: 8px 10px
+
+            &-lp
+                @extend .account__adminlist--item-bg
+                text-align: center
+                color: #666666
+
+            &-name
+                @extend .account__adminlist--item-bg
+                +mobile
+                    border-right: 0 !important
+
+            &-button
+                text-align: center
+                +mobile
+                    grid-column: 1 / span 2
+                    border-top: 1px solid #D5D5D5
+
+    &__password-form
+        margin-top: 70px
+
+    &__list
+        margin: 20px 0 0
+        padding: 0
+        list-style-type: none
+
+        &--item
+            margin: 10px 0
+            display: flex
+
+            &-lp
+                margin-right: 5px
+                +tablet
+                    margin-right: 30px
+
+            &-name
+                margin-right: 3px

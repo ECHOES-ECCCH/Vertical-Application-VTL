@@ -1,0 +1,161 @@
+@import "@Styles/_breakpoints.sass"
+
+.pagination-top
+    position: relative
+    display: grid
+    grid-auto-flow: column
+    align-items: center
+    grid-auto-columns: min-content
+    grid-gap: 15px
+    flex-wrap: wrap
+    +mobile
+        grid-auto-flow: row
+
+    &__anchor
+        position: absolute
+
+    +mobile-micro
+        font-size: 0.875rem
+    &--perpage
+        white-space: nowrap
+    &--left
+        display: grid
+        grid-auto-flow: column
+        align-items: center
+        grid-auto-columns: min-content
+        grid-gap: 15px
+        margin-left: auto
+
+    &--perpage
+        white-space: nowrap
+
+    &--container 
+        display: flex
+        justify-content: space-between
+        +touch 
+            margin-top: 2rem
+        +mobile
+            margin-right: auto
+    &__item
+        display: flex 
+        align-items: center
+        gap: 20px
+    &__items 
+        display: flex 
+        flex-wrap: wrap
+        align-items: start
+        gap: 20px
+
+.pagination__btn
+    background: #ECEEEF
+    border: 1px solid #D5D5D5
+    border-radius: 4px
+    color: #373A3C
+    height: 40px
+    padding-left: 20px
+    padding-right: 20px
+    position: relative
+    font-size: 1rem
+    +mobile
+        font-size: 0px
+        padding: 0
+        width: 40px
+    +mobile-micro
+        width: 30px
+        height: 30px
+
+    &:after, &:before
+        content: ''
+        position: absolute
+        top: 15px
+        width: 0
+        height: 0
+        border-top: 4px solid transparent
+        border-bottom: 4px solid transparent
+        +mobile-micro
+            top: 10px
+
+    &--disabled
+        @extend .pagination__btn
+        display: none
+        +mobile-micro
+            display: block
+            visibility: hidden
+        
+    &--next        
+        padding-right: 30px
+        &:after
+            right: 16px
+            border-left: 4px solid #373A3C
+            +mobile-micro
+                right: 12px
+
+    &--prev
+        padding-left: 30px
+        &:before
+            left: 16px
+            border-right: 4px solid #373A3C
+            +mobile-micro
+                left: 12px
+
+
+.pagination-bottom
+    display: grid
+    grid-auto-flow: column
+    align-items: center
+    justify-content: end
+    grid-auto-columns: min-content
+    grid-gap: 15px
+    height: auto
+    margin-top: 6px
+    margin-bottom: 80px
+    padding: 20px  0
+    +mobile-micro
+        grid-gap: 10px
+        font-size: 0.875rem
+        justify-content: space-between
+
+    &__list
+        display: grid
+        grid-auto-flow: column
+        grid-gap: 15px
+        align-items: center
+        margin: 0
+        padding: 0
+
+    &__item
+        list-style-type: none
+        color: #135FC3
+        text-decoration: none
+        background-color: transparent
+        cursor: pointer
+        margin: 0
+        padding: 0
+
+        &:hover
+            text-decoration: none
+            color: #373A3C
+
+        &--disabled
+            color: #373A3C
+            text-decoration: none
+            background-color: transparent
+            margin: 0
+            padding: 0
+            list-style-type: none
+            pointer-events: none
+    &__spacer
+        padding-bottom: 100px
+
+.pagination__input
+    text-align: center
+    border: 1px solid #DDDDDD
+    border-radius: 4px
+    width: 45px
+    height: 40px
+    color: #373A3C
+    +mobile-micro
+        width: 30px
+        height: 30px
+        font-size: 0.875rem 
+

@@ -1,0 +1,129 @@
+@font-face
+    font-family: 'Readex Pro'
+    src: url('~@Assets/icons/ReadexPro.eot')
+    src: local('Readex Pro'), local('ReadexPro'), url('~@Assets/icons/ReadexPro.eot?#iefix') format('embedded-opentype'), url('~@Assets/icons/ReadexPro.woff2') format('woff2'), url('~@Assets/icons/ReadexPro.woff') format('woff'),url('~@Assets/icons/ReadexPro.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+    font-display: swap
+
+@import '@Styles/_font-colors.sass'
+
+html, body, #root
+    min-height: 100vh
+
+html
+    font-size: 1rem
+    &.medium
+        font-size: 1.125rem
+    &.big
+        font-size: 1.25rem
+
+body
+    font-family: 'Readex Pro', sans-serif
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    
+
+#root
+    display: flex
+    flex-direction: column
+
+main
+    flex: 1
+    background-color: #F5F5F5
+
+a[disabled]
+    pointer-events: none
+
+a
+    color: #005CA9
+    &:hover,
+    &:focus
+        color: #005CA9
+    &[target="_blank"]
+        &::after
+            font-family: "fontello"
+            font-style: normal
+            font-weight: normal
+            speak: never
+
+            display: inline-block
+            text-decoration: none
+            width: 1em
+            margin-right: .2em
+            text-align: center
+            /* opacity: .8; */
+
+            /* For safety - reset parent styles, that can break glyph codes*/
+            font-variant: normal
+            text-transform: none
+
+            /* fix buttons height, for twitter bootstrap */
+            line-height: 1em
+
+            /* Animation center compensation - margins should be symmetric */
+            /* remove if not needed */
+            margin-left: .7em
+
+            /* you can be more comfortable with increased icons size */
+            /* font-size: 120%; */
+
+            /* Font smoothing. That was taken from TWBS */
+            -webkit-font-smoothing: antialiased
+            -moz-osx-font-smoothing: grayscale
+
+            /* Uncomment for 3D effect */
+            /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+            content: '\e82c'
+            font-size: 0.875em
+            //margin-left: 5px
+            position: relative
+            top: -0.1em
+
+button[disabled]
+    opacity: 0.5
+
+button
+    color: $kolor1
+    background: $kolor5
+    border-color: $kolor1
+    &:hover
+        color: $kolor5
+        background-color: $kolor1
+    &:focus
+        color: $kolor1
+        background-color: $kolor5
+        box-shadow: 0 5px 15px rgba(0, 92, 169, .4)
+    &:active
+        color: $kolor5
+        background-color: $kolor1
+        box-shadow: 0 5px 15px rgba(0, 92, 169, .4)
+
+input[type='number'] 
+    -moz-appearance: textfield
+
+    &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+    &::-webkit-outer-spin-button
+        -webkit-appearance: none
+        margin: 0
+
+p
+    font-family: 'Readex Pro', sans-serif
+    font-size: 0.875rem
+    font-weight: 400
+
+html.mourn
+    -webkit-filter: grayscale(1)!important
+    filter: grayscale(1)!important
+    header
+        z-index: 999!important
+        .show
+            z-index: 1000!important
+
+.asterisk
+    color: #004C9B
+    margin-left: 6px
+    margin-right: 6px

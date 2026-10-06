@@ -1,0 +1,46 @@
+@import "@Styles/_breakpoints.sass"
+
+.cookies
+    background: #1D1B19
+    color: #FFFFFF
+    padding: 12px 15px
+    position: fixed
+    width: 100%
+    left: 0
+    bottom: 0
+    z-index: 999
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        +touch
+            flex-direction: column
+            align-items: normal
+    &__left
+        text-align: left
+        flex: 1 1
+        font-size: 0.875rem
+        +touch
+            font-size: 0.75rem
+            margin-bottom: 10px
+        
+        &-link
+            color: #268EEE
+            &:hover, &:focus
+                color: #CBCBCB
+            &:active
+                color: #FFF
+        &-text
+            color: #CECECE
+            i
+                font-size: 1.3rem
+                display: inline-flex
+                &:before
+                    line-height: 1.4rem
+    &__btn
+        font-size: 0.875rem
+        align-self: center
+        +touch
+            align-self: flex-end
+            font-size: 0.75rem
