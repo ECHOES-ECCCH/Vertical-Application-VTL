@@ -1,0 +1,62 @@
+server:
+    port: 5556
+
+spring:
+    jackson:
+        serialization:
+            fail-on-empty-beans: false
+    mvc:
+        throw-exception-if-no-handler-found: true
+        async:
+            request-timeout: 10000
+    servlet:
+        multipart:
+            max-file-size: 100MB
+            max-request-size: 100MB
+    task:
+      execution:
+        thread-name-prefix: task-exec-
+        pool:
+          core-size: 4
+          max-size: 8
+          queue-capacity: 1024
+          keep-alive: 10m
+        shutdown:
+          await-termination: true
+          await-termination-period: 60s
+
+springdoc:
+    version: '@api.version@'
+    api-docs:
+        enabled: true
+        path: /v3/api-docs
+
+vtl:
+    iiif-tools:
+        storage: ./vtl-storage
+        scripts: ./vtl-scripts
+        cache: ./vtl-storage/cache
+        tile-size: 256
+        pdf-dpi: 300
+        max-retries: 3
+        max-redirects: 3
+        timeout:
+          read: 30000
+          connection: 6000
+          process: ${CONVERT_PROCESS_TIMEOUT_MILLI:300000}
+        filename-length-limit: ${FILENAME_LENGTH_LIMIT:100}
+
+eBooks:
+    storage:
+        path: ./vtl-storage/ebooks
+        clean-up-rate: 604_800_000 #7 days in milliseconds
+
+management:
+    health:
+        defaults:
+            enabled: false
+        db:
+            enabled: true
+    endpoint:
+        health:
+            show-details: always

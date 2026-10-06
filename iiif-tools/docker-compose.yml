@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  iiif-tools:
+    container_name: wlt-iiif-tools
+    build: .
+    image: registry.apps.man.poznan.pl/wlt/wlt-iiif-tools:latest
+    ports:
+      - 5556:5556
+      - 9995:9995
+    volumes:
+      - vtl-storage:/var/vtl-storage
+    environment:
+      SPRING_ACTIVE_PROFILE: dev
+volumes:
+  vtl-storage:
