@@ -1,0 +1,64 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  tags:
+    - bsa-bad-runner
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"${CI_REGISTRY}\":{\"auth\":\"$(printf "%s:%s" "${CI_REGISTRY_USER}" "${CI_REGISTRY_PASSWORD}" | base64 | tr -d '\n')\"}}}" > /kaniko/.docker/config.json
+    - >-
+      /kaniko/executor
+      --cache
+      --context "${CI_PROJECT_DIR}"
+      --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+      --destination "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}"
+
+
+deploy:
+  stage: deploy
+  tags:
+    - bsa-bad-runner
+  needs:
+    - build
+  only:
+    - main
+  image:
+    name: gcr.io/go-containerregistry/crane:debug
+    entrypoint: [""]
+  variables:
+    GIT_STRATEGY: none
+    REGISTRY: registry.apps.paas-dev.psnc.pl
+    TARGET: registry.apps.paas-dev.psnc.pl/bsa-bad/bad-postgresql:latest
+  script:
+    - crane auth login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - crane cp ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA} ${CI_REGISTRY_IMAGE}:latest
+    - crane auth login -u pusher -p $OPENSHIFT_DEV_REGISTRY_TOKEN $REGISTRY
+    - crane cp ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA} ${TARGET}
+
+deploy-test:
+  stage: deploy
+  tags:
+    - bsa-bad-runner
+  needs:
+    - build
+  only:
+    - main
+  when: manual
+  image:
+    name: gcr.io/go-containerregistry/crane:debug
+    entrypoint: [""]
+  variables:
+    GIT_STRATEGY: none
+    REGISTRY: registry.apps.paas-dev.psnc.pl
+    TARGET: registry.apps.paas-dev.psnc.pl/bs-agregator/bad-postgresql:latest
+  script:
+    - crane auth login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - crane cp ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA} ${CI_REGISTRY_IMAGE}:test
+    - crane auth login -u pusher -p $OPENSHIFT_TEST_REGISTRY_TOKEN $REGISTRY
+    - crane cp ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA} ${TARGET}
