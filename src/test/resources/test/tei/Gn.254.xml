@@ -1,0 +1,59 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title xml:lang="pol">Rota 254, Księga Ziemska 2, Karta 94v, Gniezno</tei:title>
+                <tei:title xml:lang="eng">Rotha 254, Land Court Book 2, Page 94v, Gniezno</tei:title>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:publisher>
+                    <tei:orgName>ROThA</tei:orgName>
+                </tei:publisher>
+                <tei:date when="2019-09-10"/>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:biblStruct>
+                    <tei:monogr>
+                        <tei:title xml:lang="pol">Rota 254, Księga Ziemska 2, Karta 94v, Gniezno</tei:title>
+                        <tei:title xml:lang="eng">Rotha 254, Land Court Book 2, Page 94v, Gniezno</tei:title>
+                        <tei:author role="author">
+                            <tei:persName sameAs="Per.11">PISARZ 11</tei:persName>
+                        </tei:author>
+                        <tei:textLang mainLang="lat-med"/>
+                        <tei:textLang mainLang="pol-old" otherLangs="pol"/>
+                        <tei:imprint>
+                            <tei:pubPlace>Gniezno</tei:pubPlace>
+                            <tei:date when="1418"/>
+                            <tei:biblScope unit="issue">254</tei:biblScope>
+                            <tei:biblScope unit="volume">GnZ2</tei:biblScope>
+                            <tei:biblScope unit="page" from="94v" to="94v"/>
+                        </tei:imprint>
+                    </tei:monogr>
+                </tei:biblStruct>
+                <tei:msDesc>
+                    <tei:msIdentifier>
+                        <tei:repository>ROThA</tei:repository>
+                        <tei:idno>Gn.254</tei:idno>
+                    </tei:msIdentifier>
+                </tei:msDesc>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+        <tei:revisionDesc status="approved">
+            <tei:change when-iso="2019-09-10T15:07:29"/>
+        </tei:revisionDesc>
+    </tei:teiHeader>
+    <tei:text>
+        <tei:body>
+            <tei:pb n="1" facs="Gn.254/254_1418_94v_GnZ2_11.tif"/>
+            <tei:div type="original">
+                <tei:p xml:lang="lat-med">Jelithowo. Testes pro parte Anne relicte de Jelithowo contra Mathiam et Jacussium de ibidem: primus Mathias de Jelithowo, secundus Nicolaus Ozepouicz de Bodzeporouicze, tercius Stachnik de ibidem, quartus Wirzbantha de Dzethmarouicze, quintus Nemir de ibidem, sextus Gregorius de Dzethmarouicze:</tei:p>
+            </tei:div>
+            <tei:div type="transliteration">
+                <tei:p xml:lang="pol-old">Tako gim pomoſzy bog <tei:lb/> Jaco tho ſwathczimi Iſze Maczek <tei:lb/> y Jacuſz gwaltem poſzeklÿ lanku <tei:lb/> atrzi dzeſczi pocoſzew vczinili na <tei:lb/> nye kthorze nÿdgi nyebili wtrzi<tei:lb/>manu</tei:p>
+            </tei:div>
+            <tei:div type="transcription">
+                <tei:p xml:lang="pol-mod">Tako jim pomoży Bog, jako to świadczymy, iże Maciek i Jakusz gwałtem posiekli łąkę a trzydzieści pokosow uczynili na niej, ktorej nigdy nie byli w trzymaniu.</tei:p>
+            </tei:div>
+        </tei:body>
+    </tei:text>
+</tei:TEI>

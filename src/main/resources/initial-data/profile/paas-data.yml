@@ -1,0 +1,243 @@
+Users:
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          1
+    email:                       email2@wp.pl
+    password:                    myPassword
+    enabled:                     true
+    securityGroup:               USER
+    quota:                       3000
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          2
+    email:                       email5@wp.pl
+    password:                    myPassword
+    enabled:                     false
+    securityGroup:               USER
+    quota:                       3000
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          3
+    email:                       email@wp.pl
+    password:                    myPassword
+    enabled:                     true
+    securityGroup:               USER
+    quota:                       3000
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          4
+    email:                       email3@wp.pl
+    password:                    myPassword
+    enabled:                     true
+    securityGroup:               USER
+    quota:                       3000
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          5
+    email:                       email4@wp.pl
+    password:                    myPassword
+    enabled:                     true
+    securityGroup:               USER
+    quota:                       3000
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          6
+    email:                       transcriber@wp.pl
+    password:                    myPassword
+    enabled:                     true
+    securityGroup:               USER
+    quota:                       3000
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          7
+    email:                       myExistingUserInDatabase@wp.pl
+    password:                    myPassword
+    enabled:                     true
+    securityGroup:               USER
+    quota:                       3000
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          8
+    email:                       myUsernameWithOneTranscription@wp.pl
+    password:                    myPassword
+    enabled:                     true
+    securityGroup:               USER
+    quota:                       3000
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          9
+    email:                       superadmin@wp.pl
+    password:                    superadmin
+    enabled:                     true
+    securityGroup:               SUPER_ADMIN
+    quota:                       20000
+    trustedContributor:          true
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          10
+    email:                       userWithoutPermissionToTranscription@wp.pl
+    password:                    myPassword
+    enabled:                     true
+    quota:                       3000
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          11
+    email:                       userToUpdateHisRole@wp.pl
+    password:                    userToUpdateHisRole
+    enabled:                     true
+    securityGroup:               USER
+    quota:                       3000
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          12
+    email:                       userToBeSuperAdmin@wp.pl
+    password:                    userToBeSuperAdmin
+    enabled:                     true
+    securityGroup:               USER
+    quota:                       3000
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          13
+    email:                       email1@wp.pl
+    password:                    myPassword
+    enabled:                     true
+    securityGroup:               USER
+    quota:                       3000
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          14
+    email:                       email6@wp.pl
+    password:                    myPassword
+    enabled:                     true
+    securityGroup:               USER
+    quota:                       3000
+    usedSpaceQuota:              200
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          15
+    email:                       userWithExceededQuota@wp.pl
+    password:                    myPassword
+    enabled:                     true
+    securityGroup:               USER
+    quota:                       3000
+    usedSpaceQuota:              3001
+
+  - !!pl.psnc.vtl.portal.model.users.User
+    id:                          16
+    email:                       vtl.portal.dev@gmail.com
+    password:                    myPassword
+    enabled:                     true
+    securityGroup:               USER
+    quota:                       3000
+    usedSpaceQuota:              200
+
+Groups:
+
+  - !!pl.psnc.vtl.portal.model.users.Group
+    id:                          1
+    name:                        groupName
+    creator:
+      !!pl.psnc.vtl.portal.model.users.User
+      id:                          2
+
+  - !!pl.psnc.vtl.portal.model.users.Group
+    id:                          2
+    name:                        groupToBeDelete
+    creator:
+      !!pl.psnc.vtl.portal.model.users.User
+      id:                          3
+
+  - !!pl.psnc.vtl.portal.model.users.Group
+    id:                          3
+    name:                        groupToTestUserRole
+    creator:
+      !!pl.psnc.vtl.portal.model.users.User
+      id:                          5
+
+  - !!pl.psnc.vtl.portal.model.users.Group
+    id:                          4
+    name:                        groupToRename
+    creator:
+      !!pl.psnc.vtl.portal.model.users.User
+      id:                          3
+
+
+UserGroups:
+
+  - !!pl.psnc.vtl.portal.model.users.UserGroup
+    user:
+      !!pl.psnc.vtl.portal.model.users.User
+      id:                          3
+    group:
+      !!pl.psnc.vtl.portal.model.users.Group
+      id:                          1
+    role:
+      !!pl.psnc.vtl.portal.model.users.UserRole
+      code:                        admin
+
+  - !!pl.psnc.vtl.portal.model.users.UserGroup
+    user:
+      !!pl.psnc.vtl.portal.model.users.User
+      id:                          4
+    group:
+      !!pl.psnc.vtl.portal.model.users.Group
+      id:                          1
+    role:
+      !!pl.psnc.vtl.portal.model.users.UserRole
+      code:                        verifier
+
+  - !!pl.psnc.vtl.portal.model.users.UserGroup
+    user:
+      !!pl.psnc.vtl.portal.model.users.User
+      id:                          5
+    group:
+      !!pl.psnc.vtl.portal.model.users.Group
+      id:                          2
+    role:
+      !!pl.psnc.vtl.portal.model.users.UserRole
+      code:                        admin
+
+  - !!pl.psnc.vtl.portal.model.users.UserGroup
+    user:
+      !!pl.psnc.vtl.portal.model.users.User
+      id:                          4
+    group:
+      !!pl.psnc.vtl.portal.model.users.Group
+      id:                          2
+    role:
+      !!pl.psnc.vtl.portal.model.users.UserRole
+      code:                        admin
+
+  - !!pl.psnc.vtl.portal.model.users.UserGroup
+    user:
+      !!pl.psnc.vtl.portal.model.users.User
+      id:                          4
+    group:
+      !!pl.psnc.vtl.portal.model.users.Group
+      id:                          3
+    role:
+      !!pl.psnc.vtl.portal.model.users.UserRole
+      code:                        contributor
+
+  - !!pl.psnc.vtl.portal.model.users.UserGroup
+    user:
+      !!pl.psnc.vtl.portal.model.users.User
+      id:                          4
+    group:
+      !!pl.psnc.vtl.portal.model.users.Group
+      id:                          4
+    role:
+      !!pl.psnc.vtl.portal.model.users.UserRole
+      code:                        admin
+
+  - !!pl.psnc.vtl.portal.model.users.UserGroup
+    user:
+      !!pl.psnc.vtl.portal.model.users.User
+      id:                          5
+    group:
+      !!pl.psnc.vtl.portal.model.users.Group
+      id:                          4
+    role:
+      !!pl.psnc.vtl.portal.model.users.UserRole
+      code:                        verifier
+

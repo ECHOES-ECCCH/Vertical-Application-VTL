@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="/webservices/catalog/xsl/searchRetrieveResponse.xsl"?>
+
+<searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <version>1.1</version>
+    <numberOfRecords>33587</numberOfRecords>
+    <recordData>
+        <oclcdcs>
+            <dc:creator>authorName</dc:creator>
+            <dc:date>publicationDate</dc:date>
+            <dc:contributor>contributorName</dc:contributor>
+            <dc:description>summary</dc:description>
+            <dc:identifier>EiSbN text</dc:identifier>
+            <dc:language>pol</dc:language>
+            <dc:publisher>publisher</dc:publisher>
+            <dc:relation>relationTitle</dc:relation>
+            <dc:subject>word</dc:subject>
+            <dc:subject>word2</dc:subject>
+            <dc:title>title</dc:title>
+            <dc:type>s</dc:type>
+            <dc:type>chapter</dc:type>
+            <dc:type>article</dc:type>
+        </oclcdcs>
+    </recordData>
+</searchRetrieveResponse>

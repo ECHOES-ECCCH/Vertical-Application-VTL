@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?> <?xml-stylesheet type="text/xsl" href="https://www.wbc.poznan.pl/style/common/xsl/oai-style.xsl"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/
+         http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+<responseDate>2020-01-01T10:00:00Z</responseDate>
+<request identifier="oai:www.wbc.poznan.pl:2364" metadataPrefix="mets" verb="GetRecord">
+    https://www.wbc.poznan.pl/oai-pmh-repository.xml</request>
+<GetRecord>
+
+    <record>
+        <header>
+            <identifier>oai:www.wbc.poznan.pl:2364</identifier>
+            <datestamp>2016-06-03T16:01:04Z</datestamp>
+            <setSpec>rootCollection</setSpec> 	      <setSpec>rootCollection:wbc</setSpec> 	      <setSpec>rootCollection:wbc:DigitalLibraryOfWielkopolska</setSpec> 	      <setSpec>rootCollection:wbc:DigitalLibraryOfWielkopolska:EducationalMaterials</setSpec> 	    </header>
+        <metadata>
+            <mets LABEL="Łuczak, Maciej; 2002, Szermierka w Polsce w latach 1945-1989" xmlns="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd">
+                <dmdSec ID="dmd0">
+                    <mdWrap MIMETYPE="text/xml" MDTYPE="OTHER" OTHERMDTYPE="dlibra_avs" LABEL="Local Metadata">
+                        <xmlData><dlibra_avs:metadataDescription xmlns:dlibra_avs="https://www.wbc.poznan.pl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.wbc.poznan.pl/ https://www.wbc.poznan.pl/dlibra/attribute-schema.xsd">
+                            <dlibra_avs:Title>
+                                <value xml:lang="pl"><![CDATA[Szermierka w Polsce w latach 1945-1989]]></value>
+                                <dlibra_avs:SeriesTitle xml:lang="pl"><![CDATA[Monografie - Akademia Wychowania Fizycznego im. Eugeniusza Piaseckiego]]></dlibra_avs:SeriesTitle>
+                                <dlibra_avs:SeriesNumber xml:lang="pl"><![CDATA[nr348]]></dlibra_avs:SeriesNumber>
+                            </dlibra_avs:Title>
+                            <dlibra_avs:Creator>
+                                <value xml:lang="pl"><![CDATA[Łuczak, Maciej]]></value>
+                            </dlibra_avs:Creator>
+                            <dlibra_avs:Subject>
+                                <value xml:lang="pl"><![CDATA[Polska]]></value>
+                                <value xml:lang="pl"><![CDATA[historia]]></value>
+                                <value xml:lang="pl"><![CDATA[organizacja]]></value>
+                                <value xml:lang="pl"><![CDATA[szermierka]]></value>
+                                <value xml:lang="pl"><![CDATA[technika]]></value>
+                                <value xml:lang="pl"><![CDATA[taktyka]]></value>
+                                <dlibra_avs:Tags/>
+                            </dlibra_avs:Subject>
+                            <dlibra_avs:Description>
+                                <value xml:lang="pl"><![CDATA[392 s. : il. ; 24 cm.]]></value>
+                                <value xml:lang="pl"><![CDATA[bibliogr. s. 334-359.]]></value>
+                                <value xml:lang="pl"><![CDATA[streszcz. ang., niem.]]></value>
+                                <dlibra_avs:DegreeInformation/>
+                            </dlibra_avs:Description>
+                            <dlibra_avs:Publisher>
+                                <value xml:lang="pl"><![CDATA[Akademia Wychowania Fizycznego im. Eugeniusza Piaseckiego]]></value>
+                                <dlibra_avs:PlaceOfPublication xml:lang="pl"><![CDATA[Poznań]]></dlibra_avs:PlaceOfPublication>
+                            </dlibra_avs:Publisher>
+                            <dlibra_avs:Type xml:lang="pl"><![CDATA[monografia]]></dlibra_avs:Type>
+                            <dlibra_avs:Type xml:lang="pl"><![CDATA[rozprawa habilitacyjna]]></dlibra_avs:Type>
+                            <dlibra_avs:Identifier>
+                                <value xml:lang="pl"><![CDATA[ISBN 83-88923-00-5]]></value>
+                            </dlibra_avs:Identifier>
+                            <dlibra_avs:Language xml:lang="pl"><![CDATA[pol]]></dlibra_avs:Language>
+                            <dlibra_avs:Relation>
+                                <value xml:lang="pl"><![CDATA[Monografie AWF w Poznaniu]]></value>
+                            </dlibra_avs:Relation>
+                            <dlibra_avs:Rights xml:lang="pl"><![CDATA[Akademia Wychowania Fizycznego w Poznaniu]]></dlibra_avs:Rights>
+                            <dlibra_avs:Rights xml:lang="pl"><![CDATA[Biblioteka Akademii Wychowania Fizycznego w Poznaniu]]></dlibra_avs:Rights>
+                            <dlibra_avs:CreationPublicationDate>
+                                <dlibra_avs:Date xml:lang="pl"><![CDATA[2002]]></dlibra_avs:Date>
+                            </dlibra_avs:CreationPublicationDate>
+                            <dlibra_avs:Right xml:lang="pl"><![CDATA[wszystkie prawa zastrzeżone]]></dlibra_avs:Right>
+                            <dlibra_avs:AccessRights>
+                                <value xml:lang="pl"><![CDATA[dla wszystkich w zakresie dozwolonego użytku]]></value>
+                            </dlibra_avs:AccessRights>
+                            <dlibra_avs:License xml:lang="pl"><![CDATA[udostępnianie na podstawie umowy z właścicielem majątkowych praw autorskich]]></dlibra_avs:License>
+                            <dlibra_avs:RightsHolder xml:lang="pl"><![CDATA[Akademia Wychowania Fizycznego w Poznaniu]]></dlibra_avs:RightsHolder>
+                            <dlibra_avs:Digitisation>
+                                <value xml:lang="pl"><![CDATA[Biblioteka Akademii Wychowania Fizycznego w Poznaniu]]></value>
+                            </dlibra_avs:Digitisation>
+                            <dlibra_avs:LocationOfPhysicalObject>
+                                <value xml:lang="pl"><![CDATA[Biblioteka Akademii Wychowania Fizycznego w Poznaniu]]></value>
+                            </dlibra_avs:LocationOfPhysicalObject>
+                        </dlibra_avs:metadataDescription>
+                        </xmlData>
+                    </mdWrap>
+                </dmdSec>
+                <dmdSec ID="dmd1">
+                    <mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Dublin Core Metadata">
+                        <xmlData><dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/">
+                            <dc:title xml:lang="pl"><![CDATA[Szermierka w Polsce w latach 1945-1989]]></dc:title>
+                            <dc:creator xml:lang="pl"><![CDATA[Łuczak, Maciej]]></dc:creator>
+                            <dc:subject xml:lang="pl"><![CDATA[Polska]]></dc:subject>
+                            <dc:subject xml:lang="pl"><![CDATA[historia]]></dc:subject>
+                            <dc:subject xml:lang="pl"><![CDATA[organizacja]]></dc:subject>
+                            <dc:subject xml:lang="pl"><![CDATA[szermierka]]></dc:subject>
+                            <dc:subject xml:lang="pl"><![CDATA[technika]]></dc:subject>
+                            <dc:subject xml:lang="pl"><![CDATA[taktyka]]></dc:subject>
+                            <dc:description xml:lang="pl"><![CDATA[392 s. : il. ; 24 cm.]]></dc:description>
+                            <dc:description xml:lang="pl"><![CDATA[bibliogr. s. 334-359.]]></dc:description>
+                            <dc:description xml:lang="pl"><![CDATA[streszcz. ang., niem.]]></dc:description>
+                            <dc:publisher xml:lang="pl"><![CDATA[Akademia Wychowania Fizycznego im. Eugeniusza Piaseckiego]]></dc:publisher>
+                            <dc:date xml:lang="pl"><![CDATA[2002]]></dc:date>
+                            <dc:type xml:lang="pl"><![CDATA[monografia]]></dc:type>
+                            <dc:type xml:lang="pl"><![CDATA[rozprawa habilitacyjna]]></dc:type>
+                            <dc:identifier><![CDATA[https://www.wbc.poznan.pl/dlibra/docmetadata?showContent=true&id=2364]]></dc:identifier>
+                            <dc:identifier><![CDATA[oai:www.wbc.poznan.pl:2364]]></dc:identifier>
+                            <dc:identifier xml:lang="pl"><![CDATA[ISBN 83-88923-00-5]]></dc:identifier>
+                            <dc:source xml:lang="pl"><![CDATA[Biblioteka Akademii Wychowania Fizycznego w Poznaniu]]></dc:source>
+                            <dc:source xml:lang="pl"><![CDATA[Biblioteka Akademii Wychowania Fizycznego w Poznaniu]]></dc:source>
+                            <dc:language xml:lang="pl"><![CDATA[pol]]></dc:language>
+                            <dc:relation xml:lang="pl"><![CDATA[Monografie AWF w Poznaniu]]></dc:relation>
+                            <dc:rights xml:lang="pl"><![CDATA[dla wszystkich w zakresie dozwolonego użytku]]></dc:rights>
+                            <dc:rights xml:lang="pl"><![CDATA[udostępnianie na podstawie umowy z właścicielem majątkowych praw autorskich]]></dc:rights>
+                            <dc:rights xml:lang="pl"><![CDATA[Akademia Wychowania Fizycznego w Poznaniu]]></dc:rights>
+                            <dc:rights xml:lang="pl"><![CDATA[Akademia Wychowania Fizycznego w Poznaniu]]></dc:rights>
+                            <dc:rights xml:lang="pl"><![CDATA[Biblioteka Akademii Wychowania Fizycznego w Poznaniu]]></dc:rights>
+                        </dc:dc>
+                        </xmlData>
+                    </mdWrap>
+                </dmdSec>
+                <fileSec>
+                    <fileGrp USE="original">
+                        <file ID="original0" MIMETYPE="text/xml">
+                            <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://localhost:8787/linkedPublication"/>
+                        </file>
+                    </fileGrp>
+                    <fileGrp USE="original">
+                        <file ID="original0" MIMETYPE="application/something">
+                            <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://156.17.58.32/Content/83/manifest.json"/>
+                        </file>
+                    </fileGrp>
+                    <fileGrp USE="original">
+                        <file ID="original0" MIMETYPE="image/jpeg">
+                            <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://156.17.58.32/Content/77/Test3.jpg"/>
+                        </file>
+                        <file ID="original1" MIMETYPE="image/jpeg">
+                            <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://156.17.58.32/Content/77/Test2.jpg"/>
+                        </file>
+                        <file ID="original2" MIMETYPE="image/jpeg">
+                            <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://156.17.58.32/Content/77/Test1.jpg"/>
+                        </file>
+                    </fileGrp>
+                </fileSec>
+                <structMap TYPE="PHYSICAL">
+                    <div ID="physicalStructure" DMDID="dmd1 dmd0" TYPE="files">
+                        <div ID="dir.rysunki." TYPE="directory">
+                            <div ID="phys0" TYPE="file">
+                                <fptr FILEID="original0"/>
+                            </div>
+                            <div ID="phys1" TYPE="file">
+                                <fptr FILEID="original1"/>
+                            </div>
+                            <div ID="phys2" TYPE="file">
+                                <fptr FILEID="original2"/>
+                            </div>
+                            <div ID="phys3" TYPE="file">
+                                <fptr FILEID="original3"/>
+                            </div>
+                            <div ID="phys4" TYPE="file">
+                                <fptr FILEID="original4"/>
+                            </div>
+                            <div ID="phys5" TYPE="file">
+                                <fptr FILEID="original5"/>
+                            </div>
+                            <div ID="phys6" TYPE="file">
+                                <fptr FILEID="original6"/>
+                            </div>
+                            <div ID="phys7" TYPE="file">
+                                <fptr FILEID="original7"/>
+                            </div>
+                            <div ID="phys8" TYPE="file">
+                                <fptr FILEID="original8"/>
+                            </div>
+                            <div ID="phys9" TYPE="file">
+                                <fptr FILEID="original9"/>
+                            </div>
+                            <div ID="phys10" TYPE="file">
+                                <fptr FILEID="original10"/>
+                            </div>
+                            <div ID="phys11" TYPE="file">
+                                <fptr FILEID="original11"/>
+                            </div>
+                            <div ID="phys12" TYPE="file">
+                                <fptr FILEID="original12"/>
+                            </div>
+                            <div ID="phys13" TYPE="file">
+                                <fptr FILEID="original13"/>
+                            </div>
+                            <div ID="phys14" TYPE="file">
+                                <fptr FILEID="original14"/>
+                            </div>
+                            <div ID="phys15" TYPE="file">
+                                <fptr FILEID="original15"/>
+                            </div>
+                            <div ID="phys16" TYPE="file">
+                                <fptr FILEID="original16"/>
+                            </div>
+                            <div ID="phys17" TYPE="file">
+                                <fptr FILEID="original17"/>
+                            </div>
+                            <div ID="phys18" TYPE="file">
+                                <fptr FILEID="original18"/>
+                            </div>
+                            <div ID="phys19" TYPE="file">
+                                <fptr FILEID="original19"/>
+                            </div>
+                            <div ID="phys20" TYPE="file">
+                                <fptr FILEID="original20"/>
+                            </div>
+                            <div ID="phys21" TYPE="file">
+                                <fptr FILEID="original21"/>
+                            </div>
+                            <div ID="phys22" TYPE="file">
+                                <fptr FILEID="original22"/>
+                            </div>
+                            <div ID="phys23" TYPE="file">
+                                <fptr FILEID="original23"/>
+                            </div>
+                            <div ID="phys24" TYPE="file">
+                                <fptr FILEID="original24"/>
+                            </div>
+                            <div ID="phys25" TYPE="file">
+                                <fptr FILEID="original25"/>
+                            </div>
+                            <div ID="phys26" TYPE="file">
+                                <fptr FILEID="original26"/>
+                            </div>
+                            <div ID="phys27" TYPE="file">
+                                <fptr FILEID="original27"/>
+                            </div>
+                            <div ID="phys28" TYPE="file">
+                                <fptr FILEID="original28"/>
+                            </div>
+                            <div ID="phys29" TYPE="file">
+                                <fptr FILEID="original29"/>
+                            </div>
+                            <div ID="phys30" TYPE="file">
+                                <fptr FILEID="original30"/>
+                            </div>
+                            <div ID="phys31" TYPE="file">
+                                <fptr FILEID="original31"/>
+                            </div>
+                            <div ID="phys32" TYPE="file">
+                                <fptr FILEID="original32"/>
+                            </div>
+                            <div ID="phys33" TYPE="file">
+                                <fptr FILEID="original33"/>
+                            </div>
+                            <div ID="phys34" TYPE="file">
+                                <fptr FILEID="original34"/>
+                            </div>
+                            <div ID="phys35" TYPE="file">
+                                <fptr FILEID="original35"/>
+                            </div>
+                            <div ID="phys36" TYPE="file">
+                                <fptr FILEID="original36"/>
+                            </div>
+                            <div ID="phys37" TYPE="file">
+                                <fptr FILEID="original37"/>
+                            </div>
+                            <div ID="phys38" TYPE="file">
+                                <fptr FILEID="original38"/>
+                            </div>
+                            <div ID="phys39" TYPE="file">
+                                <fptr FILEID="original39"/>
+                            </div>
+                            <div ID="phys40" TYPE="file">
+                                <fptr FILEID="original40"/>
+                            </div>
+                            <div ID="phys41" TYPE="file">
+                                <fptr FILEID="original41"/>
+                            </div>
+                            <div ID="phys42" TYPE="file">
+                                <fptr FILEID="original42"/>
+                            </div>
+                            <div ID="phys43" TYPE="file">
+                                <fptr FILEID="original43"/>
+                            </div>
+                            <div ID="phys44" TYPE="file">
+                                <fptr FILEID="original44"/>
+                            </div>
+                            <div ID="phys45" TYPE="file">
+                                <fptr FILEID="original45"/>
+                            </div>
+                            <div ID="phys46" TYPE="file">
+                                <fptr FILEID="original46"/>
+                            </div>
+                            <div ID="phys47" TYPE="file">
+                                <fptr FILEID="original47"/>
+                            </div>
+                            <div ID="phys48" TYPE="file">
+                                <fptr FILEID="original48"/>
+                            </div>
+                            <div ID="phys49" TYPE="file">
+                                <fptr FILEID="original49"/>
+                            </div>
+                            <div ID="phys50" TYPE="file">
+                                <fptr FILEID="original50"/>
+                            </div>
+                            <div ID="phys51" TYPE="file">
+                                <fptr FILEID="original51"/>
+                            </div>
+                            <div ID="phys52" TYPE="file">
+                                <fptr FILEID="original52"/>
+                            </div>
+                            <div ID="phys53" TYPE="file">
+                                <fptr FILEID="original53"/>
+                            </div>
+                            <div ID="phys54" TYPE="file">
+                                <fptr FILEID="original54"/>
+                            </div>
+                            <div ID="phys55" TYPE="file">
+                                <fptr FILEID="original55"/>
+                            </div>
+                            <div ID="phys56" TYPE="file">
+                                <fptr FILEID="original56"/>
+                            </div>
+                            <div ID="phys57" TYPE="file">
+                                <fptr FILEID="original57"/>
+                            </div>
+                            <div ID="phys58" TYPE="file">
+                                <fptr FILEID="original58"/>
+                            </div>
+                            <div ID="phys59" TYPE="file">
+                                <fptr FILEID="original59"/>
+                            </div>
+                            <div ID="phys60" TYPE="file">
+                                <fptr FILEID="original60"/>
+                            </div>
+                            <div ID="phys61" TYPE="file">
+                                <fptr FILEID="original61"/>
+                            </div>
+                            <div ID="phys62" TYPE="file">
+                                <fptr FILEID="original62"/>
+                            </div>
+                            <div ID="phys63" TYPE="file">
+                                <fptr FILEID="original63"/>
+                            </div>
+                            <div ID="phys64" TYPE="file">
+                                <fptr FILEID="original64"/>
+                            </div>
+                            <div ID="phys65" TYPE="file">
+                                <fptr FILEID="original65"/>
+                            </div>
+                            <div ID="phys66" TYPE="file">
+                                <fptr FILEID="original66"/>
+                            </div>
+                            <div ID="phys67" TYPE="file">
+                                <fptr FILEID="original67"/>
+                            </div>
+                            <div ID="phys68" TYPE="file">
+                                <fptr FILEID="original68"/>
+                            </div>
+                            <div ID="phys69" TYPE="file">
+                                <fptr FILEID="original69"/>
+                            </div>
+                            <div ID="phys70" TYPE="file">
+                                <fptr FILEID="original70"/>
+                            </div>
+                            <div ID="phys71" TYPE="file">
+                                <fptr FILEID="original71"/>
+                            </div>
+                            <div ID="phys72" TYPE="file">
+                                <fptr FILEID="original72"/>
+                            </div>
+                            <div ID="phys73" TYPE="file">
+                                <fptr FILEID="original73"/>
+                            </div>
+                            <div ID="phys74" TYPE="file">
+                                <fptr FILEID="original74"/>
+                            </div>
+                            <div ID="phys75" TYPE="file">
+                                <fptr FILEID="original75"/>
+                            </div>
+                            <div ID="phys76" TYPE="file">
+                                <fptr FILEID="original76"/>
+                            </div>
+                            <div ID="phys77" TYPE="file">
+                                <fptr FILEID="original77"/>
+                            </div>
+                            <div ID="phys78" TYPE="file">
+                                <fptr FILEID="original78"/>
+                            </div>
+                            <div ID="phys79" TYPE="file">
+                                <fptr FILEID="original79"/>
+                            </div>
+                            <div ID="phys80" TYPE="file">
+                                <fptr FILEID="original80"/>
+                            </div>
+                            <div ID="phys81" TYPE="file">
+                                <fptr FILEID="original81"/>
+                            </div>
+                            <div ID="phys82" TYPE="file">
+                                <fptr FILEID="original82"/>
+                            </div>
+                            <div ID="phys84" TYPE="file">
+                                <fptr FILEID="original84"/>
+                            </div>
+                            <div ID="phys85" TYPE="file">
+                                <fptr FILEID="original85"/>
+                            </div>
+                            <div ID="phys86" TYPE="file">
+                                <fptr FILEID="original86"/>
+                            </div>
+                            <div ID="phys87" TYPE="file">
+                                <fptr FILEID="original87"/>
+                            </div>
+                            <div ID="phys88" TYPE="file">
+                                <fptr FILEID="original88"/>
+                            </div>
+                            <div ID="phys89" TYPE="file">
+                                <fptr FILEID="original89"/>
+                            </div>
+                            <div ID="phys90" TYPE="file">
+                                <fptr FILEID="original90"/>
+                            </div>
+                            <div ID="phys91" TYPE="file">
+                                <fptr FILEID="original91"/>
+                            </div>
+                            <div ID="phys92" TYPE="file">
+                                <fptr FILEID="original92"/>
+                            </div>
+                            <div ID="phys93" TYPE="file">
+                                <fptr FILEID="original93"/>
+                            </div>
+                            <div ID="phys94" TYPE="file">
+                                <fptr FILEID="original94"/>
+                            </div>
+                            <div ID="phys95" TYPE="file">
+                                <fptr FILEID="original95"/>
+                            </div>
+                            <div ID="phys96" TYPE="file">
+                                <fptr FILEID="original96"/>
+                            </div>
+                            <div ID="phys97" TYPE="file">
+                                <fptr FILEID="original97"/>
+                            </div>
+                            <div ID="phys98" TYPE="file">
+                                <fptr FILEID="original98"/>
+                            </div>
+                            <div ID="phys99" TYPE="file">
+                                <fptr FILEID="original99"/>
+                            </div>
+                            <div ID="phys100" TYPE="file">
+                                <fptr FILEID="original100"/>
+                            </div>
+                            <div ID="phys101" TYPE="file">
+                                <fptr FILEID="original101"/>
+                            </div>
+                            <div ID="phys102" TYPE="file">
+                                <fptr FILEID="original102"/>
+                            </div>
+                            <div ID="phys103" TYPE="file">
+                                <fptr FILEID="original103"/>
+                            </div>
+                            <div ID="phys104" TYPE="file">
+                                <fptr FILEID="original104"/>
+                            </div>
+                            <div ID="phys105" TYPE="file">
+                                <fptr FILEID="original105"/>
+                            </div>
+                            <div ID="phys106" TYPE="file">
+                                <fptr FILEID="original106"/>
+                            </div>
+                            <div ID="phys107" TYPE="file">
+                                <fptr FILEID="original107"/>
+                            </div>
+                            <div ID="phys108" TYPE="file">
+                                <fptr FILEID="original108"/>
+                            </div>
+                        </div>
+                        <div ID="phys83" TYPE="file">
+                            <fptr FILEID="original83"/>
+                        </div>
+                    </div>
+                </structMap>
+            </mets>
+
+        </metadata>
+    </record>	</GetRecord>
+</OAI-PMH>
