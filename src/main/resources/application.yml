@@ -1,0 +1,37 @@
+server:
+    port: 5557
+
+spring:
+    jackson:
+        serialization:
+            fail-on-empty-beans: false
+    mvc:
+        throw-exception-if-no-handler-found: true
+
+springdoc:
+    version: '@api.version@'
+    api-docs:
+        enabled: true
+        path: /v3/api-docs
+
+vtl:
+    ocr-tools:
+        storage: ${VTL_STORAGE:/var/vtl}
+
+    ocr-training:
+        endpoint: "${OCR_TRAINING_ENDPOINT}"
+        # contains subfolders for each trained language
+        trained-langs-dir: ${VTL_STORAGE:/var/vtl}/trained_langs
+
+tesseract:
+    tessdata: /usr/share/tesseract-ocr/5/tessdata
+
+management:
+    health:
+        defaults:
+            enabled: false
+        db:
+            enabled: true
+    endpoint:
+        health:
+            show-details: always
