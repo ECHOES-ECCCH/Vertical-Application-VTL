@@ -1,0 +1,101 @@
+@import "@Styles/_font-colors.sass"
+.master
+    background-color: orange
+    margin: 10px
+    border: 1px solid black
+    border-radius: 5px
+
+.form
+    &__input
+        border: 0
+        border-bottom: 2px solid #6F6F6F
+        border-radius: 0
+        background-color: transparent
+
+        &::-webkit-input-placeholder
+            font-style: normal
+            color: #9F9F9F
+
+        &:focus
+            color: #495057
+            background-color: #fff
+            border-color: #005CA9
+            border-width: 2px
+            outline: 0
+            box-shadow: none
+
+        &-required
+            color: red
+        &-container
+            display: flex
+            flex-direction: column
+        &-row
+            position: relative
+            margin-left: 0
+            margin-right: 0
+
+            & .form-label
+                font-size: 0.875rem
+                color: #6F6F6F
+
+        &-password
+            font-size: 1.5rem
+            color: #9D9EA2
+            cursor: pointer
+            position: absolute
+            top: 1px
+            right: 8px
+            &:hover,
+            &:focus
+                color: #1A73E8
+            &:active
+                color: #0E60CB
+
+        &--correct
+            border-color: #449D44
+
+        &--delete
+            font-size: 0.875rem
+            &-container
+                display: flex
+                justify-content: space-between
+
+    &__textarea
+        &-row
+            position: relative
+            margin-left: 0
+            margin-right: 0
+            height: 180px
+
+    &__select
+        &-row
+            position: relative
+            margin-left: 0
+            margin-right: 0
+
+    &__checkbox
+        display: inline-block
+        width: auto
+        height: auto
+        margin-right: 10px
+
+    &__error
+        position: relative
+        color: #CB2E25
+        padding: 16px 40px
+        margin-bottom: 40px
+        background: #FCF6F5
+        border: 1px solid #F2CAC8
+        border-radius: 5px
+
+    &__message
+        &--invalid
+            color: #CB2E25
+            font-size: 1rem
+            margin-top: 6px
+
+label
+    margin-bottom: 5px
+
+input::placeholder
+    font-size: 1rem

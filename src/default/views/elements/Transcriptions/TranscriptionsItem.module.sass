@@ -1,0 +1,425 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/_font-colors.sass"
+.transcr-item
+    width: 100%
+    background: #F4F4F4
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__button
+        padding: 11.25px 30px
+        font-size: 1.0625rem
+        border-radius: 0
+
+    &__description
+        width: 100%
+        font-size: 0.875rem
+        display: flex
+        flex-direction: column
+        background-color: #ffffff
+
+        +touch
+            font-size: 0.6875rem
+            grid-template-columns: 1fr
+
+        &--matches
+            &-bold
+                font-weight: bold
+
+        &--left-wrapper
+            width: 100%
+            padding: 23px 0 23px 0
+            background-color: #0B8087
+            color: #FFFFFF
+            font-size: 1rem
+
+            +touch
+                grid-template-columns: auto
+                grid-row-gap: 0px
+
+            & :global(.container)
+                display: flex
+                justify-content: space-between
+                align-items: center
+
+                +touch
+                    flex-direction: column
+                    align-items: start
+
+        &--metadata
+            display: flex
+            justify-content: space-between
+            padding: 0
+            font-size: 1rem
+            +touch
+                flex-direction: column
+                padding-top: 20px
+                padding-bottom: 20px
+            &-left
+                display: flex
+                gap: 20px
+                & :global(> div)
+                    padding-top: 15px
+                    padding-bottom: 15px
+                    +touch
+                        padding-top: 1px
+                        padding-bottom: 1px
+                +touch
+                    flex-direction: column
+                    gap: 0
+                    grid-gap: 0
+            &-right
+                padding-top: 15px
+                padding-bottom: 15px
+                +touch
+                    padding-top: 1px
+                    padding-bottom: 1px
+
+        &--addInfo
+            margin-top: 20px
+            display: flex
+            font-size: 1rem
+            justify-content: space-between
+            +touch
+                flex-direction: column
+                align-items: flex-start
+
+        &--separator
+            display: block
+            border-left: 1px solid #C0C0C0
+            margin: 0
+            +touch
+                display: block
+
+        &--progress
+            grid-column: span 2
+            display: flex
+            justify-content: space-between
+            +touch
+                grid-column: 1
+                flex-direction: column
+                align-items: flex-start
+                margin-top: 5px
+
+        &--progress-wrapper
+            display: flex
+            align-items: center
+            margin-left: auto
+            +touch
+                flex-wrap: wrap
+                justify-content: flex-start
+                width: 250px
+
+        &--progress-bar
+            width: 150px
+            margin: 0 10px
+            display: flex
+            align-items: center
+            +touch
+                margin: 0
+
+        &--progress-text
+            font-size: 1rem
+            color: #373A3C
+
+            &-space
+                margin-left: 30px
+                +touch
+                    margin-left: 0
+
+        &--label
+            font-weight: bold
+            margin-right: 30px
+            +touch
+                margin-right: 0
+                margin-bottom: 5px
+
+        &--icon
+            color: #555858
+            &::before
+                margin-left: -0.2em
+
+        &--title
+            font-size: 1.25rem
+            font-weight: normal
+            color: #FFFFFF
+            +touch
+                margin-bottom: 10px
+
+            &:hover, &:focus
+                text-decoration: underline
+                color: #FFFFFF
+
+            &:active
+                color: #FFFFFF
+                text-decoration: underline
+
+        &--author
+            font-weight: normal
+
+    &__pages
+        width: 100%
+        padding-top: 30px
+        display: grid
+        grid-gap: 10px
+        grid-template-columns: repeat(2, minmax(130px, 190px) )
+
+        @media screen and (max-width: 530px)
+            max-width: 300px
+            grid-template-columns: 1fr
+
+        @media screen and (min-width: 530px)
+            grid-template-columns: repeat( 3, minmax(130px, 280px) )
+
+        +tablet
+            grid-template-columns: repeat(4, minmax(130px, 190px))
+
+        +desktop
+            grid-template-columns: repeat( auto-fill, max(280px) )
+
+        +hd
+            grid-template-columns: repeat( auto-fill, max(280px) )
+
+        +fullhd
+            grid-template-columns: repeat( auto-fill, max(280px) )
+
+    &__footer
+        width: 100%
+        display: flex
+        justify-content: center
+        position: relative
+        margin: 20px 0 20px
+        @media screen and (max-width: 530px)
+            max-width: 400px
+            flex-direction: column-reverse
+
+        &__first
+            margin-right: auto
+            width: 85px
+
+        &__show-all
+            align-self: center
+            margin-left: auto
+            width: 85px
+            font-size: 1.0625rem
+            color: #005CA9
+            @media screen and (max-width: 530px)
+                margin-left: 0
+                height: 50px
+
+            &:hover
+                text-decoration: underline
+                cursor: pointer
+
+.transcription
+    &__page
+        &--box
+            border-radius: 4px
+            position: relative
+            height: min-content
+            border: 1px solid #DDDDDD
+            margin-bottom: 4rem
+            transition: box-shadow 0.3s ease
+
+            &:hover,
+            &:focus
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
+                margin-bottom: 0rem
+
+        &--block
+            &-bottom
+                background-color: #FFFFFF
+                padding: 10px 12px
+                border-radius: 0 0 4px 4px
+
+        &--image
+            overflow: hidden
+            position: relative
+            width: 100%
+            background-size: cover
+            background-position: center
+            border-radius: 4px 4px 0 0
+            height: 201px
+            background-color: #55595C
+            +desktop
+                height: 201px
+            +fullhd
+                height: 200px
+
+            img
+                display: none
+
+            &-error
+                @extend .transcription__page--image
+                background-size: 80px
+                background-repeat: no-repeat
+
+        &--number
+            color: #555858
+            font-weight: 300
+            font-size: 0.875rem
+            margin-bottom: 9px
+            display: block
+            text-align: right
+            +widescreen
+                margin-bottom: 13px
+            &:hover,
+            &:focus
+                color: #1A73E8
+            &:active
+                color: #373A3C
+
+        &--progress
+            display: flex
+            flex-direction: column
+            margin-bottom: 8px
+            &-text
+                color: #555858
+                font-size: 1rem
+                &-short
+                    display: none
+                    +touch
+                        display: block
+                &-layer
+                    display: block
+                    color: #005CA9
+                &-long
+                    display: none
+                    font-size: 0.875rem
+                    +desktop
+                        display: block
+            &-bar
+                display: flex
+                align-items: center
+                &--wrapper
+                    height: 10px
+                    background-color: #FFF
+                    border: 1px solid #DDDDDD
+                    border-radius: 6px
+                    display: flex
+                    margin-right: 14px
+                    flex: 1
+                    +touch
+                        margin-right: 6px
+                &--meter
+                    background-color: #219AA2
+                    display: flex
+                    margin: 1px
+                    border-radius: 6px
+                &--active
+                    @extend .transcription__page--progress-bar--meter
+                    background-color: #219AA2
+            &-value
+                color: #373A3C
+                font-size: 0.6875rem
+
+        &--ribbon
+            display: block
+            background-color: #FFF
+            font-size: 0.6875rem
+            color: #555858
+            position: absolute
+            font-weight: 700
+            right: -25px
+            padding: 4px
+            width: 100px
+            text-align: center
+            transform: rotate(45deg)
+            top: 12px
+
+        &--span
+            display: none
+
+        &__magicBox
+            height: 0px
+            overflow: hidden
+            text-align: center
+            opacity: 0
+            transition: opacity 1s ease
+
+            +touch
+                height: 5rem
+                padding-top: 15px
+                opacity: 1
+
+                & button
+                    width: calc(100% - 4px)
+
+                @media screen and (max-width: 530px)
+                    height: 4rem
+
+.navigation
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 999
+    &__checkbox
+        display: none
+
+    &:has(&__checkbox:checked)
+        width: 100%
+
+    &__checkbox:checked ~ &__nav
+        display: block
+        height: auto
+        width: 100%
+
+    &__button
+        background-color: #fff
+        width: 55px
+        height: 55px
+        margin-bottom: 0
+        display: block
+        margin-left: auto
+        box-shadow: 0 2px 2px rgba(#000, 0.2)
+        cursor: pointer
+        text-align: center
+    &__nav
+        float: right
+        display: none
+        background-color: #fff
+        border-top: 1px solid rgba(#000, 0.2)
+        box-shadow: 0 2px 2px rgba(#000, 0.2)
+    &__list
+        list-style: none
+        padding: 0
+        width: 98%
+    &__item
+        color: #005CA9
+        padding: 8px 18px
+        font-sise: 1.0625rem
+
+        &:hover
+            background-color: #DFEAF4
+
+        & a:hover
+            text-decoration: none
+
+    &__icon
+        margin-top: 25px
+        position: relative
+        &,
+        &::before,
+        &::after
+            content: ''
+            width: 4px
+            height: 4px
+            display: inline-block
+            background-color: #005CA9
+        &::before,
+        &::after
+            position: absolute
+            left: 0
+        &::before
+            top: -10px
+        &::after
+            top: 10px
+
+.transcription__page--box:hover .transcription__page__magicBox
+    height: 4rem
+    padding-top: 15px
+    opacity: 1
+
+    & button
+        width: calc(100% - 4px)

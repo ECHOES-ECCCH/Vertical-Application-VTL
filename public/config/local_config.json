@@ -1,0 +1,21 @@
+{
+    "reactAppApi":"http://192.168.56.101:8080/api",
+    "knowledgeBaseProxyUrl":"https://echoes-api-echoes-demo-devel.apps.dcw1.paas.psnc.pl/hdt",
+
+    "googleAnalyticsTagId": "",
+    "googleReCaptchaV3SiteKey": "6Lcqy-UqAAAAAPKOgOxdSdMGd6moVRsA1NOJSTAk",
+
+    "accessibilityStatement": "/accessibilitystatement",
+    "daceUrl": "",
+
+    "authorization": "FORMS",
+    "authorizationLoginUrl": "/oauth2/authorization/bad",
+    "authorizationRegisterUrl": "/oauth2/authorization/bad_register",
+    "accountUrl": "",
+
+    "activeDirectoryLoginProviderUrl": "",
+    "pionierIdLoginProviderUrl": "",
+    "facebookLoginEnabled": false,
+    "googleLoginEnabled": false
+
+}

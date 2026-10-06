@@ -1,0 +1,38 @@
+.alert
+    position: relative
+    width: 100%
+    margin: 15px auto
+    border: 1px solid black
+    border-radius: 5px
+    padding: 15px 40px
+
+    &--danger
+        @extend .alert
+        color: #CB2E25
+        background-color: #FCF6F5
+        border-color: #F2CAC8
+
+    &--success
+        @extend .alert
+        color: #449D44
+        background-color: #F1F5EF
+        border-color: #A6D8A6
+
+    &--info
+        @extend .alert
+        color: #1A73E8
+        background-color: #F2F9FC
+        border-color: #CDE1F8
+
+.icon
+    position: absolute
+    top: 15px
+    left: 15px
+
+.close
+    position: absolute
+    right: 8px
+    top: 8px
+    cursor: pointer
+    font-size: 1.3rem
+    color: #000

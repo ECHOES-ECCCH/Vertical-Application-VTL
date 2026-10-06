@@ -1,0 +1,416 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/_text.sass"
+@import "@Styles/_font-colors.sass"
+
+@import "@Pages/Transcription/TranscriptionVerification/TranscriptionVerification.module.sass"
+
+.permissions
+    padding: 35px 0 100px
+
+    &__title
+        border-bottom: 1px solid #DDDDDD
+        padding-bottom: 10px
+        color: #373A3C
+        @extend .verification__title
+        &--container
+            @extend .verification__title--container
+
+    &__nav-wrapper
+        padding-top: 57px
+        padding-bottom: 30px
+        border-bottom: 1px solid #DDDDDD
+    &__additional-text
+        margin-top: 50px
+        margin-bottom: 35px
+        font-weight: bold
+    &__main
+        padding-bottom: 30px
+        +touch
+            padding-bottom: 0px
+    &__link
+        padding: 7px 25px
+        &--active
+            @extend .permissions__link
+            box-shadow: inset 0px 4px 0 0px #1C7CD5
+            background-color: #FCFCFC
+    &__desktopNav
+        +touch
+            display: none
+    &__mobileNav
+        display: none
+        +touch
+            display: block
+            text-align: right
+        &--dropdown
+            margin-bottom: 27px
+        &--dropdown-menu
+            width: 100%
+            text-align: center
+            a
+                color: #1C7CD5
+                padding: 5px
+    &__project-info
+        padding-top: 10px
+        @extend .verification__info
+        &--container
+            @extend .verification__info--container
+        &--label
+            font-size: 0.9rem
+            @extend .verification__info--label
+        &--author
+            font-size: 0.9rem
+            @extend .verification__info--author
+
+        &--title
+            font-size: 0.9rem
+            @extend .verification__info--title
+        &--list
+            font-size: 0.9rem
+            margin-top: 10px
+            padding-left: 15px
+            line-height: 2rem
+
+    &__status
+        margin-top: 53px
+        margin-bottom: 64px
+
+    &__add
+        &--container
+            max-width: 700px
+        &--wrapper
+            flex: 1
+            position: relative
+        &--form
+            display: flex
+            flex-direction: column
+
+            &-submit
+                margin-top: 20px
+                margin-left: auto
+                width: 200px
+
+            &-input
+                flex: 1
+                height: 42px
+                border: none
+                border-bottom: 1px solid #AAAAAA
+                border-radius: 0
+                background: none
+
+                &:active
+                    background-color: white
+
+                &::placeholder
+                    font-size: 0.875rem
+                    font-style: normal
+                label
+                    display: none
+                input
+                    height: 42px
+                    border-top-right-radius: 0
+                    border-bottom-right-radius: 0
+                    &::placeholder
+                        font-size: 0.875rem
+
+    &__userlist-header
+        margin-top: 20px
+        padding: 20px 50px
+        background-color: #0B8087
+        color: white
+        font-size: 1.5rem
+        display: inline-block
+
+    &__userlist
+        margin-top: 10px
+
+        &--item-header
+            border: 1px solid #D5D5D5
+            background-color: #4A4A4A
+            color: white
+            display: grid
+            grid-template-columns: 34px 190px 120px 1fr 82px
+            height: 50px
+            font-size: 0.938rem
+            margin-bottom: 10px
+            +mobile
+                display: none
+
+        &--item
+            border: 1px solid #D5D5D5
+            background-color: #FFF
+            display: grid
+            grid-template-columns: 34px 190px 120px 1fr 82px
+            font-size: 0.938rem
+            margin-bottom: 10px
+            min-height: 70px
+
+            &--admin
+                @extend .permissions__userlist--item
+                & > div
+                    padding: 20px 10px
+
+            +mobile
+                display: flex
+                flex-direction: column
+                height: auto
+
+            &-order
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                padding-right: 10px
+                padding-left: 10px
+                border-right: 1px solid #D5D5D5
+                +mobile
+                    justify-content: flex-start
+                    border-right: 0
+                    color: #666666
+                    padding: 16px 14px 13px
+
+                &--header
+                    border-right: none
+
+            &-email
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                padding: 0 10px
+                border-right: 1px solid #D5D5D5
+                color: #373A3C
+                &:hover
+                    color: #373A3C
+                +mobile
+                    border-right: 0
+                    padding: 10px 10px 13px
+                +mobile-small
+                    align-items: flex-start
+                &--header
+                    color: white
+                    border-right: none
+                    text-decoration: none
+
+            &-role
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                padding: 0 10px
+                border-right: 1px solid #D5D5D5
+                background-color: #FFF
+                +mobile
+                    align-items: flex-start
+                    border-right: 0
+                    padding: 13px 14px
+                    border-top: 1px solid #D5D5D5
+                &--header
+                    background-color: #4a4a4a
+                    border-right: none
+
+                &--admin
+                    @extend .permissions__userlist--item-role
+                    text-transform: capitalize
+                    +mobile
+                        display: none
+                        padding: 10px 15px
+
+            &-activity
+                display: flex
+                align-items: center
+                justify-content: space-between
+                padding: 0 10px
+                +mobile
+                    border-right: 0
+                    border-top: 1px solid #D5D5D5
+                    align-items: start
+                    padding: 0px 14px 13px
+                +mobile-small
+                    align-items: flex-start
+                +touch-sec
+                    flex-direction: column
+
+                &--header
+                    grid-column: span 2
+                    border-right: none
+                    justify-content: center
+
+                &--item
+                    padding: 5px 2px
+                    border-right: 1px solid rgb(204, 204, 204)
+                    text-align: center
+                    min-width: 160px
+                    &:last-child
+                        border-right: none
+                    +mobile
+                        text-align: start
+                    +touch-sec
+                        border-right: none
+
+            &-button
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: #FFF
+                border-radius: 0
+                +mobile
+                    justify-content: flex-end
+                    border-top: 1px solid #D5D5D5
+                    padding: 13px 19px
+
+            &-placeholder
+                color: #666666
+                margin-right: 8px
+
+            &-descplaceholder
+                display: none
+                margin: 10px 10px
+                &:first-child
+                    margin-left: 0
+
+                +mobile
+                    display: block
+                    color: #212529
+
+        &--dropdown
+            font-size: 0.9375rem
+            flex: 1
+
+            &[aria-expanded="true"]
+                border-bottom: none
+            +mobile
+                width: 100%
+            &-btn
+                background: #FFF
+                border: transparent
+                color: black
+                width: 100%
+                padding: 2px 4px
+                text-align: left
+                display: flex
+                justify-content: space-between
+                align-items: center
+                border-bottom: 1px solid transparent
+                text-transform: capitalize
+                border-radius: 0
+                box-shadow: none
+
+                &::after
+                    color: #373A3C
+                &:hover,
+                &:focus
+                    background: transparent
+                    color: #1C7CD5
+                    border-bottom-color: transparent
+                &:focus
+                    &::after
+                        color: #373A3C
+            &-role
+                @extend .permissions__userlist--dropdown-btn
+                margin-bottom: -1px
+                &:focus
+                    &::after
+                        color: #373A3C
+                &[aria-expanded="true"]
+                    &:focus
+                        &::after
+                            color: #FFF
+                &[aria-expanded="false"]
+                    &:hover
+                        border-bottom: 1px solid #0E60CB
+                        border-bottom-left-radius: 0px
+                        border-bottom-right-radius: 0px
+            &-list
+                width: 200px
+                margin-left: -51px
+                margin-top: 8px
+                +mobile
+                    width: 100%
+                    margin-left: 0
+                &::before,
+                &::after
+                    content: ''
+                    display: block
+                    position: absolute
+                    bottom: 100%
+                    width: 0
+                    height: 0
+
+                &::before
+                    left: 20px
+                    border: 4px solid transparent
+                    border-bottom-color: rgba(0, 0, 0, 0.15)
+
+                &::after
+                    left: 21px
+                    border: 3px solid transparent
+                    border-bottom-color: #fff
+
+            &-item
+                font-size: 0.9375rem
+                line-height: 1.75rem
+                color: #217ACC
+                padding: 3px 35px
+                text-transform: capitalize
+                &--active
+                    color: #373A3C
+                    i
+                        position: absolute
+                        left: 5px
+
+    &__dropdown
+        @extend .permissions__userlist--dropdown
+        font-size: 0.9375rem
+        width: 235px
+
+        &--list
+            @extend .permissions__userlist--dropdown-list
+            width: 235px
+            margin-top: 8px
+            margin-left: 0
+            &-item
+                @extend .permissions__userlist--dropdown-item
+                text-transform: none
+                &--active
+                    @extend .permissions__userlist--dropdown-item--active
+    &__group
+        margin-bottom: 18px
+        &-creator
+            margin-right: 10px
+        &--container
+            margin-bottom: 115px
+            padding-top: 59px
+    &__dropdown-autocomplete
+        @extend .permissions__dropdown--list
+        width: 100%
+        padding: 0.5rem 0
+        border: 1px solid rgba(0, 0, 0, 0.15)
+        border-radius: 0.25rem
+        position: absolute
+        background: white
+        z-index: 1
+
+        &::before,
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            bottom: 100%
+            width: 0
+            height: 0
+
+        &::before
+            left: 20px
+            border: 4px solid transparent
+            border-bottom-color: rgba(0, 0, 0, 0.15)
+
+        &::after
+            left: 21px
+            border: 3px solid transparent
+            border-bottom-color: #fff
+        &--item
+            color: #217ACC
+            padding-left: 19px
+            padding-top: 5px
+            &:hover
+                background-color: #F2F2F2
+                cursor: pointer
+.permissions__dropdown--wrapper
+    width: 240px

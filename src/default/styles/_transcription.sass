@@ -1,0 +1,244 @@
+@import '@Styles/_font-colors.sass'
+
+.transcription
+    &__tooltip
+        i
+            color: #1C7CD5
+            &:hover, &focus
+                color: #373A3C
+
+    &-new
+        &__required-info
+            color: #525252
+            margin-top: 30px
+            width: 20rem
+
+        &__block
+            max-width: 900px
+            margin-left: auto
+            margin-right: auto
+            display: flex
+            flex-direction: column
+            label,
+            input
+                font-size: 1rem
+            input
+                color: #6F6F6F
+                background-color: #F5F5F5
+            label
+                color: #525252
+
+        &__title
+            &--container
+                display: flex
+                justify-content: space-between
+                align-items: center
+                +mobile
+                    flex-direction: column-reverse
+                    align-items: flex-start
+        &__subtitle
+            font-size: 1.5rem
+            margin: 45px 0 16px
+            font-weight: 700
+
+        &__sectionTitle
+            font-size: 1.125rem
+            margin: 60px 0 16px
+            color: #373A3C
+
+        &__sectionTitle2
+            font-size: 1.25rem
+            margin: 60px 0 16px
+            color: #373A3C
+
+        &__import
+            color: #005CA9
+            text-decoration: none
+            +mobile
+                margin-bottom: 15px
+                align-self: flex-end
+
+        &__form
+            color: #6F6F6F
+            padding-top: 5px
+
+            &--radio-block
+                margin-top: 20px
+
+            &--radio-input
+                margin-left: 25px
+
+                .form-label
+                    font-size: 0.875rem
+                    color: #6F6F6F
+
+            &--radio-label
+                text-transform: capitalize
+                margin-left: 10px
+
+            &--richText
+                margin-top: 17px
+                &-label
+                    color: #525252
+                    margin-bottom: 2px
+                    z-index: 5
+                &-editor
+                    z-index: 100
+                    font-size: 0.875rem
+                    line-height: 120%
+                    margin-top: -5px
+                    background-color: #F5F5F5
+
+                    & div
+                        background-color: #FFFFFF
+
+                        border-bottom: 2px solid #005CA9
+                        transition: margin 0.3s ease-in
+                        max-height: 200px
+                    &-readOnly
+                        margin-top: -10px
+                        border-bottom: none
+                        border-bottom: 1px solid #AAAAAA
+                    &-tb-hidden
+                        margin-top: -40px
+                        background-color: #FFFFFF
+                        border-bottom: 2px solid #6F6F6F
+
+                        & div
+                            background-color: #F5F5F5
+                    &-disabled
+                        background-color: #e9ecef
+                        opacity: 1
+                        border-bottom: 1px solid #AAAAAA
+                &-tb-hidden
+                    .rdw-option-wrapper
+                        transition-delay: 0.4s
+                        z-index: -1 !important
+                &-tb
+                    background-color: #EFEFEF !important
+                    border: 0
+                    .rdw-option-wrapper
+                        transition-delay: 0.4s
+                        z-index: 0
+
+            &-required
+                color: red
+            &--row
+                margin-top: 15px
+                padding-left: 15px
+                &-split
+                    display: flex
+                    gap: 20px
+
+                p
+                    color: #525252
+                    margin-bottom: 2px
+            &--links
+                display: grid
+                grid-auto-flow: row
+                row-gap: 10px
+
+            &--inline
+                display: flex
+                margin-top: 15px
+                +mobile-small
+                    flex-direction: column
+                &-select
+                    flex: 0 1 185px
+                    font-size: 0.875rem
+                    +mobile
+                        flex: 0 1 150px
+                    +mobile-small
+                        flex: 1
+                    .css-tlfecz-indicatorContainer
+                        padding: 100px
+                &-small
+                    flex: 0 1 125px
+                    margin-right: 15px
+                    +mobile-small
+                        flex: 1
+                        margin-right: 0
+                        margin-top: 10px
+                &-medium
+                    flex: 1
+                    margin-right: 0
+                    +mobile-small
+                        flex: 1
+                    &:first-child:not(:only-child)
+                        margin-right: 15px
+                        +mobile-small
+                            margin-right: 0
+
+                &-full
+                    flex: 1
+                    margin-left: 10px
+                    +mobile-small
+                        margin-left: 0
+                &-list
+                    padding: 0
+                    margin: 0
+                    list-style: none
+                &-item
+                    margin-top: 15px
+                &-row
+                    margin-top: 15px
+                    display: flex
+                    align-items: flex-end
+                    +mobile-small
+                        flex-direction: column
+                        align-items: normal
+            &--label
+                font-size: 0.875rem
+            &--terms
+                margin-top: 50px
+                color: #373A3C
+
+                .btn
+                    color: #005CA9
+                    text-decoration: none
+
+                    &:hover
+                        color: #005CA9
+            &--btns
+                display: flex
+                justify-content: flex-end
+                margin-top: 50px
+                align-items: center
+                margin-bottom: 50px
+                +mobile
+                    flex-direction: column-reverse
+                    align-items: stretch
+                    gap: 20px
+            &--cancel
+                font-size: 1.0625rem
+                margin-right: 50px
+                padding: 10px 30px
+
+                +mobile
+                    margin-right: 0
+                +mobile-small
+                    font-size: 0.9375rem
+                +mobile-micro
+                    margin-right: 0
+                    margin-bottom: 30px
+
+                +touch
+                    width: 100%
+            &--submit
+                +mobile-small
+                    padding: 10px 30px
+                    font-size: 0.9375rem
+
+                +touch
+                    width: 100%
+
+        &__btn
+            &--add
+                font-size: 0.875rem !important
+                margin-top: 10px
+            &--remove
+                font-size: 0.875rem
+
+        &__level
+            &:nth-of-type(1)
+                margin-top: 0px

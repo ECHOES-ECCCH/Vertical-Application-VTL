@@ -1,0 +1,182 @@
+@import '@Styles/_breakpoints.sass'
+
+.group
+    padding-bottom: 40px
+
+    &__divider
+        border-top: 1px solid #DDDDDD
+        margin: 65px 0
+        +touch
+            margin: 25px 0
+
+    &__header
+        display: flex
+        justify-content: space-between
+        margin-bottom: 29px
+
+    &__name
+        &--title
+            margin-bottom: 8px
+        &--form
+            &:hover,
+            &:focus
+
+        &--input
+            border-top-right-radius: 5px
+            border-bottom-right-radius: 5px
+            background-color: #FFF
+            &:disabled
+                background-color: #ECEEEF
+
+    &__add-user
+        font-size: 0.938rem
+        max-width: 500px
+        margin-top: 70px
+
+        button
+            width: 100%
+
+        &--header
+            font-size: 0.938rem
+            font-weight: bold
+
+        &--tf
+            display: grid
+            grid-template-columns: 1fr 150px
+            margin-top: 10px
+
+        &--field
+            display: block
+            background-color: #fff
+            background-clip: padding-box
+            border: 1px solid #D5D5D5
+            font-size: 0.875rem
+            padding: 20px 12px
+            width: calc(100% - 5px)
+            height: calc(1.5em + 0.75rem + 2px)
+            color: #687078
+            border-radius: 5px 0 0 5px
+
+            &::placeholder
+                font-style: italic
+
+            &-error
+                border-color: #CB2E25
+
+        &--error
+            color: #CB2E25
+            font-size: 0.938rem
+            margin-top: 5px
+
+    &__userlist
+        margin-top: 29px
+
+        &--item
+            border-radius: 5px
+            border: 1px solid #D5D5D5
+            background-color: #ECEEEF
+            display: grid
+            grid-template-columns: 44px 1fr 200px 82px
+            height: 42px
+            align-items: stretch
+            font-size: 0.938rem
+            margin-bottom: 10px
+
+            +mobile
+                display: flex
+                flex-direction: column
+                height: auto
+                padding: 10px 15px
+
+            &-order
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                padding-right: 10px
+                border-right: 1px solid #D5D5D5
+                +mobile
+                    justify-content: flex-start
+                    padding: 0
+                    border-right: 0
+                    margin-bottom: 5px
+
+            &-email
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                padding: 0 10px
+                border-right: 1px solid #D5D5D5
+                +mobile
+                    padding: 0
+                    border-right: 0
+                    margin-bottom: 5px
+                +mobile-small
+                    flex-direction: column
+                    align-items: flex-start
+
+            &-role
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                padding: 0 10px
+                border-right: 1px solid #D5D5D5
+                background-color: #FFF
+                +mobile
+                    flex-direction: column
+                    align-items: flex-start
+                    background-color: #ECEEEF
+                    border-right: 0
+                    margin-bottom: 5px
+                    padding: 0
+
+            &-button
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: #FFF
+                border-top-right-radius: 5px
+                border-bottom-right-radius: 5px
+                +mobile
+                    justify-content: flex-start
+                    background-color: transparent
+
+            &-placeholder
+                color: #666666
+                margin-right: 8px
+
+    &__role
+        &--admin
+            @extend .group__userlist--item-role
+            background: #ECEEEF
+            text-transform: capitalize
+            +mobile
+                padding: 0
+        &--dropdown
+            font-size: 0.9375rem
+            flex: 1
+            +mobile
+                width: 100%
+            &-btn
+                background: #FFF
+                border: transparent
+                color: #1B78D0
+                width: 100%
+                padding: 2px 4px
+                text-align: left
+                display: flex
+                justify-content: space-between
+                align-items: center
+                border-bottom: 1px solid transparent
+                text-transform: capitalize
+
+                &::after
+                    color: #373A3C
+
+                &:hover,
+                &:focus
+                    background: transparent
+                    color: #1B78D0
+                    border-bottom-color: #0E60CB
+                &:focus
+                    &::after
+                        color: #FFF

@@ -1,0 +1,229 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/_font-colors.sass"
+
+$eu-logo: url("~@Assets/images/UE.svg")
+
+.top-bar
+    background-color: #ffffff
+    color: #fff
+    padding: 0
+    display: block
+    +touch
+        position: absolute
+        top: 126px
+        left: 0
+        width: 100vw
+        margin: 0
+        max-height: calc(100vh - 126px)
+        overflow-y: auto
+
+    &__ue-logo
+        height: 30px
+        width: 152px
+        background-image: $eu-logo
+        background-size: cover
+
+    &__collapsed
+        +touch
+            display: none
+
+    &__row
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        padding: 12px 0
+        +touch
+            justify-content: flex-start
+
+        &--menu
+            font-size: 1.1rem
+            padding: 12px 0
+            align-items: center
+            justify-content: end
+            +touch
+                flex-direction: column
+                align-items: start
+                \:global(.dropdown)
+                    width: 100%
+                > div
+                    width: 100%
+                    padding-top: 12px
+                    padding-bottom: 12px
+                    border-bottom: 1px solid #C0C0C0
+    &__item
+        padding: 0px 4px
+        color: #005CA9
+        text-decoration: none
+        +desktop
+            color: #005CA9
+            &:hover,
+            &:focus,
+            &:active
+                color: #005CA9
+        +touch
+            font-size: 1rem
+
+        &--access
+            display: flex
+            line-height: 30px
+            gap: 13px
+            +touch
+                border-left: none
+                width: 100%
+
+        &--lang
+            +touch
+                width: 100%
+
+.dropdown
+    &:hover,
+    &:focus
+        text-decoration: underline
+
+    &__wrapper
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 10px
+    &__button
+        background-color: #FFFFFF
+        font-size: 1.0625rem
+        height: auto
+        width: auto
+        border: none
+        border-radius: 0px
+        padding: 2px 2px
+        margin: 0px 10px
+        line-height: 20px
+        color: #005CA9
+        border-bottom: 1.5px solid transparent
+        +touch
+            padding-left: 0
+            margin-left: 0
+        &::after
+            margin-left: 14px
+
+        &:hover,
+        &:focus
+            border-color: #005CA9
+            color: #005CA9
+            background: #FFFFFF
+            border-bottom: 1.5px solid #005CA9
+
+        &[aria-expanded="true"]
+            background-color: #FFFFFF
+            color: #005CA9
+            &::after
+                transform: rotate(180deg)
+
+        +touch
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            height: 38px
+            font-size: 1rem
+            color: #000000
+            &::after
+                color: #404244
+
+            &:hover
+                background-color: #F8F8F8
+                border-color: #D3D3D3
+                color: #373A3C
+
+            &[aria-expanded="true"]
+                background-color: #F8F8F8
+                border-color: #D3D3D3
+
+        &:focus
+            outline: none
+
+        &--divider
+            padding: 0
+            width: 75%
+            margin: 0.25rem 1.5rem
+            border-top: 1px dotted #C0C0C0
+        &--disabled
+            &-black
+                color: black !important
+            &-grey
+                color: #4A4A4A !important
+
+    &__menu
+        margin-top: 5px
+        left: auto
+        right: 0
+        min-width: 90px
+        font-size: 0.875rem
+        border: 1px solid #DDDDDD
+        border-radius: 0
+        padding: 0
+        z-index: 1022
+
+        +touch
+            background-color: #FFF
+            border-color: #DDD
+
+            &::before
+                border-bottom-color: #DDD
+
+            &::after
+                border-bottom-color: #FFF
+
+    &__item
+        color: #373A3C
+        font-size: 0.875rem
+        height: 48px
+        padding-left: 35px
+        display: flex
+        align-items: center
+        border-bottom: 1px solid #DDDDDD
+        background-color: #FFFFFF
+        border-top-right-radius: 5px
+        border-top-left-radius: 5px
+
+        &:last-child
+            border-bottom: none
+            border-radius: 0
+            border-bottom-left-radius: 5px
+            border-bottom-right-radius: 5px
+
+        &:hover
+            color: #FFF
+            background-color: #1A73E8
+            +touch
+                background-color: #fff
+
+        &:active
+            background-color: #F4F4F4
+            color: #373A3C
+
+        &--not-active
+            color: #005CA9
+
+        i
+            position: absolute
+            left: 13px
+
+.mobile-top-bar
+    &--divider
+        border-top: dotted 1px #C0C0C0
+
+    &--label
+        font-size: 1em
+        margin: 15px 0px 5px 0px
+
+.custom-card
+    border-left: none
+    border-right: none
+
+.custom-card-header
+    background: none
+    font-weight: bold
+
+.card-header-toggle
+    text-decoration: none
+
+    i
+        position: absolute
+        right: 10px

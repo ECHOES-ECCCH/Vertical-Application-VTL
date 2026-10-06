@@ -1,0 +1,317 @@
+@import '@Styles/_breakpoints.sass'
+
+.dashboard
+    &--container
+        background-color: #F9F9F9
+
+    &--search-input
+        margin-left: auto
+        margin-bottom: 30px
+        width: 500px
+        max-width: calc(100vw - 30px)
+        border-radius: 0px
+        border: 0px
+        border-bottom: 2px solid #4a4a4a
+
+        & input
+            padding: 6px 10px 6px 15px
+            background: transparent
+            border: none
+            width: 450px
+            max-width: calc(100vw - 40px)
+
+            &::-webkit-input-placeholder
+                font-style: normal
+
+            &:focus-visible
+                border: none
+                outline: none
+
+        & i
+            color: #717171
+
+.tabs
+    display: flex
+    gap: 30px
+    &__item
+        color: #005CA9
+        height: 50px
+        width: 160px
+        text-align: center
+        line-height: 50px
+        +mobile
+            width: 130px
+
+        &--active
+            background-color: teal
+            color: white
+            &:hover
+                color: white
+                text-decoration: underline
+
+.userlist
+    margin-top: 29px
+
+    &__block
+        margin-bottom: 60px
+
+        &--top
+            margin-top: 20px
+            margin-bottom: 20px
+            color: #4a4a4a
+
+    &__pagination-wrapper
+        margin-top: 0
+
+    &__no-pagination-wrapper
+        margin-top: 0
+
+    &__border-right
+        border-right: 1px solid #D5D5D5
+
+    &__item-header
+        color: #fff
+        background: #4A4A4A
+        display: grid
+        grid-auto-rows: minmax(45px, auto)
+        align-items: center
+        justify-content: flex-start
+        font-size: 0.875rem
+        border: 1px solid #D5D5D5
+        margin-bottom: 5px
+        height: 60px
+        +mobile
+            display: none
+
+    &__project-item
+        grid-template-columns: 40px 1fr 1fr 250px 250px
+        grid-template-areas: 'order project email used limit'
+
+    &__user-item
+        grid-template-columns: 40px 1fr 250px 250px
+        grid-template-areas: 'order email used limit'
+
+    &__item
+        display: grid
+        grid-auto-rows: minmax(45px, auto)
+        font-size: 0.875rem
+        border: 1px solid #D5D5D5
+        margin-bottom: 5px
+        height: 60px
+        +mobile
+            display: flex
+            flex-direction: column
+            height: auto
+
+        &--input
+            width: 70px
+            border: none
+            border-radius: 0px
+            height: 28px
+            border-bottom: 2px solid #005CA9
+            background: #EDEDED
+            &:disabled
+                color: black
+                border: none
+                background: transparent
+            &:focus-visible
+                outline: none
+
+        &--quota-btn
+            margin-right: 10px
+            margin-left: auto
+            +touch
+                margin-left: 10px
+
+        &--quota-btn-cancel
+            margin-right: 5px
+            margin-left: 10px
+            +touch
+                margin-left: 10px
+
+        &--quota-text
+            margin: 0px 30px 0px 3px
+
+        &--element
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            overflow: hidden
+            padding: 0 15px
+
+            +touch
+                grid-column: span 2
+                border: none
+
+            &-grey
+                @extend .userlist__item--element
+                background-color: #F6F6F6
+
+        &--divider
+            margin-right: 10px
+            margin-left: 10px
+            width: 2px
+            height: 70%
+            border-right: 1px solid #D5D5D5
+
+        &--order
+            @extend .userlist__item--element
+            grid-area: order
+            justify-content: center
+            border-right: 1px solid #D5D5D5
+            +touch
+                justify-content: center
+                border-right: 1px solid #D5D5D5
+            +mobile
+                justify-content: start
+                padding: 10px 20px
+
+        &--order-header
+            @extend .userlist__item--element
+            grid-area: order
+            justify-content: center
+            +touch
+                justify-content: center
+
+        &--project
+            @extend .userlist__item--element
+            grid-area: project
+            border-right: 1px solid #D5D5D5
+            +mobile
+                padding: 10px 20px
+
+        &--project-header
+            @extend .userlist__item--element
+            grid-area: project
+
+        &--email
+            @extend .userlist__item--element
+            grid-area: email
+            border-right: 1px solid #D5D5D5
+            +touch
+                padding-left: 14px
+            +mobile
+                padding: 10px 20px
+
+        &--email-header
+            @extend .userlist__item--element
+            grid-area: email
+            +touch
+                padding-left: 14px
+
+        &--text-elipsis
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+
+        &--link
+            color: #005ca9
+            text-decoration: none
+
+        &--status
+            @extend .userlist__item--element
+            overflow: visible
+            grid-area: status
+
+            +touch
+                border-bottom: none
+
+        &--limit
+            @extend .userlist__item--status
+            grid-area: limit
+            +mobile
+                background-color: #FFFFFF
+                border: 1px solid #D5D5D5
+                padding: 10px 20px
+
+        &--used
+            @extend .userlist__item--status
+            grid-area: used
+            border-right: 1px solid #D5D5D5
+            +mobile
+                padding: 10px 20px
+
+        &--used-header
+            @extend .userlist__item--status
+            grid-area: used
+
+        &--superadmin
+            @extend .userlist__item--element
+            background-color: #FFF
+            grid-area: superadmin
+
+            +touch
+                padding: 10px 15px
+
+        &--trusted
+            @extend .userlist__item--superadmin
+            grid-area: trusted
+
+        &--btn
+            @extend .userlist__item--element
+            justify-content: left
+            border: none
+            grid-area: transcriptions
+            border-right: 1px solid #D5D5D5
+
+            +touch
+                margin-right: 10px
+
+        &--placeholder
+            color: #666666
+            margin-right: 4px
+            +mobile
+                display: none
+
+        &--label
+            display: none
+            +mobile
+                padding: 10px 20px 1px 20px
+                display: block
+
+    &__checkbox
+        display: inline-block
+        width: 12px
+        height: 12px
+        margin-right: 10px
+
+    &__label
+        @extend .userlist__item--text-elipsis
+        margin: 0
+
+    &__dropdown
+        flex: 1
+        &--btn
+            background: #FFF
+            border: transparent
+            color: #1C7CD5
+            width: 100%
+            font-size: 0.938rem
+            max-width: 200px
+            padding: 2px 4px
+            text-align: left
+            display: flex
+            justify-content: space-between
+            align-items: center
+            border-bottom: 1px solid transparent
+            text-transform: capitalize
+            +touch
+                max-width: 120px
+            +mobile
+                font-size: 0.875rem
+
+            &::after
+                color: #373A3C
+            &:hover
+                border-radius: 0
+            &:hover,
+            &:focus
+                background: transparent
+                color: #1C7CD5
+                border-bottom-color: #0E60CB
+            &:hover
+                &:focus
+                    border-radius: 4px
+            &:focus
+                &::after
+                    color: #FFF

@@ -1,0 +1,521 @@
+@import "@Styles/viewer/_viewer-colors.sass"
+
+.verses-block
+    background: $viewerColorGrey800
+    color: $viewerColorGrey100
+    border-bottom: $viewerColorBlack solid 1px
+
+    &:hover
+        background: #003a5e
+
+    &__title
+        display: flex
+        align-items: center
+        width: 100%
+        padding: 6px
+
+        &__consistency-error
+            color: $viewerColorConsistencyError
+
+        &__name
+            text-overflow: ellipsis
+
+    &__toggle
+        padding: 6px 6px 6px 0px
+    
+.verse
+    border-bottom: 1px solid $viewerColorGrey700
+    min-height: 31px
+
+    &__block-annotation
+        display: flex
+        width: 100%
+        position: relative
+        margin: 2px 3px
+
+        button
+            border-color: transparent
+            background-color: transparent
+
+            &.btn-verse:hover
+                background-color: transparent
+
+        &--inactive
+            &:hover
+                z-index: 9
+                .btn-verse
+                    text-align: left
+                    box-shadow: 0 0 0 1px $viewerColorAnnotation100
+
+            &.active
+                .btn-verse
+                    box-shadow: 0 0 0 3px $viewerColorAnnotation100
+
+                .btn-verse-edit
+                    color: black
+                    background: $viewerColorAnnotation100
+
+                    &:hover, &:focus
+                        background: $viewerColorAnnotation100
+
+                    
+            &:not(.active)
+                .btn-verse
+                    &:hover
+                        box-shadow: 0 0 0 1px $viewerColorAnnotation100
+                    &:focus
+                        &:not(:hover)
+                            box-shadow: none
+
+            &:hover, &.active
+                .btn-verse-edit
+                    display: flex
+
+            &.activeEdit
+                pointer-events: none
+
+        &--active
+            background-color: $viewerColorGrey100
+            box-shadow: 0 0 0 3px $viewerColorAnnotation100
+            color: #282828
+            font-size: 0.875rem
+            cursor: default
+            line-height: 1
+
+            .verse__num 
+                color: #595959
+        
+        &--readonly
+            button
+                .verse__num
+                    color: #7C7C7C
+                .verse__content
+                    color: #7C7C7C
+
+            &:not(.active)
+                .btn-verse
+                    &:hover,
+                    &:focus
+                        box-shadow: 0 0 0 1px $viewerColorAnnotation100
+    
+    &__block-music
+        display: flex
+        width: 100%
+        position: relative
+        margin: 2px 3px
+
+        button
+            border-color: transparent
+            background-color: transparent
+
+            &.btn-verse:hover
+                background-color: transparent
+
+        &--inactive
+            &:hover
+                z-index: 9
+                .btn-verse
+                    text-align: left
+                    box-shadow: 0 0 0 1px $viewerColorMusic
+
+            &.active
+                .btn-verse
+                    box-shadow: 0 0 0 3px $viewerColorMusic
+
+                .btn-verse-music-add,
+                .btn-verse-music-download
+                    background: $viewerColorMusic
+
+                    &:hover, &:focus
+                        background: $viewerColorMusic
+
+                .btn-verse-music-remove
+                    background: #E6E7E8
+                    box-shadow: 0 0 0 3px $viewerColorMusic
+                    color: black
+
+                    &:hover, &:focus
+                        background: #E6E7E8
+
+                    
+            &:not(.active)
+                .btn-verse
+                    &:hover
+                        box-shadow: 0 0 0 1px $viewerColorMusic
+                    &:focus
+                        &:not(:hover)
+                            box-shadow: none
+
+            &:hover, &.active
+                .btn-verse-music-add,
+                .btn-verse-music-remove,
+                .btn-verse-music-download
+                    display: flex
+
+            &.activeEdit
+                pointer-events: none
+        
+        &--readonly
+            button
+                .verse__num
+                    color: #7C7C7C
+                .verse__content
+                    color: #7C7C7C
+
+            &:not(.active)
+                .btn-verse
+                    &:hover,
+                    &:focus
+                        box-shadow: 0 0 0 1px $viewerColorMusic
+
+    &__block
+        display: flex
+        width: 100%
+        position: relative
+        margin: 2px 3px
+        
+        button
+            border-color: transparent
+            background-color: transparent
+
+            &.btn-verse:hover
+                background-color: transparent
+
+        &--inactive
+            &:hover
+                z-index: 9
+                .btn-verse
+                    text-align: left
+                    box-shadow: 0 0 0 1px $viewerColorPrimary500
+
+            &.active
+                .btn-verse
+                    box-shadow: 0 0 0 3px $viewerColorPrimary500
+
+                .btn-verse-edit
+                    background: $viewerColorPrimary500
+
+                    &:hover, &:focus
+                        background: $viewerColorPrimary500
+            &:not(.active)
+                .btn-verse
+                    &:hover
+                        box-shadow: 0 0 0 1px $viewerColorPrimary500
+                    &:focus
+                        &:not(:hover)
+                            box-shadow: none
+
+            &:hover, &.active
+                .btn-verse-edit
+                    display: flex
+
+            &.activeEdit
+                pointer-events: none
+                
+        &--active
+            background-color: $viewerColorGrey100
+            box-shadow: 0 0 0 3px $viewerColorPrimary500
+            color: #282828
+            font-size: 0.875rem
+            cursor: default
+            line-height: 1
+
+            .verse__num 
+                color: #595959
+
+        &--readonly
+            button
+                .verse__num
+                    color: #7C7C7C
+                .verse__content
+                    color: #7C7C7C
+
+    &__num
+        color: $viewerColorWhite
+        justify-content: center
+        width: 38px
+        font-size: 0.875rem
+        display: flex
+        align-items: center
+        flex: 0 0 38px
+
+    &__content
+        color: $viewerColorWhite
+        text-align: left
+        font-size: 0.875rem
+        padding-right: 45px
+        word-break: break-word
+
+        p
+            margin: 0
+            display: inline
+
+    &__lightup
+        background-color: $viewerColorSearchFlag
+
+    &__editor
+        display: flex
+        width: 100%
+        &--container
+            flex: 1
+            min-width: 50px
+        &--buttons
+            .accept-change
+                background-color: $viewerColorPrimary500
+            .accept-change-annotation
+                background-color: $viewerColorAnnotation100
+                box-shadow: 0 0 0 2px $viewerColorAnnotation100
+                color: black
+                &:hover
+                    background-color: $viewerColorAnnotation100
+                    box-shadow: 0 0 0 2px $viewerColorAnnotation100
+                    color: black
+
+    &__button
+        &--submit
+            line-height: 1.4rem
+            width: 40px
+            padding: 0
+            height: 100%
+            color: #fff
+            background: $viewerColorPrimary500
+            border: solid 1px $viewerColorPrimary500
+
+        &--cancel
+            line-height: 1.4rem
+            width: 40px
+            padding: 0
+            height: 100%
+            background: #C9C9C9
+            border: solid 1px #C9C9C9
+            color: #373A3C
+
+    &__info
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 40px
+        margin-left: 5px
+
+        .dropdown-menu
+            background: #424242
+            border: 1px solid #515151
+            padding: 0
+            min-width: 70px
+            top: 3px !important
+
+            &::after, &::before
+                display: block
+                position: absolute
+                content: ""
+                width: 0
+                height: 0
+                border-left: 5px solid transparent
+                border-right: 5px solid transparent
+
+            &::before
+                top: -5px
+                right: 6px
+                border-bottom: 5px solid #515151
+
+            &::after
+                top: -4px
+                right: 5px
+                border-bottom: 5px solid #424242
+        
+        .dropdown-item
+            color: #cecece
+            font-size: 0.8rem
+
+            &:hover, &:focus
+                background: transparent
+                color: white
+
+    &__comments
+        padding: 0 5px 0 5px
+        display: flex
+        align-items: center
+        min-width: 35px
+
+        &--button
+            padding: 0
+            margin: 0
+            background: transparent
+            border: 0
+            position: relative
+            color: white
+            font-size: 1.25rem
+        
+        &--count
+            position: absolute
+            width: 13px
+            height: 13px
+            border-radius: 100%
+            background: #B8580F
+            display: flex
+            justify-content: center
+            align-items: center
+            right: -4px
+            top: 3px
+            font-size: 0.5rem
+
+    &__expand-words
+        color: #E5EDF5
+        text-decoration: underline
+        flex-basis: 100px
+        flex-grow: 0
+        flex-shrink: 0
+        padding: 0 5px
+        display: flex
+        align-items: center
+        position: relative
+        cursor: pointer
+        justify-content: end
+
+    &__status
+        padding: 0 5px
+        display: flex
+        align-items: center
+        position: relative
+
+        &__dropdown-menu
+            background-color: $viewerColorGrey800
+            border-radius: 4px !important
+            padding: 0px !important
+
+            &__item
+                display: flex
+                color: $viewerColorGrey100 !important
+                padding: 0.25rem 0.5rem
+                font-size: 0.875rem
+
+                &:hover,
+                &:focus
+                    background-color: #999DA1 !important
+                    
+
+    &__checkbox
+        color: $viewerColorWhite
+        width: 25px
+        height: 17px
+        pointer-events: none
+        background: transparent
+        border: 1px solid transparent
+        position: relative
+        outline: 0 !important
+        border: 1px solid $viewerColorWhite
+        padding: 0
+
+        &:hover, &:focus
+            background: #424242
+
+        &--active
+            pointer-events: auto   
+
+        &--accept
+            width: 100%
+            height: 100%
+
+            i
+                position: absolute
+                left: 3px
+                top: -1px
+                font-size: 0.8rem
+
+        &--accept-double
+            width: 100%
+            height: 100%
+            background: rgb(11, 128, 135)
+
+            i
+                position: absolute
+                top: -1px
+                font-size: 0.8rem
+
+                &:first-child
+                    left: 5px
+
+                &:last-child
+                    left: 1px
+
+        &--decline
+            width: 100%
+            height: 100%
+            background: #cb2e25
+
+            i
+                position: absolute
+                top: -1px
+                left: 3px
+                font-size: 0.75rem
+
+        &[disabled]
+            opacity: 1
+            pointer-events: none
+
+    &__student-status 
+        &--correct
+            background: #365846
+        &--incorrect
+            background: #5B3769
+        &--partial_correct
+            background: #AD3D02
+
+        &--correct, &--incorrect, &--partial_correct
+            .verse__num
+                color: #C7C7C7
+
+    &__tooltip
+        width: 16px
+        height: 16px
+
+        position: relative
+        display: inline-block
+        margin-right: 5px
+
+        &--status
+            position: absolute
+            white-space: nowrap
+            right: 45px
+            z-index: 600
+            border: none
+            background: #959595
+            font-size: 0.75rem
+            padding: 3px 10px
+            color: #212121
+            border-radius: 2px
+
+        i
+            top: 2px
+
+        &--accept
+            @extend .verse__tooltip
+            i
+                position: absolute
+                left: -2px
+                font-size: 0.8rem
+
+        &--accept-double
+            @extend .verse__tooltip
+            i
+                position: absolute
+
+                font-size: 0.8rem
+
+                &:first-child
+                    left: -4px
+
+                &:last-child
+                    left: 0px
+
+        &--decline
+            @extend .verse__tooltip
+            i
+                position: absolute
+                left: -1px
+                font-size: 0.75rem
+
+                
+
+            
+

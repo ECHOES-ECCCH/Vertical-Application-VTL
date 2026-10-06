@@ -1,0 +1,1757 @@
+﻿{
+  "headers": {
+    "logoAlt": "Logo",
+    "title": "Wirtualne Laboratorium Transkrypcji",
+    "description": "Serwis Wirtualnego Laboratorium Transkrypcji służy do zmiany zeskanowanych dokumentów na tekst cyfrowy. Na podstawie materiałów źródłowych możesz tworzyć transkrypcje, transliteracje i tłumaczenia. Projekty możesz realizować samodzielnie, współdzielić je z innymi, a następnie udostępniać efekty pracy pozostałym członkom społeczności WLT.",
+    "descriptions": {
+      "title": "Jak rozpocząć pracę z tekstem?",
+      "item1": " w serwisie WLT - tworzenie projektów jest możliwe tylko dla zalogowanych użytkowników.",
+      "item2_1": "Kliknij ",
+      "item2_2": ", aby przejść do formularza, gdzie wymagane jest uzupełnienie informacji na temat projektu i plików źródłowych.",
+      "item3": "Zdefiniuj warstwę tekstową i określ czy będzie ona dotyczyła transkrypcji, transliteracji czy tłumaczenia.",
+      "item4": "Dodaj pliki źródłowe ze swojego urządzenia lub zaimportuj je z publikacji dostępnej online.",
+      "item5": "Zbuduj zespół dodając uczestników projektu w zakładce Uczestnicy.",
+      "item6": "Rozpocznij pracę z tekstem, moderuj zmiany i udostępniaj efekty pozostałym członkom społeczności WLT."
+    },
+    "help": "Dowiedz się więcej",
+    "menu": {
+      "transcriptions": "Projekty",
+      "logIn": "Zaloguj się",
+      "createAccount": "Utwórz konto",
+      "myAccount": "Moje konto",
+      "myProfile": "Mój profil",
+      "logOut": "Wyloguj się",
+      "myAccountMenu": {
+        "general": "Ogólne",
+        "myAccount": "Moje konto",
+        "myProfile": "Mój profil",
+        "historyTexts": "Wirtualne Laboratorium Transkrypcji",
+        "historyTextsMyProjects": "Moje projekty",
+        "profile": "Ustawienia profilu",
+        "management": "Zarządzanie",
+        "myProjects": "Moje projekty",
+        "serviceManagement": "Ustawienia limitów",
+        "usersManagement": "Zarządzanie użytkownikami"
+      },
+      "projects": "Projekty",
+      "myProjects": "Moje projekty",
+      "allProjects": "Wszystkie projekty",
+      "newProject": "Utwórz projekt"
+    },
+    "informations": "Informacje",
+    "informationsMenu": {
+      "contactInfo": "Dane kontaktowe",
+      "contact": "Kontakt",
+      "helpersInfo": "Informacje pomocnicze",
+      "howTo": "Jak korzystać z serwisu?",
+      "pageMap": "Mapa strony",
+      "privacyInfo": "Informacje prawne",
+      "privacy": "Polityka prywatności",
+      "availability": "Deklaracja dostępności",
+      "terms": "Regulamin"
+    }
+  },
+  "footer": {
+    "links": {
+      "privacyPolicy": "Polityka prywatności",
+      "contact": "Kontakt"
+    },
+    "rights": {
+      "copyright": "Copyright",
+      "client": "Wirtualne Laboratorium Transkrypcji",
+      "createdBy": "serwis opracowany przez ",
+      "pcss": {
+        "title": "Poznańskie Centrum Superkomputerowo-Sieciowe",
+        "url": "https://www.man.poznan.pl"
+      }
+    }
+  },
+  "financed": {
+    "text": "[Informacja o finansowaniu projektu]"
+  },
+  "form": {
+    "cancel": "Anuluj",
+    "change": "Zmień",
+    "email": "E-mail",
+    "password": "Hasło",
+    "currentPassword": "Dotychczasowe hasło",
+    "newPassword": "Nowe hasło",
+    "repeatedNewPassword": "Powtórz nowe hasło",
+    "repeatedPassword": "Powtórz hasło",
+    "rememberMe": "Zapamiętaj mnie",
+    "forgotPass": "Nie pamiętasz hasła?",
+    "signIn": "Zaloguj się",
+    "signUp": "Zarejestruj się",
+    "createNewTranscription": "Utwórz projekt",
+    "createImportedTranscription": "Zatwierdź import projektu",
+    "saveTranscription": "Zapisz zmiany",
+    "publishTranscription": "Opublikuj projekt",
+    "passwordTip": "Przy ustalaniu hasła pamiętaj, że prawidłowe hasło powinno zawierać: wielką literę, małą literę, cyfrę lub znak specjalny oraz składać się z min. 8 znaków",
+    "delete": "Usuń",
+    "inputFile": {
+      "selectFile": "Wybierz plik",
+      "selectFiles": "Wybierz pliki",
+      "changeFile": "Zmień plik",
+      "sendFile": "Prześlij plik",
+      "selectedFile": "Wybrany plik",
+      "startSendingFile": "Rozpocznij przesyłanie"
+    },
+    "messages": {
+      "invalidEmail": "Niepoprawny adres e-mail",
+      "correctEmail": "Prawidłowo podany adres e-mail",
+      "emptyEmail": "Pole e-mail nie może być puste",
+      "invalidUrl": "Niepoprawny adres pliku",
+      "emptyUrl": "Pole url nie może być puste",
+      "duplicateEmail": "Ten adres e-mail już istnieje, proszę wpisać inny lub wybrać przypomnienie hasła.",
+      "emailNotExists": "Ten adres e-mail nie figuruje w naszej bazie danych. Sprawdź poprawność tego adresu.",
+      "emailExistsInGroup": "Ten użytkownik jest już członkiem tej grupy.",
+      "incorrectPassword": "Prawidłowe hasło powinno zawierać: wielką literę, małą literę, cyfrę lub znak specjalny oraz składać się z min. 8 znaków",
+      "invalidPassword": "Wprowadzono niepoprawne hasło",
+      "correctPassword": "Prawidłowo podane hasło",
+      "fillPassword": "Pole hasła nie może być puste",
+      "fillField": "To pole nie może być puste",
+      "privatePolicy": "Musisz zaakceptować politykę prywatności",
+      "confirmPassword": "Hasła muszą być zgodne",
+      "nonExistingEmail": "Adres email nie został odnaleziony",
+      "error": "Wystąpił błąd",
+      "notAcceptedRegulations": "Musisz zaakceptować regulamin",
+      "passwordChangeFailure": "Zmiana hasła nie powiodła się",
+      "differentPasswords": "Hasła muszą być zgodne",
+      "requiredField": "To pole jest wymagane",
+      "wrongFileType": "Niepoprawny format pliku",
+      "wrongFilesType": "Niepoprawne formaty plików",
+      "wrongFileProvided": "Przesłany plik jest niewłaściwy",
+      "uploadSuccess": "Plik został przesłany prawidłowo.",
+      "uploadFailed": "Plik nie został przesłany. Spróbuj ponownie.",
+      "fileCouldNotBeAdded": "Nie można dodać wskazanego pliku",
+      "transcriptionUserAlreadyExists": "Użytkownik posiada już dostęp do tego projektu",
+      "noUserWithGivenEmail": "Nie znaleziono użytkownika z podanym adresem e-mail",
+      "invalidRange": "Podany zakres jest nieprawidłowy.",
+      "minumumOnetitle": "Wymagane jest podanie przynajmniej jednego tytułu",
+      "unrecognizablePage": "Nie można rozpoznać następującej strony",
+      "unrecognizablePages": "Nie można rozpoznać następujących stron",
+      "fileTooLarge": "Plik, który próbujesz przesłać przekroczył wyznaczony limit 100MB. Spróbuj zmniejszyć plik i prześlij go ponownie.",
+      "quotaExceeded": "Plik nie został przesłany. Wykorzystałeś limit MB dostępny dla Twojego konta. Sprawdź limit na stronie 'Mój profil'.",
+      "quotaTranscriptionExceeded": "Plik nie został przesłany. Wykorzystałeś limit MB dostępny dla tego projektu.",
+      "emptySubject": "Pole temat nie może być puste",
+      "emptyMessage": "Pole treść nie może być puste",
+      "downloadFailed": "Pobieranie pliku nie powiodło się.",
+      "filesAlreadyExist": "Pliki już istnieją",
+      "fileAlreadyExists": "Plik już istnieje",
+      "pagesNotEqual": "Niezgodna ilość stron projektu z ilością stron w pliku.",
+      "minimumOneTag": "Wymagane jest podanie przynajmniej jednego słowa kluczowego",
+      "requiredProjectName": "Wymagane jest podanie nazwy projektu",
+      "requiredIIIFurl": "Musisz podać adres url do zasobu IIIF",
+      "requiredReleaseDate": "Wymagane jest podanie daty wydania",
+      "requiredDescription": "Wymagane jest podanie opisu projektu",
+      "requiredKeywords": "Wymagane jest podanie słów kluczowych",
+      "requiredDocumentSrc": "Wymagane jest podanie informacji o dokumentach źródłowych",
+      "requiredDocumentOrigin": "Wymagane jest podanie informacji o pochodzeniu dokumentów źródłowych",
+      "requiredSourceFileTypes": "Wymagane jest podanie informacji o typie dokumentów źródłowych",
+      "fileCannotBeProcessed": "Nie można przetworzyć wskazanego pliku",
+      "requiredInfo": "pole wymagane",
+      "malformedURL": "Podano niepoprawny adres URL",
+      "requiredPageRange": "Wymagane jest podanie  zakresu stron",
+      "invalidPageRange": "Podano niepoprawny zakres stron",
+      "linkLess": "Wskazane źródło nie zawiera plików."
+    },
+    "importSelect": {
+      "title": "Wybierz sposób dodania nowych plików graficznych",
+      "importIIIF": "Importuj pliki poprzez protokół IIIF",
+      "importLocal": "Dodaj pliki ze swojego urządzenia"
+    },
+    "inputIIIF": {
+      "label": "Wpisz adres URL do protokołu IIIF, za pośrednictwem którego chcesz zaimportować pliki źródłowe.",
+      "placeholder": "Wpisz adres URL"
+    },
+    "requiredInfo": "Pola oznaczone gwiazdką są obowiązkowe",
+    "save": "Zapisz zmiany"
+  },
+  "auth": {
+    "confirmBox": {
+      "title": "Zaloguj się lub zarejestruj",
+      "message": "Ta funkcja dostępna jest tylko dla zalogowanych użytkowników. Utwórz konto lub zaloguj się, aby korzystać z pełnych możliwości serwisu WLT.",
+      "register": "Utwórz konto"
+    },
+    "login": {
+      "title": "Zaloguj się",
+      "alternativeLoginHead": "Inny sposób zalogowania",
+      "alternativeLoginPrivacy": "Polityka prywatności",
+      "alternativeLoginAvailability": "Deklaracja dostępności",
+      "alternativeLogin": {
+        "uwrad": {
+          "title": "Active Directory"
+        },
+        "pionierid": {
+          "title": "Pionier ID"
+        },
+        "facebook": {
+          "title": "Facebook"
+        },
+        "google": {
+          "title": "Google"
+        }
+      },
+      "isNotValid": "Nieprawidłowy e-mail lub hasło. Spróbuj jeszcze raz lub kliknij „Nie pamiętam hasła”, by je zresetować.",
+      "isValid": "Zalogowałeś się poprawnie. Możesz teraz korzystać z serwisu.",
+      "isTokenValid": "Twoje konto zostało założone.<br>Możesz teraz zalogować się.",
+      "isTokenNotValid": "Link aktywacji jest już nieaktywny. Spróbuj założyć konto jeszcze raz.",
+      "signOut": "Zostałes poprawnie wylogowany."
+    },
+    "register": {
+      "title": "Rejestracja",
+      "acceptedRegulations": {
+        "t1": "Zapoznałem się z ",
+        "link": "Polityką prywatności",
+        "t2": " i akceptuję jej treść."
+      },
+      "info": "Po utworzeniu konta na podany adres e-mail zostanie wysłana wiadomość z odnośnikiem do aktywacji konta.",
+      "emailSent": {
+        "head": "Dziękujemy za rejestrację konta",
+        "text": "Na podany adres e-mail przyjdzie wiadomość zawierająca link aktywacyjny Twojego konta w Wirtualnym Laboratorium Transkrypcji.",
+        "info": "Kliknij link zawarty w e-mailu, by zakończyć rejestrację.",
+        "backToHome": "Przejdź do strony głównej"
+      }
+    },
+    "account": {
+      "title": "Mój profil",
+      "email": "E-mail",
+      "contactEmail": "Kontakt e-mail",
+      "password": "Hasło",
+      "changeEmail": "Zmień e-mail",
+      "changePassword": "Zmień hasło",
+      "passwordChange": "Zmiana hasła",
+      "myGroup": "Moje grupy",
+      "createNewGroup": "Utwórz nową grupę",
+      "groupAdministrator": "Grupy, w których jestem administratorem",
+      "groupEdit": "Edytuj",
+      "groupRest": "Pozostałe grupy, do których należę",
+      "groupCreator": "Twórca",
+      "groupBlank": "Nie jesteś obecnie przypisany do żadnych grup.",
+      "function": "Funkcja",
+      "manageSSOAccount": "Zarządzanie kontem SSO",
+      "manageSSOAccountLink": "Przejdź do systemu SSO",
+      "manageSSOAccountLinkTooltip": "Zmiany we właściwościach konta SSO będą widoczne po ponownym zalogowaniu",
+      "adminConsole": "Konsola administracyjna",
+      "passwordChangeAlert": "Hasło zostało zmienione",
+      "diskSpace": "Miejsce na dysku",
+      "increase": "Poproś o zwiększenie",
+      "mb": "MB"
+    },
+    "remind": {
+      "title": "Nie pamiętam hasła",
+      "instruction": "By ustalić nowe hasło wpisz swój adres e-mail. Na podany adres zostanie wysłana wiadomość zawierająca link aktywacyjny do zmiany hasła. Należy kliknąć w ten link i ustawić nowe hasło.",
+      "send": "Wyślij",
+      "cancel": "Anuluj",
+      "emailSent": "Na podany adres e-mail wysłano link aktywacyjny.",
+      "error": "Zmiana hasła nie powiodła się",
+      "changeMessage": "Wiadomość o zmianie hasła",
+      "changedDescription": "Na podany w formularzu adres e-mail przyjdzie wiadomość zawierająca link aktywacyjny uprawniający do zmiany hasła.",
+      "backToHome": "Przejdź do strony głównej"
+    },
+    "passwordChange": {
+      "title": "Zmiana hasła",
+      "warning": "Wszystkie pola są wymagane",
+      "instruction": "Prawidłowe hasło powinno zawierać: wielką literę, małą literę, cyfrę lub znak specjalny oraz składać się z min. 8 znaków",
+      "newPassword": "Nowe hasło",
+      "repeat": "Powtórz nowe hasło",
+      "error": "Nie udało się zmienić hasła",
+      "success": "Hasło zostało pomyślnie zmienione. Możesz teraz się zalogować."
+    },
+    "deleteUser": {
+      "success": "Twoje konto użytkownika zostało usunięte"
+    }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Ustawienia limitów",
+      "description": "Zarządzanie użytkownikami",
+      "listDescription": "Lista użytkowników Wirtualnego Laboratorium Transkrypcji",
+      "projects": "Projekty",
+      "project": "Projekt",
+      "users": "Użytkownicy",
+      "status": "Status",
+      "active": "Aktywny",
+      "disabled": "Nieaktywny",
+      "superadministrator": "Kierownik projektu",
+      "transcriptions": "Projekty",
+      "searchPlaceholder": "Wpisz nazwę projektu lub adres e-mail użytkownika",
+      "searchTranscriptionPlaceholder": "Wyszukaj projekty",
+      "noMatch": "Brak użytkowników spełniających kryteria wyszukiwania",
+      "limit": "Limit:",
+      "used": "Użyto: ",
+      "usedHeader": "Wykorzystano",
+      "transcriptionsLink": "Link do projektów użytkownika",
+      "changeLimit": "Zmień limit",
+      "no": "Nr",
+      "email": "Adres e-mail",
+      "userProjects": "Projekty użytkownika",
+      "userLimits": "Limit na użytkownika",
+      "projectLimits": "Limit na projekt",
+      "descriptionUser": "Zarządzaj limitami wielkości plików, które są domyślnie przyznane użytkownikowi. Limity możesz ustawić na projekt lub na użytkownika.",
+      "descriptionProject": "Zarządzaj limitami wielkości plików, które są domyślnie przypisywane projektom i użytkownikom.",
+      "searchUsersPlaceholder": "Wpisz adres e-mail użytkownika"
+    },
+    "userTranscriptions": {
+      "description": "Zarządzaj projektami użytkownika WLT",
+      "descriptionComment": "(Zarządzanie obiektami użytkownika przysługuje tylko osobie z przypisaną funkcją Superadministratora).",
+      "listDescription": "Projekty użytkownika: ",
+      "noTranscriptions": "Brak wyników odpowiadających zapytaniu",
+      "open": "Zobacz",
+      "delete": "Usuń projekt",
+      "no": "Nr",
+      "projectName": "Nazwa projektu",
+      "members": "Uczestnicy",
+      "none": "brak",
+      "searchForProject": "Wyszukaj projekt"
+    }
+  },
+  "group": {
+    "headerGroup": "Grupa",
+    "headerGroupCreateNewOne": "Utwórz nową grupę",
+    "deleteGroup": "Usuń grupę",
+    "groupName": "Nazwa grupy:",
+    "groupNameInputPlaceholder": "Wpisz nazwę grupy",
+    "groupNameExists": "Grupa o podanej nazwie już istnieje.",
+    "groupUserRole": "Rola:",
+    "groupUserEmail": "E-mail:",
+    "removeUser": "Usuń",
+    "addUserHead": "Dodaj uczestnika",
+    "addUserText": "Podaj e-mail użytkownika, któremu chcesz dać dostęp do obiektu:",
+    "addButton": "Dodaj grupę",
+    "addToButton": "Dodaj do grupy",
+    "addUserPlaceholder": "kowalski@poczta.pl"
+  },
+  "roles": {
+    "admin": "Administrator",
+    "transcribent": "Transkrybent",
+    "verifier": "Weryfikator",
+    "third": "Opcja 3",
+    "changeEmail": "Zmień e-mail",
+    "changePassword": "Zmień hasło",
+    "passwordChange": "Zmiana hasła",
+    "myGroup": "Moje grupy",
+    "createNewGroup": "Utwórz nową grupę",
+    "groupAdministrator": "Grupy, w których jestem administratorem",
+    "groupEdit": "Edytuj",
+    "groupRest": "Pozostałe grupy, do których należę",
+    "groupCreator": "Twórca",
+    "groupBlank": "Nie jesteś obecnie przypisany do żadnych grup.",
+    "function": "Funkcja",
+    "adminConsole": "Konsola administracyjna",
+    "passwordChangeInfo": "Po utworzeniu konta na podany adres e-mail zostanie wysłana wiadomość z odnośnikiem do aktywacji konta.",
+    "passwordChangeAlert": "Hasło zostało zmienione"
+  },
+  "actorRoles": {
+    "author": "Autor",
+    "editor": "Redaktor",
+    "translator": "Tłumacz",
+    "copyist": "Kopista",
+    "publisher": "Publicysta",
+    "contributor": "Współautor"
+  },
+  "languages": {
+    "pol": "Polski",
+    "eng": "Angielski",
+    "deu": "Niemiecki",
+    "fra": "Francuski",
+    "lat": "Łotewski",
+    "rus": "Rosyjski"
+  },
+  "types": {
+    "print": "Druk",
+    "manuscript": "Rękopis"
+  },
+  "transcriptions": {
+    "header": {
+      "title": "Wszystkie projekty",
+      "titleMy": "Moje projekty",
+      "descr": "Lista transkrybowanych obiektów cyfrowych udostępnionych przez użytkowników.",
+      "login": "Zaloguj się, aby zobaczyć wszystkie ",
+      "myTranscriptionsLink": "Moje projekty.",
+      "searchResultsText": "Wyniki wyszukiwania dla: ",
+      "createNew": "Utwórz nowy projekt"
+    },
+    "scope": {
+      "select": "Wyświetl:",
+      "myAll": "wszystkie projekty",
+      "creatorOnly": "utworzone przeze mnie",
+      "memberOnly": "udostępnione dla mnie",
+      "publicAndPrivate": "publiczne i prywatne",
+      "publicOnly": "tylko publiczne",
+      "privateOnly": "tylko prywatne"
+    },
+    "search": {
+      "placeholder": "Przeszukaj transkrybowane obiekty",
+      "searchingPhrase": "Wyszukiwana fraza: ",
+      "searchBt": "Szukaj",
+      "noTranscriptionsFound": "Nie znaleziono wyszukiwanej frazy",
+      "description": "Sprawdź pisownię wpisanej frazy lub spróbuj wpisać frazę wyszukiwania w inny sposób.",
+      "userHasNoTranscriptions": "Nie masz jeszcze żadnych projektów.",
+      "userHasNoTranscriptionsCreator": "Nie masz jeszcze żadnych utworzonych projektów.",
+      "userHasNoTranscriptionsMember": "Nie masz jeszcze żadnych udostępnionych projektów."
+    },
+    "sort": {
+      "sortBy": "Sortuj według:",
+      "publicationDate": "daty publikacji",
+      "editionDate": "daty edycji",
+      "sortTitles": "tytułu A-Z",
+      "hitCount": "liczby wystąpień",
+      "advancement": "zaawansowania"
+    },
+    "paging": {
+      "title": "Projektów na stronie:"
+    },
+    "item": {
+      "transcriptionAdvancementFull": "Zaawansowanie całego projektu",
+      "transcriptionAdvancementShort": "Zaawansowanie projektu",
+      "name": "Nazwa: ",
+      "fullOCR": "100% OCR",
+      "noMatches": "Brak dopasowań w treści",
+      "foundMatches": "Znaleziono dopasowania: ",
+      "matchesInText": "Dopasowań w treści: ",
+      "expandMatches": "Rozwiń",
+      "foldMatches": "Zwiń",
+      "on": "na",
+      "page": "jednej stronie",
+      "pages": "stronach",
+      "pageNo": "Strona ",
+      "show": "Podgląd",
+      "work": "Pracuj z tekstem"
+    },
+    "dropdown": {
+      "btn": "Akcje",
+      "transcribe": "Transkrybuj",
+      "loadText": "Załaduj tekst do strony",
+      "download": "Pobierz warstwy tekstowe",
+      "hocrDownload": "Pobierz hOCR",
+      "textDownload": "Pobierz tekst",
+      "teiDownload": "Pobierz TEI z koordynatami",
+      "markAsEmpty": "Oznacz stronę jako pustą",
+      "deletePage": "Usuń stronę"
+    },
+    "description": {
+      "title": "Tytuł: ",
+      "author": "Autor: ",
+      "lastEdited": "Data ostatniej edycji: ",
+      "files": "Strony w projekcie: ",
+      "transcriptionAdvance": "Zaawansowanie całego projektu: ",
+      "verificationAdvance": "Zaawansowanie weryfikacji: ",
+      "showMore": "Szczegóły projektu",
+      "projectAuthor": "Utworzony przez: ",
+      "type": "Typ: ",
+      "timePeriod": "Zakres czasu dokumentu:  ",
+      "releaseDate": "Data wydania: ",
+      "sourcePublishDate": "Data publikacji: ",
+      "layersDesc": "Warstwy tekstowe określają rodzaj przetwarzania pliku źródłowego. Mogą one dotyczyć na przykład: transkrypcji, transliteracji czy tłumaczenia. W ramach jednego projektu można maksymalnie utworzyć trzy różne warstwy. Zdefiniuj ich nazwę i opisz.",
+      "name": "Nazwa projektu: ",
+      "verificationDesc": "Przeglądaj statystyki dotyczące zaawansowania moderacji w projekcie. Moderatorzy projektu mogą akceptować lub odrzucać obszary tekstowe w stanie „Do akceptacji“ w trybie pracy z tekstem."
+    },
+    "layers": {
+      "addNew": "Dodaj nową warstwę",
+      "delete": "Usuń",
+      "layer": "Warstwa",
+      "edit": "Zmień nazwę i opis",
+      "layerName": "Nazwa warstwy tekstowej ",
+      "layerNamePlaceholder": "Np. Transkrypcja, Transliteracja, Tłumaczenie na angielski",
+      "layerDescription": "Opis warstwy tekstowej ",
+      "layerDescriptionSub": "Informacje uzupełniające na temat danej warstwy tekstowej.",
+      "info": "Pola oznaczone gwiazdką są obowiązkowe",
+      "toManyWarning": "Nie możesz już utworzyć kolejnej warstwy. W ramach jednego projektu można utworzyć maksymalnie trzy warstwy. Jeśli chcesz dodać koleją warstwę usuń lub edytuj jedną z trzech istniejących warstw lub utwórz nowy projekt.",
+      "no": "Nr",
+      "name": "Nazwa warstwy tekstowej",
+      "desc": "Opis warstwy tekstowej"
+    },
+    "addLayerPage": {
+      "title": "Dodaj nową warstwę tekstową",
+      "addLayerStep1": "1. Nazwij i opisz warstwę tekstową",
+      "layerName": "Nazwa warstwy tekstowej",
+      "layerDescription": "Opis warstwy tekstowej",
+      "layerDescriptionInfo": "Wpisz informacje uzupełniające na temat warstwy tekstowej, np. kto z uczestników będzie ją uzupełniał",
+      "addLayerStep2": "2. Wskaż, co będzie zawierać warstwa tekstowa",
+      "step2option1": "Teksty (np. transkrypcje, transliteracje, tłumaczenia)",
+      "step2option2": "Adnotacje dotyczące obrazów",
+      "addLayerStep3": "3. Czy powielić obszary tekstowe z pierwszej warstwy tekstowej:",
+      "step3option1": "Nie powielaj obszarów tekstowych",
+      "step3option2": "Powiel puste obszary tekstowe",
+      "step3option3": "Powiel obszary tekstowe razem z tekstem (jeżeli istnieje)",
+      "addLayerStep4": "4. Czy powielić strukturę tekstu (tj. podział tekstu na różne części: wstęp, rozdziały, sekcje, akapity) z pierwszej warstwy tekstowej?",
+      "step4option1": "Nie powielaj struktury tekstu",
+      "step4option2": "Powiel strukturę tekstu",
+      "addlayerbt": "Dodaj warstwę tekstową",
+      "layerAddedToast": "Do projektu została dodana nowa warstwa tekstowa. Możesz zacząć na niej pracować!"
+    },
+    "varification": {
+      "goToVerification": "Przejdź do moderacji",
+      "columns": [
+        "Strona",
+        "Obszary tekstowe",
+        "W trakcie edycji",
+        "Do akceptacji",
+        "Zaakceptowane",
+        "Odrzucone",
+        "Ostatnia edycja",
+        " "
+      ]
+    }
+  },
+  "staticPage": {
+    "accessibilityStatement": "Deklaracja dostępności",
+    "contact": "Kontakt",
+    "privacyPolicy": "Polityka prywatności",
+    "regulations": "Regulamin"
+  },
+  "transcriptionHelpPage": {
+    "title": "Informacje - Jak korzystać z serwisu?",
+    "header": "Jak korzystać z serwisu?",
+    "readOn": "Czytaj dalej",
+    "howToStart": {
+      "title": "Jak rozpocząć pracę z tekstem?",
+      "desc": "Aby transkrybować strony w Wirtualnym Laboratorium Transkrypcji należy:",
+      "step": {
+        "step1title": " w serwisie WLT",
+        "step1desc": "Założenie konta jest jednoznaczne z otrzymaniem dostępu do szeregu funkcjonalności w tym module, ale także w pozostałych, które należą do serwisu WLT i umożliwiają: tworzenie kolekcji cyfrowych zasobów kultury pochodzących z regionu Śląska, projektowanie treści edukacyjnych i oznaczanie miejsc historycznych.",
+        "step1link": "Utwórz konto",
+        "step2title": " po aktywacji konta.",
+        "step2link": "Zaloguj się",
+        "step3title": " aby utworzyć nowy projekt",
+        "step3link": "Nowa transkrypcja",
+        "step3desc": "Utworzenie projektu wiąże się z uzupełnieniem formularza na jego temat. Ilość wymaganych informacji zależy od tego, czy projekt ma być prywatny, czy publiczny. Publikacja jest możliwa zarówno na etapie formularza tworzącego nowy projekt, jak i na późniejszych etapach rozwoju projektu. Należy wtedy przejść do Edycji opisu, zaznaczyć \"Projekt publiczny\" i upewnić się, że wymagane informacje zostały uzupełnione.",
+        "step4title": "Zdefiniuj warstwy tekstowe",
+        "step4desc": "W kolejnym kroku zdefiniuj, jakiego rodzaju przetwarzania tekstu będzie dotyczył projekt (sugerowane rodzaje to transkrypcja, tłumaczenia, transliteracja). W tym celu należy podać nazwę i opis przynajmniej jednej i maksymalnie trzech warstw tekstowych.",
+        "step5title": "Dodaj pliki źródłowe",
+        "step5desc": "Ostatnim wymaganym krokiem, aby rozpocząć projekt, jest dodanie plików źródłowych w postaci skanów lub zdjęć, które będą stanowiły bazę dla pracy z tekstem. Pliki można dodać ze swojego urządzenia (w formacie: JPG, PNG, DjVu, TIFF) lub zaimportować je z już istniejącej publikacji online - za pośrednictwem protokołu IIIF.",
+        "step6title": "Realizuj projekt samodzielnie lub z innymi",
+        "step7title": "Po dodaniu stron transkrypcji możesz zacząć automatyczną transkrypcję wszystkich dodanych stron lub możesz transkrybować każdy plik z osobna.",
+        "step7desc": "Jeżeli chcesz osobno transkrybować automatycznie każdą stronę kliknij najpierw w płytkę strony. Otworzy się nowe okno do transkrypcji wybranej przez Ciebie strony tam jedną z opcji jest „Automatyczna transkrypcja” widocznej strony. Opcja Transkrybuj automatycznie jest jednym z najważniejszych narzędzi dostępnych w WLT. Inaczej nazywana jest ona OCR (Optical Character Recognition) czyli optycznego rozpoznawania znaków na skanie dokumentu. Można powiedzieć, że OCR wyciąga tekst z obrazu.",
+        "step8title": "Kliknij wybraną stronę i przejdź do okna transkrypcji.",
+        "readMore": "Po utworzeniu nowej transkrypcji i dodaniu do niej stron do transkrybowania możesz rozpocząć pracę z plikiem. W tym celu kliknij w wybraną stronę. Wybrana strona pojawi się w nowym oknie z wszystkim potrzebnymi narzędziami do transkrybowania pliku strony. Jeśli chcesz wiedzieć w jaki sposób pracować z plikiem na stronie transkrypcji czytaj dalej ",
+        "step2desc": "Po wypełnieniu formularza rejestracyjnego na podany adres mailowy otrzymasz link, po kliknięciu w który aktywujesz swoje konto. Możliwe wtedy będzie zalogowanie się - przy użyciu danych podanych podczas rejestracji konta.",
+        "step6desc": "Od tej chwili możesz zacząć pracę z tekstem, do której możesz przystąpić sam lub z zespołem. Dodaj uczestników projektu, klikając w opcję \"Uczestnicy\" i przydziel im rolę w projekcie. Zakres uprawnień zależy od przydzielonej roli:",
+        "preEndDesc1": "Uczestnik",
+        "endDesc1": " - ma pełne możliwości edytowania warstw tekstowych,",
+        "preEndDesc2": "Moderator",
+        "endDesc2": " - poza uprawnieniami uczestnika ma również możliwość moderacji, czyli akceptowania i odrzucania wprowadzonych zmian w warstwach tekstowych przez użytkowników posiadających rolę \"uczestnika\", w tym zmian własnych,",
+        "preEndDesc3": "Administrator",
+        "endDesc3": " - posiada pełne możliwości zarządzania projektem, moderowania zmian i edytowania warstw tekstowych."
+      }
+    },
+    "howToTranscribe": {
+      "title": "Jak pracować z tekstem?",
+      "desc": "Zadaniem uczestników projektu jest przeprowadzanie konwersji tekstu ze zdjęć lub skanów do postaci tekstu cyfrowego - w zakresie wybranej formy pracy: transkrypcji, tłumaczenia czy transliteracji. Dowiedz się więcej na temat narzędzi do tego służących:",
+      "section": {
+        "workWithFile": "Narzędzia globalne do pracy z tekstem",
+        "workOnWindow": "Praca na oknie z obiektem transkrybowanym",
+        "workOnWindowDescription": "Opis działania narzędzi okna obiektu transkrybowanego",
+        "workWithWindow": "Praca z oknem transkrypcji",
+        "workWithWindowDescription": "Kliknij na linijkę wiersza, który chcesz transkrybować. Wiersz podświetli się. Niebieska ramka edytowanego wiersza pojawi się zarówno na widoku obiektu transkybowanego jak i na widoku transkrypcji. Dzięki temu będziesz mógł widzieć na obiekcie transkrybowanym, który wiersz strony edytujesz."
+      },
+      "steps": {
+        "step1title": "Ustawienia widoku",
+        "step1desc": "Standardowo przestrzeń robocza jest podzielona na dwa okna: z plikiem źródłowym po lewej stronie i warstwą tekstową po prawej. Widok ten można dostosować do własnych potrzeb:",
+        "step2title": "Wybór warstwy tekstowej",
+        "step2desc": "W sytuacji, kiedy w projekcie jest więcej niż jedna warstwa tekstowa, można aktywować do edycji jedną z nich, a w przypadku pozostałych włączyć lub wyłączyć ich podgląd, korzystając z opcji Pokaż/Ukryj.",
+        "step3title": "Rozpoznaj tekst automatycznie (OCR)",
+        "step3desc": "Funkcja ta powoduje, że tekst w pliku źródłowym - w postaci skanu lub zdjęcia - jest rozpoznawany w sposób automatyczny przez oprogramowanie OCR (ang. optical character recognition). Jeżeli warstwa tekstowa jest już uzupełniona, należy wskazać, czy ma ona zostać uzupełniona o automatyczne rozpoznanie, czy nadpisana przez nie. Należy też wybrać język rozpoznania wśród dostępnych.",
+        "step4title": "Pobierz wyniki",
+        "step4desc": "Funkcja ta umożliwia pobranie każdej z warstw tekstowych w postaci plików TEI P5, TXT oraz hOCR. Dotyczy ona zarówno warstw z pojedynczego pliku (opcja: \"Pobierz warstwy tekstowe\"), jak i z całego projektu (opcja: \"Pobierz wyniki\" na stronie szczegółów). Eksport zachowuje współrzędne elementów tekstowych oraz wprowadzone formatowanie, znaczniki i inne elementy struktury tekstu.",
+        "step5title": "Załaduj tekst",
+        "step5desc": "Funkcja ta jest dostępna tylko dla administratorów projektu i umożliwia załadowanie tekstu do wybranej warstwy tekstowej dla pojedynczego pliku.",
+        "step6title": "Przechodzenie do kolejnego pliku",
+        "step6desc": "W przestrzeni roboczej można przechodzić do kolejnych plików, korzystając z nawigacji po prawej stronie: \"Poprzedni plik\", \"Następny plik\".",
+        "step1extra_1p": "Zamień stronami",
+        "step1extra_1": " - umożliwia zamianę stronami obu okien.",
+        "step1extra_2p": "Zwiń/Rozwiń",
+        "step1extra_2": " - umożliwia ukrycie jednego okna na rzecz rozszerzenia drugiego i na odwrót.",
+        "step3extra_1": "Pamiętaj:",
+        "step3extra_2": " oprogramowanie OCR nie jest tak skuteczne jak człowiek, zatem w przypadkach wątpliwych (trudności z odczytaniem tekstu) oraz w celu uniknięcia błędów zawsze warto zweryfikować wynik OCR."
+      },
+      "icons": {
+        "addTranscriptionArea": "Dodaj obszar transkrypcji",
+        "addTranscriptionAreaInfo": "Narzędzie to służy do samodzielnego zaznaczania dodatkowych wierszy lub zaznaczania całych akapitów.",
+        "zoomIn": "Przybliż",
+        "zoomOut": "Oddal",
+        "fullScreen": "Powiększ na cały ekran",
+        "fitToWindow": "Dopasuj do szerokości okna",
+        "workWithTranscriptionWindow": {
+          "italic": "Kursywa",
+          "bold": "Pogrubienie",
+          "symbol": "Znaki specjalne",
+          "quote": "Koniec paragrafu",
+          "listElementEnd": "Koniec elementu listy",
+          "listEnd": "Koniec listy",
+          "page": "Nagłowek, stopka, numer strony",
+          "pageHeader": "Nagłowek",
+          "pageFooter": "Stopka",
+          "pageNumber": "Numer strony",
+          "header": "Tytuł",
+          "header1": "Nagłówek 1 stopnia",
+          "header2": "Nagłówek 2 stopnia",
+          "header3": "Nagłówek 3 stopnia",
+          "image": "Ilustracja",
+          "imageDescription": "Podpis pod ilustracją",
+          "table": "Tabela",
+          "elementTableCell": "Komórka tabeli",
+          "elementTableVerse": "Wiersz tabeli",
+          "elementTable": "Tabela",
+          "verseAutoTranscription": "Transkrybuj automatycznie zaznaczony wiersz",
+          "verseComment": "Dodaj komentarz do zaznaczonego wiersza",
+          "verseDelete": "Usuń cały wiersz",
+          "verseClear": "Wyczyść tekst w polu wiersza",
+          "verseUp": "Przesuń wiersz w górę",
+          "verseDown": "Przesuń wiersz w dół"
+        }
+      },
+      "descPoint1": "Narzędzia globalne do pracy z tekstem",
+      "descPoint2": "Narzędzia do pracy z plikiem źródłowym",
+      "descPoint3": "Narzędzia do pracy z warstwami tekstowymi",
+      "instruction_1": "Serwis Rozpoznawania Tekstów Historycznych udostępnia użytkownikom narzędzia usprawniające przetwarzanie dokumentów na tekst cyfrowy. W ten sposób możliwe jest wykonanie na przykład <b>transkrypcji</b> (ręcznej lub przy pomocy automatycznego rozpoznawania znaków), <b>tłumaczenia</b> czy <b>transliteracji</b>.",
+      "instruction_2": "Efekty pracy z tekstem można następnie opublikować w serwisie, tworząc tym samym cyfrową bazę zeskanowanych dokumentów, możliwych do wyszukania i przeglądania przez innych użytkowników.",
+      "instruction_3": "Do realizacji projektów służy specjalna przestrzeń robocza, do której użytkownicy wgrywają pliki źródłowe dokumentów i dokonują różnego rodzaju konwersji tekstu. Projekty można realizować <b>samodzielnie</b> lub <b>zespołowo</b>.",
+      "instruction_4": "Dzięki możliwości utworzenia <b>wielu warstw tekstowych</b> można jednocześnie stworzyć np. transkrypcję i tłumaczenie dokumentu źródłowego. Poza wprowadzaniem tekstu do warstw użytkownik ma możliwość importowania plików tekstowych, oznaczania elementów struktury logicznej (nagłówków, akapitów, list, tabel, etc.), jak również <b>budowania indeksów haseł, miejsc i osób</b>.",
+      "instruction_5": "Efektami prac można podzielić się z pozostałymi członkami społeczności WLT - publikując projekt w serwisie - ale można też go eksportować do użytku prywatnego."
+    },
+    "howToVerify": {
+      "title": "Jak moderować?",
+      "desc": "Zadaniem moderatora jest kontrolowanie poprawności i jakości zmian wprowadzanych przez uczestników projektu w warstwach tekstowych - akceptując je i odrzucając. Dowiedz się:",
+      "section": {
+        "howToAssignRole": "Jak przypisać uczestnikowi projektu rolę moderatora?",
+        "howToStart": "Jak przejść do trybu moderacji?",
+        "verification": "Weryfikacja",
+        "verificationDescription1": "Narzędzia weryfikatora w oknie transkrypcji. Weryfikator posiada wszystkie narzędzia jakie mają transkrybenci i twórcy w oknie transkrypcji. Dodatkowo weryfikator ma więcej możliwości przez oznaczanie poprawności weryfikacji wiersza. Oznaczenie poprawności transkrypcji przez transkrybenta:",
+        "verificationDescription2": "Jak zaznaczać poprawnie zweryfikowany wiersz?",
+        "verificationDescription3": "Po zweryfikowaniu transkrypcji transkrybent nie będzie miał już praw do edytowania transkrybowanej treści. Taką funkcjonalnośc będzie posiadał tylko twórca i weryfikator.",
+        "howToStart_desc": "Do trybu moderacji można przejść zarówno z poziomu szczegółów własnego projektu, jak i z poziomu przestrzeni roboczej, gdzie jest możliwa praca z tekstem:",
+        "howToAssignRole_desc": "Użytkownik, który utworzył projekt, ma przypisaną rolę Administratora, która daje mu uprawnienia zarówno uczestnika, jak i moderatora projektu. Będąc administratorem, możesz moderować zmiany samemu lub możesz tę rolę przypisać innemu użytkownikowi - samemu jej przy tym nie tracąc. Poniżej opisujemy, jak to zrobić:"
+      },
+      "assignRolesSteps": {
+        "step1": "Przejdź do zakładki Uczestnicy",
+        "step2": "Zmień rolę z Uczestnika na Moderatora",
+        "step2desc": "Po dodaniu kolejnego użytkownika do projektu ma on automatycznie przypisaną rolę uczestnika, która daje możliwość edycji warstw tekstowych. Aby zmienić rolę, rozwiń menu znajdujące się w tabeli przy jego/jej danych i wybierz rolę: Moderator.",
+        "step1desc": "Zakładka ta znajduje się na stronie szczegółów projektu, który został przez Ciebie utworzony. Można tam dodać uczestników projektu, sprawdzić i zmienić ich rolę, jak również zapoznać się ze statystykami pracy poszczególnych uczestników."
+      },
+      "startVeryficationSteps": {
+        "step1": "Będąc na stronie szczegółów projektu, przejdź do zakładki Moderacja",
+        "step2": "Z listy wybierz stronę, którą chciałbyś weryfikować i kliknij przycisk Weryfikuj. Otworzy Ci się okno transkrypcji, na której będziesz mógł weryfikować transkrybowany tekst.",
+        "step2desc": "Możliwość zmiany trybów jest w rozwijanym menu, znajdującym się w górnym pasku przestrzeni roboczej - obok nazwy pliku",
+        "step1desc": "W widoku Moderacji znajduje się tabela, w której oprócz podsumowania ilości obszarów w stanie: \"Do akceptacji\", \"Zaakceptowany\" i \"Odrzucony\", jest odnośnik do Trybu moderacji."
+      },
+      "veryficationIcons": {
+        "correct": "Wiersz oznaczony przez transkrybenta jako poprawnie transkrybowany.",
+        "incorrect": "Wiersz oznaczony przez transkrybenta jako błędnie transkrybowany lub taki, którego transkrypcji nie potrafił dokończyć.",
+        "untranscribed": "Wiersz nietranskrybowany lub niezweryfikowany przez transkrybenta."
+      },
+      "selectionIcons": {
+        "firstClick": "<strong>Pierwszy klik</strong> weryfikatora będzie zaznaczał poprawność transkrypcji niezależnie od tego, czy transkrybent oznaczył wiersza jako poprawny lub błędny. Weryfikator błędny wiersz może uznać za poprawnie transkrybowany.",
+        "secondClick": "Drugi klik weryfikatora pokaże, że transkrypcja wiersza jest błędna.",
+        "thirdClick": "Trzeci klik weryfikatora wraca do stanu zaznaczenia przez transkrybenta przed weryfikacją."
+      },
+      "desc_3": "Z jakich narzędzi korzysta moderator?",
+      "desc_1": "Jak przypisać uczestnikowi projektu rolę moderatora?",
+      "desc_2": "Jak przejść do trybu moderacji?"
+    },
+    "about": {
+      "title": "O serwisie"
+    }
+  },
+  "functionList": {
+    "SUPER_ADMIN": "Superadministrator",
+    "ADMIN": "Administrator",
+    "USER": "Użytkownik"
+  },
+  "cookies": {
+    "text": "Używamy plików cookies, by ułatwić korzystanie z naszego serwisu. Sprawdź informacje o plikach ",
+    "link": "Cookies i Polityce prywatności",
+    "agree": "Rozumiem"
+  },
+  "pagination": {
+    "next": "Następna",
+    "previous": "Poprzednia",
+    "of": " z "
+  },
+  "breadcrumbs": {
+    "home": "Strona główna",
+    "account": "Moje konto",
+    "accountMyProfile": "Mój profil",
+    "group": "Grupa",
+    "transcriptions": "Wszystkie projekty",
+    "searchResults": "Wyniki wyszukiwania",
+    "addPages": "Dodaj nowe pliki",
+    "transcriptionImport": "Import danych z obiektu cyfrowego dostępnego on-line",
+    "transcriptionEdit": "Edycja projektu",
+    "transcriptionNew": "Utwórz nowy projekt",
+    "addTextPage": "Załaduj tekst strony",
+    "addTextPages": "Załaduj tekst stron",
+    "transcriptionsUser": "Moje projekty",
+    "adminConsole": "Ustawienia limitów",
+    "adminUserTranscriptions": "Projekty użytkownika",
+    "contributors": "Uczestnicy",
+    "layers": "Warstwy tekstowe"
+  },
+  "viewer": {
+    "header": {
+      "transcriptionPage": "Strona",
+      "closeMenu": "Zamknij menu",
+      "transcriptionObject": "Transkrybowanie obiektu",
+      "howToStart": "Jak rozpocząć pracę z tekstem?",
+      "viewObject": "Przeglądanie obiektu",
+      "menu": "Menu",
+      "undo": "Cofnij zmianę (skrót: Ctrl + Z)",
+      "redo": "Przywróć zmianę (skrót: Ctrl + Y)",
+      "workWithTextStructure": "Pracuj ze strukturą tekstu",
+      "workWithTextStructureTooltip": "Ten tryb umożliwia użycie znaczników TEI, np. <div> (podział tekstu na różne części)",
+      "pages": {
+        "next": "Następna",
+        "fromNumber": "z",
+        "prev": "Poprzednia",
+        "page": "strona"
+      },
+      "swapPanels": "Zamień stronami",
+      "correctTranscription": "Poprawna transkrypcja",
+      "autoTranscribe": "Transkrybuj stronę automatycznie",
+      "download": "Pobierz wyniki",
+      "import": "Załaduj tekst do strony",
+      "chooseFormat": "Wybierz format",
+      "downloadhOCR": "hOCR",
+	  "downloadALTO": "ALTO",
+      "downloadText": "TXT",
+      "downloadTEI": "TEI P5",
+      "setHistoricalPageNumber": "Ustaw historyczny numer strony",
+      "markAsEmpty": "Oznacz stronę jako pustą",
+      "layerManagement": "Zarządzaj warstwami tekstowymi"
+    },
+    "footer": {
+      "search": "Wyszukaj",
+      "searchResults": {
+        "foundNumberPart1": "Znaleziono",
+        "foundNumberPart2": "dopasowań na",
+        "foundNumberPart3": "stronach dla zapytania",
+        "previousResult": "Poprzedni wynik",
+        "nextResult": "Następny wynik",
+        "page": "Strona"
+      }
+    },
+    "editor": {
+      "acceptAllVerses": "Zaakceptuj wszystkie obszary",
+      "rejectAllVerses": "Odrzuć wszystkie obszary"
+    },
+    "panels": {
+      "fold": "Zwiń",
+      "expand": "Rozwiń",
+      "editorHelp": {
+        "start": "Skróty klawiszowe:",
+        "previousVerse": "↑ - wybierz poprzedni wiersz/słowo",
+        "nextVerse": "↓ - wybierz następny wiersz/słowo",
+        "previousVerse10": "Page Up - wybierz 10 wiersz/słowo wyżej",
+        "nextVerse10": "Page Down - wybierz 10 wiersz/słowo niżej",
+        "firstVerse": "Home - wybierz pierwszy wiersz/słowo",
+        "lastVerse": "End - wybierz ostatni wiersz/słowo",
+        "addNextVerse": "Shift + ↓ - dodaj do wyboru następny wiersz/słowo",
+        "addPreviousVerse": "Shift + ↑ - dodaj do wyboru poprzedni wiersz/słowo",
+        "addNext10Verses": "Shift + Page Up - dodaj do wyboru 10 następnych wierszy/słów",
+        "addPrevious10Verses": "Shift + Page Down - dodaj do wyboru 10 poprzednich wierszy/słów",
+        "addToFirstVerses": "Shift + Home - dodaj do wyboru wszystkie wiersze/słowa wyżej",
+        "addToLastVerses": "Shift + End - dodaj do wyboru wszystkie wiersze/słowa niżej",
+        "enterVerse": "→ - rozwiń listę słów wybranego wiersza i wybierz pierwsze słowo",
+        "exitVerse": "← - zwiń listę słów i wybierz wiersz wybranego słowa",
+        "moveVersesDown": "Alt + ↓ - przenieś wybrane wiersze o jedno miejsce niżej",
+        "moveVersesUp": "Alt + ↑ - przenieś wybrane wiersze o jedno miejsce wyżej",
+        "moveVerses10Down": "Alt + Shift + ↓ - przenieś wybrane wiersze o 10 miejsc niżej",
+        "moveVerses10Up": "Alt + Shift + ↑ - przenieś wybrane wiersze o 10 miejsc wyżej",
+        "deleteVerses": "DEL - Usuń zaznaczone wiersze/słowa"
+      },
+      "title": {
+        "osd": "Plik źródłowy",
+        "editor": "Transkrypcja",
+        "student": "Nauka"
+      },
+      "selection": {
+        "edit": "Edytuj zaznaczenie",
+        "save": "Zakończ edycję"
+      }
+    },
+    "block": {
+      "delete": "Usuń znacznik"
+    },
+    "status": {
+      "inEdit": "W trakcie edycji (skrót: C)",
+      "verification": "Gotowy do weryfikacji (skrót: R)",
+      "accepted": "Zaakceptowany (skrót: A)",
+      "rejected": "Odrzucony (skrót: X)"
+    },
+    "music": {
+      "downloadMusic": "Pobierz",
+      "deleteMusic": "Usuń",
+      "addMusic": "Dodaj transkrypcję nutową"
+    },
+    "words": {
+      "expand": "Rozwiń",
+      "collapse": "Zwiń"
+    },
+    "tooltip": {
+      "header": {
+        "correctTranscription": "Zaznacz wszystkie wiersze jako poprawnie transkrybowane",
+        "downloadTooltip": "Pobierz widoczną stronę w wybranym formacie (hOCR, Tekst, TEI z koordynatami)",
+        "homeBt": "Przejdź na stronę główną Wirtualnego Laboratorium Transkrypcji",
+        "prevPage": "Przejdź do poprzedniej strony tego obiektu transkrypcji",
+        "nextPage": "Przejdź do następnej strony tego obiektu transkrypcji",
+        "switchBt": "Zamiana stronami prezentowanych stron Transkrypcji i Obiektu Transkrybowanego",
+        "autoBt": "Automatyczna transkrypcja widocznej strony. Dotychczasowe zmiany w formularzu nie zostaną zachowane",
+        "collapseObject": "Zwiń widoczny obszar Obiektu transkrybowanego",
+        "collapseTranscription": "Zwiń widoczny obszar Transkrypcji",
+        "expandObject": "Rozwiń obszar Obiektu transkrybowanego",
+        "expandTranscription": "Rozwiń obszar Transkrypcji"
+      },
+      "osdMenu": {
+        "addVerseArea": "Dodaj obszar tekstowy dla wiersza (skrót: W)",
+        "addWordArea": "Dodaj obszar tekstowy dla słowa (skrót: S)",
+        "addMusicArea": "Dodaj obszar nutowy (skrót: N)",
+        "addAnnotationArea": "Dodaj adnotację prostokątną (skrót: W)",
+        "addAnnotationPoint": "Dodaj adnotację punktową (skrót: S)",
+        "removeArea": "Usuń obszar transkrypcji (skrót: DEL)",
+        "zoomIn": "Przybliż (skrót: Numpad +)",
+        "zoomOut": "Oddal (skrót: Numpad -)",
+        "fullScreen": "Wyświetl na cały ekran (skrót: F)",
+        "fitToPage": "Dopasuj do wysokości okna (skrót: Numpad 0)",
+        "editArea": "Rozpocznij edycję zaznaczonego obszaru"
+      },
+      "blocks": {
+        "heading-1": "Nagłówek 1 stopnia",
+        "heading-2": "Nagłówek 2 stopnia",
+        "heading-3": "Nagłówek 3 stopnia",
+        "paragraph": "Akapit",
+        "table": "Tabela",
+        "table-row": "Wiersz tabeli",
+        "table-cell": "Komórka tabeli",
+        "list": "Lista",
+        "list-item": "Element listy",
+        "annotation": "Przypis",
+        "header": "Nagłówek",
+        "footer": "Stopka",
+        "page-no": "Numer strony",
+        "div-prologue": "Prolog, wstęp",
+        "div-part": "Część, księga",
+        "div-chapter": "Rozdział",
+        "div-section": "Podział wewnątrz rozdziału",
+        "add": "Dopisany tekst",
+        "add-above": "Dopisany tekst na górze",
+        "add-below": "Dopisany tekst na dole",
+        "add-margin": "Dopisany tekst na marginesie",
+        "del": "Usunięta partia tekstu",
+        "subst": "Poprawiona fraza <subst>",
+        "image": "Ilustracja",
+        "caption": "Opis ilustracji"
+      },
+      "blocksErrors": {
+        "invalidParent": "Ten znacznik nie pasuje typem do znacznika nadrzędnego",
+        "rootNotAllowed": "Ten znacznik nie może być na szczycie hierarchii",
+        "versesNotAllowed": "Znacznik tego typu nie może zawierać bezpośrednio wierszy",
+        "onlyOneVerse": "Blok tego typu powinien zawierać dokładnie jeden wiersz"
+      },
+      "menu": {
+        "style": {
+          "BOLD": "Pogrubienie",
+          "ITALIC": "Kursywa",
+          "STRIKETHROUGH": "Przekreślenie",
+          "UNDERLINE": "Podkreślenie"
+        },
+        "charmap": "Znaki specjalne",
+        "elementListItem": "Element listy",
+        "elementList": "Lista",
+        "list": "Lista",
+        "pageDescription": "Nagłówek, Stopka, Numer strony",
+        "verseHeader": "Nagłówek",
+        "verseFooter": "Stopka",
+        "pageNumber": "Numer strony",
+        "titleH": "Tytuł",
+        "titleH1": "Nagłówek 1 stopnia",
+        "titleH2": "Nagłówek 2 stopnia",
+        "titleH3": "Nagłówek 3 stopnia",
+        "image": "Ilustracja",
+        "imageCaption": "Opis ilustracji",
+        "table": "Tabela",
+        "elementTableCell": "Komórka tabeli",
+        "elementTableRow": "Wiersz tabeli",
+        "elementTable": "Tabela",
+        "verseAutoTranscription": "Transkrybuj automatycznie zaznaczone wiersze",
+        "addComment": "Dodaj komentarz do zaznaczonego wiersza",
+        "verseDelete": "Usuń zaznaczone wiersze",
+        "wordDelete": "Usuń zaznaczone słowa",
+        "versesDelete": "Usuń zakres wierszy",
+        "deleting": "Usuwanie",
+        "verseClear": "Wyczyść tekst w polach wierszy",
+        "verseUp": "Przesuń wiersze w górę (skrót: Alt + ↑)",
+        "verseDown": "Przesuń wiersze w dół (skrót: Alt + ↓)",
+        "verseUp10": "Przesuń wiersze 10 miejsc w górę (skrót: Alt + Shift + ↑)",
+        "verseDown10": "Przesuń wiersze 10 miejsc w dół (skrót: Alt + Shift + ↓)",
+        "setAsPerson": "Indeks osób",
+        "setAsPlace": "Indeks miejsc",
+        "setAsTerm": "Indeks haseł",
+        "categoryTextFormatting": "Formatowanie tekstu",
+        "categoryTextStructure": "Oznaczanie struktury tekstu",
+        "categoryTeiStructure": "Oznaczanie struktury tekstu w TEI",
+        "categoryIndexes": "Oznaczanie indeksów",
+        "categoryIndexesTextStructureError": "Oznaczanie indeksów jest dostępne tylko w trybie bez struktury tekstu",
+        "categoryVerseEdition": "Edycja wierszy",
+        "div": "Podział tekstu na części <div>",
+        "div-prologue": "Prolog, wstęp",
+        "div-part": "Część, księga",
+        "div-chapter": "Rozdział",
+        "div-section": "Podział wewnątrz rozdziału",
+        "subscript": "Przypis",
+        "paragraph": "Akapit",
+        "del": "Usunięta partia tekstu <del>",
+        "add": "Dopisany tekst <add>",
+        "add-def": "Dopisany tekst",
+        "add-above": "Dopisany na górze",
+        "add-below": "Dopisany na dole",
+        "add-margin": "Dopisany na marginesie",
+        "subst": "Poprawiona fraza <subst>",
+        "gap": "Nieczytelne słowo <gap>"
+      }
+    },
+    "layers": {
+      "button": "Praca z warstwami ",
+      "container": {
+        "title": "Aktywna warstwa tekstowa",
+        "titleReadOnly": "Pokaż warstwę",
+        "layer": "Warstwa ",
+        "show": "Pokaż",
+        "hide": "Ukryj"
+      }
+    },
+    "verse": {
+      "info": {
+        "delete": "Usuń"
+      }
+    }
+  },
+  "error": {
+    "error404": {
+      "title": "Błąd 404",
+      "description": "Przepraszamy, strona której szukasz, nie została odnaleziona.",
+      "backText": "Wróć do ",
+      "backLinkText": "poprzedniej strony",
+      "homeText": "Przejdź do ",
+      "homeLinkText": "strony głównej"
+    },
+    "error403": {
+      "title": "Brak dostępu",
+      "description": "Nie masz uprawnień do tej strony.",
+      "backText": "Wróć do ",
+      "backLinkText": "poprzedniej strony",
+      "homeText": "Przejdź do ",
+      "homeLinkText": "strony głównej"
+    },
+    "error409": {
+      "operationInProgress": "Nie można wywołać operacji, ponieważ w tym projekcie trwa wykonywanie innej operacji."
+    },
+    "error500": {
+      "title": "Błąd 500",
+      "description": "Przepraszamy, ale chwilowo nie możemy wyświetlić tej strony, ze względu na wewnętrzny błąd serwera.",
+      "reloadLinkText": "Odśwież stronę"
+    }
+  },
+  "modals": {
+    "acceptAllVerses": {
+      "title": "Zaakceptuj wszystkie obszary",
+      "body": "Jeśli zmienisz status wszystkich obszarów tekstowych na \"Zaakceptowany\" nie będzie możliwości powrotu do wcześniej określonych statusów. Czy jesteś pewny, że chcesz zaakceptować wszystkie obszary tekstowe?",
+      "button": "Zaakceptuj wszystkie obszary"
+    },
+    "rejectAllVerses": {
+      "title": "Odrzuć wszystkie obszary",
+      "body": "Jeśli zmienisz status wszystkich obszarów tekstowych na \"Odrzucony\" nie będzie możliwości powrotu do wcześniej określonych statusów. Czy jesteś pewny, że chcesz odrzucić wszystkie obszary tekstowe?",
+      "button": "Odrzuć wszystkie obszary"
+    },
+    "viewerResize": {
+      "title": "Transkrybowanie pliku",
+      "body": "<p>Niestety w tym momencie Twoje urządzenie nie spełnia potrzebnych wymagań, by korzystać z wszystkich narzędzi transkrypcji.</p><p>Wszystkie funkcje transkrypcji dostępne są na rozdzielczości powyżej 1200px. Poniżej tej rozdzielczości dostępna jest tylko funkcja automatycznej transkrypcji. </p><p>By móc edytować wiersze zmień lub obróć urządzenie, tak by uzyskać odpowiednią rozdzielczość ekranu.</p>",
+      "button": "Rozumiem"
+    },
+    "viewerExportTextLayers": {
+      "title": "Pobierz wyniki"
+    },
+    "pastedTooLongText": {
+      "title": "Wklejony tekst jest zbyt długi",
+      "body": "<p>Wklejony tekst jest zbyt długi. Jego długość została ograniczona do 4000 znaków.</p>",
+      "button": "Rozumiem"
+    },
+    "autoTranscribeVerse": {
+      "title": "Transkrybuj wiersze automatycznie",
+      "bodyHTML": "Automatyczna transkrypcja wierszy wyczyści aktualny tekst.<br>Czy jesteś pewny, że chcesz ponownie transkrybować wiersze?",
+      "select": {
+        "title": "Profil rozpoznania",
+        "default": "Wybierz język..."
+      },
+      "button": "Rozpocznij rozpoznawanie"
+    },
+    "autoTranscribePage": {
+      "title": "Transkrybuj strony automatycznie (OCR)",
+      "titleSinglePage": "Transkrybuj stronę automatycznie (OCR)",
+      "textLayerLabel": "Warstwa tekstowa",
+      "body": "Wybierz warstwę tekstową*, w której chcesz rozpoznać tekst",
+      "select": {
+        "titleProfile": "Wybierz język rozpoznania",
+        "titleRange": "Określ zakres rozpoznania w wybranej warstwie tekstowej",
+        "default": "Wybierz język...",
+        "ocrMode": {
+          "update": "Uzupełnij tylko puste obszary tekstowe",
+          "override": "Zastąp istniejący tekst w warstwie tekstowej"
+        },
+        "asterisk": "*Najlepiej użyć tej funkcji w warstwie teksowej, w której realizowana jest transkrypcja."
+      },
+      "checkbox": {
+        "handleColumns": "Rozpoznaj układ kolumnowy (wolniejsze)"
+      },
+      "button": "Rozpocznij rozpoznawanie"
+    },
+    "trainOCR": {
+      "title": "Trenuj OCR",
+      "selectRange": "Wskaż zakres stron, które zostaną użyte do trenowania mechanizmu OCR:",
+      "rangeLabel": "Numery stron i/lub zakresy stron oddziel przecinkami",
+      "rangeExample": "np. 1,2 - 6,8",
+      "selectLanguage": "Wybierz język:",
+      "button": "Trenuj OCR",
+      "radio": {
+        "pagesAll": "Wszystkie strony",
+        "pagesRange": "Strony z zakresu"
+      },
+      "select": {
+        "selectLayer": "Wybierz warstwę, w której realizujesz transkrypcję:"
+      },
+      "successAlert": "Poprawnie przekazano do trenowania przykłady oparte na {{0}} wierszach."
+    },
+    "autoTranscribePages": {
+      "title": "Rozpoznaj tekst automatycznie (OCR)",
+      "body": "Funkcja ta tworzy automatyczną transkrypcję stron w podanym zakresie",
+      "radio": {
+        "pagesAll": "Wszystkie strony",
+        "pagesRange": "Strony z zakresu"
+      },
+      "input": {
+        "placeholder": "1,2-6,8",
+        "label": "Numery stron i/lub zakresy stron oddziel przecinkami"
+      },
+      "select": {
+        "titleProfile": "Wybierz język rozpoznania",
+        "titleRange": "Określ zakres rozpoznania w wybranej warstwie tekstowej",
+        "default": "Wybierz język ...",
+        "selectLayer": "Wybierz warstwę tekstową*, w której chcesz rozpoznać tekst",
+        "asterisk": "*Najlepiej użyć tej funkcji w warstwie tekstowej, w której realizowana jest transkrypcja.",
+        "ocrMode": {
+          "emptyonly": "Rozpoznaj tylko pliki z pustą warstwą tekstową",
+          "update": "Uzupełnij tylko puste obszary tekstowe",
+          "override": "Zastąp istniejący tekst w warstwie tekstowej"
+        }
+      },
+      "checkbox": {
+        "handleColumns": "Rozpoznaj układ kolumnowy (wolniejsze)"
+      },
+      "button": "Rozpocznij rozpoznawanie",
+      "notice": "Czas trwania rozpoznania zależy od ilości plików w projekcie i może zająć nawet kilka godzin."
+    },
+    "deleteTranscription": {
+      "title": "Usuń projekt",
+      "bodyHTML": "Ta funkcja usuwa cały projekt, zarówno opis, jak i wszystkie pliki.<br>Czy jesteś pewny, że chcesz kontynuować?",
+      "button": "Usuń projekt"
+    },
+    "deleteTranscriptionPage": {
+      "title": "Usuń stronę z projektu",
+      "body": "Czy jesteś pewien, że chcesz usunąć stronę z projektu?",
+      "button": "Usuń stronę"
+    },
+    "markTranscriptionPageAsEmpty": {
+      "title": "Oznacz stronę jako pustą",
+      "body": "Po oznaczeniu strony jako pusta, wszystkie wiersze na tej stronie zostaną bezpowrotnie usunięte. <br>Strona oznaczona jako pusta nie będzie brana pod uwagę przy zliczaniu postępów transkrypcji.<br>Jeśli do strony zostanie dodany wiersz, oznaczenie zostanie usunięte.<br>Czy na pewno chcesz kontynuować?",
+      "button": "Oznacz jako pustą"
+    },
+    "downloadTranscriptionPage": {
+      "title": "Pobierz warstwę tekstową ze strony",
+      "body": "Wybierz format",
+      "button1": "hOCR",
+      "button2": "ALTO",
+      "button3": "TXT",
+      "button4": "TEI P5"
+    },
+    "loadTextTranscriptionPage": {
+      "title": "Załaduj tekst do strony",
+      "body": "Wybierz warstwę, do której chcesz importować tekst",
+      "bodyInfo": "Dodaj pliki w formacie: hOCR, TXT lub TEI.",
+      "buttonAdd": "Dodaj plik",
+      "button": "Rozpocznij przesyłanie"
+    },
+    "publishTranscription": {
+      "title": "Opublikuj projekt",
+      "bodyHTML": "Opublikowanie projektu spowoduje, że będzie on widoczny dla wszystkich użytkowników serwisu. Czy chcesz opublikować projekt?",
+      "button": "Opublikuj projekt"
+    },
+    "depublishTranscription": {
+      "title": "Przestań publikować",
+      "bodyHTML": "Wycofanie publikacji projektu spowoduje, że nie będzie on dłużej możliwy do podglądu przez użytkowników serwisu (poza uczestnikami projektu). Czy chcesz przestać publikować projekt?",
+      "button": "Przestań publikować"
+    },
+    "groupDeleteUser": {
+      "title": "Usunięcie użytkownika",
+      "bodyHTML": "Ta funkcja usunie użytkownika z grupy.<br> Czy jesteś pewny, że chcesz kontynuować?",
+      "button": "Usuń użytkownika"
+    },
+    "groupDeleteGroup": {
+      "title": "Usuwanie grupy",
+      "bodyHTML": "Ta funkcja usuwa całą grupę i przywrócenie jej będzie niemożliwe.<br> Czy jesteś pewny, że chcesz kontynuować?",
+      "button": "Usuń grupę"
+    },
+    "permissionsDeleteGroup": {
+      "title": "Usuń grupę.",
+      "bodyHTML": "Usunięcie grupy spowoduje, że obiekt dla tej grupy nie będzie już dostępny.",
+      "button": "Usuń"
+    },
+    "permissionsDeleteUser": {
+      "title": "Usuń użytkownika.",
+      "bodyHTML": "Usunięcie użytkownika spowoduje, że obiekt dla tego użytkownika nie będzie już dostępny.",
+      "button": "Usuń"
+    },
+    "downloadResults": {
+      "title": "Eksportuj projekt",
+      "download": "Pobierz",
+      "btOptions": {
+        "alto": "ALTO",
+        "altoZipLayers": "ALTO ZIP, 1 plik na warstwę",
+        "altoZipPages": "ALTO ZIP, 1 plik na stronę",
+        "hocr": "hOCR",
+        "hocrZip": "hOCR (Zip)",
+        "hocrZipLayers": "hOCR ZIP, 1 plik na warstwę",
+        "hocrZipPages": "hOCR ZIP, 1 plik na stronę",
+        "tei": "TEI P5",
+        "teiZip": "TEI P5 (Zip)",
+        "teiZipLayers": "TEI P5 ZIP, 1 plik na warstwę",
+        "teiZipPages": "TEI P5 ZIP, 1 plik na stronę",
+        "text": "TXT",
+        "textZip": "TXT (Zip)",
+        "textZipLayers": "TXT ZIP, 1 plik na warstwę",
+        "textZipPages": "TXT ZIP, 1 plik na stronę"
+      },
+      "getEbook": "Pobierz eBook",
+      "options": {
+        "mobi": "MOBI",
+        "epub": "ePUB",
+        "pdf": "PDF"
+      },
+      "chooseLayers": "Wybierz warstwę",
+      "text": "Wybierz zakres eksportu",
+      "textLayerLabel": "Warstwa tekstowa",
+      "selectFormat": "Wybierz format:",
+      "layerOptions": {
+        "all": "Eksportuj wszystkie warstwy tekstowe",
+        "specified": "Eksportuj pojedynczą warstwę tekstową"
+      },
+      "selectLayer": "Wybierz warstwę",
+      "generateCoverPage": "Wygeneruj stronę tytułową na podstawie metadanych."
+    },
+    "regulations": {
+      "title": "Regulamin dotyczący publikowania transkrypcji w WLT",
+      "button": "Rozumiem"
+    },
+    "commentsVerse": {
+      "titleAdd": "Dodaj komentarz",
+      "titleVerse": "Komentarze do wiersza",
+      "button": "Dodaj komentarz",
+      "clear": "Wyczyść",
+      "commentsInAVerse": "Komentarzy w wierszu",
+      "label": "Komentarz",
+      "limit": "Limit znaków",
+      "previousComments": "Wcześniejsze komentarze",
+      "failed": "Dodanie komentarza nie powiodło się",
+      "delete": "Usuń"
+    },
+    "commentsDelete": {
+      "title": "Potwierdź usunięcie komentarza",
+      "bodyHTML": "Ta funkcja usunie komentarz użytkownika do wersu.<br> Czy jesteś pewny, że chcesz kontynuować?",
+      "button": "Usuń komentarz"
+    },
+    "deleteVerse": {
+      "title": "Potwierdź usunięcie wiersza",
+      "bodyHTML": "Ta funkcja usunie wybrany wiersz, wraz z komentarzami i indeksami.<br> Czy jesteś pewny, że chcesz kontynuować?",
+      "button": "Usuń wiersz"
+    },
+    "deleteSelectedVerses": {
+      "title": "Potwierdź usunięcie wierszy",
+      "bodyHTML": "Ta funkcja usunie wybrane wiersze.<br> Czy jesteś pewny, że chcesz kontynuować?",
+      "button": "Usuń wiersze"
+    },
+    "deleteWord": {
+      "title": "Potwierdź usunięcie słowa",
+      "bodyHTML": "Ta funkcja usunie wybrane słowo, wraz z indeksami.<br> Czy jesteś pewny, że chcesz kontynuować?",
+      "button": "Usuń słowo"
+    },
+    "deleteSelectedWords": {
+      "title": "Potwierdź usunięcie słów",
+      "bodyHTML": "Ta funkcja usunie wybrane słowa.<br> Czy jesteś pewny, że chcesz kontynuować?",
+      "button": "Usuń słowa"
+    },
+    "deleteVerses": {
+      "title": "Usuń wiele wierszy",
+      "bodyHTML": "Wiersze zostaną usunięte z aktualnie aktywnej warstwy, wraz z komentarzami i indeksami.",
+      "button": "Usuń",
+      "input": {
+        "placeholder": "1,6-8,12",
+        "label": "Wybierz zakres wierszy, które chcesz usunąć:",
+        "error": "Błędny zakres wierszy"
+      }
+    },
+    "importAvailableSources": {
+      "title": {
+        "mets": "Lista dostępnych źródeł importu dla METS",
+        "iiif": "Lista dostępnych źródeł importu dla IIIF",
+        "tei": "Lista dostępnych źródeł importu dla TEI"
+      },
+      "desc": {
+        "mets": "Lista źródeł, z których możesz zaimportować do WLT obiekty podając link do metadanych METS.",
+        "iiif": "Lista źródeł, z których możesz zaimportować do WLT obiekty podając link do manifestu IIIF.",
+        "tei": "Lista źródeł, z których możesz zaimportować do WLT obiekty podając link do pliku TEI."
+      },
+      "search": "Wyszukaj źródło",
+      "close": "Zamknij"
+    },
+    "contactAuthor": {
+      "title": "Kontakt z Twórcą transkrypcji",
+      "subject": "Temat",
+      "message": "Treść",
+      "button": "Wyślij",
+      "sendMsg": "Wiadomość została wysłana",
+      "notSendMsg": "Wiadomość nie została wysłana"
+    },
+    "listOfIndex": {
+      "title": {
+        "persons": "Indeks osób",
+        "places": "Indeks miejsc",
+        "terms": "Indeks haseł"
+      },
+      "personName": "Właściwa nazwa osoby",
+      "placeName": "Nazwa miejsca",
+      "termName": "Nazwa hasła",
+      "urlAddress": "Adres URL projektu",
+      "notAccessible": "Brak powiązania z projektem",
+      "termMeaning": "Znaczenie hasła",
+      "edit": "Edytuj",
+      "delete": "Usuń",
+      "deleteIndexTitle": "Usuń indeks",
+      "deleteButton": "Usuń",
+      "bodyHTML": "Po usunięciu indeksu nie będziesz mógł go przywrócić. <br/> Indeks zostanie usunięty.",
+      "chooseFrom": "Wybierz z wcześniej dodanych:"
+    },
+    "setAsPerson": {
+      "titleAdd": "Dodaj do indeksu osób",
+      "titleEdit": "Edytuj osobę",
+      "titleVerse": "Przypisz osobę do wiersza",
+      "button": "Dodaj do indeksu osób",
+      "cancel": "Anuluj",
+      "label": "Nazwa osoby",
+      "limit": "Limit znaków",
+      "previousPerson": "Wcześniejsze osoby",
+      "failed": "Dodanie osoby nie powiodło się",
+      "delete": "Usuń"
+    },
+    "setAsPlace": {
+      "titleAdd": "Dodaj do indeksu miejsc",
+      "titleEdit": "Edytuj miejsce",
+      "titleVerse": "Przypisz miejsce do wiersza",
+      "button": "Dodaj do indeksu miejsc",
+      "cancel": "Anuluj",
+      "label": "Nazwa miejsca",
+      "placeUrlLabel": "Odnośnik do geolokalizacji",
+      "limit": "Limit znaków",
+      "previousPlace": "Wcześniejsze miejsca",
+      "failed": "Dodanie miejsca nie powiodło się",
+      "delete": "Usuń"
+    },
+    "setAsTerm": {
+      "titleAdd": "Dodaj do indeksu haseł",
+      "titleEdit": "Edytuj hasło",
+      "titleVerse": "Przypisz hasło do wiersza",
+      "button": "Dodaj do indeksu haseł",
+      "cancel": "Anuluj",
+      "label": "Nazwa hasła",
+      "termDescriptionLabel": "Znaczenie hasła",
+      "limit": "Limit znaków",
+      "previousTerm": "Wcześniejsze hasła",
+      "failed": "Dodanie hasła nie powiodło się",
+      "delete": "Usuń"
+    },
+    "addNewLayer": {
+      "title": "Warstwy tekstowe",
+      "layerTitle": "Warstwa tekstowa",
+      "layerName": "Nazwa:",
+      "layerDescription": "Opis:",
+      "edit": "Edytuj",
+      "delete": "Usuń",
+      "addNew": {
+        "maxLength": "Osiągnięto maksymalną liczbę warstw",
+        "title": "Dodaj warstwę",
+        "save": "Zapisz zmiany",
+        "form": {
+          "nameRequired": "Wymagane jest podanie nazwy warstwy"
+        }
+      },
+      "deleteModal": {
+        "title": "Usuwanie warstwy",
+        "body": "Czy jesteś pewien, że chcesz usunąć warstwę?",
+        "subBody": "Wraz z usunięciem warstwy, stracisz dostęp do tekstów zapisanych w warstwie."
+      },
+      "exit": "Zakończ podgląd"
+    },
+    "importTextToLayer": {
+      "title": "Załaduj tekst do stron",
+      "titleSinglePage": "Załaduj tekst do strony",
+      "chooseLayer": "Wybierz warstwę, do której chcesz importować tekst",
+      "addFileInFormat": "Dodaj plik w formacie hOCR, TXT lub TEI.",
+      "importText": "Rozpocznij przesyłanie"
+    },
+    "addPages": {
+      "title": "Dodaj pliki źródłowe",
+      "quotaInfo": "Można dodać plik o maksymalnym rozmiarze: 100MB"
+    },
+    "deleteTranscriptionLayer": {
+      "title": "Usuń warstwę tekstową",
+      "bodyHTML": "Usunięcie warstwy tekstowej spowoduje nieodwracalną utratę wprowadzonych w niej zmian. Czy jesteś pewny, że chcesz usunąć tę warstwę tekstową?",
+      "button": "Usuń warstwę"
+    },
+    "editTranscriptionLayer": {
+      "title": "Edytuj warstwę tekstową",
+      "button": "Usuń warstwę"
+    },
+    "removeMusicNotesFromVerse": {
+      "title": "Usuń transkrypcję nutową",
+      "removeFile": "Jesteś pewny, że chcesz usunąć dodaną transkrypcję nutową?",
+      "button": "Usuń transkrypcję nutową"
+    },
+    "historicalPageNumber": {
+      "title": "Ustaw historyczny numer strony",
+      "label": "Historyczny numer strony",
+      "button": "Ustaw historyczny numer strony"
+    },
+    "addSubst": {
+      "title": "Dodaj identyfikator do znacznika “subst”",
+      "body1": "Przypisz znacznikowi “subst” liczbę, aby odróżnienić między sobą poprawki oznaczone tym znacznikiem.",
+      "body2": "Przypisując tę samą liczbę dla fragmentu tekstu wykreślonego (“del”) i dopisanego (“add”) powiążesz oba teksty w jedną poprawkę. Jeżeli chcesz utworzyć powiązanie w ramach innej poprawki, przypisz jako identyfikator niewykorzystaną wcześniej liczbę.",
+      "label": "Identyfikator znacznika",
+      "button": "Dodaj identyfikator"
+    }
+  },
+  "transcription": {
+    "details": {
+      "instructionHeader": "Instrukcja dla uczestników projektu",
+      "instructionText": "Moderację proszę wykonać, dopiero kiedy strona jest w 100% transkrybowana.",
+      "public": "Opublikuj projekt",
+      "transcriptionChangeError": "Operacja na projekcie spowodowała nieoczekiwany błąd.",
+      "reversePublic": "Przestań publikować",
+      "publicInfo": "Publikacja projektu spowoduje, że będzie on możliwy do podglądu dla wszystkich użytkowników serwisu WLT. Upewnij się, że wszystkie wymagane informację są uzupełnione.",
+      "myTranscription": "Moja transkrypcja",
+      "analyticLevel": "POZIOM ANALITYCZNY",
+      "analyticLevelDescription": "- zawiera elementy bibliograficzne opisujące pozycję (np. artykuł lub rozdział) opublikowane w monografii lub czasopiśmie, a nie jako niezależna publikacja",
+      "monographicLevel": "POZIOM MONOGRAFICZNY",
+      "monographicLevelDescription": "- zawiera elementy bibliograficzne opisujące pozycję (np. książkę, rękopis lub czasopismo) opublikowane jako niezależny element (tj. jako oddzielny przedmiot fizyczny)",
+      "textLevel": "POZIOM PROFILU TEKSTOWEGO",
+      "textLevelDescription": "- zawiera opis pozabibliograficznych aspektów tekstu",
+      "metadata": "Metadane obiektu źródłowego",
+      "collapse": "Zwiń",
+      "expand": "Rozwiń",
+      "title": "Tytuł:",
+      "author": "Autor:",
+      "language": "Język:",
+      "type": "Typ:",
+      "redactor": "Redaktor:",
+      "numberOfChapter": "Numer rozdziału:",
+      "numberOfNotebook": "Numer zeszytu:",
+      "pageRange": "Zakres stron:",
+      "publisher": "Wydawca:",
+      "placeOfPublication": "Miejsce wydania:",
+      "dateOfPublication": "Data wydania:",
+      "isbn": "ISBN:",
+      "keywords": "Słowa kluczowe:",
+      "summary": "Streszczenie:",
+      "links": "Linki:",
+      "importAdress": "Adres importu ",
+      "externalId": "Zewnętrzny Identyfikator ",
+      "details": "Szczegóły",
+      "permissions": "Uprawnienia",
+      "remove": "Usuń projekt",
+      "start": "Rozpocznij pracę z tekstem",
+      "continue": "Kontynuuj pracę z tekstem",
+      "transcriptionComplete": "Transkrypcja ukończona",
+      "verificationComplete": "Transkrypcja zweryfikowana",
+      "transcriptionFiles": "Strony w projekcie",
+      "transcriptionPages": "Pliki graficzne: ",
+      "transcriptionLayers": "Warstwy tekstowe: ",
+      "contact": "Skontaktuj sie z Twórcą transkrypcji",
+      "edit": "Edytuj opis",
+      "dateOfCreation": "Data dodania: ",
+      "sendEmail": "Wyślij e-mail",
+      "addNewPages": "Dodaj pliki źródłowe",
+      "trainOCR": "Trenuj OCR",
+      "verify": "Moderacja",
+      "returnToMyTranscripts1": "Zobacz wszystkie ",
+      "returnToMyTranscripts2": "Moje projekty",
+      "workWithPages": "Praca ze stronami",
+      "workWithText": "Praca z tekstem",
+      "identifierLevel": "POZIOM IDENTYFIKATORÓW",
+      "EISBN": "e-ISBN:",
+      "EISSN": "e-ISSN:",
+      "ISSN": "ISSN:",
+      "pages": "Liczba stron:",
+      "volumeNumber": "Numer tomu:",
+      "importAdressDesc": "Jest to adres URL systemu, z którego obiekt został zaimportowany.",
+      "externalIdDesc": "Jest to identyfikator obiektu, który został mu przypisany w zewnętrznym systemie, z którego pochodzi.",
+      "indexes": "Indeksy",
+      "contributors": "Uczestnicy",
+      "moderation": "Moderacja",
+      "automaticallyTranscribe": "Transkrybuj strony automatycznie (OCR)",
+      "loadText": "Załaduj tekst do stron",
+      "deleteTextLayer": "Usuń warstwę tekstową",
+      "addTextLayer": "Warstwy tekstowe",
+      "downloadResults": "Pobierz wyniki",
+      "transcriptionLayersCount": "Warstwy tekstowe w projekcie: ",
+      "noPagesInfo1": "Aby rozpocząć pracę z tekstem, ",
+      "noPagesInfo2": "dodaj pliki źródłowe",
+      "noPagesInfoLoading": "Strony projektu będą widoczne po zakończeniu przetwarzania",
+      "workWithProject": "Pracuj z projektem",
+      "moreOptions": "Więcej opcji"
+    },
+    "addPages": {
+      "title": "Dodaj nowe strony",
+      "description": "Wybierz, czy chcesz dodać plik źródłowy ze swojego urządzenia (w formacie: JPG, PNG, DjVu, TIFF), czy zaimportować pliki źródłowe z już istniejącej publikacji online (przez protokół IIIF):",
+      "confirm": "Przeslij plik",
+      "messages": {
+        "success": "Plik został przesłany poprawnie.",
+        "failed": "Plik nie został przesłany. Spróbuj ponownie."
+      }
+    },
+    "addText": {
+      "titlePage": "Załaduj tekst strony",
+      "titlePages": "Załaduj tekst stron",
+      "descriptionPage": "Wybierz a następnie prześlij swój plik transkrypcji w formacie hOCR lub TEI z koordynatami.",
+      "descriptionPages": "Wybierz a następnie prześlij swój plik transkrypcji w formacie hOCR (Zip) lub TEI z koordynatami (Zip)."
+    },
+    "new": {
+      "title": "Utwórz projekt",
+      "importedTitle": "Zaimportowany projekt",
+      "beforeImport": "Wypełnij poniższe pola lub ",
+      "import": "importuj dane z obiektu cyfrowego dostępnego online",
+      "sourceObjectMetadata": "Opis projektu",
+      "reference": "Odnośniki",
+      "terms": "Aby utworzyć projekt, musisz zapoznać się z ",
+      "termsPart2": " i zaakceptować jego warunki",
+      "termsRegLink": "Regulaminem",
+      "termsNew1": "Zobowiązuję się do przestrzegania ",
+      "termsNew2": ", w tym również praw autorskich.",
+      "termsNew3": "Mam świadomość, że w przypadku złamania praw autorskich, to ja poniosę za to odpowiedzialność, a nie operatorzy serwisu.",
+      "termsLink": "Regulaminu",
+      "importSucced": "Importowanie transkrypcji przebiegło pomyślnie.",
+      "alertSuccess": "Utworzono projekt z jedną warstwą tekstową. Aby rozpocząć pracę z tekstem, dodaj pliki źródłowe.",
+      "alertPublishSuccess": "Projekt został opublikowany w serwisie.",
+      "alertEdit": "Dokonane przez Ciebie zmiany w opisie transkrypcji zostały zapisane",
+      "alertError": "Wystąpił błąd w tworzeniu nowej transkypcji",
+      "frameTitle": "Uwaga!",
+      "frameText": "Klikając „Utwórz projekt“ przeniesiesz się na stronę ze szczegółami projektu z automatycznie przypisaną jedną warstwą tekstową. Tam będziesz mógł dookreślić warstwy tekstowe, dodać pliki źródłowe, uczestników i rozpocząć pracę z tekstem. Dopóki nie opublikujesz projektu dostęp do niego będą mieli tylko jego uczestnicy.",
+      "frameTextPublish": "Opublikowany projekt w każdej chwili możesz przestać publikować, przechodząc do jego szczegółów i klikając przycisk „Przestań publikować“.",
+      "publicProjectLabel": "Projekt publiczny",
+      "section1": "1. Informacje o projekcie",
+      "section2": "Informacje wymagane przy publikacji projektu",
+      "section2_1": "2. Informacje o plikach źródłowych w projekcie",
+      "section3": "Informacje widoczne dla uczestników projektu",
+      "section4": "Informacje dodatkowe"
+    },
+    "import": {
+      "title": "Importuj obiekt źródłowy z publikacji dostępnej online",
+      "subtitle": "Importuj opis z publikacji dostępnej online",
+      "description": "Funkcja ta załaduje wszystkie metadane i pliki obiektu.",
+      "selectLabel": "Wybierz format metadanych",
+      "urlLabel": "Adres URL publikacji",
+      "urlSublabel": "Podaj link do serwisu, z którego chcesz zaimportować obiekt źródłowy wraz z opisem",
+      "remember": "Pamiętaj, by po imporcie metadanych zapoznać się z regulaminem i zaakceptować jego treść. Następnie utwórz nową transkrypcję.",
+      "startImport": "Rozpocznij pobieranie",
+      "checkList": "Lista dostępnych źródeł",
+      "searchSource": "Wyszukaj źródło",
+      "errors": {
+        "importserrorurlmalformed": "Niepoprawny URL",
+        "importserrorurlsecured": "URL zabezpieczony",
+        "importserrorurlunresponsive": "Obiekt pod podanym adresem nie odpowiada",
+        "importserrorurlnotprocessable": "Obiekt pod podany adresem nie może być przetworzony",
+        "importserrorurlnotfound": "Adres nie znaleziony",
+        "importstextformatmalformed": "Niepoprawny format obiektu",
+        "importstextformatwrongtype": "Niepoprawny typ obiektu",
+        "importstextformatunsupportedtypes": "Nieobsługiwany typ obiektu",
+        "importstextformatlinkless": "Wskazane źródło nie zawiera plików",
+        "domainerrornotavailableiiif": "Ten adres nie należy do naszej bazy źródeł, z których możesz zaimportować pliki typu Manifest IIIF.",
+        "domainerrornotavailabletei": "Ten adres nie należy do naszej bazy źródeł, z których możesz zaimportować pliki typu TEI.",
+        "domainerrornotavailablemets": "Ten adres nie należy do naszej bazy źródeł, z których możesz zaimportować pliki typu METS."
+      }
+    },
+    "edit": {
+      "title": "Edytuj opis"
+    },
+    "form": {
+      "title": "Tytuł:",
+      "select": "Wybierz",
+      "titlePlaceholder": "Jeśli nie znasz oryginalnego tytułu możesz zaproponować swój lub wpisać incipit",
+      "role": "Rola:",
+      "firstAndLastName": "Imię i nazwisko:",
+      "none": "brak",
+      "firstAndLastNamePlaceholder": "Jan Kowalski (1934-1999)",
+      "language": "Język:",
+      "languageSelect": "Wybierz język",
+      "type": "Typ:",
+      "typeSelect": "Wybierz typ",
+      "chapterNumber": "Numer rozdziału:",
+      "volumeNumber": "Numer tomu:",
+      "notebookNumber": "Numer zeszytu:",
+      "pagesRange": "Zakres stron:",
+      "pagesRangePlaceholder": "Np.: 13-18",
+      "pagesNumber": "Liczba stron:",
+      "publisher": "Wydawca:",
+      "publicationPlace": "Miejsce wydania / powstania:",
+      "publicationDate": "Data wydania / powstania:",
+      "publicationDatePlaceholder": "Np.: 1789 lub II połowa XVIII wieku",
+      "signature": "Sygnatura:",
+      "isbn": "ISBN:",
+      "eisbn": "e-ISBN:",
+      "issn": "ISSN:",
+      "eissn": "e-ISSN:",
+      "keywords": "Słowa kluczowe:",
+      "keywordsPlaceholder": "Ciąg słów kluczowych rozdziel średnikiem",
+      "summary": "Streszczenie:",
+      "link": "Link:",
+      "appendAnotherLink": "Dodaj kolejny link",
+      "appendAnotherPerson": "Dodaj kolejną osobę"
+    },
+    "verification": {
+      "transcriptionVerification": "Moderacja",
+      "stats": "Statystyki transkrybentów",
+      "title": "Tytuł:",
+      "author": "Autor:",
+      "advancement": {
+        "main": "Zaawansowanie moderacji:",
+        "toVerify": "W trakcie edycji:",
+        "verified": "Do akceptacji:",
+        "correct": "Zaakceptowane:",
+        "incorrect": "Odrzucone:"
+      },
+      "table": {
+        "number": "Nr",
+        "name": "Nazwa strony",
+        "versesNumber": "Liczba wierszy",
+        "verified": "Zweryfikowanych",
+        "correct": "Poprawnych",
+        "incorrect": "Błędnych",
+        "lastEdition": "Ostatnia edycja",
+        "verification": "Weryfikacja",
+        "verify": "Przejdź do trybu moderacji"
+      }
+    },
+    "permissions": {
+      "title": "Uczestnicy",
+      "objectAuthority": "Uprawnienia do obiektu",
+      "publicAvailability": "Dostępny publicznie",
+      "privateAvailability": "Niedostępny publicznie",
+      "projectName": "Nazwa projektu: ",
+      "author": "Utworzony przez: ",
+      "status": "Status obiektu na stronie WLT: ",
+      "shareObject": "Współdziel obiekt z wybranymi użytkownikami i grupami WLT",
+      "users": "Uczestnicy projektu",
+      "groups": "Grupy, które mają dostęp do obiektu:",
+      "addGroupName": "Nazwa grupy",
+      "addUserTitle": "Dodaj uczestnika projektu",
+      "addGroupTitle": "Dodaj grupę",
+      "addUserEmail": "Adres e-mail użytkownika",
+      "addUserInfo": "Dodawać można tylko użytkowników którzy mają założone konto w serwisie WLT.",
+      "addUserPlaceholder": "Wpisz adres e-mail",
+      "addUserButton": "Dodaj uczestnika",
+      "requiredFields": "Pola oznaczone gwiazdką są obowiązkowe",
+      "email": "E-mail",
+      "emailAddress": "Adres email",
+      "role": "Rola",
+      "activity": "Aktywność w zakresie obszarów tekstowych",
+      "deleteUser": "Usuń",
+      "groupPlaceholder": "Wpisz nazwę grupy",
+      "filled": "Wypełnionych: ",
+      "corrected": "Poprawionych: ",
+      "accepted": "Zaakceptowanych: ",
+      "rejected": "Odrzuconych: ",
+      "pageInfo": {
+        "firstLine": "Dodaj uczestników projektu i przydziel im jedną z następujących ról:",
+        "userRole": "Uczestnika",
+        "userRoleInfo": " - ma pełne możliwości edytowania warstw tekstowych,",
+        "modRole": "Moderatora",
+        "modRoleInfo": " - poza uprawnieniami uczestnika, ma również możliwość moderacji - akceptowania i odrzucania wprowadzonych zmian w warstwach tekstowych,",
+        "ownerRole": "Administrator",
+        "ownerRoleInfo": " - posiada pełne możliwości zarządzania projektem, moderowania zmianami i edytowania warstw tekstowych."
+      }
+    },
+    "stats": {
+      "transcribersStats": "Statystyki uczestników",
+      "title": "Tytuł:",
+      "author": "Autor:",
+      "userName": "Nazwa użytkownika",
+      "charactersEntered": "Liczba wpisanych znaków",
+      "transcribedVerses": "Liczba transkrybowanych wersów",
+      "correctlyVerifiedVerses": "Liczba poprawnie zweryfikowanych wersów",
+      "contact": "Skontaktuj się",
+      "noStats": "Ten obiekt nie posiada jeszcze statystyk, by transkrypcja przez użytkownika była wliczona w statystyki musi on kliknąć poprawność transkrypcji wybranej strony. Może to zrobić przez kliknięcie w oknie transkrypcji przycisku \"Poprawna transkrypcja\" lub oznaczając osobno poprawność każdego wiersza klikając w checkbox zlokalizowany tuż za wierszem. ",
+      "howTo": "Dowiedz się więcej o tym jak transkrybować"
+    },
+    "indexes": {
+      "transcriptionIndex": "Indeksy",
+      "goToInfoButtonText": "< Wróć do szczegółów projektu",
+      "title": "Indeksy",
+      "projectName": "Nazwa projektu: ",
+      "author": "Utworzony przez: ",
+      "pageInfo": "Przeglądaj dodawane na poziomie pracy z tekstem indeksy: osób, miejsc i haseł. Klikając w wybrany plik, przejdziesz do jego warstw tekstowych, gdzie został odnaleziony dany indeks.",
+      "header": {
+        "chosenIndex": "Wybrany indeks",
+        "instancesInProject": "Zestawienie indeksu w projekcie"
+      },
+      "filters": {
+        "letterLabel": "Wybierz pierwsza literę: ",
+        "numberLabel": "Wybierz plik: ",
+        "selectDefaultLetter": "A-Z",
+        "selectDefaultFile": "Wszystkie",
+        "selectDefault": "Zaznacz",
+        "searchTermPlaceholder": "Wyszukaj hasło",
+        "searchPlacePlaceholder": "Wyszukaj miejsce",
+        "searchPersonPlaceholder": "Wyszukaj osobę",
+        "resetFilters": "Resetowanie filtrów",
+        "noOptionsMessage": {
+          "alphabet": "-",
+          "pages": "Brak stron"
+        },
+        "availableTags": [
+          {
+            "tag": "person",
+            "label": "Osoby"
+          },
+          {
+            "tag": "place",
+            "label": "Miejsca"
+          },
+          {
+            "tag": "term",
+            "label": "Hasła"
+          }
+        ]
+      },
+      "empty": {
+        "person": "Nie dodano jeszcze żadnej osoby do indeksu",
+        "term": "Nie dodano jeszcze żadnego hasła do indeksu",
+        "place": "Nie dodano jeszcze żadnego miejsca do indeksu",
+        "general": "Indeksy można dodać w widoku pracy z tekstem. Zaznacz tekst, który chcesz oznaczyć jako indeks a następnie wybierz \"Indeks\" z listy narzędzi służących do pracy z plikiem źródłowym."
+      }
+    },
+    "alert": {
+      "processingOK": "Operacja zakończona pomyślnie.",
+      "processingFailed": "Operacja zakończona błędem. Spróbuj ponownie lub skontaktuj się z administratorem.",
+      "processingOCR": "Trwa automatyczna transkrypcja...",
+      "processingImport": "Trwa import plików źródłowych nowego projektu...",
+      "processingIIIFImport": "Trwa import plików źródłowych IIIF...",
+      "processingLocalImport": "Trwa import przesłanych plików źródłowych..."
+    },
+    "metadata": {
+      "fieldTitle": {
+        "info": "Informacje o projekcie",
+        "sourcesInfo": "Informacje o dokumentach źródłowych",
+        "projectName": "Nazwa projektu",
+        "projectDescription": "Opis projektu",
+        "documentsTimeRange": "Zakres czasu dokumentów",
+        "documentsTimeRangeStart": "Początek zakresu",
+        "documentsTimeRangeEnd": "Koniec zakresu",
+        "tags": "Słowa kluczowe",
+        "sourceFileTypes": "Typ",
+        "sourceFileInfo": "Pochodzenie",
+        "sourceFileOriginInfo": "Dodatkowe informacje",
+        "projectCollectionName": "Kolekcja, do której należy projekt badawczy",
+        "projectCoordinatorContact": "Dane kontaktowe do osoby koordynującej projekt",
+        "projectColaboratorInstruction": "Instrukcja dla uczestników projektu",
+        "projectImported": "Importowany",
+        "releaseDate": "Data wydania",
+        "creator": "Utworzony przez",
+        "manifest": "Link do manifestu IIIF:",
+        "sourceFileTypeWebsite": "strona WWW",
+        "sourceFileTypeInternal": "zbiór własny",
+        "contactName": "Dane kontaktowe do koordynatora projektu",
+        "collection": "Kolekcja",
+        "copyLink": "Skopiuj link"
+      },
+      "fieldTitleWithRequiredInfo": {
+        "projectName": "Nazwa projektu",
+        "projectDescription": "Opis projektu",
+        "documentsTimeRange": "Zakres czasu dokumentów (pole obowiązkowe przy publikacji projektu)",
+        "releaseDate": "Data wydania",
+        "documentsTimeRangeStart": "Początek zakresu",
+        "documentsTimeRangeEnd": "Koniec zakresu",
+        "tags": "Słowa kluczowe",
+        "tagsSublabel": "Wpisz słowa kluczowe po średniku.",
+        "sourceFileTypes": "Typ",
+        "sourceFileInfo": "Pochodzenie",
+        "additionalInformation": "Dodatkowe informacje",
+        "projectCollectionName": "Kolekcja, do której należy projekt",
+        "projectCoordinatorContact": "Dane kontaktowe do koordynatora projektu",
+        "projectColaboratorInstruction": "Instrukcja dla uczestników projektu",
+        "required": "*",
+        "pasteURLAddress": "Wklej adres URL strony, skąd pochodzą pliki."
+      },
+      "fieldPlaceholder": {
+        "projectName": "Nazwa projektu...",
+        "projectDescription": "Opis projektu...",
+        "documentsTimeRange": "Zakres czasu dokumentów...",
+        "tags": "np. historia Śląska; geografia; satyra polska",
+        "sourceFileTypes": "np. starodruki, rękopisy",
+        "sourceFileInfo": "Informacje o dokumentach źródłowych...",
+        "additionalInformation": "Dodatkowe informacje...",
+        "projectCollectionName": "Kolekcja, do której należy projekt badawczy...",
+        "projectCoordinatorContact": "np. imię i nazwisko, email",
+        "projectColaboratorInstruction": "Instrukcja dla uczestników projektu...",
+        "releaseDate": "np.: 1923, 1923-1926 lub I połowa XIXw."
+      },
+      "richText": {
+        "inline": {
+          "bold": "Pogrubienie",
+          "italic": "Kursywa",
+          "underline": "Podkreślenie",
+          "monospace": "Stała szerokość znaków"
+        },
+        "list": {
+          "unordered": "Punktory",
+          "ordered": "Numerowanie",
+          "indent": "Zwiększ wcięcie",
+          "outdent": "Zmniejsz wcięcie"
+        },
+        "remove": "Wyczyść formatowanie"
+      }
+    }
+  },
+  "main": {
+    "search": {
+      "title": "Wyszukaj projekt",
+      "additionalInfo": "Wyszukiwarka umożliwia wyszukiwanie ogólne, w opisach lub w treści udostępnionych projektów.<br/>Możesz również przejść do listy publicznych lub swoich prywatnych projektów.",
+      "filters": [
+        "Wyszukaj wszędzie",
+        "Wyszukaj w opisach",
+        "Wyszukaj w treści"
+      ],
+      "inputPlaceholder": "Wyszukaj projekt",
+      "searchbtn": "Wyszukaj",
+      "seeAll": "Wszystkie projekty",
+      "seeMine": "Moje projekty"
+    },
+    "lastTranscribed": {
+      "title": "Ostatnio opublikowane projekty",
+      "seeAll": "Zobacz wszystkie opublikowane",
+      "transcriptions": "Projekty",
+      "noTranscriptions": "Nie znaleziono projektów"
+    },
+    "myLastTranscription": {
+      "title": "Ostatnie moje projekty",
+      "seeAll": "Zobacz wszystkie",
+      "transcriptions": "Moje projekty"
+    }
+  },
+  "title": "WLT - Wirtualne Laboratorium Transkrypcji"
+}

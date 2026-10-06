@@ -1,0 +1,27 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+#development
+.idea
+.env
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.vscode
+/.vs
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+*.iml
+iiifMainfestUrl
+/.project

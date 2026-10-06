@@ -1,0 +1,138 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/_font-colors.sass"
+
+$wlt_logo_base: "~@Assets/images/wlt_logo_"
+$wlt_logo_ext: ".svg"
+
+$logo-mobile: url("~@Assets/images/echoes_logo_mobile.svg")
+
+$logo-long: url("~@Assets/images/echoes_logo.svg")
+
+$eu-logo-mobile: url("~@Assets/images/UE_mobile.svg")
+
+$langs: "en", "pl", "de"
+
+.test
+    height: 123px
+    position: relative
+
+.header
+    position: fixed
+    z-index: 1020
+    width: 100%
+    height: 123px
+    background-color: #ffffff
+
+    &__inner
+        display: flex
+        height: 100%
+        justify-content: space-between
+        align-items: center
+        background-color: #ffffff
+        padding: 0px 20px
+
+    &__ue-logo
+        height: 53px
+        width: 82px
+        background-image: $eu-logo-mobile
+        background-size: 82px 53px
+        background-repeat: no-repeat
+        margin: 0px 24px
+
+    +touch
+        background-color: #FFFFFF
+    &__subpage
+        height: 130px
+        position: relative
+        +touch
+            background: #FFFFFF
+        &::after
+            +desktop
+                content: ''
+                position: absolute
+                width: 100%
+                height: 100%
+                left: 0
+                top: 0
+
+    &__collapsed
+        +touch
+            background: #FFF
+            max-width: 100%
+            height: calc(100vh - 70px)
+
+        .header__logo--big
+            +touch
+                display: none
+        .header__column
+            padding: 0
+            +touch
+                flex-direction: column
+    &__wrapper
+        padding: 50px 0 60px
+        +touch
+            padding: 0
+            overflow: auto
+        &--sticky
+            +desktop
+                background-color: #fff
+                border-bottom: 1px solid #E5E5E5
+    &__row
+        &--sticky
+            justify-content: space-between
+            +desktop
+                display: flex
+                align-items: center
+
+    &__column
+        display: flex
+        justify-content: space-between
+        +desktop
+            align-items: center
+
+    &__container
+        margin-top: 85px
+        background: transparent
+        justify-content: space-between
+        &--sticky
+            +touch
+                margin-top: 18px
+                margin-bottom: 18px
+                justify-content: space-between
+
+    &__logo
+        height: 34px
+        width: 188px
+        float: left
+        background-image: $logo-long
+        background-size: cover
+        text-indent: -999999rem
+        margin: 0px 40px 0px 0px
+
+        +touch
+            background-image: $logo-mobile
+            background-position: center
+            height: 75px
+            width: 80px
+            margin-bottom: 18px
+            margin-top: 18px
+            margin: 0px 24px 0px 0px
+
+    &__logo-wlt
+        height: 42px
+        width: 136px
+        float: left
+        background-size: cover
+        text-indent: -999999rem
+        margin: 0px 20px 0px 40px
+
+        @each $lang in $langs
+            html[lang='#{$lang}'] &
+                background-image: url("#{$wlt_logo_base}#{$lang}#{$wlt_logo_ext}")
+
+        +touch
+            height: 42px
+            width: 42px
+            margin-bottom: 18px
+            margin-top: 18px
+            margin: 0px 24px

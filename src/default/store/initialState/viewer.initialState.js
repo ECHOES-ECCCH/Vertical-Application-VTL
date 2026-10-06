@@ -1,0 +1,78 @@
+const viewerInitialState = {
+	isLoaded: false,
+	isSaving: false,
+	isMobile: false,
+	isProcessing: true,
+	noAccess: false,
+	showTextStructure: false,
+	workingPageLayer: null,
+	annotationLayer: false,
+	data: {
+		id: null,
+		path: "",
+		pageNo: null,
+		boundingBox: {},
+		pageLayers: [],
+		verses: [],
+		words: [],
+		studentVerses: [],
+		teiPbValue: null,
+		titleLabel: "",
+		prevPageId: null,
+		nextPageId: null,
+		viewMode: "",
+	},
+	ocd: {
+		tileSources: {},
+		selection: false,
+	},
+	editor: {
+		shiftPressed: false,
+		undoPossible: false,
+		redoPossible: false,
+		verseActive: null,
+		wordActive: {
+			verseId: null,
+			wordId: null,
+		},
+		verseGroupActive: {
+			firstVerseNo: null,
+			lastVerseNo: null,
+			activeVersesIds: [],
+		},
+		wordGroupActive: {
+			verseId: null,
+			firstWordNo: null,
+			lastWordNo: null,
+			activeWordsIds: [],
+		},
+		verseEdit: null,
+		wordEdit: {
+			verseId: null,
+			wordId: null,
+		},
+		styleActive: '',
+		styleCurrent: {},
+		addChar: '',
+	},
+	searchResults: {
+		searchedPhrase: "",
+		totalHits: [],
+		pages: new Map(),
+	},
+	transcriptionData: null,
+	transcriptionPagesData: {
+		idToPage: new Map(), 
+		pageToId: new Map(), 
+		pageNum: 0,
+	},
+	transcriptionLayersData: {
+		idToNumber: new Map(),
+		numberToId: new Map(),
+		layersNum: 0,
+		layers: [],	
+	},
+	selectedLayer: null,
+};
+
+export default viewerInitialState;

@@ -1,0 +1,413 @@
+@import "@Styles/_breakpoints.sass"
+@import "@Styles/_mixins.sass"
+@import "@Styles/viewer/_viewer-colors.sass"
+
+.viewer
+    color: $viewerColorGrey100
+    background-color: $viewerColorGrey900
+    display: flex
+    flex: 1 0
+    justify-content: space-between
+    position: relative
+    
+    &-btn__wrapper
+        height: 100%
+
+    &--toggle
+        +widescreen
+            .viewer__panel--osd
+                order: 2
+
+    &__alert
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        z-index: 1030
+        background: rgba(0,0,0,0.3)
+        
+        &--box
+            border: 1px solid black
+            border-radius: 5px
+            padding: 8px 15px
+            color: #1A73E8
+            background-color: #F2F9FC
+            border-color: #CDE1F8
+            margin: 4px 30px
+            box-shadow: 0 0 1em rgba(0,0,0,0.3)
+
+
+    &__icon
+        &--fold
+            @extend .icon
+
+    &__panel
+        flex: 1
+        display: flex
+
+ 
+
+        +touch-sec
+            display: none
+
+            &--mobile
+                display: flex
+
+        +widescreen
+            &--fold
+                flex: 0 0 60px
+                
+                .viewer__content, .viewer__menu
+                    display: none
+
+    &__ocd
+        width: 100%
+        height: 100%
+
+    &__content
+        flex: 1
+        background: $viewerColorBlack
+        display: flex
+        flex-direction: column
+
+        &--header
+            border-bottom: solid 1px $viewerColorGrey700 !important
+            background: $viewerColorGrey900
+            border-bottom: 2px solid #000
+            display: flex
+            position: relative
+
+            +touch-sec
+                border-bottom: 1px solid #278BED
+
+            &-edit
+                position: absolute
+                right: 5px
+                top: 0px
+
+                +touch
+                    display: none
+
+        &--inner
+            flex: 1
+
+    &__aside
+        flex: 0 0 60px
+        border-left: solid 1px $viewerColorGrey700
+        border-right: solid 1px $viewerColorGrey700
+        margin-bottom: 5px
+
+        +touch-sec
+            display: none
+        
+        &--container
+            width: 100%
+            height: 100%
+            background: $viewerColorGrey900
+
+        &--menu
+            border-top: 1px solid $viewerColorGrey700
+
+        &--left
+            flex: 0 0 55px
+
+
+    &__menu
+        max-height: calc(100vh - 201px)
+        overflow-y: auto
+        overflow-x: visible
+        scrollbar-width: thin
+
+        &--with-search
+            max-height: calc(100vh - 271px)
+
+        &--mobile-with-search
+            max-height: calc(100vh - 296px)
+
+        &--divider
+            border-bottom: 1px solid $viewerColorGrey700
+            margin-top: 2px
+            margin-bottom: 2px
+
+        &--list 
+            padding: 10px 0
+            margin: 0
+            list-style: none
+            display: grid
+            grid-gap: 4px
+            align-items: center
+            justify-content: center
+
+        &--icon
+            font-size: 1.25rem
+
+        .dropright .dropdown-menu
+            margin-left: 10px
+
+        .dropdown-menu
+            background: $viewerColorGrey800
+            padding: 8px 0
+            position: relative
+            border-radius: 0
+            position: fixed !important
+
+            &::after, &::before
+                display: block
+                position: absolute
+                content: ""
+                width: 0
+                height: 0
+                border-top: 5px solid transparent
+                border-bottom: 5px solid transparent
+
+            &::before
+                left: -5px
+                top: 11px
+                background: $viewerColorGrey800
+
+            &::after
+                left: -4px
+                top: 12px
+                border-right: 5px solid $viewerColorGrey800
+
+            .btn-viewer-button
+                margin: 0
+
+        .dropdown-item
+            color: $viewerColorWhite
+            padding: 3px 10px
+            font-size: 0.75rem
+            display: flex
+            align-items: center
+
+            &.disabled
+                opacity: 0.5
+
+            span
+                border: solid 1px #5D5D5D
+                display: inline-block
+                width: 34px
+                height: 34px
+                border-radius: 4px
+                margin: 3px 10px 3px 0
+                text-align: center
+
+                i
+                    font-size: 1.35rem
+
+                img
+                    font-size: 1.35rem
+                    padding: 8px
+
+            &:hover, &:focus
+                color: $viewerColorWhite
+                background: #1E2026
+
+                span
+                    background: #1E2026
+
+            &:focus
+                padding: 0px 7px
+                border: 3px solid #005CA9
+                outline: none
+
+        &::-webkit-scrollbar
+            width: 6px
+            height: 10px
+            
+        &::-webkit-scrollbar-thumb 
+            background: #8e8e8e
+            border-radius: 10px
+
+    &__verses
+        max-height: calc(100vh - 201px)
+        height: 100%
+        overflow-y: auto
+
+        +touch-sec
+            max-height: calc(100vh - 136px)
+
+        &--with-search
+            max-height: calc(100vh - 271px)
+
+        &--mobile-with-search
+            max-height: calc(100vh - 296px)
+
+        &::-webkit-scrollbar
+            width: 6px
+            
+        &::-webkit-scrollbar-thumb 
+            background: #8e8e8e
+            border-radius: 10px
+
+        &--all-verses-status
+            width: 100%
+            height: 30px
+            border-bottom: solid 1px $viewerColorGrey700
+            background: $viewerColorGrey900
+            padding: 6px 0px
+            display: flex
+            align-items: center
+            font-size: 0.9rem
+
+            .verse__checkbox
+                margin-left: 15px
+                margin-right: 5px
+                background-color: $viewerColorBlack
+
+                &--decline, &--accept-double
+                    visibility: hidden
+
+                &:hover
+                    .verse__checkbox--decline, .verse__checkbox--accept-double
+                        visibility: visible
+                        
+                    
+                &:focus
+                    color: $viewerColorWhite 
+
+        &--list
+            list-style-type: none
+            margin: 0
+            padding: 0px            
+
+        &--item
+            display: flex         
+            &:first-child:not(:last-child)
+                .verse__status
+                    .verse__tooltip--status
+                        top: 0
+            &:last-child:not(:first-child)
+                .verse__status
+                    .verse__tooltip--status
+                        bottom: 0
+
+            &-dropdown
+                .dropdown-menu
+                    background-color: $viewerColorGrey900
+                    border-radius: 4px
+
+                .dropdown-item
+                    color: $viewerColorWhite
+
+                    &:hover
+                        background-color: $viewerColorGrey900
+                        color: $viewerColorWhite
+
+        &--ghostbutton
+            width: 100%
+            height: 100%
+            position: absolute
+            background: transparent
+
+    &__button
+        &--fold
+            width: 100%
+            background: $viewerColorBlack
+            border-bottom: 1px solid $viewerColorGrey700 !important
+            padding-bottom: 1px !important
+            height: 36px
+
+            span
+                text-decoration: underline
+
+        &--title
+            +touch-sec
+                color: white !important
+                background: #25272E !important
+                +box-shadow(inset 0px -2px 0px 0px $viewerColorPrimary500)
+        
+            +widescreen
+                pointer-events: none
+
+            &-active
+                &, &:hover, &:focus
+                    background: #4D5561 !important
+                    flex-grow: 2 !important
+            
+            &-active.viewer__button--title-osd
+                +widescreen
+                    +box-shadow(none)
+            
+
+            &-osd
+                &:nth-child(2), &:nth-child(3)
+                    +widescreen
+                        display: none
+            &-editor
+                &:nth-child(1)
+                    +widescreen
+                        display: none
+            &-layer
+                pointer-events: auto
+                margin-left: auto
+                cursor: pointer
+                position: relative
+
+            &[disabled] 
+                pointer-events: none !important
+
+        &--student-mode 
+            &:not(.viewer__button--title-active)
+                pointer-events: auto
+
+        &--active:enabled
+            border-color: white !important
+            background-color: white !important
+            color: #005CA9
+
+        &--menu
+            .icon-move-verse-10-up
+                font-size: 0.8rem
+
+            .icon-move-verse-10-down
+                font-size: 0.8rem
+
+        &--menu:focus
+            background-color: #343A42
+            border: #005CA9 solid 3px
+            border-color: #005CA9 !important
+            color: #F2F2F3
+        
+        &--active:focus
+            color: #005CA9
+
+    &__mobile-layer-select
+        width: 64vw
+        position: absolute
+        right: 8px
+        top: 40px
+        background-color: $viewerColorGrey900
+        z-index: 100
+        max-height: 135px
+        border-radius: 4px
+        padding: 10px
+        overflow-y: scroll
+
+        &--selection-icon
+            width: 35px
+            flex-shrink: 0
+
+        &--layer-name
+
+    &__editor-help
+        display: flex
+        align-items: center
+        margin-left: auto
+        margin-right: 5px            
+        
+
+.__react_component_tooltip.type-dark
+        border: none
+        background: #959595
+        font-size: 0.75rem
+        padding: 3px 10px
+        color: #212121
+        border-radius: 2px
+        &:after, &:before
+            display: none
+
+.openseadragon-canvas:focus
+    outline: none
+    

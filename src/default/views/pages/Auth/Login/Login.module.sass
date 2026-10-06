@@ -1,0 +1,84 @@
+@import '@Styles/_breakpoints.sass'
+@import '@Styles/_auth.sass'
+
+.login
+    @extend .auth
+    +desktop
+        margin-bottom: 65px
+
+    &-alert
+        margin: -25px 0 30px
+
+    &-form
+        @extend .auth-form
+        +desktop
+            margin: 60px auto 0
+
+        &__fields
+            @extend .auth-form__fields
+
+        &__remind-password
+            +small-devices
+                text-align: right
+            &--link
+                @extend .auth-link
+
+        &__text
+            &--header
+                @extend .auth-form__text--header
+
+    &-rememberme
+        margin-bottom: 5px
+        &--container
+            display: flex
+            align-items: center
+            input[type="checkbox"]
+                width: 1.2rem
+                height: 1.2rem
+            label
+                margin: 0
+
+    &-submit
+        @extend .auth-submit
+
+        &__row
+            @extend .auth-submit__row
+
+        &__col
+            &--createaccount
+                @extend .auth-submit__col--tobutton
+                &-link
+                    @extend .auth-link
+
+        &__button
+            @extend .auth-submit__button
+
+    &-alternative
+        width: 100%
+        max-width: 500px
+        margin: 35px auto
+        +desktop
+            margin: 50px auto 60px
+
+        &__header
+            overflow: hidden
+            font-weight: bold
+            font-size: 1.125rem
+            margin-bottom: 20px
+
+            &:after
+                content: ""
+                display: inline-block
+                height: 0.4rem
+                width: 100%
+                margin: 0 -100% 0 8px
+                border-bottom: 1px solid #DDDDDD
+
+        &__subheader
+            @extend .auth-form__text--subheader
+            margin-bottom: 40px
+            line-height: 1.5
+
+        &__button-list
+            display: grid
+            grid-gap: 12px

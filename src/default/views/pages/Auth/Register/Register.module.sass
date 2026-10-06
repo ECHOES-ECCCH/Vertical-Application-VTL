@@ -1,0 +1,56 @@
+@import '@Styles/_breakpoints.sass'
+@import '@Styles/_auth.sass'
+
+.register
+    @extend .auth
+    justify-content: flex-start
+ 
+    &-form
+        @extend .auth-form
+
+        &__fields
+            @extend .auth-form__fields
+
+        &__passwordtip
+            @extend .auth-form__passwordtip
+
+        &__info
+            margin: 5px 0 20px
+
+        &__text
+            &--passwordtip,
+            &--info
+                @extend .auth-form__text--gray
+
+    &-captcha
+        height: 75px
+        margin-bottom: 25px
+        
+    &-submit    
+        @extend .auth-submit
+
+        &__row
+            @extend .auth-submit__row
+
+        &__col
+            &--login
+                @extend .auth-submit__col--tobutton
+
+        &__button
+            @extend .auth-submit__button
+
+    &-info
+        @extend .auth-form
+        display: flex
+        flex-direction: column
+
+        &__header
+            @extend .auth-form__text--header
+            margin-top: 50px
+        &__text
+            margin-top: 30px
+
+        &__button
+            align-self: flex-end
+            margin-top: 30px
+            padding: 13px 35px

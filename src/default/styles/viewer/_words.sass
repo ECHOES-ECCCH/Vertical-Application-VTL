@@ -1,0 +1,109 @@
+@import "@Styles/viewer/_viewer-colors.sass"
+    
+.verse-word
+    border-bottom: 1px solid $viewerColorGrey700
+    min-height: 31px
+    display: flex
+
+    &__offset
+        padding-top: 1px
+        padding-bottom: 1px
+        padding-right: 5px
+        margin-right: auto
+
+    &__block
+        display: flex
+        color: $viewerColorWhite
+        position: relative
+        padding: 1px 1px
+        min-height: 29px
+
+        button
+            border-color: transparent
+            background-color: transparent
+
+            &.btn-verse:hover
+                background-color: transparent
+
+        &--inactive
+            &:hover
+                z-index: 9
+                .btn-verse
+                    text-align: left
+                    box-shadow: 0 0 0 3px $viewerColorPrimary500
+
+            &.active
+                .btn-verse
+                    box-shadow: 0 0 0 3px $viewerColorPrimary500
+
+                .btn-verse-edit
+                    background: $viewerColorPrimary500
+
+                    &:hover, &:focus
+                        background: $viewerColorPrimary500
+            &:not(.active)
+                .btn-verse
+                    &:hover
+                        box-shadow: 0 0 0 1px $viewerColorPrimary500
+                    &:focus
+                        &:not(:hover)
+                            box-shadow: none
+
+            &:hover, &.active
+                .btn-verse-edit
+                    display: flex
+
+            &.activeEdit
+                pointer-events: none
+                
+        &--active
+            background-color: $viewerColorGrey100
+            box-shadow: 0 0 0 3px $viewerColorPrimary500
+            color: #282828
+            font-size: 0.875rem
+            cursor: default
+            line-height: 1
+
+            .verse__num 
+                color: #595959
+
+    &__content
+        color: $viewerColorWhite
+        text-align: left
+        font-size: 0.875rem
+        padding-right: 60px
+        padding-left: 5px
+        word-break: break-word
+
+        p
+            margin: 0
+            display: inline
+
+    &__mark
+        padding: 0 5px
+        display: flex
+        align-items: center
+        min-width: 35px
+
+        &__icon
+            padding: 0
+            margin: 0
+            background: transparent
+            border: 0
+            position: relative
+            color: white
+            font-size: 1.25rem
+            width: unset !important
+
+            &:focus,
+            &:hover
+                background: transparent
+
+            &--subst-id
+                font-size: 0.75rem
+
+    .verse__comments
+        transform: scale(0.8)
+
+        &:last-child
+            margin-right: 170px

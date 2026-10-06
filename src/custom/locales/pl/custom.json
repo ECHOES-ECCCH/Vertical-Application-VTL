@@ -1,0 +1,17 @@
+{
+	"financed": {
+		"text": "ECHOES to projekt finansowany przez Komisję Europejską na mocy umowy o dotację nr 101157364 – ECHOES. Finansowany przez UK Research and Innovation (UKRI) na mocy gwarancji finansowania Horizon Europe rządu Wielkiej Brytanii nr 10110142 i 10110466."
+	},
+	"modals": {
+		"createDigitalTwin": {
+			"title": "Tworzenie cyfrowego bliżniaka",
+			"bodyHTML": "To oznacza wysłanie danych o projekcie do Bazy Wiedzy.<br>Czy na pewno chcesz kontynuować?",
+			"button": "Utwórz"
+		}
+	},
+	"transcription": {
+		"details" : {
+			"createDigitalTwin": "Utwórz cyfrowego bliźniaka"
+		}
+	}
+}
