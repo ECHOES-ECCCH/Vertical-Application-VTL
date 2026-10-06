@@ -1,0 +1,120 @@
+version: "3"
+
+services:
+  wlt-portal-bl:
+    container_name: wlt-portal-bl
+    build: .
+    ports:
+      - 8080:8080
+      - 9998:9998
+      - 9010:9010  #JMX port
+    depends_on:
+      - postgresql
+      - iiif-server
+      - iiif-tools
+      - ocr-tools
+    environment:
+      LOG_DIR: logs
+      SPRING_ACTIVE_PROFILE: dev-env
+      JAVA_OPTS_MEM: -Xms512m -Xmx4g
+    volumes:
+      - ./vtl-config:/var/vtl-config
+
+  postgresql:
+    container_name: wlt-postgresql
+    image: gitlab.pcss.pl:5005/bsa-bad/bad-postgresql:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - postgresql-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: wlt_portal_db
+      POSTGRES_USER: wlt_portal
+      POSTGRES_PASSWORD: wlt_portal
+
+  iiif-server:
+    container_name: wlt-iiif-server
+    image: gitlab.pcss.pl:5005/bsa-bad/wlt-portal-bl/iiif-server:latest
+    ports:
+      - 5555:8080
+    volumes:
+      - vtl-storage:/var/www
+
+  iiif-tools:
+    container_name: wlt-iiif-tools
+    image: gitlab.pcss.pl:5005/bsa-bad/wlt-iiif-tools:latest
+    ports:
+      - 5556:5556
+      - 9995:9995
+    volumes:
+      - vtl-storage:/var/vtl-storage
+    environment:
+      SPRING_ACTIVE_PROFILE: dev
+
+  ocr-tools:
+    container_name: wlt-ocr-tools
+    image: gitlab.pcss.pl:5005/uwr-workflow/wlt-ocr-tools:latest
+    ports:
+      - 5557:5557
+      - 9999:9999
+    volumes:
+      - vtl-storage:/var/vtl
+    environment:
+      SPRING_ACTIVE_PROFILE: dev
+      OCR_TRAINING_ENDPOINT: http://ocr-training-service:5558
+
+  sp:
+    build: etc/sp
+    ports:
+      - 4443:443
+      - 4480:80
+
+  pionier-id:
+    build: etc/pionier-id
+    ports:
+      - 8443:443
+      - 880:80
+
+  ocr-training-service:
+    image: gitlab.pcss.pl:5005/uwr-workflow/wlt-ocr-training:latest
+    container_name: wlt-ocr-training-service
+    volumes:
+      - vtl-storage:/var/vtl
+    ports:
+      - 5558:5558
+      - 9997:9995
+    environment:
+      SPRING_ACTIVE_PROFILE: dev
+      OCR_TRAIN_DB_HOST: wlt-ocr-training-postgres
+      OCR_TRAIN_DB_NAME: vtl_ocr_training
+      OCR_TRAIN_DB_PORT: 5432
+      OCR_TRAIN_DB_USER: vtl_ocr_user
+      OCR_TRAIN_DB_PASS: vtl_ocr_pass
+      IIIF_SERVER_ENDPOINT: http://iiif-server
+    depends_on:
+      - ocr-training-db
+
+  ocr-training-db:
+    image: postgres:12.2
+    container_name: wlt-ocr-training-postgres
+    ports:
+      - 8432:5432
+    volumes:
+      - vtl-ocr-training-db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: vtl_ocr_training
+      POSTGRES_USER: vtl_ocr_user
+      POSTGRES_PASSWORD: vtl_ocr_pass
+
+volumes:
+  postgresql-data:
+  vtl-storage:
+# Uncomment to use local folder instead of internal docker volume
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/vagrant/vtl-storage'
+  vtl-ocr-training-tess-data:
+  vtl-ocr-training-db-data:
+

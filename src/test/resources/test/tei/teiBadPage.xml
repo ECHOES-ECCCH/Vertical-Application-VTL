@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title id="1" level="m" type="main">PageId_1</title>
+                    </monogr>
+                </biblStruct>
+                <msDesc>
+                    <msIdentifier>
+                        <repositiory>VTL-REPO</repositiory>
+                        <idno>VTL-T1</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <titleStmt>
+                <title copyOf="1" level="m" type="main">PageId_1</title>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <sourceDoc>
+        <surface id="BAD_ID" ulx="0" uly="0" lrx="2595" lry="3759">
+            <zone ulx="50" uly="100" lrx="2100" lry="150" type="head">
+                <line ulx="50" uly="100" lrx="2100" lry="150">Pisarz 14, ks. III r. 1427; pisarz 15, ks. IV r 1429 i pisarz 16, ks. IV r. 1430</line>
+            </zone>
+            <zone ulx="2300" uly="100" lrx="2400" lry="200" type="pageNum">
+                <line ulx="2300" uly="100" lrx="2400" lry="200">250</line>
+            </zone>
+            <zone type="table">
+                <zone type="row">
+                    <zone ulx="200" uly="920" lrx="800" lry="1020" type="cell">
+                        <line ulx="200" uly="700" lrx="800" lry="800">Tako mÿ pomosſÿ bog ÿſzwynntyj</line>
+                        <line ulx="200" uly="810" lrx="800" lry="910">kryfz Jakotho ſwathczimi ikao ka-</line>
+                        <line ulx="200" uly="920" lrx="800" lry="1020">tha|rzina nyqgdt bogushewa</line>
+                    </zone>
+                    <zone ulx="1000" uly="920" lrx="1800" lry="1020" type="cell">
+                        <line ulx="1000" uly="700" lrx="1800" lry="800">Tako mi pomoży Bog i święty</line>
+                        <line ulx="1000" uly="810" lrx="1800" lry="910">krzyż, jako to świadczymy, jako</line>
+                        <line ulx="1000" uly="920" lrx="1800" lry="1020">Katarzyna mnidy Boguszewa żpmna</line>
+                    </zone>
+                </zone>
+                <zone type="row">
+                    <zone ulx="200" uly="1150" lrx="800" lry="1250" type="cell">
+                        <line ulx="200" uly="1040" lrx="800" lry="1140">poſzagu &lt;em&gt;deece marcarun grossoru&lt;/em&gt;</line>
+                        <line ulx="200" uly="1150" lrx="800" lry="1250">&lt;em&gt;latorym yney | nyulos &lt;/em&gt; wdom</line>
+                    </zone>
+                    <zone ulx="1000" uly="1150" lrx="1800" lry="1250" type="cell">
+                        <line ulx="1000" uly="1040" lrx="1800" lry="1140">podsagu - - - - i nie wnmisła w dom</line>
+                        <line ulx="1000" uly="1150" lrx="1800" lry="1250">Dobiesław&amp;lt;w&amp;gt;ow Grodzi&amp;lt;e&amp;gt;go</line>
+                    </zone>
+                </zone>
+          
+</TEI>

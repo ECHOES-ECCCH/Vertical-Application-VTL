@@ -1,0 +1,17 @@
+#to konfiguracja do uruchamiania lokalnego środowiska za pomocą docker-compose-dev.sh
+spring:
+    datasource:
+        url: "jdbc:postgresql://postgresql:5432/wlt_portal_db"
+    jpa:
+        hibernate:
+            ddl-auto: update
+
+vtl:
+    iiif-server-url: ${IIIF_SERVER_ENDPOINT:http://iiif-server:8080/}
+    iiif-server-public-url: ${IIIF_SERVER_PUBLIC_ENDPOINT:http://localhost:5555/}
+    iiif-tools-url: ${IIIF_TOOLS_ENDPOINT:http://iiif-tools:5556/}
+    ocr-tools-url: ${OCR_TOOLS_ENDPOINT:http://ocr-tools:5557/}
+
+    conf-dir: /var/vtl-config/
+quota:
+    space: 3000

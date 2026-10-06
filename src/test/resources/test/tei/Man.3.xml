@@ -1,0 +1,135 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title xml:lang="pol-Latn" type="main" copyOf="1">Zbiór modlitw</tei:title>
+                <tei:principal>
+                    <tei:persName sameAs="Per.115">Michał Németh</tei:persName>
+                </tei:principal>
+                <tei:principal>
+                    <tei:persName sameAs="Per.47">Anna Sulimowicz</tei:persName>
+                </tei:principal>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:publisher>
+                    <tei:orgName>Związek Karaimów Polskich</tei:orgName>
+                </tei:publisher>
+                <tei:date when="2017-01-13"/>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:biblStruct type="manuscript">
+                    <tei:monogr>
+                        <tei:title xml:lang="pol-Latn" type="main" id="1">Zbiór modlitw</tei:title>
+                        <tei:editor role="publisher">
+                            <tei:persName>—</tei:persName>
+                        </tei:editor>
+                        <tei:editor role="translator">
+                            <tei:persName>Niepodany</tei:persName>
+                        </tei:editor>
+                        <tei:editor role="copyist">
+                            <tei:persName>Niepodany</tei:persName>
+                        </tei:editor>
+                        <tei:textLang mainLang="kdr-gal-Hebr"/>
+                        <tei:textLang mainLang="heb-Hebr"/>
+                        <tei:imprint>
+                            <tei:pubPlace>Halicz (?)</tei:pubPlace>
+                            <tei:date when="1882"/>
+                        </tei:imprint>
+                    </tei:monogr>
+                </tei:biblStruct>
+                <tei:msDesc>
+                    <tei:msIdentifier>
+                        <tei:repository>KARAIM-MANUSCRIPTS-POLISH-COLLECTIONS</tei:repository>
+                        <tei:idno>Man.3</tei:idno>
+                        <tei:msName>JSul.I.54-19</tei:msName>
+                    </tei:msIdentifier>
+                    <tei:msContents>
+                        <tei:msItem n="1">
+                            <tei:locus from="1 r"/>
+                            <tei:incipit>מַחְטַבְלוּדוּר הָ֜ טֵנְרִישִי יִשְרָאֵלְנִין</tei:incipit>
+                            <tei:incipit type="transliteration">Maχtavludur H Tenrisi Israelnin</tei:incipit>
+                            <tei:author role="author">
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:author>
+                            <tei:editor role="translator">
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski modlitwy mówionej szeptem</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="2">
+                            <tei:locus from="1 v" to="2 r"/>
+                            <tei:incipit>קוֹלְטְקָא בִילָא אֵי הָ֜ טֶנְרִים</tei:incipit>
+                            <tei:incipit type="transliteration">Koltka byla e H Tenrim</tei:incipit>
+                            <tei:author role="author">
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:author>
+                            <tei:editor role="translator">
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski modlitwy mówionej szeptem</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="3">
+                            <tei:locus from="2 r"/>
+                            <tei:incipit>בוֹלְגַײְ קָבוּלְלוּק אַלְנִינְדָן סֶנִין אֵי הָ֜ טֵנְרִים</tei:incipit>
+                            <tei:incipit type="transliteration">Bolhaj kabulluk alnyndan senin eH Tenrim</tei:incipit>
+                            <tei:author role="author">
+                                <tei:persName sameAs="Per.360">Icchak hazzan w Łucku syn Icchaka</tei:persName>
+                            </tei:author>
+                            <tei:editor role="translator">
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:editor>
+                            <tei:note>przekład na język karaimski modlitwy błagalnej (bakkeša)</tei:note>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>przekład na język karaimski modlitwy błagalnej (  [bakkeša] )</tei:title>
+                        </tei:msItem>
+                    </tei:msContents>
+                    <tei:physDesc>
+                        <tei:objectDesc>
+                            <tei:supportDesc material="paper">
+                                <tei:support>Gładki, kremowy</tei:support>
+                                <tei:extent>
+                                    <tei:measure unit="page">2 kk.</tei:measure>
+                                    <tei:note>Numeracja: Brak</tei:note>
+                                    <tei:dimensions type="leaf" unit="mm">
+                                        <tei:width>270</tei:width>
+                                        <tei:height>210</tei:height>
+                                    </tei:dimensions>
+                                </tei:extent>
+                                <tei:condition>Średnio dobry, przetarcia na linii złożenia w czworo</tei:condition>
+                            </tei:supportDesc>
+                            <tei:layoutDesc>
+                                <tei:layout columns="1" ruledLines="27"/>
+                            </tei:layoutDesc>
+                        </tei:objectDesc>
+                        <tei:typeDesc>
+                            <tei:typeNote medium="ink">Brązowy</tei:typeNote>
+                        </tei:typeDesc>
+                        <tei:scriptDesc>
+                            <tei:scriptNote script="VOCALIZED"/>
+                            <tei:scriptNote script="Semi-cursive Cursive"/>
+                        </tei:scriptDesc>
+                        <tei:additions>
+                            <tei:p>U dołu karty 1 r o podana data, najprawdopodobniej data sporządzenia rękopisu: 4 dzień miesiąca tewet 5643 A.M. (tj. 13 grudnia 1882 A.D.). Karta 2 v o pusta. Ten sam (nieznany) kopista, co w przypadku JSul.I.54.20 — zawartość tych dwóch rękopisów jest taka sama.</tei:p>
+                            <tei:p>Tom drukowany zawiera wkładki rękopiśmiennicze.</tei:p>
+                        </tei:additions>
+                        <tei:bindingDesc>
+                            <tei:condition>Brak</tei:condition>
+                        </tei:bindingDesc>
+                    </tei:physDesc>
+                </tei:msDesc>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+        <tei:facsimile/>
+        <tei:revisionDesc status="approved">
+            <tei:change when-iso="2018-05-02T09:49" who="admin"/>
+        </tei:revisionDesc>
+    </tei:teiHeader>
+    <tei:text>
+        <tei:body>
+            <tei:p n="begin">תפלה בלחש בפשט</tei:p>
+            <tei:p n="end">תם הבקשה</tei:p>
+        </tei:body>
+    </tei:text>
+</tei:TEI>

@@ -1,0 +1,19 @@
+---
+- hosts: "local"
+  vars:
+    registry: "registry.apps.man.poznan.pl"
+    project: "wlt"
+    imageTag: "{{ tag | default('latest') }}"
+    imageName: "wlt-pionier-id-sp"
+    targetName: "{{spName}}"
+  vars_prompt:
+    - name: registryUser
+      prompt: "What is your docker registry username?"
+      private: no
+    - name: registryPassword
+      prompt: "What is your docker registry password?"
+      private: yes
+  roles:
+    - docker-login
+    - generate-image
+    - cleanup

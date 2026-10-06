@@ -1,0 +1,1 @@
+idp-metadata for local profile has the same content as etc/sp/etc-shibboleth/idp-metadata.xml

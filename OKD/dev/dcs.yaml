@@ -1,0 +1,710 @@
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    io.kompose.service: iiif-server
+  name: iiif-server
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    io.kompose.service: iiif-server
+  strategy:
+    activeDeadlineSeconds: 21600
+    recreateParams:
+      timeoutSeconds: 600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: iiif-server
+    spec:
+      containers:
+      - image: null
+        imagePullPolicy: Always
+        name: wlt-iiif-server
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 200m
+            memory: 200Mi
+          requests:
+            cpu: 200m
+            memory: 200Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/www
+          name: vtl-storage
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: vtl-storage
+        persistentVolumeClaim:
+          claimName: vtl-storage
+  test: false
+  triggers:
+  - type: ConfigChange
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - wlt-iiif-server
+      from:
+        kind: ImageStreamTag
+        name: iiif-server:latest
+    type: ImageChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    io.kompose.service: iiif-tools
+  name: iiif-tools
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    io.kompose.service: iiif-tools
+  strategy:
+    activeDeadlineSeconds: 21600
+    recreateParams:
+      timeoutSeconds: 600
+    resources: {}
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: iiif-tools
+    spec:
+      containers:
+      - env:
+        - name: SPRING_ACTIVE_PROFILE
+          value: dev
+        image: null
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /actuator/health
+            port: 5556
+            scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: wlt-iiif-tools
+        ports:
+        - containerPort: 5556
+          protocol: TCP
+        - containerPort: 9995
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /actuator/health
+            port: 5556
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources:
+          limits:
+            cpu: "1"
+            memory: 6Gi
+          requests:
+            cpu: 200m
+            memory: 500Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/vtl-storage
+          name: vtl-storage
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: vtl-storage
+        persistentVolumeClaim:
+          claimName: vtl-storage
+  test: false
+  triggers:
+  - type: ConfigChange
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - wlt-iiif-tools
+      from:
+        kind: ImageStreamTag
+        name: iiif-tools:latest
+    type: ImageChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    io.kompose.service: ocr-tools
+  name: ocr-tools
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    io.kompose.service: ocr-tools
+  strategy:
+    activeDeadlineSeconds: 21600
+    recreateParams:
+      timeoutSeconds: 600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: ocr-tools
+    spec:
+      containers:
+      - env:
+        - name: OCR_TRAINING_ENDPOINT
+          value: http://ocr-training-service:5558
+        - name: SPRING_ACTIVE_PROFILE
+          value: dev
+        - name: JAVA_OPTS
+          value: -Xms128m -Xmx3000m
+        image: null
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /actuator/health
+            port: 5557
+            scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: wlt-ocr-tools
+        ports:
+        - containerPort: 5557
+          protocol: TCP
+        - containerPort: 9999
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /actuator/health
+            port: 5557
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources:
+          limits:
+            cpu: "1"
+            memory: 3Gi
+          requests:
+            cpu: 200m
+            memory: 200Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/vtl-storage
+          name: vtl-storage
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: vtl-storage
+        persistentVolumeClaim:
+          claimName: vtl-storage
+  test: false
+  triggers:
+  - type: ConfigChange
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - wlt-ocr-tools
+      from:
+        kind: ImageStreamTag
+        name: ocr-tools:latest
+    type: ImageChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    io.kompose.service: ocr-training-db
+  name: ocr-training-db
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    io.kompose.service: ocr-training-db
+  strategy:
+    activeDeadlineSeconds: 21600
+    recreateParams:
+      timeoutSeconds: 600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: ocr-training-db
+    spec:
+      containers:
+      - env:
+        - name: POSTGRES_DB
+          value: vtl_ocr_training
+        - name: POSTGRES_PASSWORD
+          value: vtl_ocr_pass
+        - name: POSTGRES_USER
+          value: vtl_ocr_user
+        - name: PGDATA
+          value: /var/lib/postgresql/data/data/
+        image: null
+        imagePullPolicy: IfNotPresent
+        name: wlt-ocr-training-postgres
+        ports:
+        - containerPort: 5432
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 200m
+            memory: 200Mi
+          requests:
+            cpu: 200m
+            memory: 200Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/postgresql/data
+          name: vtl-ocr-training-db-data
+          subPath: data
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: vtl-ocr-training-db-data
+        persistentVolumeClaim:
+          claimName: vtl-ocr-training-db-data
+  test: false
+  triggers:
+  - type: ConfigChange
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - wlt-ocr-training-postgres
+      from:
+        kind: ImageStreamTag
+        name: postgres:12.2
+    type: ImageChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    io.kompose.service: ocr-training-service
+  name: ocr-training-service
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    io.kompose.service: ocr-training-service
+  strategy:
+    activeDeadlineSeconds: 21600
+    recreateParams:
+      timeoutSeconds: 600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: ocr-training-service
+    spec:
+      containers:
+      - env:
+        - name: IIIF_SERVER_ENDPOINT
+          value: http://iiif-server:8080
+        - name: OCR_TRAIN_DB_HOST
+          value: ocr-training-db
+        - name: OCR_TRAIN_DB_PASS
+          value: vtl_ocr_pass
+        - name: OCR_TRAIN_DB_PORT
+          value: "5432"
+        - name: OCR_TRAIN_DB_USER
+          value: vtl_ocr_user
+        - name: SPRING_ACTIVE_PROFILE
+          value: dev
+        - name: OCR_TRAIN_DB_NAME
+          value: vtl_ocr_training
+        - name: OCR_TOOLS_ENDPOINT
+          value: http://ocr-tools:5557
+        image: null
+        imagePullPolicy: IfNotPresent
+        name: wlt-ocr-training-service
+        ports:
+        - containerPort: 5558
+          protocol: TCP
+        - containerPort: 9995
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 600m
+            memory: 600Mi
+          requests:
+            cpu: 200m
+            memory: 200Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/vtl/training-data
+          name: vtl-ocr-training-tess-data
+          subPath: data
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: vtl-ocr-training-tess-data
+        persistentVolumeClaim:
+          claimName: vtl-ocr-training-tess-data
+  test: false
+  triggers:
+  - type: ConfigChange
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - wlt-ocr-training-service
+      from:
+        kind: ImageStreamTag
+        name: ocr-training-service:latest
+    type: ImageChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: pgadmin4
+  labels:
+    io.kompose.service: pgadmin4
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    deploymentconfig: pgadmin4
+  strategy:
+    activeDeadlineSeconds: 21600
+    recreateParams:
+      timeoutSeconds: 600
+    resources: {}
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        deploymentconfig: pgadmin4
+    spec:
+      containers:
+      - env:
+        - name: PGADMIN_DEFAULT_EMAIL
+          value: admin@bsa.pcss.pl
+        - name: PGADMIN_DEFAULT_PASSWORD
+          value: wlt-bl-password
+        image: null
+        imagePullPolicy: Always
+        name: pgadmin4
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        - containerPort: 443
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 200m
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/pgadmin
+          name: pgadmin
+          subPath: data
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: pgadmin
+        persistentVolumeClaim:
+          claimName: pgadmin
+  test: false
+  triggers:
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - pgadmin4
+      from:
+        kind: ImageStreamTag
+        name: pgadmin4:latest
+    type: ImageChange
+  - type: ConfigChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    io.kompose.service: bad-postgresql
+  name: bad-postgresql
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    io.kompose.service: bad-postgresql
+  strategy:
+    activeDeadlineSeconds: 21600
+    recreateParams:
+      timeoutSeconds: 600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: bad-postgresql
+    spec:
+      containers:
+      - env:
+        - name: POSTGRES_DB
+          value: wlt_portal_db
+        - name: POSTGRES_PASSWORD
+          value: wlt_portal
+        - name: POSTGRES_USER
+          value: wlt_portal
+        - name: PGDATA
+          value: /var/lib/postgresql/data/data/
+        image: null
+        imagePullPolicy: IfNotPresent
+        name: bad-postgresql
+        ports:
+        - containerPort: 5432
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 800m
+            memory: 800Mi
+          requests:
+            cpu: 200m
+            memory: 200Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/postgresql/data
+          name: bad-postgresql-data
+          subPath: data
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: bad-postgresql-data
+        persistentVolumeClaim:
+          claimName: bad-postgresql-data
+  test: false
+  triggers:
+  - type: ConfigChange
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - bad-postgresql
+      from:
+        kind: ImageStreamTag
+        name: bad-postgresql:latest
+    type: ImageChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    io.kompose.service: wlt-portal-bl
+  name: wlt-portal-bl
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    io.kompose.service: wlt-portal-bl
+  strategy:
+    activeDeadlineSeconds: 21600
+    recreateParams:
+      timeoutSeconds: 600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: wlt-portal-bl
+    spec:
+      containers:
+      - envFrom:
+          - configMapRef:
+              name: wlt-portal-bl-config
+        image: null
+        imagePullPolicy: IfNotPresent
+        name: wlt-portal-bl
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        - containerPort: 9998
+          protocol: TCP
+        - containerPort: 9010
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /api/healthcheck/start-state
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 90
+          periodSeconds: 30
+          successThreshold: 1
+          timeoutSeconds: 5
+        resources:
+          limits:
+            cpu: "1"
+            memory: 1Gi
+          requests:
+            cpu: 200m
+            memory: 200Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  test: false
+  triggers:
+  - type: ConfigChange
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - wlt-portal-bl
+      from:
+        kind: ImageStreamTag
+        name: wlt-portal-bl:latest
+    type: ImageChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: wlt-portal-ui
+  labels:
+    io.kompose.service: wlt-portal-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    app: wlt-portal-ui
+    deploymentconfig: wlt-portal-ui
+  strategy:
+    activeDeadlineSeconds: 21600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Rolling
+  template:
+    metadata:
+      labels:
+        app: wlt-portal-ui
+        deploymentconfig: wlt-portal-ui
+    spec:
+      containers:
+      - image: null
+        imagePullPolicy: Always
+        name: wlt-portal-ui
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html/config
+          name: volume-ttrlw
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: wlt-portal-ui-config
+        name: volume-ttrlw
+  test: false
+  triggers:
+  - type: ConfigChange
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - wlt-portal-ui
+      from:
+        kind: ImageStreamTag
+        name: wlt-portal-ui:latest
+    type: ImageChange
+---

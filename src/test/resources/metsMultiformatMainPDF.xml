@@ -1,0 +1,51 @@
+<mets LABEL="TEST JPG LIST" xmlns="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd">
+    <fileSec>
+        <fileGrp ID="DjVu_original" USE="original">
+            <file ID="DjVu_original44" MIMETYPE="image/x.djvu">
+                <FLocat LOCTYPE="URL" xlink:type="simple"
+                        xlink:href="https://bibliotekacyfrowa.eu/Content/26171/50_0001.djvu"/>
+            </file>
+            <file ID="DjVu_original45" MIMETYPE="image/x.djvu">
+                <FLocat LOCTYPE="URL" xlink:type="simple"
+                        xlink:href="https://bibliotekacyfrowa.eu/Content/26171/28_0001.djvu"/>
+            </file>
+            <file ID="DjVu_original46" MIMETYPE="image/x.djvu">
+                <FLocat LOCTYPE="URL" xlink:type="simple"
+                        xlink:href="https://bibliotekacyfrowa.eu/Content/26171/6_0001.djvu"/>
+            </file>
+            <file ID="DjVu_original47" MIMETYPE="image/x.djvu">
+                <FLocat LOCTYPE="URL" xlink:type="simple"
+                        xlink:href="https://bibliotekacyfrowa.eu/Content/26171/15_0001.djvu"/>
+            </file>
+            <file ID="DjVu_original48" MIMETYPE="image/x.djvu">
+                <FLocat LOCTYPE="URL" xlink:type="simple"
+                        xlink:href="https://bibliotekacyfrowa.eu/Content/26171/47_0001.djvu"/>
+            </file>
+        </fileGrp>
+        <fileGrp ID="PDF_original" USE="original">
+            <file ID="PDF_original0" MIMETYPE="application/pdf">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="https://bibliotekacyfrowa.eu/pdf1.pdf"/>
+            </file>
+            <file ID="PDF_original1" MIMETYPE="application/pdf">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="https://bibliotekacyfrowa.eu/pdf2.pdf"/>
+            </file>
+            <file ID="INI_original0" MIMETYPE="application/ini">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="https://bibliotekacyfrowa.eu/ini.ini"/>
+            </file>
+            <file ID="PDF_original2" MIMETYPE="application/pdf">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="https://bibliotekacyfrowa.eu/pdf3.pdf"/>
+            </file>
+        </fileGrp>
+        <fileGrp ID="JPEG_original" USE="original">
+            <file ID="PDF_original0" MIMETYPE="image/jpg">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="https://bibliotekacyfrowa.eu/jpg.jpg"/>
+            </file>
+            <file ID="PDF_original0" MIMETYPE="image/jpg">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="https://bibliotekacyfrowa.eu/jpg.jpg"/>
+            </file>
+        </fileGrp>
+
+    </fileSec>
+</mets>

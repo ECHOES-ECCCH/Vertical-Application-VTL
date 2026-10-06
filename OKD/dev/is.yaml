@@ -1,0 +1,158 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    io.kompose.service: iiif-server
+  name: iiif-server
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+  - annotations: null
+    importPolicy: {}
+    name: latest
+    referencePolicy:
+      type: Local
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    io.kompose.service: iiif-tools
+  name: iiif-tools
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    importPolicy: {}
+    name: latest
+    referencePolicy:
+      type: Local
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    io.kompose.service: ocr-tools
+  name: ocr-tools
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+  - annotations: null
+    importPolicy: {}
+    name: latest
+    referencePolicy:
+      type: Local
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    io.kompose.service: ocr-training-service
+  name: ocr-training-service
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+  - annotations: null
+    importPolicy: {}
+    name: latest
+    referencePolicy:
+      type: Local
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: pgadmin4
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: dpage/pgadmin4:latest
+    importPolicy:
+      scheduled: true
+    name: latest
+    referencePolicy:
+      type: Local
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    io.kompose.service: postgresql
+  name: postgres
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: postgres:9.6
+    importPolicy:
+      scheduled: true
+    name: "9.6"
+    referencePolicy:
+      type: Local
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: postgres:12.2
+    importPolicy:
+      scheduled: true
+    name: "12.2"
+    referencePolicy:
+      type: Local
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    io.kompose.service: bad-postgresql
+  name: bad-postgresql
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - annotations: null
+      importPolicy: {}
+      name: "latest"
+      referencePolicy:
+        type: Local
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    io.kompose.service: wlt-portal-bl
+  name: wlt-portal-bl
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+  - annotations: null
+    importPolicy: {}
+    name: latest
+    referencePolicy:
+      type: Local
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: wlt-portal-ui
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+  - annotations: null
+    importPolicy: {}
+    name: latest
+    referencePolicy:
+      type: Local
+---

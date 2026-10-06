@@ -1,0 +1,57 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title type="main" copyOf="1" level="m">Karaimi</tei:title>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:date when="2017-02-28"/>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:biblStruct>
+                    <tei:monogr>
+                        <tei:title type="main" id="1" level="m">Karaimi</tei:title>
+                        <tei:editor role="editor">
+                            <tei:persName sameAs="Per.16">Aleksander Dubiński</tei:persName>
+                        </tei:editor>
+                        <tei:editor role="editor">
+                            <tei:persName sameAs="Per.49">Eugeniusz Śliwka</tei:persName>
+                        </tei:editor>
+                        <tei:imprint>
+                            <tei:pubPlace>Pieniężno</tei:pubPlace>
+                            <tei:publisher>Muzeum Misyjno-Etnograficzne Seminarium Duchownego Księży Werbistów</tei:publisher>
+                            <tei:date when="1987"/>
+                            <tei:biblScope>
+                                <tei:dimensions unit="cm">
+                                    <tei:width>21</tei:width>
+                                    <tei:height>21</tei:height>
+                                </tei:dimensions>
+                            </tei:biblScope>
+                            <tei:biblScope unit="page">104</tei:biblScope>
+                        </tei:imprint>
+                    </tei:monogr>
+                </tei:biblStruct>
+                <tei:msDesc>
+                    <tei:msIdentifier>
+                        <tei:repository>KARAIM-LITERATURE</tei:repository>
+                        <tei:idno>Bo.17</tei:idno>
+                    </tei:msIdentifier>
+                </tei:msDesc>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+        <tei:facsimile/>
+        <tei:revisionDesc status="approved">
+            <tei:change when-iso="2017-02-28T00:00"/>
+        </tei:revisionDesc>
+        <tei:profileDesc>
+            <tei:textClass>
+                <tei:keywords>
+                    <tei:term>Historia</tei:term>
+                </tei:keywords>
+            </tei:textClass>
+        </tei:profileDesc>
+    </tei:teiHeader>
+    <tei:text>
+        <tei:body/>
+    </tei:text>
+</tei:TEI>

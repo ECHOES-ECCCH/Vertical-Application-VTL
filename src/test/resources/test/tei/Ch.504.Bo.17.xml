@@ -1,0 +1,47 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title>Nabożeństwo karaimskie</tei:title>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:publisher>
+                    <tei:orgName>Związek Karaimów Polskich</tei:orgName>
+                </tei:publisher>
+                <tei:date when="2016-11-07"/>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:biblStruct>
+                    <tei:analytic>
+                        <tei:title xml:lang="pol" type="main" level="a">Nabożeństwo karaimskie</tei:title>
+                        <tei:author>
+                            <tei:persName sameAs="Per.2">Ananiasz Zajączkowski</tei:persName>
+                        </tei:author>
+                        <tei:textLang mainLang="pol-Latn"/>
+                    </tei:analytic>
+                    <tei:monogr>
+                        <tei:title type="main" level="a">Karaimi</tei:title>
+                        <tei:imprint>
+                            <tei:biblScope unit="page" from="16" to="19"/>
+                        </tei:imprint>
+                    </tei:monogr>
+                    <tei:relatedItem type="book" target="books/Bo.17"/>
+                </tei:biblStruct>
+                <tei:msDesc>
+                    <tei:msIdentifier>
+                        <tei:repository>KARAIM-LITERATURE</tei:repository>
+                        <tei:idno>Ch.504.Bo.17</tei:idno>
+                    </tei:msIdentifier>
+                </tei:msDesc>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+        <tei:revisionDesc status="approved">
+            <tei:change when-iso="2016-11-07T00:00"/>
+        </tei:revisionDesc>
+    </tei:teiHeader>
+    <tei:text>
+        <tei:body>
+            <tei:p/>
+        </tei:body>
+    </tei:text>
+</tei:TEI>

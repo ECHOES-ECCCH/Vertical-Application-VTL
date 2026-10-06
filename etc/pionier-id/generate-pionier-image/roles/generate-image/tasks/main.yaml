@@ -1,0 +1,48 @@
+---
+- name: Replace idptestbed with given SP name
+  replace:
+    path: "{{ item }}"
+    regexp: "idptestbed"
+    replace: "{{targetName}}"
+  with_items:
+    - "../etc-shibboleth/shibboleth2.xml"
+    - "../var-www-html/sp-metadata.xml"
+    - "../etc-httpd/conf.d/pionierId.conf"
+
+- name: Create privatekey file
+  copy:
+    src: "{{files_path}}/private.pem"
+    dest: "../sp_key"
+
+- name: Create public cert  file
+  copy:
+    src: "{{files_path}}/public.pem"
+    dest: "../etc-shibboleth/sp-cert.pem"
+
+- name: Replace placeholder with key with given SP name
+  replace:
+    path: "../var-www-html/sp-metadata.xml"
+    regexp: "PUBLIC_CERT_HERE"
+    replace: "{{lookup('file', '{{files_path}}/public.pem') }}"
+
+#kinda ugly but it works ;)
+- name: Remove ----Begin/end certificate--- from sp-metadata.xml
+  replace:
+    path: "../var-www-html/sp-metadata.xml"
+    regexp: "-----.+CERTIFICATE-----\n"
+    replace: ""
+
+- name: Replace placeholder in key with given SP name
+  replace:
+    path: "../var-www-html/sp-metadata.xml"
+    regexp: "SP_NAME_HERE"
+    replace: "{{targetName}}"
+
+- name: Build docker image
+  docker_image:
+    build:
+      path: ".."
+    name:  "{{registryPath}}{{imageName}}:{{imageTag}}"
+    tag: "{{imageTag}}"
+    push: yes
+    source: build

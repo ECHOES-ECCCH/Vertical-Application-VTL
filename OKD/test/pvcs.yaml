@@ -1,0 +1,37 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    volume.beta.kubernetes.io/storage-class: manila-share
+    volume.beta.kubernetes.io/storage-provisioner: externalstorage.k8s.io/manila
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    io.kompose.service: vtl-ocr-training-tess-data
+  name: vtl-ocr-training-tess-data
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    volume.beta.kubernetes.io/storage-class: manila-share
+    volume.beta.kubernetes.io/storage-provisioner: externalstorage.k8s.io/manila
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    io.kompose.service: vtl-storage
+  name: vtl-storage
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+---

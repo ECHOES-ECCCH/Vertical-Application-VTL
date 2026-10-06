@@ -1,0 +1,121 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title type="main" copyOf="1">Modlitewnik</tei:title>
+                <tei:principal>
+                    <tei:persName sameAs="Per.115">Michał Németh</tei:persName>
+                </tei:principal>
+                <tei:principal>
+                    <tei:persName sameAs="Per.47">Anna Sulimowicz</tei:persName>
+                </tei:principal>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:publisher>
+                    <tei:orgName>Związek Karaimów Polskich</tei:orgName>
+                </tei:publisher>
+                <tei:date when="2017-01-13"/>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:biblStruct type="manuscript">
+                    <tei:monogr>
+                        <tei:editor role="publisher">
+                            <tei:persName sameAs="Per.412">Menahem Cadik Jeruszalmi</tei:persName>
+                        </tei:editor>
+                        <tei:editor role="copyist">
+                            <tei:persName sameAs="Per.397">Jeszua Josef Mordkowicz</tei:persName>
+                        </tei:editor>
+                        <tei:textLang mainLang="kdr-gal-Hebr"/>
+                        <tei:imprint>
+                            <tei:pubPlace>Halicz</tei:pubPlace>
+                            <tei:date when="XIX w."/>
+                        </tei:imprint>
+                    </tei:monogr>
+                </tei:biblStruct>
+                <tei:msDesc>
+                    <tei:msIdentifier>
+                        <tei:repository>KARAIM-MANUSCRIPTS-POLISH-COLLECTIONS</tei:repository>
+                        <tei:idno>Man.442</tei:idno>
+                        <tei:msName>JSul.III.73</tei:msName>
+                    </tei:msIdentifier>
+                    <tei:msContents>
+                        <tei:summary>Tom drugi modlitewnika drukowanego zawierający modlitwy na Pesach, Święto Tygodni i inne oraz tom trzeci zawierający modlitwy i hymny na posty dziewiątego dnia miesiąca tamuz i dziesiątego dnia miesiące aw. Uzupełnienia rękopiśmienne brakujących stron modlitewnika i dodatkowe teksty. Szczeg&amp;oacute;łowy opis zawartości części rękopiśmiennych: Poz. 1: 1&amp;nbsp;r [o] &amp;ndash; 80&amp;nbsp;v [o] : zbi&amp;oacute;r modlitw na Pesach w języku hebrajskim i karaimskim (kk. 25&amp;nbsp;r [o] &amp;ndash; 80&amp;nbsp;v [o] wszyte między karty לב i פא druku)</tei:summary>
+                        <tei:msItem n="1">
+                            <tei:locus from="1&#160;r" to="24&#160;v"/>
+                            <tei:incipit>אֵי קַײָם טֶנְרִישִי יַעֲקֹבנוּן</tei:incipit>
+                            <tei:incipit type="transliteration">E kajjam Tenrisi Jaakovnun</tei:incipit>
+                            <tei:author role="author">
+                                <tei:persName>niepodany</tei:persName>
+                            </tei:author>
+                            <tei:editor role="translator">
+                                <tei:persName sameAs="Per.542">Mordechaj syn Szemoela (hazzan w Haliczu w latach 1734–1764)</tei:persName>
+                            </tei:editor>
+                            <tei:textLang mainLang="kdr-gal-Hebr"/>
+                            <tei:title>uzupełnienie brakujących początkowych fragmentów druku (język hebrajski)</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="2">
+                            <tei:locus from="25 r" to="67 v"/>
+                            <tei:title>uzupełnienia modlitw w języku hebrajskim</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="3">
+                            <tei:locus from="68 r" to="68 v"/>
+                            <tei:note>język karaimski archaiczny (zob. np. šükürlik , köp , küclü , körtü, küpligimiz , sözlerden , özinnin)</tei:note>
+                            <tei:title>przekład hymnu religijnego ( pijut ) na język karaimski</tei:title>
+                        </tei:msItem>
+                        <tei:msItem n="4">
+                            <tei:locus from="69 r" to="80 v"/>
+                            <tei:title>modlitwy w języku hebrajskim</tei:title>
+                        </tei:msItem>
+                    </tei:msContents>
+                    <tei:physDesc>
+                        <tei:objectDesc>
+                            <tei:supportDesc material="paper">
+                                <tei:support>Papier czerpany, żeberkowy, w kolorze kremowym; karta 100 i 101: papier niebieskawy</tei:support>
+                                <tei:extent>
+                                    <tei:measure unit="page">114 kk. rkp. +140 kk. druku</tei:measure>
+                                    <tei:note>Numeracja: kk. rkp. 1–24 + 16 kk. druku od k. יז do לב + kk. rkp. 25–80 + 36 kk. druku od k. פא do קיו + k. rkp. 81–99 + 15 kk. druku od k. קלג do קמז + kk. rkp. 100–101 + 8 kk. druku od k. קמח do קנה, k. rkp. 102 + 41 kk. druku od k. קנו do קסח (tom 2) oraz od k. [א] do כח (tom 3) + kk. rkp. 103–106 + 17 kk. druku od k. כט do מה + k. rękopiśmienna 107 + 4 kk. druku od k. מו do מט + kk. rkp. 108–110 + 3 kk. druku od k. נ do נב + kk. rkp. 111–114.</tei:note>
+                                    <tei:dimensions type="block" unit="mm">
+                                        <tei:width>250</tei:width>
+                                        <tei:height>195</tei:height>
+                                    </tei:dimensions>
+                                    <tei:dimensions type="leaf" unit="mm">
+                                        <tei:width>245</tei:width>
+                                        <tei:height>175</tei:height>
+                                    </tei:dimensions>
+                                </tei:extent>
+                                <tei:condition>Dobry, blok zwarty, ślady napraw</tei:condition>
+                            </tei:supportDesc>
+                            <tei:layoutDesc>
+                                <tei:layout columns="1" ruledLines="1 27 29"/>
+                            </tei:layoutDesc>
+                        </tei:objectDesc>
+                        <tei:typeDesc>
+                            <tei:typeNote medium="ink">Ciemnobrązowy, galusowy</tei:typeNote>
+                        </tei:typeDesc>
+                        <tei:scriptDesc>
+                            <tei:scriptNote script="VOCALIZED"/>
+                            <tei:scriptNote script="Square Semi-cursive Cursive"/>
+                        </tei:scriptDesc>
+                        <tei:additions>
+                            <tei:p>Karta 5 r o : tytuł rozdziału w ozdobnej winiecie z motywem roślinnym; karty rękopiśmienne 103–106 (wstawka nie uzupełnienie), karta rękopiśmienna 107 przypadkowo wklejona między karty מח i מו druku, karty rękopiśmienne 108–110 (wstawka); na odwrocie karty יט tomu trzeciego, na marginesie adnotacja: אני יצחק בן יצחק הגנואק טרוק. Na karcie 100 r o nagłówek wprowadzający tłumaczenie hymnu religijnego zawiera informacje o kopiście: był nim Jeszua Josef Mordkowicz (1802–1884).</tei:p>
+                            <tei:p>Tom drukowany zawiera wkładki rękopiśmiennicze.</tei:p>
+                        </tei:additions>
+                        <tei:bindingDesc>
+                            <tei:condition>Deska obleczona skórą w kolorze brązowym, grzbiet z wytłoczeniami, zachowane kapitałki, przetarcia na krawędziach, wyklejki w całości, z tyłu 5 kart ochronnych</tei:condition>
+                        </tei:bindingDesc>
+                    </tei:physDesc>
+                </tei:msDesc>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+        <tei:facsimile/>
+        <tei:revisionDesc status="approved">
+            <tei:change when-iso="2018-05-02T09:45" who="admin"/>
+        </tei:revisionDesc>
+    </tei:teiHeader>
+    <tei:text>
+        <tei:body>
+            <tei:p n="begin">בשם אשר חסדו ממנו לעד לא יחדול</tei:p>
+            <tei:p n="end">ולמענו יקיים ייעודיו בימינו ונראה שכלול החומות</tei:p>
+        </tei:body>
+    </tei:text>
+</tei:TEI>

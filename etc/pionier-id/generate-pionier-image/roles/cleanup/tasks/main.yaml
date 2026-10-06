@@ -1,0 +1,3 @@
+---
+- name: Discard local changes
+  shell: "git checkout -- . && git checkout -- ../../ "

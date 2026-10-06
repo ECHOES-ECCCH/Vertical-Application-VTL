@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="http://fbc.pionier.net.pl/zbiorki/style/common/xsl/oai-style.xsl"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/
+         http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2020-03-04T12:15:58Z</responseDate>
+    <request identifier="oai:europeana1989.eu:1159" metadataPrefix="mets" verb="GetRecord">
+        http://fbc.pionier.net.pl/zbiorki/oai-pmh-repository.xml</request>
+    <GetRecord>
+
+        <record>
+            <header>
+                <identifier>oai:europeana1989.eu:1159</identifier>
+                <datestamp>2019-08-14T17:45:08Z</datestamp>
+                <setSpec>DigitalArchiveOfMemorabilia:Europeana1989:CzechRepublic:Olomounc</setSpec> 	      <setSpec>DigitalArchiveOfMemorabilia</setSpec> 	      <setSpec>DigitalArchiveOfMemorabilia:Europeana1989</setSpec> 	    </header>
+            <metadata>
+                <mets LABEL="OLM073" xmlns="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd">
+                    <dmdSec ID="dmd0">
+                        <mdWrap MIMETYPE="text/xml" MDTYPE="OTHER" OTHERMDTYPE="dlibra_avs" LABEL="Local Metadata">
+                            <xmlData><dlibra_avs:metadataDescription xmlns:dlibra_avs="http://fbc.pionier.net.pl/zbiorki/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://fbc.pionier.net.pl/zbiorki/ http://fbc.pionier.net.pl/zbiorki/dlibra/attribute-schema.xsd">
+                                <dlibra_avs:Title xml:lang="cs"><![CDATA[Materiály k dovolené v zahraničí roku 1989]]></dlibra_avs:Title>
+                                <dlibra_avs:Subject>
+                                    <dlibra_avs:ObligatoryKeywordsE1989 xml:lang="cs"><![CDATA[každodenní život]]></dlibra_avs:ObligatoryKeywordsE1989>
+                                </dlibra_avs:Subject>
+                                <dlibra_avs:Spatial xml:lang="cs"><![CDATA[46.227638,2.213749]]></dlibra_avs:Spatial>
+                                <dlibra_avs:Spatial xml:lang="cs"><![CDATA[46.818188,8.227512]]></dlibra_avs:Spatial>
+                                <dlibra_avs:Spatial xml:lang="cs"><![CDATA[47.516231,14.550072]]></dlibra_avs:Spatial>
+                                <dlibra_avs:Spatial xml:lang="cs"><![CDATA[49.614686,6.104279]]></dlibra_avs:Spatial>
+                                <dlibra_avs:Spatial xml:lang="cs"><![CDATA[50.503887,4.469936]]></dlibra_avs:Spatial>
+                                <dlibra_avs:Spatial xml:lang="cs"><![CDATA[52.132633,5.291266]]></dlibra_avs:Spatial>
+                                <dlibra_avs:Temporal xml:lang="cs"><![CDATA[1989]]></dlibra_avs:Temporal>
+                                <dlibra_avs:Description xml:lang="cs"><![CDATA[Materiály k dovolené v západní Evropě v létě 1989: doklady, průkazy, povolení, podrobný plán cesty, účtenky, pojištění, pokyny pro pojištěné při cestách do ciziny, předběžné hlášení pojistné události apod.]]></dlibra_avs:Description>
+                                <dlibra_avs:Type xml:lang="cs"><![CDATA[Tiskoviny]]></dlibra_avs:Type>
+                                <dlibra_avs:Format><![CDATA[text/xml]]></dlibra_avs:Format>
+                                <dlibra_avs:Identifier xml:lang="cs"><![CDATA[OLM073]]></dlibra_avs:Identifier>
+                                <dlibra_avs:Language xml:lang="cs"><![CDATA[čeština]]></dlibra_avs:Language>
+                                <dlibra_avs:License xml:lang="cs"><![CDATA[http://creativecommons.org/publicdomain/mark/1.0/ Public domain - předmět není chráněný autorským právem]]></dlibra_avs:License>
+                                <dlibra_avs:RightsHolder xml:lang="cs"><![CDATA[Michal Urbášek]]></dlibra_avs:RightsHolder>
+                                <dlibra_avs:Digitisation xml:lang="cs"><![CDATA[Europeana 1989 - Olomouc, 23.11.2013]]></dlibra_avs:Digitisation>
+                                <dlibra_avs:OriginCountry xml:lang="en"><![CDATA[Czech Republic]]></dlibra_avs:OriginCountry>
+                            </dlibra_avs:metadataDescription>
+                            </xmlData>
+                        </mdWrap>
+                    </dmdSec>
+                    <dmdSec ID="dmd1">
+                        <mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Dublin Core Metadata">
+                            <xmlData><dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/">
+                                <dc:title xml:lang="cs"><![CDATA[Materiály k dovolené v zahraničí roku 1989]]></dc:title>
+                                <dc:description xml:lang="cs"><![CDATA[Materiály k dovolené v západní Evropě v létě 1989: doklady, průkazy, povolení, podrobný plán cesty, účtenky, pojištění, pokyny pro pojištěné při cestách do ciziny, předběžné hlášení pojistné události apod.]]></dc:description>
+                                <dc:type xml:lang="cs"><![CDATA[Tiskoviny]]></dc:type>
+                                <dc:format xml:lang="cs"><![CDATA[text/xml]]></dc:format>
+                                <dc:format xml:lang="pl"><![CDATA[text/xml]]></dc:format>
+                                <dc:format xml:lang="ro"><![CDATA[text/xml]]></dc:format>
+                                <dc:format xml:lang="hu"><![CDATA[text/xml]]></dc:format>
+                                <dc:format xml:lang="lv"><![CDATA[text/xml]]></dc:format>
+                                <dc:format xml:lang="lt"><![CDATA[text/xml]]></dc:format>
+                                <dc:format xml:lang="de"><![CDATA[text/xml]]></dc:format>
+                                <dc:format xml:lang="en"><![CDATA[text/xml]]></dc:format>
+                                <dc:format xml:lang="et"><![CDATA[text/xml]]></dc:format>
+                                <dc:identifier><![CDATA[http://fbc.pionier.net.pl/zbiorki/Content/1159]]></dc:identifier>
+                                <dc:identifier xml:lang="cs"><![CDATA[OLM073]]></dc:identifier>
+                                <dc:source xml:lang="cs"><![CDATA[Europeana 1989 - Olomouc, 23.11.2013]]></dc:source>
+                                <dc:language xml:lang="cs"><![CDATA[pol]]></dc:language>
+                                <dc:coverage xml:lang="cs"><![CDATA[52.132633,5.291266]]></dc:coverage>
+                                <dc:coverage xml:lang="cs"><![CDATA[49.614686,6.104279]]></dc:coverage>
+                                <dc:coverage xml:lang="cs"><![CDATA[50.503887,4.469936]]></dc:coverage>
+                                <dc:coverage xml:lang="cs"><![CDATA[46.818188,8.227512]]></dc:coverage>
+                                <dc:coverage xml:lang="cs"><![CDATA[46.227638,2.213749]]></dc:coverage>
+                                <dc:coverage xml:lang="cs"><![CDATA[47.516231,14.550072]]></dc:coverage>
+                                <dc:coverage xml:lang="cs"><![CDATA[1989]]></dc:coverage>
+                                <dc:rights xml:lang="cs"><![CDATA[http://creativecommons.org/publicdomain/mark/1.0/ Public domain - předmět není chráněný autorským právem]]></dc:rights>
+                                <dc:rights xml:lang="cs"><![CDATA[Michal Urbášek]]></dc:rights>
+                            </dc:dc>
+                            </xmlData>
+                        </mdWrap>
+                    </dmdSec>
+                    <fileSec>
+                        <fileGrp USE="original">
+                            <file ID="original0" MIMETYPE="image/jpeg">
+                                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://fbc.pionier.net.pl/zbiorki/Content/1159/OLM073/OLM073_prukaz_Svazarm_1.jpg"/>
+                            </file>
+                            <file ID="original1" MIMETYPE="image/jpeg">
+                                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://fbc.pionier.net.pl/zbiorki/Content/1159/OLM073/OLM073_klub_cestovatelu_1.jpg"/>
+                            </file>
+                            <file ID="original2" MIMETYPE="image/jpeg">
+                                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://fbc.pionier.net.pl/zbiorki/Content/1159/OLM073/OLM073_camping_1.jpg"/>
+                            </file>
+                            <file ID="original3" MIMETYPE="image/jpeg">
+                                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://fbc.pionier.net.pl/zbiorki/Content/1159/OLM073/OLM073_prukaz_Svazarm_2.jpg"/>
+                            </file>
+                            <file ID="original4" MIMETYPE="image/jpeg">
+                                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://fbc.pionier.net.pl/zbiorki/Content/1159/OLM073/OLM073_prukaz_automotoklub_2.jpg"/>
+                            </file>
+                            <file ID="original5" MIMETYPE="text/xml">
+                                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://fbc.pionier.net.pl/zbiorki/Content/1159/PresentationData.xml"/>
+                            </file>
+                            <file ID="original6" MIMETYPE="image/jpeg">
+                                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://fbc.pionier.net.pl/zbiorki/Content/1159/OLM073/OLM073_klub_cestovatelu_2.jpg"/>
+                            </file>
+                            <file ID="original7" MIMETYPE="image/jpeg">
+                                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://fbc.pionier.net.pl/zbiorki/Content/1159/OLM073/OLM073_camping_2.jpg"/>
+                            </file>
+                            <file ID="original8" MIMETYPE="image/jpeg">
+                                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="http://fbc.pionier.net.pl/zbiorki/Content/1159/OLM073/OLM073_prukaz_automotoklub_1.jpg"/>
+                            </file>
+                        </fileGrp>
+                    </fileSec>
+                    <structMap TYPE="PHYSICAL">
+                        <div ID="physicalStructure" DMDID="dmd0 dmd1" TYPE="files">
+                            <div ID="dir.OLM073." TYPE="directory">
+                                <div ID="phys0" TYPE="file">
+                                    <fptr FILEID="original0"/>
+                                </div>
+                                <div ID="phys1" TYPE="file">
+                                    <fptr FILEID="original1"/>
+                                </div>
+                                <div ID="phys2" TYPE="file">
+                                    <fptr FILEID="original2"/>
+                                </div>
+                                <div ID="phys3" TYPE="file">
+                                    <fptr FILEID="original3"/>
+                                </div>
+                                <div ID="phys4" TYPE="file">
+                                    <fptr FILEID="original4"/>
+                                </div>
+                                <div ID="phys6" TYPE="file">
+                                    <fptr FILEID="original6"/>
+                                </div>
+                                <div ID="phys7" TYPE="file">
+                                    <fptr FILEID="original7"/>
+                                </div>
+                                <div ID="phys8" TYPE="file">
+                                    <fptr FILEID="original8"/>
+                                </div>
+                            </div>
+                            <div ID="phys5" TYPE="file">
+                                <fptr FILEID="original5"/>
+                            </div>
+                        </div>
+                    </structMap>
+                </mets>
+
+
+            </metadata>
+        </record>	</GetRecord>
+</OAI-PMH>

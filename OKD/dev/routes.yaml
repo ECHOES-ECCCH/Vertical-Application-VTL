@@ -1,0 +1,107 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/ip_whitelist: 150.254.169.0/24 156.17.58.251/32 91.220.103.65/32
+  labels:
+    io.kompose.service: wlt-portal-bl
+  name: bad-api
+spec:
+  host: wlt-portal-ui-bsa-bad.apps.paas-dev.psnc.pl
+  path: /api
+  port:
+    targetPort: "8080"
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: wlt-portal-bl
+    weight: 100
+  wildcardPolicy: None
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/ip_whitelist: 150.254.169.0/24 156.17.58.251/32 91.220.103.65/32
+  labels:
+    io.kompose.service: iiif-server
+  name: bad-ebooks
+spec:
+  host: wlt-portal-ui-bsa-bad.apps.paas-dev.psnc.pl
+  path: /ebooks
+  port:
+    targetPort: "8080"
+  tls:
+    termination: edge
+  to:
+    kind: Service
+    name: iiif-server
+    weight: 100
+  wildcardPolicy: None
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/ip_whitelist: 150.254.169.0/24 156.17.58.251/32 91.220.103.65/32
+  labels:
+    io.kompose.service: iiif-server
+  name: bad-iiif
+spec:
+  host: wlt-portal-ui-bsa-bad.apps.paas-dev.psnc.pl
+  path: /iipsrv
+  port:
+    targetPort: "8080"
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: iiif-server
+    weight: 100
+  wildcardPolicy: None
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/ip_whitelist: 150.254.169.0/24 156.17.58.251/32 91.220.103.65/32
+    openshift.io/host.generated: "true"
+  name: bad-pgadmin4
+spec:
+  host: pgadmin4-bsa-bad.apps.paas-dev.psnc.pl
+  port:
+    targetPort: 80-tcp
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: pgadmin4
+    weight: 100
+  wildcardPolicy: None
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/ip_whitelist: 150.254.169.0/24 156.17.58.251/32 91.220.103.65/32
+    openshift.io/host.generated: "true"
+  labels:
+    app: wlt-portal-ui
+  name: bad-ui
+spec:
+  host: wlt-portal-ui-bsa-bad.apps.paas-dev.psnc.pl
+  port:
+    targetPort: 8080-tcp
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: wlt-portal-ui
+    weight: 100
+  wildcardPolicy: None
+---

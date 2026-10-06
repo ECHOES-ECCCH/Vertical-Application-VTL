@@ -1,0 +1,18 @@
+resources:
+  - dcs.yaml
+  - is.yaml
+  - pvcs.yaml
+  - routes.yaml
+  - svcs.yaml
+
+configMapGenerator:
+  - name: wlt-portal-ui-config
+    files:
+      - config/config.json
+    options:
+      disableNameSuffixHash: true
+  - name: wlt-portal-bl-config
+    envs:
+      - config/wlt-portal-bl.env
+    options:
+      disableNameSuffixHash: true
