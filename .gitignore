@@ -1,0 +1,8 @@
+/.idea/*
+/target
+/wlt-iiif-tools.iml
+/.settings
+/.project
+/.classpath
+/.factorypath
+/bin
