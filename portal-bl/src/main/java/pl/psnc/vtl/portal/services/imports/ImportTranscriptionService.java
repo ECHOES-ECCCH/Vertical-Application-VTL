@@ -51,6 +51,8 @@ public class ImportTranscriptionService {
 
     private final DocumentsLoaderRepository documentsLoaderRepository;
 
+    private final EchoesImportSourceService echoesImportSourceService;
+
     private final LinkMappersRegistry linkMappersRegistry;
 
     private final MappersRegistry mappersRegistry;
@@ -77,27 +79,33 @@ public class ImportTranscriptionService {
 
     public TranscriptionCore importTranscriptionData(ImportTranscriptionDTO importTranscriptionDTO)
             throws ConfigurationException {
-        if (checkImportDomain)
+        boolean echoesImport = StringUtils.isNotBlank(importTranscriptionDTO.getEchoesAssetId());
+        if (checkImportDomain && !echoesImport)
             domainService.validateDomain(importTranscriptionDTO);
-            
-        if (StringUtils.isNotBlank(importTranscriptionDTO.getExternalId())) {
+        if (StringUtils.isNotBlank(importTranscriptionDTO.getExternalId()))
             domainService.validateExternalEditorDomain(importTranscriptionDTO);
-        }
 
         String metadataUrl = StringUtils.defaultIfBlank(
                 importTranscriptionDTO.getMetadataUrl(), importTranscriptionDTO.getResourceUrl());
         FileType metadataType = ObjectUtils.defaultIfNull(
                 importTranscriptionDTO.getMetadataType(), importTranscriptionDTO.getFileType());
-        String contentString = documentsLoaderRepository.loadDocumentStringFromResource(metadataUrl);
+        LoadedFile source = echoesImport
+                ? echoesImportSourceService.loadAsset(importTranscriptionDTO.getEchoesAssetId(), null)
+                : new LoadedFile(metadataUrl, documentsLoaderRepository.loadDocumentStringFromResource(metadataUrl));
+        if (checkImportDomain && echoesImport && StringUtils.isNotBlank(source.getResourceUrl()))
+            domainService.validateDomain(source.getResourceUrl(), metadataType);
         MapperStrategy mapperStrategy = mappersRegistry.getMapperStrategy(metadataType);
-        TranscriptionCore transcriptionCore = mapperStrategy.mapToImportTemplate(contentString);
-        transcriptionCore.setExternalMetadataUrl(metadataUrl);
+        TranscriptionCore transcriptionCore = mapperStrategy.mapToImportTemplate(source.getFileContent());
+        transcriptionCore.setExternalMetadataUrl(source.getResourceUrl());
         transcriptionCore.setExternalMetadataType(metadataType);
-
         transcriptionCore.setFileType(importTranscriptionDTO.getFileType());
+        if (echoesImport)
+            transcriptionCore.setProjectId(
+                    echoesImportSourceService.getProjectId(importTranscriptionDTO.getEchoesAssetId()));
         if (StringUtils.isNotBlank(importTranscriptionDTO.getMetadataUrl())
                 || transcriptionCore.getExternalUrl() == null) {
-            transcriptionCore.setExternalUrl(importTranscriptionDTO.getResourceUrl());
+            transcriptionCore.setExternalUrl(
+                    echoesImport ? source.getResourceUrl() : importTranscriptionDTO.getResourceUrl());
         }
 
         if (StringUtils.isNotBlank(importTranscriptionDTO.getExternalId())) {
@@ -116,9 +124,12 @@ public class ImportTranscriptionService {
     public Transcription createTranscription(TranscriptionCore core, String origin) {
         boolean isMets = core.getFileType() == FileType.METS && core.getExternalMetadataType() == FileType.METS;
         String resourceUrl = isMets ? core.getExternalMetadataUrl() : core.getExternalUrl();
-        String resourceString = documentsLoaderRepository.loadDocumentStringFromResource(resourceUrl);
+        String echoesAssetId = echoesImportSourceService.getAssetId(core.getProjectId());
+        LoadedFile loadedFile = echoesAssetId != null
+                ? echoesImportSourceService.loadAsset(echoesAssetId, resourceUrl)
+                : new LoadedFile(resourceUrl, documentsLoaderRepository.loadDocumentStringFromResource(resourceUrl));
+        String resourceString = loadedFile.getFileContent();
         var linkMapperStrategy = linkMappersRegistry.getMapperStrategy(isMets ? FileType.METS : core.getFileType());
-        LoadedFile loadedFile = new LoadedFile(resourceUrl, resourceString);
         var publicationLinks = linkMapperStrategy.getTranscriptionLinks(loadedFile);
         if (publicationLinks.getLinks().isEmpty())
             throw TextFormatValidator.linkLessPublicationException();
@@ -146,9 +157,9 @@ public class ImportTranscriptionService {
         Transcription transcription = transcriptionService.requireTranscription(transcriptionId);
         transcriptionExportService.resetTranscriptionExportStatus(transcriptionId);
         
-        if (transcription.getExternalUrl() == null) {
+        String echoesAssetId = echoesImportSourceService.getAssetId(transcription.getProjectId());
+        if (echoesAssetId == null && transcription.getExternalUrl() == null)
             throw new IllegalArgumentException("Transcription " + transcriptionId + " was not imported");
-        }
 
         String metadataUrl = transcription.getExternalMetadataUrl();
         if (metadataUrl == null)
@@ -156,16 +167,20 @@ public class ImportTranscriptionService {
         FileType metadataType = transcription.getExternalMetadataType();
         if (metadataType == null)
             metadataType = FileType.from(transcription.getCreationMode());
-        String contentString = documentsLoaderRepository.loadDocumentStringFromResource(metadataUrl);
+
+        LoadedFile loadedFile = echoesAssetId != null
+                ? echoesImportSourceService.loadAsset(echoesAssetId, transcription.getExternalUrl())
+                : new LoadedFile(transcription.getExternalUrl(),
+                        documentsLoaderRepository.loadDocumentStringFromResource(transcription.getExternalUrl()));
+        String contentString = echoesAssetId != null
+                ? loadedFile.getFileContent()
+                : documentsLoaderRepository.loadDocumentStringFromResource(metadataUrl);
         MapperStrategy mapperStrategy = mappersRegistry.getMapperStrategy(metadataType);
         TranscriptionMetadataCore metadataCore =
                 new TranscriptionMetadataCore(mapperStrategy.mapToImportTemplate(contentString));
 
-        String resourceString =
-                documentsLoaderRepository.loadDocumentStringFromResource(transcription.getExternalUrl());
         LinkMapperStrategy linkMapperStrategy =
                 linkMappersRegistry.getMapperStrategy(FileType.from(transcription.getCreationMode()));
-        LoadedFile loadedFile = new LoadedFile(transcription.getExternalUrl(), resourceString);
         PublicationLinks publicationLinks = linkMapperStrategy.getTranscriptionLinks(loadedFile);
 
         transcriptionService.updateTranscriptionMetadata(transcriptionId, metadataCore, false);
