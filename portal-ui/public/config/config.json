@@ -16,6 +16,9 @@
     "activeDirectoryLoginProviderUrl": "",
     "pionierIdLoginProviderUrl": "",
     "facebookLoginEnabled": false,
-    "googleLoginEnabled": false
+    "googleLoginEnabled": false,
+    "commonPlatformApi": "",
+    "commonPlatformProjectUri": "https://culturalheritagecloud.eu/projects/vtl-poc",
+    "commonPlatformManagedUploadEnabled": false
 
 }
