@@ -17,6 +17,11 @@ public class ImportTranscriptionDTO {
     private String resourceUrl;
 
     /**
+     * Stable ECHOES asset identifier
+     */
+    private String echoesAssetId;
+
+    /**
      * External resource file type.
      */
     private FileType fileType;
