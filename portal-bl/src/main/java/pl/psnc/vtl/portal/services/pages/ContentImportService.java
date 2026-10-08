@@ -5,6 +5,7 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,6 +13,8 @@ import org.springframework.transaction.support.TransactionTemplate;
 import pl.psnc.vtl.portal.conf.logging.LogAction;
 import pl.psnc.vtl.portal.model.imports.FileType;
 import pl.psnc.vtl.portal.model.transcriptions.Transcription;
+import pl.psnc.vtl.portal.repositories.echoes.EchoesBinaryAsset;
+import pl.psnc.vtl.portal.repositories.echoes.EchoesPlatformRepository;
 import pl.psnc.vtl.portal.repositories.iiiftools.DownloadFilesResponse;
 import pl.psnc.vtl.portal.repositories.iiiftools.IIIFToolsRepository;
 import pl.psnc.vtl.portal.repositories.imports.DocumentsLoaderRepository;
@@ -21,6 +24,7 @@ import pl.psnc.vtl.portal.services.permissions.TranscriptionPermissionService;
 import pl.psnc.vtl.portal.services.transcriptions.*;
 import pl.psnc.vtl.portal.services.users.UserService;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
@@ -58,6 +62,8 @@ public class ContentImportService {
 
     private final LinkMappersRegistry linkMappersRegistry;
 
+    private final EchoesPlatformRepository echoesPlatformRepository;
+
     @Value("${vtl.imports-domains: false}")
     private boolean checkImportDomain;
 
@@ -70,12 +76,31 @@ public class ContentImportService {
     public void importPagesFromIIIF(long transcriptionId, String resourceUrl) throws ConfigurationException {
         if (checkImportDomain) domainService.validateDomain(resourceUrl, FileType.IIIF);
 
+        String manifestString = documentsLoaderRepository.loadDocumentStringFromResource(resourceUrl);
+        importPagesFromIIIF(transcriptionId, new LoadedFile(resourceUrl, manifestString));
+    }
+
+    @Transactional
+    public void importPagesFromEchoesIIIF(long transcriptionId, String assetId) throws ConfigurationException {
+        transcriptionPermissionService.checkAdminOrVerifyAccess(transcriptionId);
+        LoadedFile loadedFile = echoesPlatformRepository.loadAsset(assetId);
+        if (checkImportDomain && StringUtils.isNotBlank(loadedFile.getResourceUrl())) {
+            domainService.validateDomain(loadedFile.getResourceUrl(), FileType.IIIF);
+        }
+        importPagesFromIIIF(transcriptionId, loadedFile);
+    }
+
+    public void importPagesFromEchoesFile(long transcriptionId, String assetId) throws IOException {
+        transcriptionPermissionService.checkAdminAccess(transcriptionId);
+        echoesPlatformRepository.loadBinaryAsset(assetId, file ->
+                transcriptionService.addPagesToTranscription(transcriptionId, file));
+    }
+
+    private void importPagesFromIIIF(long transcriptionId, LoadedFile loadedFile) {
         Transcription transcription = transcriptionService.requireTranscription(transcriptionId);
         transcriptionPermissionService.checkAdminOrVerifyAccess(transcriptionId);
 
-        String manifestString = documentsLoaderRepository.loadDocumentStringFromResource(resourceUrl);
         LinkMapperStrategy linkMapperStrategy = linkMappersRegistry.getMapperStrategy(FileType.IIIF);
-        LoadedFile loadedFile = new LoadedFile(resourceUrl, manifestString);
         PublicationLinks externalLinks = linkMapperStrategy.getTranscriptionLinks(loadedFile);
 
         if (externalLinks.getLinks().isEmpty())
@@ -121,7 +146,8 @@ public class ContentImportService {
                 log.info("Imported pages from IIIF object to Transcription with id - {}.", transcriptionId);
                 LogAction.clearMDCAction();
             } catch (Exception e) {
-                log.error("IIIF import failed for transcription {} from ULR {}", transcriptionId, resourceUrl, e);
+                log.error("IIIF import failed for transcription {} from {}", transcriptionId,
+                        loadedFile.getResourceUrl(), e);
                 transcriptionProcessingCoordinator.processingFinished(transcriptionId, OPERATION, e);
             }
         })));

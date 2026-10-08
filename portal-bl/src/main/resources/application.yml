@@ -157,6 +157,8 @@ vtl:
   ocr-training-url: ${OCR_TRAINING_ENDPOINT:http://localhost:5558/}
   conf-dir: ./vtl-config/
   imports-domains: ${IMPORT_DOMAINS_CHECK:false}
+  echoes:
+    common-platform-api-url: ${ECHOES_COMMON_PLATFORM_API_URL:}
   cache: 900000
   verses:
     payload:
