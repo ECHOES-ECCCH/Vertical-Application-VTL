@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import PropTypes from "prop-types";
 import { Dropdown } from 'react-bootstrap';
 import { useHistory } from "react-router-dom";
@@ -14,6 +14,7 @@ import Alert from "@Elements/Alert/Alert";
 import { CheckViewModePermission } from "@/permissions/ViewModes";
 
 import ModalBaseCancelConfirm from '@Elements/Modal/ModalBaseCancelConfirm';
+import EchoesIntegrationModal from './EchoesIntegrationModal';
 
 import styles from "@Pages/Transcription/TranscriptionDetails/TranscriptionDetails.module.sass";
 
@@ -21,9 +22,6 @@ const TranscriptionDetailsNav = ({ viewMode, transcriptionId, title, hidden, cre
 	const { t } = useTranslation();
 	const history = useHistory();
 	const dispatch = useDispatch();
-	const reactAppApi = useSelector((state) => state.app.config.reactAppApi);
-	const knowledgeBaseProxyUrl = useSelector((state) => state.app.config.knowledgeBaseProxyUrl);
-	const echoesUi = useSelector((state) => state.app.config.echoesUi);
 	const [showModalUnpublish, setShowModalUnpublish] = useState(false);
 	const [showModalPublish, setShowModalPublish] = useState(false);
 	const [showModalRemoveTranscription, setShowModalRemoveTranscription] = useState(false);
@@ -36,90 +34,6 @@ const TranscriptionDetailsNav = ({ viewMode, transcriptionId, title, hidden, cre
 			query = "?publish=true";
 		}
 		history.push(location + query);
-	};
-
-	const modalCommitCreateDigitalTwin = async () => {
-		dispatch(appActions.setLoading(true));
-		try {
-			console.log("modalCommitCreateDigitalTwin");
-			const transcriptionResponse = await api.get(`/transcriptions/${transcriptionId}`, { params: { perpage: 100 } });
-			const transcription = transcriptionResponse.data;
-
-			const hdt = {
-				name: transcription.analyticInfo.title,
-				resources: transcription.pages.list.flatMap((page) => {
-					const { boundingBox: { lowerRightX, lowerRightY, upperLeftX, upperLeftY } } = page;
-					return [
-						{
-							name: page.path,
-							fileUrl: page.thumbnailUrl.replace(/\/full\/.*/, "/info.json"),
-							fileMediaType: "application/json",
-							destinationStorage: "EXTERNAL",
-							attributes: {
-								width: lowerRightX - upperLeftX,
-								height: lowerRightY - upperLeftY,
-							},
-						},
-						{
-							name: page.path.replace(/(\.[^./]*)?$/, '.hocr'),
-							fileUrl: `${reactAppApi}/pages/${page.id}/content?type=hocr`,
-							fileMediaType: "text/html",
-							destinationStorage: "EXTERNAL",
-						},
-					];
-				}),
-			};
-			console.log("hdt", hdt);
-
-			const accessTokenResponse = await api.get("/oauth2/accessToken");
-			const accessToken = accessTokenResponse.data;
-
-			const hdtResponse = await fetch(knowledgeBaseProxyUrl, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-					'Authorization': `Bearer ${accessToken}`,
-				},
-				body: JSON.stringify(hdt),
-			});
-
-			if (!hdtResponse.ok) {
-				throw new Error(`Failed to create digital twin: ${hdtResponse.status}`);
-			}
-
-			console.log("hdtResponse", hdtResponse);
-
-			const hdtData = await hdtResponse.json();
-			const hdtId = hdtData.id;
-			const hdtLink = `${echoesUi}/data/${hdtId}`;
-			const graphUri = hdtData.graphUri;
-
-			// Open the link in a new tab
-			window.open(hdtLink, '_blank');
-
-			await api.put(`/transcriptions/${transcriptionId}/metadata`, {
-				'analyticInfo': transcription.analyticInf,
-				'monographicInfo': transcription.monographicInfo,
-				'profileDesc': {
-					...transcription.profileDesc,
-					links: [
-						...transcription.profileDesc.links,
-						hdtLink,
-						graphUri,
-					],
-				},
-				'transcriptionInfo': transcription.transcriptionInfo,
-			});
-
-			window.location.reload();
-		}
-		catch (error) {
-			console.log(error); // eslint-disable-line
-		}
-		finally {
-			setShowModalCreateDigitalTwin(false);
-			dispatch(appActions.setLoading(false));
-		}
 	};
 
 	const modalCommitPublish = async (publish) => {
@@ -149,17 +63,12 @@ const TranscriptionDetailsNav = ({ viewMode, transcriptionId, title, hidden, cre
 
 	return (
 		<>
-			{/* Modal create digital twin */}
-			<ModalBaseCancelConfirm
-				modalVisible={showModalCreateDigitalTwin}
-				setModalVisible={setShowModalCreateDigitalTwin}
-				title={t('modals.createDigitalTwin.title')}
-				bodyHTML={t('modals.createDigitalTwin.bodyHTML')}
-				cancelButtonName={t('form.cancel')}
-				confirmButtonName={t('modals.createDigitalTwin.button')}
-				onConfirm={modalCommitCreateDigitalTwin}
+			<EchoesIntegrationModal
+				show={showModalCreateDigitalTwin}
+				onHide={() => setShowModalCreateDigitalTwin(false)}
+				transcriptionId={transcriptionId}
 			/>
-			
+
 			{/* Modal remove transcription */}
 			<ModalBaseCancelConfirm
 				modalVisible={showModalRemoveTranscription}
@@ -170,7 +79,7 @@ const TranscriptionDetailsNav = ({ viewMode, transcriptionId, title, hidden, cre
 				confirmButtonName={t('modals.deleteTranscription.button')}
 				onConfirm={modalCommitRemoveTranscription}
 			/>
-			
+
 			{/* Modal unpublish transcription */}
 			<ModalBaseCancelConfirm
 				modalVisible={showModalUnpublish}
@@ -218,7 +127,7 @@ const TranscriptionDetailsNav = ({ viewMode, transcriptionId, title, hidden, cre
 											onClick={() => setShowModalCreateDigitalTwin(true)}
 											disabled={hidden}
 										>
-											{t('transcription.details.createDigitalTwin')}
+											{t('echoesIntegration.button')}
 										</Dropdown.Item>}
 									{CheckViewModePermission("canRemoveTranscription", viewMode) &&
 										<Dropdown.Item
@@ -267,7 +176,7 @@ const TranscriptionDetailsNav = ({ viewMode, transcriptionId, title, hidden, cre
 									onClick={() => setShowModalCreateDigitalTwin(true)}
 									disabled={hidden}
 								>
-									{t('transcription.details.createDigitalTwin')}
+									{t('echoesIntegration.button')}
 								</Button>}
 
 							{CheckViewModePermission("canRemoveTranscription", viewMode) &&

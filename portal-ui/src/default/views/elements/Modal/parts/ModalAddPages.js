@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect, useMemo, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from 'react-i18next';
 import { useHistory } from "react-router-dom";
 import { Modal } from "react-bootstrap";
@@ -7,6 +7,8 @@ import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
 
 import api from "@/services/api";
+import EchoesPlatformClient from "@/services/echoes/echoesPlatformClient";
+import { getEchoesAccessToken } from "@/services/echoes/echoesTokenProvider";
 import { appActions } from "@/store/actions/app.actions";
 
 import FormSubmit from "@Elements/Form/FormSubmit";
@@ -19,25 +21,92 @@ import CommonDropdown from '@Elements/Dropdown/CommonDropdown';
 import Frame from "@Elements/Frame/Frame";
 import { alertActions } from "@/store/actions/alert.actions";
 
+const SOURCE_IIIF = 0;
+const SOURCE_LOCAL = 1;
+const SOURCE_ECHOES = 2;
+
+const assetLabel = (asset) => {
+	const name = asset.fileName || asset.assetId;
+	const details = [asset.managementMode, asset.mediaType].filter(Boolean).join(' — ');
+	return details ? `${name} — ${details}` : name;
+};
+
 const ModalAddPages = ({ handleOnClose, transcriptionId }) => {
 	const { t } = useTranslation();
 
 	const dispatch = useDispatch();
 	const history = useHistory();
+	const config = useSelector(state => state.app.config);
 
-	const [ selectedOption, setSelectedOption ] = useState(0);
+	const [ selectedOption, setSelectedOption ] = useState(SOURCE_IIIF);
+	const [ echoesImportTypeOption, setEchoesImportTypeOption ] = useState(0);
+	const [ echoesAssets, setEchoesAssets ] = useState([]);
+	const [ selectedEchoesAssetOption, setSelectedEchoesAssetOption ] = useState(-1);
+	const [ echoesLoading, setEchoesLoading ] = useState(false);
+	const [ echoesError, setEchoesError ] = useState('');
 
 	const options = [
 		{ value: 'IIIF', label: t('form.importSelect.importIIIF') },
 		{ value: 'LOCAL', label: t('form.importSelect.importLocal') },
+		{ value: 'ECHOES', label: t('echoesImport.personalSpaceSource') },
 	];
+
+	const echoesImportTypes = [
+		{ value: 'IIIF', label: t('echoesAddPages.iiif') },
+		{ value: 'FILE', label: t('echoesAddPages.file') },
+	];
+
+	const platformClient = useMemo(() => new EchoesPlatformClient({
+		baseUrl: config.commonPlatformApi,
+		getAccessToken: getEchoesAccessToken,
+	}), [config.commonPlatformApi]);
 
 	const { register, handleSubmit, formState: { errors, isValid }, setError, watch } = useForm({
 		defaultValues: {
 			importLink: "",
 		},
 		mode: "onChange",
+		shouldUnregister: true,
 	});
+
+	useEffect(() => {
+		if (selectedOption !== SOURCE_ECHOES) {
+			setEchoesError('');
+			return undefined;
+		}
+
+		if (!config.commonPlatformApi) {
+			setEchoesAssets([]);
+			setSelectedEchoesAssetOption(-1);
+			setEchoesError(t('echoesImport.missingApi'));
+			return undefined;
+		}
+
+		let active = true;
+		setEchoesLoading(true);
+		setEchoesError('');
+		setEchoesAssets([]);
+		setSelectedEchoesAssetOption(-1);
+
+		platformClient.listMyAssets()
+			.then((collection) => {
+				if (!active) return;
+				const assets = collection?.items || [];
+				setEchoesAssets(assets);
+				setSelectedEchoesAssetOption(assets.length > 0 ? 0 : -1);
+			})
+			.catch((error) => {
+				if (!active) return;
+				setEchoesError(error?.message || t('echoesImport.loadFailed'));
+			})
+			.finally(() => {
+				if (active) setEchoesLoading(false);
+			});
+
+		return () => {
+			active = false;
+		};
+	}, [selectedOption, platformClient, config.commonPlatformApi, t]);
 
 	const inputFile = watch('file');
 	const formats = [
@@ -196,8 +265,33 @@ const ModalAddPages = ({ handleOnClose, transcriptionId }) => {
 
 	};
 
+	const selectedEchoesAsset = selectedEchoesAssetOption >= 0 ? echoesAssets[selectedEchoesAssetOption] : null;
+
+	const importEchoes = () => {
+		if (!selectedEchoesAsset) return;
+
+		dispatch(appActions.setLoading(true));
+		setEchoesError('');
+		const importType = echoesImportTypes[echoesImportTypeOption].value;
+		const assetId = encodeURIComponent(selectedEchoesAsset.assetId);
+
+		api.post(`transcription/${transcriptionId}/import-echoes?assetId=${assetId}&type=${importType}`)
+			.then(() => {
+				history.go(0);
+				handleOnClose();
+				dispatch(appActions.setLoading(false));
+			})
+			.catch((response) => {
+				dispatch(appActions.setLoading(false));
+				setEchoesError(response?.data?.message || response?.message || t('echoesAddPages.importFailed'));
+			});
+	};
+
 	const onSubmit = data => {
-		if (data.importLink) {
+		if (selectedOption === SOURCE_ECHOES) {
+			importEchoes();
+		}
+		else if (data.importLink) {
 			importIIIF(data.importLink);
 		}
 		else if (data.file) {
@@ -232,7 +326,7 @@ const ModalAddPages = ({ handleOnClose, transcriptionId }) => {
 					onSubmit={handleSubmit(onSubmit)}
 				>
 					<div className='block__form--row'>
-						{selectedOption === 0 ?
+						{selectedOption === SOURCE_IIIF && (
 							<FormInput
 								name='importLink'
 								label={t('form.inputIIIF.label')}
@@ -252,14 +346,47 @@ const ModalAddPages = ({ handleOnClose, transcriptionId }) => {
 								type='text'
 								errorMessage={errors.importLink ? errors.importLink.message : ''}
 							/>
-							:
+						)}
+
+						{selectedOption === SOURCE_LOCAL && (
 							<FormInputFile
 								dict={null}
 								register={register}
 								errorMessage={errors.file && errorMessage()}
 								formats={formats}
 								chooseFile={inputFile && Object.values(inputFile).map((value) => { return value.name; }).toString()}
-							/>}
+							/>
+						)}
+
+						{selectedOption === SOURCE_ECHOES && (
+							<>
+								<CommonDropdown
+									label={t('echoesAddPages.importTypeLabel')}
+									options={echoesImportTypes.map(it => it.label)}
+									selectedOption={echoesImportTypeOption}
+									setSelectedOption={setEchoesImportTypeOption}
+									className='dropdown-new'
+									isRequired
+								/>
+
+								{echoesLoading && <p>{t('echoesImport.loading')}</p>}
+								{echoesError && <p>{echoesError}</p>}
+								{!echoesLoading && !echoesError && echoesAssets.length === 0 && (
+									<p>{t('echoesImport.noAssets')}</p>
+								)}
+
+								{echoesAssets.length > 0 && (
+									<CommonDropdown
+										label={t('echoesImport.assetLabel')}
+										options={echoesAssets.map(assetLabel)}
+										selectedOption={selectedEchoesAssetOption}
+										setSelectedOption={setSelectedEchoesAssetOption}
+										className='dropdown-new'
+										isRequired
+									/>
+								)}
+							</>
+						)}
 					</div>
 					<Frame
 						text={`${t('modals.addPages.quotaInfo')}`}
@@ -276,10 +403,11 @@ const ModalAddPages = ({ handleOnClose, transcriptionId }) => {
 							label={t('form.inputFile.startSendingFile')}
 							className='block__button--submit'
 							variant='submit'
-							disabled={selectedOption === 0 ?
-								!isValid
-								:
-								!isValid || (inputFile && Object.keys(inputFile).length === 0)}
+							disabled={
+								selectedOption === SOURCE_IIIF ? !isValid
+									: selectedOption === SOURCE_LOCAL ? !isValid || (inputFile && Object.keys(inputFile).length === 0)
+										: echoesLoading || !selectedEchoesAsset
+							}
 						/>
 					</div>
 				</form>
