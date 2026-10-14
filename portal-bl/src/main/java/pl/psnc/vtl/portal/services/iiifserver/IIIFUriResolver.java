@@ -187,7 +187,7 @@ public class IIIFUriResolver {
         } else {
             size = thumbnailSizeExpression;
         }
-        return iiifImageUrl.replace("/full/full", region + size);
+        return iiifImageUrl.replaceAll("/full/(full|pct:100)", region + size);
     }
 
     public String getManifestUrl(String origin, long transcriptionId) {
