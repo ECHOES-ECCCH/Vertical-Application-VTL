@@ -1,6 +1,8 @@
 FROM maven:3.9-eclipse-temurin-11 as build
 
-RUN apt-get update && apt-get install git
+RUN apt-get update \
+    && apt-get install -y git \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/src/app
 COPY pom.xml ./
