@@ -13,7 +13,6 @@ import org.springframework.transaction.support.TransactionTemplate;
 import pl.psnc.vtl.portal.conf.logging.LogAction;
 import pl.psnc.vtl.portal.model.imports.FileType;
 import pl.psnc.vtl.portal.model.transcriptions.Transcription;
-import pl.psnc.vtl.portal.repositories.echoes.EchoesBinaryAsset;
 import pl.psnc.vtl.portal.repositories.echoes.EchoesPlatformRepository;
 import pl.psnc.vtl.portal.repositories.iiiftools.DownloadFilesResponse;
 import pl.psnc.vtl.portal.repositories.iiiftools.IIIFToolsRepository;
