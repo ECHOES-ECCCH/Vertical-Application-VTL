@@ -29,12 +29,12 @@ public class Slf4jMDCFilter extends OncePerRequestFilter {
         try {
             addRequestId(request);
 
-            log.info("path: {}, method: {}, query: {}", request.getRequestURI(), request.getMethod(), request.getQueryString());
+            log.info("path: {}, method: {}", request.getRequestURI(), request.getMethod());
             response.setHeader(DEFAULT_RESPONSE_TOKEN_HEADER, MDC.get(DEFAULT_MDC_UUID_TOKEN_KEY));
 
             chain.doFilter(request, response);
         } finally {
-            log.debug("statusCode {}, path: {}, method: {}, query: {}", response.getStatus(), request.getRequestURI(), request.getMethod(), request.getQueryString());
+            log.debug("statusCode {}, path: {}, method: {}", response.getStatus(), request.getRequestURI(), request.getMethod());
             MDC.clear();
         }
     }
