@@ -1,0 +1,6 @@
+/.idea/*
+/target/*
+/wlt-ocr-tools.iml
+/.settings/*
+/.project
+/.classpath
