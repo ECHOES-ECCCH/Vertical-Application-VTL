@@ -1,0 +1,33 @@
+@import '@Styles/_breakpoints.sass'
+
+$logo_path_base: "~@Assets/images/wlt_logo_"
+$logo_path_ext: ".svg"
+
+$langs: "en", "pl", "de"
+
+
+.auth-header
+    width: 100%
+    border-bottom: 1px solid #DDDDDD
+
+    &__logo
+        height: 86px
+        width: 275px
+        margin: 45px 0 40px -2px
+        background-size: cover
+        filter: brightness(0)
+        text-indent: -9999rem
+
+        @each $lang in $langs
+            html[lang='#{$lang}'] &
+                background-image: url("#{$logo_path_base}#{$lang}#{$logo_path_ext}")
+
+        &:hover,
+        &:focus
+            filter: brightness(50%)
+        &:active
+            filter: none
+        +touch
+            height: 46px
+            width: 147px
+            margin: 18px 0

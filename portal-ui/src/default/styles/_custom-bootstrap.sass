@@ -1,0 +1,138 @@
+@import 'bootstrap/scss/bootstrap.scss'
+@import '@Styles/_breakpoints.sass'
+@import '@Styles/_font-colors.sass'
+//PLACE BOOTSTRAP OVERRIDES HERE
+
+.navbar
+    width: 100%
+
+.container-fluid
+    padding: 0
+
+.container
+    +hd
+        max-width: 1600px
+    +fullhd
+        max-width: 1750px
+
+a.btn:not(.btn-primary):hover
+    color: $kolor5
+    background-color: $kolor1
+
+a.dropdown-item
+    color: #005ca9
+    &:hover, &:focus
+        background-color: #DFEAF4
+        color: #005ca9
+
+.card-body > .dropdown-item
+    padding: 0.5rem 1.5rem
+    font-weight: bold
+
+.btn-group
+    white-space: nowrap
+    & > .btn, a
+        margin-right: 10px
+    & > a.btn.disabled
+        background-color: #d9d9d9
+        color: #6b7073
+        border-color: #bdbdbd
+
+
+.btn
+    color: $kolor1
+    border-color: $kolor1
+    &:hover
+        color: $kolor5
+        background-color: $kolor1
+    &:focus
+        color: $kolor1
+        box-shadow: 0 5px 15px rgba(0, 92, 169, .4)
+    &:active
+        color: $kolor5
+        background-color: $kolor1
+        box-shadow: 0 5px 15px rgba(0, 92, 169, .4)
+    &.focus
+        color: $kolor1
+        box-shadow: 0 5px 15px rgba(0, 92, 169, .4)
+
+// Make a button look and behave like a link
+.btn-link
+    color: $kolor1
+    border: none
+    &:hover
+        color: $kolor1
+        background-color: transparent
+    &:active
+        color: $kolor1
+        background-color: transparent
+    &:focus,
+    &.focus
+        color: $kolor1
+        background-color: transparent
+    &:disabled,
+    &.disabled
+        background-color: transparent
+        color: $kolor3
+
+.custom-file-input
+    height: 40px
+    cursor: pointer
+
+    &:hover, &:focus
+        & + .custom-file-label
+            &::after
+                background: $kolor1
+
+    &:active
+        & + .custom-file-label
+            &::after
+                background: $kolor5
+                color: $kolor3
+
+.custom-file-input-inactive
+    cursor: default
+    &:hover, &:focus
+        & + .custom-file-label
+            &::after
+                background: $kolor3!important
+
+
+.custom-file-label
+    border-radius: 0
+    border: 0.5px solid #ced4da
+
+    +text-elipsis
+    padding-right: 140px
+
+    &::after
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+        background: $kolor1
+        color: $kolor5
+        min-width: 130px
+        font-size: 1rem
+        display: flex
+        align-items: center
+        justify-content: center
+        content: attr(data-buttontext) !important
+        border-radius: 0
+
+
+.custom-file-label-inactive
+    background-color: $kolor4
+    color: $kolor3
+    cursor: default
+
+    +text-elipsis
+    padding-right: 140px
+
+    &::after
+        background: $kolor2!important
+
+.dropdown-toggle.btn
+    &:active,&:focus
+        text-decoration: none
+
+.hidden
+    display: none
+    visibility: hidden

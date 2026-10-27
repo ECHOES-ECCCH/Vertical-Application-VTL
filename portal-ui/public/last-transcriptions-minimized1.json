@@ -1,0 +1,323 @@
+[
+  {
+    "id": 2402,
+    "titleLabel": "prj17",
+    "dateCreated": "2022-06-29 14:40",
+    "creator": {
+      "id": 17,
+      "email": "jamrozy@man.poznan.pl"
+    },
+    "lastModificationDate": "2022-07-27 09:41",
+    "creationMode": "web-form",
+    "analyticInfo": {
+      "id": 2402,
+      "title": "prj17"
+    },
+    "transcriptionInfo": {
+      "id": 2402,
+      "releaseDate": "a",
+      "description": "<p>a</p>",
+      "sourcePublishDate": null,
+      "descriptionPlain": "a",
+      "documentTypes": "a",
+      "documentSrc": "<p>a</p>",
+      "documentSrcPlain": "a",
+      "imgSrc": "<p>a</p>",
+      "imgSrcPlain": "a",
+      "collectionName": "",
+      "contactName": "",
+      "contactSurname": null,
+      "contactEmail": null,
+      "guidelines": null,
+      "guidelinesPlain": null
+    },
+    "profileDesc": {
+      "id": 2402,
+      "keywords": [
+        "a"
+      ],
+      "summary": null,
+      "links": []
+    },
+    "pages": {
+      "hits": 2,
+      "count": 2,
+      "page": 1,
+      "perpage": 6,
+      "pages": 1,
+      "list": [
+        {
+          "id": 6302,
+          "pageLayers": [
+            {
+              "page": {
+                "id": "6302"
+              },
+              "layer": {
+                "id": "2452",
+                "name": "lay2"
+              },
+              "percentOfTranscribed": 100
+            },
+            {
+              "page": {
+                "id": "6302"
+              },
+              "layer": {
+                "id": "2453",
+                "name": "lay3"
+              },
+              "percentOfTranscribed": 0
+            },
+            {
+              "page": {
+                "id": "6302"
+              },
+              "layer": {
+                "id": "2504",
+                "name": "lay4"
+              },
+              "percentOfTranscribed": 50
+            }
+          ],
+          "path": "srak_square.jpg",
+          "pageNo": 1,
+          "relativeNo": null,
+          "boundingBox": {
+            "upperLeftX": 0,
+            "upperLeftY": 0,
+            "lowerRightX": 600,
+            "lowerRightY": 601
+          },
+          "thumbnailUrl": "https://wlt-portal-ui-bsa-bad.apps.paas-dev.psnc.pl/iipsrv/iipsrv.fcgi/?IIIF=t2402/srak_square_Page0000.tif/pct:0,0,100.0,99.8/!300,300/0/default.jpg",
+          "percentOfTranscribed": 77
+        },
+        {
+          "id": 6402,
+          "pageLayers": [
+            {
+              "page": {
+                "id": "6402"
+              },
+              "layer": {
+                "id": "2452",
+                "name": "lay2"
+              },
+              "percentOfTranscribed": 0
+            },
+            {
+              "page": {
+                "id": "6402"
+              },
+              "layer": {
+                "id": "2453",
+                "name": "lay3"
+              },
+              "percentOfTranscribed": 0
+            },
+            {
+              "page": {
+                "id": "6402"
+              },
+              "layer": {
+                "id": "2504",
+                "name": "lay4"
+              },
+              "percentOfTranscribed": 100
+            }
+          ],
+          "path": "wiewior.jpg",
+          "pageNo": 2,
+          "relativeNo": null,
+          "boundingBox": {
+            "upperLeftX": 0,
+            "upperLeftY": 0,
+            "lowerRightX": 640,
+            "lowerRightY": 352
+          },
+          "thumbnailUrl": "https://wlt-portal-ui-bsa-bad.apps.paas-dev.psnc.pl/iipsrv/iipsrv.fcgi/?IIIF=t2402/wiewior_Page0000.tif/pct:0,0,55.0,100.0/!300,300/0/default.jpg",
+          "percentOfTranscribed": 100
+        }
+      ]
+    },
+    "percentOfTranscribed": 88,
+    "percentOfVerified": null
+  },
+  {
+    "id": 252,
+    "titleLabel": "jjtest",
+    "dateCreated": "2022-05-27 17:23",
+    "creator": {
+      "id": 17,
+      "email": "jamrozy@man.poznan.pl"
+    },
+    "lastModificationDate": "2022-06-06 09:40",
+    "analyticInfo": {
+      "id": 252,
+      "title": "jjtest",
+      "language": null
+    },
+    "transcriptionInfo": {
+      "id": 252,
+      "releaseDate": "2011",
+      "description": "<p>aa</p>",
+      "sourcePublishDate": null,
+      "descriptionPlain": "aa",
+      "documentTypes": "podejrzane",
+      "documentSrc": "<p>nieznane</p>",
+      "documentSrcPlain": "nieznane",
+      "imgSrc": "<p>Julka mi dała</p>",
+      "imgSrcPlain": "Julka mi dała",
+      "collectionName": "",
+      "contactName": "",
+      "contactSurname": null,
+      "contactEmail": null,
+      "guidelines": null,
+      "guidelinesPlain": null
+    },
+    "profileDesc": {
+      "id": 252,
+      "keywords": [
+        "klucz"
+      ],
+      "summary": null,
+      "links": []
+    },
+    "pages": {
+      "hits": 1,
+      "count": 1,
+      "page": 1,
+      "perpage": 6,
+      "pages": 1,
+      "list": [
+        {
+          "id": 2187,
+          "pageLayers": [
+            {
+              "page": {
+                "id": "2187"
+              },
+              "layer": {
+                "id": "252",
+                "name": "Default layer"
+              },
+              "percentOfTranscribed": 100,
+              "addedOn": "2022-06-03T10:14:36.507+00:00"
+            }
+          ],
+          "path": "wiewior_square.jpg",
+          "pageNo": 1,
+          "relativeNo": null,
+          "boundingBox": {
+            "upperLeftX": 0,
+            "upperLeftY": 0,
+            "lowerRightX": 238,
+            "lowerRightY": 238
+          },
+          "thumbnailUrl": "https://wlt-portal-ui-bsa-bad.apps.paas-dev.psnc.pl/iipsrv/iipsrv.fcgi/?IIIF=t252/wiewior_square_Page0000.tif/pct:0,0,100.0,100.0/!300,300/0/default.jpg",
+          "percentOfTranscribed": 100,
+          "lastModificationDate": "2022-06-06 09:40"
+        }
+      ]
+    },
+    "percentOfTranscribed": 100,
+    "percentOfVerified": null
+  },
+  {
+    "id": 43,
+    "titleLabel": "Test",
+    "dateCreated": "2022-05-24 16:19",
+    "creator": {
+      "id": 3,
+      "email": "email@wp.pl"
+    },
+    "lastModificationDate": "2022-05-24 16:59",
+    "analyticInfo": {
+      "id": 43,
+      "title": "Test"
+    },
+    "transcriptionInfo": {
+      "id": 43,
+      "releaseDate": null,
+      "description": "description43",
+      "sourcePublishDate": null,
+      "descriptionPlain": "description43",
+      "documentTypes": null,
+      "documentSrc": null,
+      "documentSrcPlain": null,
+      "imgSrc": null,
+      "imgSrcPlain": null,
+      "collectionName": null,
+      "contactName": null,
+      "contactSurname": null,
+      "contactEmail": null,
+      "guidelines": null,
+      "guidelinesPlain": null
+    },
+    "profileDesc": {
+      "id": 43,
+      "keywords": [],
+      "summary": null,
+      "links": []
+    },
+    "pages": {
+      "hits": 3,
+      "count": 3,
+      "page": 1,
+      "perpage": 6,
+      "pages": 1,
+      "list": [
+        {
+          "id": 103,
+          "pageLayers": [],
+          "path": "Image7.jpg",
+          "pageNo": 1,
+          "relativeNo": null,
+          "boundingBox": {
+            "upperLeftX": 0,
+            "upperLeftY": 0,
+            "lowerRightX": 2706,
+            "lowerRightY": 4042
+          },
+          "thumbnailUrl": "/iipsrv/iipsrv.fcgi/?IIIF=t43/Image7_Page0000.tif/pct:0,0,100.0,66.9/!300,300/0/default.jpg",
+          "percentOfTranscribed": 100,
+          "lastModificationDate": "2022-05-24 16:19"
+        },
+        {
+          "id": 104,
+          "pageLayers": [],
+          "path": "Image8.jpg",
+          "pageNo": 2,
+          "relativeNo": null,
+          "boundingBox": {
+            "upperLeftX": 0,
+            "upperLeftY": 0,
+            "lowerRightX": 2706,
+            "lowerRightY": 4042
+          },
+          "thumbnailUrl": "/iipsrv/iipsrv.fcgi/?IIIF=t43/Image8_Page0000.tif/pct:0,0,100.0,66.9/!300,300/0/default.jpg",
+          "percentOfTranscribed": 100,
+          "lastModificationDate": "2022-05-24 16:19"
+        },
+        {
+          "id": 105,
+          "pageLayers": [],
+          "path": "Image9.jpg",
+          "pageNo": 3,
+          "relativeNo": null,
+          "boundingBox": {
+            "upperLeftX": 0,
+            "upperLeftY": 0,
+            "lowerRightX": 2706,
+            "lowerRightY": 4042
+          },
+          "thumbnailUrl": "/iipsrv/iipsrv.fcgi/?IIIF=t43/Image9_Page0000.tif/pct:0,0,100.0,66.9/!300,300/0/default.jpg",
+          "percentOfTranscribed": 0,
+          "lastModificationDate": "2022-05-24 16:19"
+        }
+      ]
+    },
+    "percentOfTranscribed": 66,
+    "percentOfVerified": null
+  }
+]

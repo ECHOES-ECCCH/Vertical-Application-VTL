@@ -1,0 +1,153 @@
+@import "@Styles/viewer/_viewer-colors.sass"
+    
+.osd-overlay
+    border: 1px solid rgba(0,0,0,0)
+    &--visible
+        border: 1px solid $viewerColorPrimary500
+
+    &--drawing
+        @extend .osd-overlay
+        border: 3px solid $viewerColorPrimary500
+
+    &--highlight
+        @extend .osd-overlay
+        border: 3px solid $viewerColorPrimary500
+        &.h-disabled
+            pointer-events: none
+
+.osd-word-overlay
+    border: 1px dashed $viewerColorPrimary500
+    box-shadow: 1px 1px 3px $viewerColorPrimary500
+
+    &--highlight
+        @extend .osd-word-overlay
+        border: 3px dashed $viewerColorPrimary500
+        &.h-disabled
+            pointer-events: none
+
+.osd-music-overlay
+    border: 1px solid $viewerColorMusic
+
+    &--highlight
+        @extend .osd-music-overlay
+        border: 3px solid $viewerColorMusic
+        &.h-disabled
+            pointer-events: none
+
+    .versenumber
+        background-color: $viewerColorMusic
+
+    .leftbottom, .righttop
+        width: 8px
+        height: 8px
+        display: block
+        border: 2px solid $viewerColorMusic
+        background-color: $viewerColorMusic
+        position: absolute
+        cursor: ne-resize
+
+.osd-annotation-overlay
+    border: 3px solid $viewerColorAnnotation500
+    box-shadow: -2px 2px 4px 1px #15475CCC
+
+    &--highlight
+        @extend .osd-annotation-overlay
+        border: 3px solid $viewerColorAnnotation100
+        &.h-disabled
+            pointer-events: none
+
+    .versenumber
+        background-color: $viewerColorAnnotation100
+        
+        span
+            color: black !important
+
+    .leftbottom, .righttop
+        width: 8px
+        height: 8px
+        display: block
+        border: 2px solid $viewerColorAnnotation100
+        background-color: $viewerColorAnnotation100
+        position: absolute
+        cursor: ne-resize
+
+.osd-annotation-point-overlay
+    width: 8px !important
+    height: 8px !important
+    margin-left: -2px
+    margin-top: -2px
+    background-color: $viewerColorAnnotation500
+    border-radius: 100%
+
+    .versenumber
+        background-color: $viewerColorAnnotation100
+        
+        span
+            color: black !important
+
+    &--highlight
+        @extend .osd-annotation-point-overlay
+        border: 3px solid $viewerColorAnnotation100
+        background-color: $viewerColorAnnotation500
+        border-radius: 100%
+        &.h-disabled
+            pointer-events: none
+
+.osd-drawing
+    cursor: nwse-resize
+
+.osd-drawing-point
+    cursor: move
+
+.versenumber
+    position: absolute
+    left: -3px
+    top: -22px
+    height: 20px
+    padding-left: 4px
+    padding-right: 4px
+    background-color: $viewerColorPrimary500
+    user-select: none
+    z-index: 2
+
+    span
+        color: #FFFFFF
+        display: block
+        margin-top: -1px
+        font-size: 12px
+
+
+.leftbottom, .righttop
+    width: 8px
+    height: 8px
+    display: block
+    border: 2px solid $viewerColorPrimary500
+    background-color: $viewerColorPrimary500
+    position: absolute
+    cursor: ne-resize
+
+.inner-handler
+    width: 100%
+    height: 100%
+    cursor: move
+
+.inner-point-handler
+    width: 100%
+    height: 100%
+    min-width: 10px
+    min-height: 10px
+    margin-left: -5px
+    margin-top: -5px
+    cursor: move 
+    position: absolute
+    display: block
+    left: 50%
+    top: 50%
+
+.leftbottom
+    left: -5px
+    bottom: -5px
+
+.righttop
+    right: -5px
+    top: -5px

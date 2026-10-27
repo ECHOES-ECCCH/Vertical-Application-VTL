@@ -1,0 +1,60 @@
+.auth
+    display: flex
+    flex-direction: column
+
+    &-form
+        width: 100%
+        margin: 20px auto 0
+        max-width: 500px
+        color: #373A3C
+
+        &__fields
+            margin-top: 50px
+
+            &--small-margin
+                margin-top: 25px
+
+        &__passwordtip
+            margin: 5px 0 20px
+            +desktop
+                width: 90%
+
+        &__text
+            &--header
+                margin: 0
+                font-weight: bold
+                font-size: 1.75rem
+
+            &--subheader
+                margin: 15px 0 0
+                font-size: 1rem
+                color: #667375
+
+            &--gray
+                color: #667375
+
+    &-submit
+        +small-devices
+            margin-top: 30px
+
+        &__row
+            align-items: baseline
+
+        &__col
+            &--tobutton
+                +mobile-small
+                    margin-bottom: 15px
+                +small-devices
+                    text-align: right
+                    font-size: 1rem
+
+        &__button
+            width: 100%
+
+    &-link
+        color: #1A73E8
+        &:hover,
+        &:focus
+            color: #0E60CA
+        &:active
+            color: #373A3C

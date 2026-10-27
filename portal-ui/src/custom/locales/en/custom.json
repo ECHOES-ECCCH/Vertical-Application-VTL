@@ -1,0 +1,17 @@
+{
+	"financed": {
+		"text": "ECHOES is a project funded by the European Commission under Grant Agreement n.101157364 – ECHOES. Funded by UK Research and Innovation (UKRI) under the UK government’s Horizon Europe funding guarantee n.10110142 & n.10110466."
+	},
+	"modals": {
+		"createDigitalTwin": {
+			"title": "Digital Twin creation",
+			"bodyHTML": "This means sending the project's data to the Knowledge Base.<br>Are you sure you want to continue?",
+			"button": "Create"
+		}
+	},
+	"transcription": {
+		"details" : {
+			"createDigitalTwin": "Create digital twin"
+		}
+	}
+}
