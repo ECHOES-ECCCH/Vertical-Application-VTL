@@ -1,0 +1,14 @@
+databaseChangeLog:
+    - changeSet:
+          id: 00009-WLT_321-1
+          author: swolarz
+          comment: Update eng and deu as trainable languages
+          changes:
+              - update:
+                    tableName: ocr_training_lang_stats
+                    columns:
+                        - column:
+                              name: trainable
+                              value: 't'
+                    where: lang in ('ENG', 'DEU', 'FRA', 'LAT', 'RUS')
+

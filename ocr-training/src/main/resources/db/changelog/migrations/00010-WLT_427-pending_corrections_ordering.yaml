@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: 00010-WLT_427-1
+      author: swolarz
+      description: Add queueuing time column for ordering pending corrections
+      changes:
+        - addColumn:
+            tableName: pending_ocr_corrections
+            columns:
+              - column:
+                  name: queue_time
+                  type: timestamp
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 00010-WLT_427-2
+      author: swolarz
+      description: Add indexes for fast pending corrections queue lookup
+      changes:
+        - createIndex:
+            indexName: pending_corrections_lookup_idx
+            tableName: pending_ocr_corrections
+            columns:
+              - column:
+                  name: queue_time

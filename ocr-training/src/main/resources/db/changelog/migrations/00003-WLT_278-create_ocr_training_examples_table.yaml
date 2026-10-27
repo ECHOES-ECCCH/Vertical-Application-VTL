@@ -1,0 +1,33 @@
+databaseChangeLog:
+    - changeSet:
+          id: 00003-WLT_278-1
+          author: swolarz
+          comment: Create table for OCR training examples
+          changes:
+              - createTable:
+                    tableName: ocr_training_examples
+                    columns:
+                        - column:
+                              name: id
+                              type: bigint
+                              autoIncrement: true
+                              constraints:
+                                  primaryKey: true
+                                  nullable: false
+                        -   column:
+                                name: correct_text
+                                type: text
+                                constraints:
+                                    nullable: false
+                        - column:
+                              name: image_path
+                              type: varchar(255)
+                              constraints:
+                                  unique: true
+                                  nullable: false
+                        - column:
+                              name: image_format
+                              type: varchar(32)
+                              constraints:
+                                  nullable: false
+

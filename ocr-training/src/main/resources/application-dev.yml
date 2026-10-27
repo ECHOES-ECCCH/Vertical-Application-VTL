@@ -1,0 +1,13 @@
+
+
+spring:
+    datasource:
+        url: "jdbc:postgresql://${OCR_TRAIN_DB_HOST:localhost}:${OCR_TRAIN_DB_PORT:8432}/${OCR_TRAIN_DB_NAME:vtl_ocr_training}"
+        username: "${OCR_TRAIN_DB_USER:vtl_ocr_user}"
+        password: "${OCR_TRAIN_DB_PASS:vtl_ocr_pass}"
+
+vtl:
+    ocr:
+        training:
+            procedure:
+                max-iterations: 500
