@@ -1,0 +1,16 @@
+/.idea/*
+/target/*
+/wlt-portal.iml
+/.env
+/.settings/*
+/.project
+/.classpath
+/docker-compose.override.yml
+emails.log
+adfs.log
+login.log
+/logs.*
+/node_modules/
+/LOG_DIR_IS_UNDEFINED/
+**/.buildinfo
+/bin/

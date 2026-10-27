@@ -1,0 +1,65 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title xml:lang="pol">Rota 35, Księga Ziemska 1, Karty 25v — 26, Poznań</tei:title>
+                <tei:title xml:lang="eng">Rotha 35, Land Court Book 1, Pages 25v — 26, Poznań</tei:title>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:publisher>
+                    <tei:orgName>ROThA</tei:orgName>
+                </tei:publisher>
+                <tei:date when="2019-09-10"/>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:biblStruct>
+                    <tei:monogr>
+                        <tei:title xml:lang="pol">Rota 35, Księga Ziemska 1, Karty 25v — 26, Poznań</tei:title>
+                        <tei:title xml:lang="eng">Rotha 35, Land Court Book 1, Pages 25v — 26, Poznań</tei:title>
+                        <tei:author role="author">
+                            <tei:persName sameAs="Per.107">PISARZ 4</tei:persName>
+                        </tei:author>
+                        <tei:textLang mainLang="lat-med"/>
+                        <tei:textLang mainLang="pol-old" otherLangs="pol"/>
+                        <tei:imprint>
+                            <tei:pubPlace>Poznań</tei:pubPlace>
+                            <tei:date when="1388"/>
+                            <tei:biblScope unit="issue">35</tei:biblScope>
+                            <tei:biblScope unit="volume">PoZ1</tei:biblScope>
+                            <tei:biblScope unit="page" from="25v" to="26"/>
+                        </tei:imprint>
+                    </tei:monogr>
+                </tei:biblStruct>
+                <tei:msDesc>
+                    <tei:msIdentifier>
+                        <tei:repository>ROThA</tei:repository>
+                        <tei:idno>Pn.35</tei:idno>
+                    </tei:msIdentifier>
+                </tei:msDesc>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+        <tei:revisionDesc status="approved">
+            <tei:change when-iso="2019-09-10T15:05:25"/>
+        </tei:revisionDesc>
+    </tei:teiHeader>
+    <tei:text>
+        <tei:body>
+            <tei:pb n="1" facs="Pn.35/35_1388_25v_PoZ1_4.tif"/>
+            <tei:pb n="2" facs="Pn.35/35_1388_26_PoZ1_4.tif"/>
+            <tei:div type="original">
+                <tei:p xml:lang="lat-med">Sandzivogius Obezerskÿ ducit testes contra <tei:unclear>Ra</tei:unclear>dlonem: primus Bodzantha de Gora, item Gotardus de Bauorowo, item Nicolaus de Dambrowa, item Jacussius Stopirka, item Petrek Nosilinski, item Jura de Choÿnicza<tei:ref target="#f1">¹</tei:ref>. (26) <tei:foreign xml:lang="lat-med" source="independent-trigger">Sic iurabunt ad testimonium:</tei:foreign>
+                </tei:p>
+                <tei:note xml:id="f1">L. 313: Choyniczi.</tei:note>
+            </tei:div>
+            <tei:div type="transliteration">
+                <tei:p xml:lang="pol-old">Jaco tho ſwathczimi iaco radlo vibil Sandzivog<tei:unclear>a</tei:unclear>
+                    <tei:ref target="#f2">²</tei:ref>
+                    <tei:lb/> ſzeczthir<tei:ref target="#f2">²</tei:ref> ſladow ſzaſtavi ſzroſnowa i uanſal ſe.</tei:p>
+                <tei:note xml:id="f2">L. 313: Sandzivog[evi] szeczat, vansal.</tei:note>
+            </tei:div>
+            <tei:div type="transcription">
+                <tei:p xml:lang="pol-mod">Jako to świadczymy, jako Radło wybił Sędziwoja se cztyr śladow zastawy, s Rożnowa i wwiązał sie.</tei:p>
+            </tei:div>
+        </tei:body>
+    </tei:text>
+</tei:TEI>

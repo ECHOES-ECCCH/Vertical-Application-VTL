@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title id="1" level="m" type="main">TranscriptionId_1</title>
+                    </monogr>
+                </biblStruct>
+                <msDesc>
+                    <msIdentifier>
+                        <repositiory>VTL-REPO</repositiory>
+                        <idno>VTL-T1</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <titleStmt>
+                <title copyOf="1" level="m" type="main">TranscriptionId_1</title>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <sourceDoc>
+        <surface id="page_1" ulx="0" uly="0" lrx="2595" lry="3759">
+            <zone type="list">
+                <zone ulx="1" uly="1" lrx="9" lry="10" type="item">
+                    <line ulx="1" uly="1" lrx="9" lry="10">Ala ma kota1</line>
+                </zone>
+                <zone ulx="3" uly="1" lrx="7" lry="12" type="item">
+                    <line ulx="3" uly="1" lrx="7" lry="12">Ala ma kota2</line>
+                </zone>
+                <zone ulx="5" uly="4" lrx="110" lry="105" type="item">
+                    <line ulx="5" uly="4" lrx="110" lry="105">Ala ma kota3</line>
+                </zone>
+                <zone ulx="1" uly="1" lrx="9" lry="10" type="item">
+                    <line ulx="1" uly="1" lrx="9" lry="10">Ala ma kota4</line>
+                </zone>
+                <zone ulx="1" uly="1" lrx="9" lry="10" type="item">
+                    <line ulx="1" uly="1" lrx="9" lry="10">Ala ma kota5</line>
+                </zone>
+            </zone>
+        </surface>
+        <surface id="page_2" ulx="0" uly="0" lrx="2595" lry="3759">
+            <zone type="figure" ulx="400" uly="2000" lrx="1900" lry="2200">
+                <zone ulx="400" uly="2000" lrx="1900" lry="2200" type="figureHead">
+                    <line ulx="400" uly="2000" lrx="1900" lry="2200">113874II/5a-b</line>
+                </zone>
+            </zone>
+            <zone ulx="300" uly="2300" lrx="2100" lry="2400" type="p">
+                <line ulx="300" uly="2300" lrx="2100" lry="2400">Redaktor wydawnictwa Anna Kosmulska</line>
+            </zone>
+            <zone ulx="300" uly="2405" lrx="2100" lry="2510" type="p">
+                <line ulx="300" uly="2405" lrx="2100" lry="2510">Redaktor naczelny Alicja Januszczak</line>
+            </zone>
+            <zone ulx="200" uly="2550" lrx="2200" lry="2630" type="p">
+                <line ulx="200" uly="2550" lrx="2200" lry="2630">© Copyright by Zakład Narodowy im. Ossoliskich - Wydawnictwo, Wrocław 1981.</line>
+            </zone>
+            <zone ulx="350" uly="2810" lrx="2000" lry="2910" type="p">
+                <line ulx="350" uly="2700" lrx="2000" lry="2800">ISBN 83-04-00300-7 całość</line>
+                <line ulx="350" uly="2810" lrx="2000" lry="2910">ISBN 83-04-00489-5</line>
+            </zone>
+            <zone type="list">
+                <zone ulx="300" uly="3200" lrx="2150" lry="3290" type="item">
+                    <line ulx="300" uly="3000" lrx="2150" lry="3090">Zakład Narodowy im. Ossolińskich - Wydawnicwto Wrocław 1981.</line>
+                    <line ulx="300" uly="3100" lrx="2150" lry="3190">Nakład: 400 egz. Objętość: ark. wyd 32,90.</line>
+                    <line ulx="300" uly="3200" lrx="2150" lry="3290">Papier druk. sat. kl. III, 80g.</line>
+                </zone>
+                <zone ulx="300" uly="3300" lrx="2150" lry="3390" type="item">
+                    <line ulx="300" uly="3300" lrx="2150" lry="3390">Podpisano do druku 22 I 1981. Druk ukończono w lutym 1981.</line>
+                </zone>
+                <zone ulx="300" uly="3300" lrx="2150" lry="3390" type="item">
+                    <line ulx="300" uly="3300" lrx="2150" lry="3390">Wrocławska Drukarnia Naukowa. Zam. 2064/80 - B3 - cena zł 130. -</line>
+                </zone>
+            </zone>
+            <zone ulx="950" uly="3600" lrx="1090" lry="3680" type="footer">
+                <line ulx="900" uly="3500" lrx="1180" lry="3580">Bibl. UAM</line>
+                <line ulx="950" uly="3600" lrx="1090" lry="3680">K</line>
+            </zone>
+        </surface>
+        <surface id="page_3" ulx="0" uly="0" lrx="2595" lry="3759">
+            <zone ulx="50" uly="100" lrx="150" lry="200" type="pageNum">
+                <line ulx="50" uly="100" lrx="150" lry="200">249</line>
+            </zone>
+            <zone ulx="50" uly="540" lrx="2400" lry="640" type="p">
+                <line ulx="50" uly="300" lrx="2400" lry="400">Thomaislai tests Merczinkowsky: [[Ofzep de Regowo advocatus]] {primus</line>
+                <line ulx="50" uly="420" lrx="2400" lry="520">Derslaus de Oczweka}, secundus Nicolaus de Oczwÿke, tercius Thurinskÿ</line>
+                <line ulx="50" uly="540" lrx="2400" lry="640">Derslaus, quartus Mirzantha Caczkowsky, quintus Sbiluth Kaczkowskÿ</line>
+            </zone>
+            <zone type="list">
+                <zone ulx="50" uly="1180" lrx="421" lry="1280" type="item">
+                    <line ulx="50" uly="700" lrx="2400" lry="800">318. (89v) - Paxima rotha Miroslaii testibus contra Paxino Stani-</line>
+                    <line ulx="50" uly="820" lrx="240" lry="920">slaum:</line>
+                    <line ulx="50" uly="940" lrx="2400" lry="1040">318a. (89v) - (IV 37 r. ca &lt;strong&gt;1430&lt;/strong&gt; –  Item &amp;lt;...&amp;gt; nobilis N&amp;lt;...&amp;gt;sky debet i&amp;lt;ura-</line>
+                    <line ulx="50" uly="1060" lrx="2400" lry="1160">re&amp;gt; Nobilis et S&amp;lt;...&amp;gt;de &lt;em&gt;Creszcz&lt;/em&gt; ad proximus termonos &amp;lt;particulares&amp;gt;</line>
+                    <line ulx="50" uly="1180" lrx="421" lry="1280">tali rotha:</line>
+                </zone>
+            </zone>
+            <zone ulx="50" uly="1420" lrx="2400" lry="1520" type="p">
+                <line ulx="50" uly="1300" lrx="2400" lry="1400">319. (90) – Testes. Miroslaw de Paxino erga Taxinszky (!) Stanoslaun</line>
+                <line ulx="50" uly="1420" lrx="2400" lry="1520">Mathiam. Testes: Mathias Zoleczsky, secundus Paulus Zoleczszky, tercius</line>
+            </zone>
+            <zone type="figure" ulx="50" uly="1420" lrx="2400" lry="1520"/>
+        </surface>
+        <surface id="page_4" ulx="0" uly="0" lrx="2595" lry="3759">
+            <zone ulx="50" uly="100" lrx="2100" lry="150" type="head">
+                <line ulx="50" uly="100" lrx="2100" lry="150">Pisarz 14, ks. III r. 1427; pisarz 15, ks. IV r 1429 i pisarz 16, ks. IV r. 1430</line>
+            </zone>
+            <zone ulx="2300" uly="100" lrx="2400" lry="200" type="pageNum">
+                <line ulx="2300" uly="100" lrx="2400" lry="200">250</line>
+            </zone>
+            <zone type="table">
+                <zone type="row">
+                    <zone ulx="200" uly="920" lrx="800" lry="1020" type="cell">
+                        <line ulx="200" uly="700" lrx="800" lry="800">Tako mÿ pomosſÿ bog ÿſzwynntyj</line>
+                        <line ulx="200" uly="810" lrx="800" lry="910">kryfz Jakotho ſwathczimi ikao ka-</line>
+                        <line ulx="200" uly="920" lrx="800" lry="1020">tha|rzina nyqgdt bogushewa</line>
+                    </zone>
+                    <zone ulx="1000" uly="920" lrx="1800" lry="1020" type="cell">
+                        <line ulx="1000" uly="700" lrx="1800" lry="800">Tako mi pomoży Bog i święty</line>
+                        <line ulx="1000" uly="810" lrx="1800" lry="910">krzyż, jako to świadczymy, jako</line>
+                        <line ulx="1000" uly="920" lrx="1800" lry="1020">Katarzyna mnidy Boguszewa żpmna</line>
+                    </zone>
+                </zone>
+                <zone type="row">
+                    <zone ulx="200" uly="1150" lrx="800" lry="1250" type="cell">
+                        <line ulx="200" uly="1040" lrx="800" lry="1140">poſzagu &lt;em&gt;deece marcarun grossoru&lt;/em&gt;</line>
+                        <line ulx="200" uly="1150" lrx="800" lry="1250">&lt;em&gt;latorym yney | nyulos &lt;/em&gt; wdom</line>
+                    </zone>
+                    <zone ulx="1000" uly="1150" lrx="1800" lry="1250" type="cell">
+                        <line ulx="1000" uly="1040" lrx="1800" lry="1140">podsagu - - - - i nie wnmisła w dom</line>
+                        <line ulx="1000" uly="1150" lrx="1800" lry="1250">Dobiesław&amp;lt;w&amp;gt;ow Grodzi&amp;lt;e&amp;gt;go</line>
+                    </zone>
+                </zone>
+                <zone type="row">
+                    <zone ulx="200" uly="1270" lrx="1800" lry="1370" type="cell">
+                        <line ulx="200" uly="1270" lrx="1800" lry="1370">{Grodzedz testumus rotha Baranmek}</line>
+                    </zone>
+                </zone>
+            </zone>
+            <zone ulx="150" uly="1700" lrx="2000" lry="1800" type="divHead1">
+                <line ulx="150" uly="1700" lrx="2000" lry="1800">Przciwko Hance z Kiszkowa o &lt;em&gt;czterrze&lt;/em&gt; grzywny  przez dziweięc skot</line>
+            </zone>
+            <zone ulx="150" uly="1820" lrx="450" lry="1920" type="divHead1">
+                <line ulx="150" uly="1820" lrx="450" lry="1920">rękojmią</line>
+            </zone>
+            <zone ulx="150" uly="1980" lrx="2000" lry="2080" type="divHead2">
+                <line ulx="150" uly="1980" lrx="2000" lry="2080">Mirosław Maćka Stanisława Jędrzeja</line>
+            </zone>
+            <zone ulx="150" uly="2100" lrx="2000" lry="2200" type="divHead3">
+                <line ulx="150" uly="2100" lrx="2000" lry="2200">Zapisa łacińska z rkp. po nastęþnej rocie, odnoszącej się do in-</line>
+            </zone>
+            <zone ulx="150" uly="2220" lrx="2000" lry="2320" type="divHead3">
+                <line ulx="150" uly="2220" lrx="2000" lry="2320">nej sprawy.</line>
+            </zone>
+        </surface>
+    </sourceDoc>
+</TEI>

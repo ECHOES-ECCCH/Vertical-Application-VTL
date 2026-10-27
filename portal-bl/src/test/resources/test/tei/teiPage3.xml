@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title id="1" level="m" type="main">PageId_3</title>
+                    </monogr>
+                </biblStruct>
+                <msDesc>
+                    <msIdentifier>
+                        <repositiory>VTL-REPO</repositiory>
+                        <idno>VTL-T1</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <titleStmt>
+                <title copyOf="1" level="m" type="main">PageId_3</title>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <sourceDoc>
+        <surface id="page_3" ulx="0" uly="0" lrx="2595" lry="3759">
+            <zone ulx="50" uly="100" lrx="150" lry="200" type="pageNum">
+                <line ulx="50" uly="100" lrx="150" lry="200">249</line>
+            </zone>
+            <zone ulx="50" uly="540" lrx="2400" lry="640" type="p">
+                <line ulx="50" uly="300" lrx="2400" lry="400">Thomaislai tests Merczinkowsky: [[Ofzep de Regowo advocatus]] {primus</line>
+                <line ulx="50" uly="420" lrx="2400" lry="520">Derslaus de Oczweka}, secundus Nicolaus de Oczwÿke, tercius Thurinskÿ</line>
+                <line ulx="50" uly="540" lrx="2400" lry="640">Derslaus, quartus Mirzantha Caczkowsky, quintus Sbiluth Kaczkowskÿ</line>
+            </zone>
+            <zone type="list">
+                <zone ulx="50" uly="1180" lrx="421" lry="1280" type="item">
+                    <line ulx="50" uly="700" lrx="2400" lry="800">318. (89v) - Paxima rotha Miroslaii testibus contra Paxino Stani-</line>
+                    <line ulx="50" uly="820" lrx="240" lry="920">slaum:</line>
+                    <line ulx="50" uly="940" lrx="2400" lry="1040">318a. (89v) - (IV 37 r. ca &lt;strong&gt;1430&lt;/strong&gt; –  Item &amp;lt;...&amp;gt; nobilis N&amp;lt;...&amp;gt;sky debet i&amp;lt;ura-</line>
+                    <line ulx="50" uly="1060" lrx="2400" lry="1160">re&amp;gt; Nobilis et S&amp;lt;...&amp;gt;de &lt;em&gt;Creszcz&lt;/em&gt; ad proximus termonos &amp;lt;particulares&amp;gt;</line>
+                    <line ulx="50" uly="1180" lrx="421" lry="1280">tali rotha:</line>
+                </zone>
+            </zone>
+            <zone ulx="50" uly="1420" lrx="2400" lry="1520" type="p">
+                <line ulx="50" uly="1300" lrx="2400" lry="1400">319. (90) – Testes. Miroslaw de Paxino erga Taxinszky (!) Stanoslaun</line>
+                <line ulx="50" uly="1420" lrx="2400" lry="1520">Mathiam. Testes: Mathias Zoleczsky, secundus Paulus Zoleczszky, tercius</line>
+            </zone>
+            <zone type="figure" ulx="50" uly="1420" lrx="2400" lry="1520"/>
+        </surface>
+    </sourceDoc>
+</TEI>

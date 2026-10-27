@@ -1,0 +1,87 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title type="main">Karaimizm</tei:title>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:publisher>
+                    <tei:orgName>Związek Karaimów Polskich</tei:orgName>
+                </tei:publisher>
+                <tei:date when="2016-11-07"/>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:biblStruct>
+                    <tei:monogr>
+                        <tei:title type="main" level="m">Karaimizm</tei:title>
+                        <tei:author>
+                            <tei:persName sameAs="Per.61">Szymon Szyszman</tei:persName>
+                        </tei:author>
+                        <tei:editor role="editor">
+                            <tei:persName sameAs="Per.48">Mariola Abkowicz</tei:persName>
+                        </tei:editor>
+                        <tei:editor role="editor">
+                            <tei:persName sameAs="Per.62">Adam Dubiński</tei:persName>
+                        </tei:editor>
+                        <tei:editor role="editor">
+                            <tei:persName sameAs="Per.63">Piotr Muchowski</tei:persName>
+                        </tei:editor>
+                        <tei:editor role="editor">
+                            <tei:persName sameAs="Per.51">Szymon Pilecki</tei:persName>
+                        </tei:editor>
+                        <tei:editor role="editor">
+                            <tei:persName sameAs="Per.47">Anna Sulimowicz</tei:persName>
+                        </tei:editor>
+                        <tei:editor role="translator">
+                            <tei:persName sameAs="Per.60">Anna Abkowicz</tei:persName>
+                        </tei:editor>
+                        <tei:editor role="translator">
+                            <tei:persName sameAs="Per.278">Irena Jaroszyńska</tei:persName>
+                        </tei:editor>
+                        <tei:imprint>
+                            <tei:pubPlace>Wrocław</tei:pubPlace>
+                            <tei:publisher>Bitik - Oficyna Wydawnicza ZKP</tei:publisher>
+                            <tei:date when="2005"/>
+                            <tei:biblScope unit="cm">
+                                <tei:dimensions unit="cm">
+                                    <tei:width>22</tei:width>
+                                    <tei:height>25</tei:height>
+                                </tei:dimensions>
+                            </tei:biblScope>
+                            <tei:biblScope unit="page">229</tei:biblScope>
+                            <tei:biblScope>
+                                <tei:note>ISBN-13: 978-83-920068-3-1 &lt;BR&gt; Na okładce błędnie podany podtytuł: Historia i doktryna</tei:note>
+                            </tei:biblScope>
+                        </tei:imprint>
+                        <tei:idno type="isbn">83-920068-3-6</tei:idno>
+                        <tei:sponsor>Ministerstwo Kultury</tei:sponsor>
+                        <tei:sponsor>Ministerstwo Spraw wewnętrznych i administracji</tei:sponsor>
+                        <tei:sponsor>Samorząd Województwa Dolnośląskiego</tei:sponsor>
+                        <tei:note>ISBN-13: 978-83-920068-3-1 &lt;BR&gt; Na okładce błędnie podany podtytuł: Historia i doktryna</tei:note>
+                    </tei:monogr>
+                </tei:biblStruct>
+                <tei:msDesc>
+                    <tei:msIdentifier>
+                        <tei:repository>KARAIM-LITERATURE</tei:repository>
+                        <tei:idno>Bo.18</tei:idno>
+                    </tei:msIdentifier>
+                </tei:msDesc>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+        <tei:revisionDesc status="approved">
+            <tei:change when-iso="2016-11-07T00:00"/>
+        </tei:revisionDesc>
+        <tei:profileDesc>
+            <tei:textClass>
+                <tei:keywords>
+                    <tei:term>Historia</tei:term>
+                </tei:keywords>
+            </tei:textClass>
+        </tei:profileDesc>
+    </tei:teiHeader>
+    <tei:text>
+        <tei:body>
+            <tei:p/>
+        </tei:body>
+    </tei:text>
+</tei:TEI>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title id="1" level="m" type="main">PageId_2</title>
+                    </monogr>
+                </biblStruct>
+                <msDesc>
+                    <msIdentifier>
+                        <repositiory>VTL-REPO</repositiory>
+                        <idno>VTL-T1</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <titleStmt>
+                <title copyOf="1" level="m" type="main">PageId_2</title>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <sourceDoc>
+        <surface id="page_2" ulx="0" uly="0" lrx="2595" lry="3759">
+            <zone type="figure" ulx="400" uly="2000" lrx="1900" lry="2200">
+                <zone ulx="400" uly="2000" lrx="1900" lry="2200" type="figureHead">
+                    <line ulx="400" uly="2000" lrx="1900" lry="2200">113874II/5a-b</line>
+                </zone>
+            </zone>
+            <zone ulx="300" uly="2300" lrx="2100" lry="2400" type="p">
+                <line ulx="300" uly="2300" lrx="2100" lry="2400">Redaktor wydawnictwa Anna Kosmulska</line>
+            </zone>
+            <zone ulx="300" uly="2405" lrx="2100" lry="2510" type="p">
+                <line ulx="300" uly="2405" lrx="2100" lry="2510">Redaktor naczelny Alicja Januszczak</line>
+            </zone>
+            <zone ulx="200" uly="2550" lrx="2200" lry="2630" type="p">
+                <line ulx="200" uly="2550" lrx="2200" lry="2630">© Copyright by Zakład Narodowy im. Ossoliskich - Wydawnictwo, Wrocław 1981.</line>
+            </zone>
+            <zone ulx="350" uly="2810" lrx="2000" lry="2910" type="p">
+                <line ulx="350" uly="2700" lrx="2000" lry="2800">ISBN 83-04-00300-7 całość</line>
+                <line ulx="350" uly="2810" lrx="2000" lry="2910">ISBN 83-04-00489-5</line>
+            </zone>
+            <zone type="list">
+                <zone ulx="300" uly="3200" lrx="2150" lry="3290" type="item">
+                    <line ulx="300" uly="3000" lrx="2150" lry="3090">Zakład Narodowy im. Ossolińskich - Wydawnicwto Wrocław 1981.</line>
+                    <line ulx="300" uly="3100" lrx="2150" lry="3190">Nakład: 400 egz. Objętość: ark. wyd 32,90.</line>
+                    <line ulx="300" uly="3200" lrx="2150" lry="3290">Papier druk. sat. kl. III, 80g.</line>
+                </zone>
+                <zone ulx="300" uly="3300" lrx="2150" lry="3390" type="item">
+                    <line ulx="300" uly="3300" lrx="2150" lry="3390">Podpisano do druku 22 I 1981. Druk ukończono w lutym 1981.</line>
+                </zone>
+                <zone ulx="300" uly="3300" lrx="2150" lry="3390" type="item">
+                    <line ulx="300" uly="3300" lrx="2150" lry="3390">Wrocławska Drukarnia Naukowa. Zam. 2064/80 - B3 - cena zł 130. -</line>
+                </zone>
+            </zone>
+            <zone ulx="950" uly="3600" lrx="1090" lry="3680" type="footer">
+                <line ulx="900" uly="3500" lrx="1180" lry="3580">Bibl. UAM</line>
+                <line ulx="950" uly="3600" lrx="1090" lry="3680">K</line>
+            </zone>
+        </surface>
+    </sourceDoc>
+</TEI>
