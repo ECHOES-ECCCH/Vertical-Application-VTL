@@ -1,4 +1,4 @@
-package pl.psnc.vtl.ocr.api.ocr.tesseract;
+package pl.psnc.vtl.ocr.api.ocr;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

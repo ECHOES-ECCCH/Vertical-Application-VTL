@@ -2,7 +2,7 @@ package pl.psnc.vtl.ocr.domain.ocr.exception;
 
 import pl.psnc.vtl.ocr.api.error.ErrorCode;
 import pl.psnc.vtl.ocr.api.error.VtlOcrException;
-import pl.psnc.vtl.ocr.api.ocr.tesseract.VerseBboxDto;
+import pl.psnc.vtl.ocr.api.ocr.VerseBboxesDto.VerseBboxDto;
 
 public class OcrRecognitionException extends VtlOcrException {
 

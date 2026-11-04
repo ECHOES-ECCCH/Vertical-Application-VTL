@@ -1,6 +1,5 @@
-package pl.psnc.vtl.ocr.api.ocr.tesseract;
+package pl.psnc.vtl.ocr.api.ocr;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -10,8 +9,7 @@ import pl.psnc.vtl.ocr.api.error.VtlOcrException;
 import pl.psnc.vtl.ocr.api.error.base.BaseVtlExceptionHandler;
 
 
-@RestControllerAdvice(assignableTypes = { TesseractController.class })
-@Slf4j
+@RestControllerAdvice(assignableTypes = { OcrController.class })
 class TesseractExceptionHandler extends BaseVtlExceptionHandler {
 
     @ExceptionHandler(VtlOcrException.class)
