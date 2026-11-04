@@ -976,32 +976,31 @@
       "body": "<p>Wklejony tekst jest zbyt długi. Jego długość została ograniczona do 4000 znaków.</p>",
       "button": "Rozumiem"
     },
+    "autoTranscribe": {
+      "select": {
+        "engine": "Silnik OCR",
+        "model": "Model OCR"
+      },
+      "checkbox": {
+        "handleColumns": "Rozpoznaj układ kolumnowy (wolniejsze)"
+      }
+    },
     "autoTranscribeVerse": {
       "title": "Transkrybuj wiersze automatycznie",
       "bodyHTML": "Automatyczna transkrypcja wierszy wyczyści aktualny tekst.<br>Czy jesteś pewny, że chcesz ponownie transkrybować wiersze?",
-      "select": {
-        "title": "Profil rozpoznania",
-        "default": "Wybierz język..."
-      },
       "button": "Rozpocznij rozpoznawanie"
     },
     "autoTranscribePage": {
       "title": "Transkrybuj strony automatycznie (OCR)",
       "titleSinglePage": "Transkrybuj stronę automatycznie (OCR)",
       "textLayerLabel": "Warstwa tekstowa",
-      "body": "Wybierz warstwę tekstową*, w której chcesz rozpoznać tekst",
+      "body": "Wybierz warstwę tekstową, w której chcesz zachować rezultat",
       "select": {
-        "titleProfile": "Wybierz język rozpoznania",
         "titleRange": "Określ zakres rozpoznania w wybranej warstwie tekstowej",
-        "default": "Wybierz język...",
         "ocrMode": {
           "update": "Uzupełnij tylko puste obszary tekstowe",
           "override": "Zastąp istniejący tekst w warstwie tekstowej"
-        },
-        "asterisk": "*Najlepiej użyć tej funkcji w warstwie teksowej, w której realizowana jest transkrypcja."
-      },
-      "checkbox": {
-        "handleColumns": "Rozpoznaj układ kolumnowy (wolniejsze)"
+        }
       },
       "button": "Rozpocznij rozpoznawanie"
     },
@@ -1033,19 +1032,13 @@
         "label": "Numery stron i/lub zakresy stron oddziel przecinkami"
       },
       "select": {
-        "titleProfile": "Wybierz język rozpoznania",
         "titleRange": "Określ zakres rozpoznania w wybranej warstwie tekstowej",
-        "default": "Wybierz język ...",
-        "selectLayer": "Wybierz warstwę tekstową*, w której chcesz rozpoznać tekst",
-        "asterisk": "*Najlepiej użyć tej funkcji w warstwie tekstowej, w której realizowana jest transkrypcja.",
+        "selectLayer": "Wybierz warstwę tekstową, w której chcesz rozpoznać tekst",
         "ocrMode": {
           "emptyonly": "Rozpoznaj tylko pliki z pustą warstwą tekstową",
           "update": "Uzupełnij tylko puste obszary tekstowe",
           "override": "Zastąp istniejący tekst w warstwie tekstowej"
         }
-      },
-      "checkbox": {
-        "handleColumns": "Rozpoznaj układ kolumnowy (wolniejsze)"
       },
       "button": "Rozpocznij rozpoznawanie",
       "notice": "Czas trwania rozpoznania zależy od ilości plików w projekcie i może zająć nawet kilka godzin."

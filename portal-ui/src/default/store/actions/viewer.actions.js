@@ -631,10 +631,10 @@ const submitCorrectTranscription = pageId => {
 	};
 };
 
-const submitAutoTranscribeVerses = (transcriptionId, layerId, versesIds, langs) => {
+const submitAutoTranscribeVerses = (transcriptionId, layerId, versesIds, modelIds) => {
 	return dispatch => {
 		dispatch(appActions.setLoading(true));
-		api.put(`/verses/content-recognition`, {verseIds: versesIds, languageCodes: langs})
+		api.put(`/verses/content-recognition`, {verseIds: versesIds, modelIds: modelIds})
 			.then(response => {
 				dispatch(appActions.setLoading(false));
 				dispatch(setVerseActive(null));
@@ -651,13 +651,13 @@ const submitAutoTranscribeVerses = (transcriptionId, layerId, versesIds, langs) 
 	};
 };
 
-const submitAutoTranscribePage = (transcriptionId, pageId, langs, ocrMode, handleColumns, selectedLayer) => {
+const submitAutoTranscribePage = (transcriptionId, pageId, models, ocrMode, handleColumns, selectedLayer) => {
 	return dispatch => {
-		const lang = encodeURIComponent(langs.join('+'));
+		const model = encodeURIComponent(models.join('+'));
 		dispatch(appActions.setLoading(true));
 		api.put(
 			`/transcriptions/${transcriptionId}/pages/${pageId}/recognize`
-				+ `?lang=${lang}`
+				+ `?model=${model}`
 				+ `&layerId=${selectedLayer}`
 				+ `&ocrMode=${ocrMode}`
 				+ `&handleColumns=${handleColumns && ocrMode !== "UPDATE"}`,

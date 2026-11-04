@@ -987,32 +987,31 @@
       "body": "<p>Der Text, den Sie eingefügt haben, ist zu lang. Er wurde auf 4000 Zeichen gekürzt.</p>",
       "button": "Ich verstehe"
     },
+    "autoTranscribe": {
+      "select": {
+        "engine": "OCR-Engine",
+        "model": "OCR-Modell"
+      },
+      "checkbox": {
+        "handleColumns": "Spaltenlayout erkennen (langsamer)"
+      }
+    },
     "autoTranscribeVerse": {
       "title": "Zeile automatisch transkribieren",
       "bodyHTML": "Die automatische Zeilentranskription löscht den aktuellen Text.<br>Möchten Sie die Zeile wirklich erneut transkribieren?",
-      "select": {
-        "title": "Erkennungsprofil",
-        "default": "Sprache wählen..."
-      },
       "button": "Start"
     },
     "autoTranscribePage": {
       "title": "Seiten automatisch transkribieren (OCR)",
       "titleSinglePage": "Seite automatisch transkribieren (OCR)",
       "textLayerLabel": "Textebene",
-      "body": "Wählen Sie die Textebene*, in der Sie Text erkennen möchten",
+      "body": "Wählen Sie die Textebene, in der Sie Text erkennen möchten",
       "select": {
-        "titleProfile": "Sprache für die Texterkennung auswählen",
         "titleRange": "Bereich der Texterkennung in der ausgewählten Textebene festlegen",
-        "default": "Sprache wählen...",
         "ocrMode": {
           "update": "Nur leere Textbereiche ergänzen",
           "override": "Vorhandenen Text in Textebene ersetzen"
-        },
-        "asterisk": "Am besten verwenden Sie diese Funktion in der Textebene, in der die Transkription durchgeführt wird."
-      },
-      "checkbox": {
-        "handleColumns": "Spaltenlayout erkennen (langsamer)"
+        }
       },
       "button": "Erkennung starten"
     },
@@ -1044,19 +1043,13 @@
         "label": "Seitenzahlen und/oder Seitenbereiche durch Kommas getrennt"
       },
       "select": {
-        "titleProfile": "Sprache für die Texterkennung auswählen",
         "titleRange": "Bereich der Texterkennung in der ausgewählten Textebene festlegen",
-        "default": "Sprache wählen...",
         "selectLayer": "Wählen Sie die Textebene, in der Sie Text erkennen möchten",
-        "asterisk": "*Am besten verwenden Sie diese Funktion in der Textebene, in der die Transkription durchgeführt wird.",
         "ocrMode": {
           "emptyonly": "Nur Dateien mit leerer Textebene erkennen",
           "update": "Nur leere Textbereiche ergänzen",
           "override": "Vorhandenen Text in Textebene ersetzen"
         }
-      },
-      "checkbox": {
-        "handleColumns": "Spaltenlayout erkennen (langsamer)"
       },
       "button": "Erkennung starten",
       "notice": "Die Dauer der Erkennung hängt von der Anzahl der Seiten im Projekt ab und kann mehrere Stunden dauern."
