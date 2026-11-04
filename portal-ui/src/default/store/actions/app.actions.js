@@ -57,7 +57,7 @@ const setMobilePanels = value => ({
 
 const getOCRProfiles = () => {
 	return dispatch => {
-		api.get("/ocr/languages").then(response => {
+		api.get("/ocrmodels").then(response => {
 			dispatch(receiveOCRProfiles(response.data));
 		});
 	};

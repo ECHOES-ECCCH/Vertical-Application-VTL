@@ -976,32 +976,31 @@
       "body": "<p>The text you have pasted is too long. It has been trimmed to 4000 characters.</p>",
       "button": "I understand"
     },
-    "autoTranscribeVerse": {
-      "title": "Transcribe the verse automatically",
-      "bodyHTML": "Automatic line transcription will clear the current text.<br>Are you sure you want to transcribe the line again?",
+    "autoTranscribe": {
       "select": {
-        "title": "Recognition profile",
-        "default": "Select language..."
+        "engine": "OCR engine",
+        "model": "OCR model"
       },
+      "checkbox": {
+        "handleColumns": "Handle layout with columns (slower)"
+      }
+    },
+    "autoTranscribeVerse": {
+      "title": "Transcribe verses automatically",
+      "bodyHTML": "Automatic line transcription will clear the current text.<br>Are you sure you want to transcribe the verses again?",
       "button": "Start"
     },
     "autoTranscribePage": {
       "title": "Transcribe pages automatically (OCR)",
       "titleSinglePage": "Transcribe page automatically (OCR)",
       "textLayerLabel": "Text layer",
-      "body": "This function creates an automatic transcription of the selected page",
+      "body": "Choose the text layer you want to store the results in",
       "select": {
-        "titleProfile": "Recognition profile",
         "titleRange": "Recognition range",
-        "default": "Select language...",
         "ocrMode": {
           "update": "Fill in only empty text areas",
           "override": "Overwrite the existing transcription page"
-        },
-        "asterisk": "*It is best to use this function in the layer, where tranascription is being realised."
-      },
-      "checkbox": {
-        "handleColumns": "Handle layout with columns (slower)"
+        }
       },
       "button": "Start"
     },
@@ -1030,22 +1029,16 @@
       },
       "input": {
         "placeholder": "1,2-6,8",
-        "label": "Separate page numbers and / or page ranges"
+        "label": "Separate page numbers and / or page ranges with commas"
       },
       "select": {
-        "titleProfile": "Recognition profile",
         "titleRange": "Recognition range",
-        "default": "Choose language ...",
-        "selectLayer": "Wybierz warstwę tekstową*, w której chcesz rozpoznać tekst",
-        "asterisk": "*Najlepiej użyć tej funkcji w warstwie tekstowej, w której realizowana jest transkrypcja.",
+        "selectLayer": "Choose the text layer you want to store the results in",
         "ocrMode": {
           "emptyonly": "Only files without transcription",
           "update": "Fill in only empty text areas",
           "override": "Overwrite existing transcription"
         }
-      },
-      "checkbox": {
-        "handleColumns": "Handle layout with columns (slower)"
       },
       "button": "Start",
       "notice": "The duration of the transcription depends on the number of pages to be transcribed. In the case of multi-page objects it may take up to several hours. If you cannot devote that amount of time, we recommend that you start transcribing from single pages."
