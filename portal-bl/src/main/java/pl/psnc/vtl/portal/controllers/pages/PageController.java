@@ -66,12 +66,13 @@ public class PageController {
     @PutMapping(path = "/transcriptions/{transcriptionId}/pages/{pageId}/recognize", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<VersesAndBlocksDto> recognizePage(@PathVariable("transcriptionId") long transcriptionId,
             @PathVariable("pageId") long pageId,
-            @RequestParam String lang, @RequestParam OcrMode ocrMode,
+            @RequestParam String model,
+            @RequestParam OcrMode ocrMode,
             @RequestParam long layerId,
             @RequestParam(required = false) OcrLevel ocrLevel,
             @RequestParam(required = false, defaultValue = "false") boolean handleColumns) {
         return ResponseEntity.ok(verseService.getVersesAndBlocksDto(
-                pageService.recognizePage(transcriptionId, pageId, lang, ocrMode, layerId, ocrLevel, handleColumns)));
+                pageService.recognizePage(transcriptionId, pageId, model, ocrMode, layerId, ocrLevel, handleColumns)));
     }
 
 

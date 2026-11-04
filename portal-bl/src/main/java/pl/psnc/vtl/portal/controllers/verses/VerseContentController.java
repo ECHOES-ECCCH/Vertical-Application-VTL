@@ -16,7 +16,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import pl.psnc.vtl.portal.dto.verses.VersesAndBlocksDto;
-import pl.psnc.vtl.portal.dto.verses.VersesAndLanguagesDto;
+import pl.psnc.vtl.portal.dto.verses.VersesAndModelsDto;
 import pl.psnc.vtl.portal.model.verses.*;
 import pl.psnc.vtl.portal.services.verses.StudentVerseContentService;
 import pl.psnc.vtl.portal.services.verses.VerseContentService;
@@ -177,9 +177,9 @@ public class VerseContentController {
 
     @Operation(summary = "call OCR on multiple verses")
     @PutMapping(path = "/verses/content-recognition", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public VersesAndBlocksDto recognizeVerses(@RequestBody @Valid VersesAndLanguagesDto vl) {
-        return verseService
-                .getVersesAndBlocksDto(verseContentService.recogniseVerses(vl.getVerseIds(), vl.getLanguageCodes()));
+    public VersesAndBlocksDto recognizeVerses(@RequestBody @Valid VersesAndModelsDto vm) {
+        return verseService.getVersesAndBlocksDto(
+                verseContentService.recogniseVerses(vm.getVerseIds(), vm.getModelIds()));
     }
 
     @Operation(summary = "clear contents of multiple verses")

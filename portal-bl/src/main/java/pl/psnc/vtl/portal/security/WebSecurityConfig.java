@@ -174,6 +174,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/static-files/**").permitAll()
                 .antMatchers("/api/languages").permitAll()
                 .antMatchers("/api/ocr/languages").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/ocrmodels").permitAll()
                 .antMatchers("/api/last-transcriptions/**").permitAll()
                 .antMatchers("/api/**").authenticated()
                 .antMatchers("/api/oauth2/success").authenticated()

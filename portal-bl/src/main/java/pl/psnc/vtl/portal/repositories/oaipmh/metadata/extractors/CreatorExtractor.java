@@ -11,10 +11,10 @@ import java.util.List;
 @Component
 public class CreatorExtractor implements ValuesExtractor {
     @Override
-    public List<DcValue> extractValues(Transcription transcription) {
+    public List<DcValue> extractValues(Transcription transcription, String defaultLanguage) {
         if (Strings.isNotBlank(transcription.getAuthorsLabel())) {
             return List.of(new DcValue(transcription.getAuthorsLabel(),
-                    determineLanguage(transcription.getLastSetLanguageCode())));
+                    determineLanguage(defaultLanguage)));
         }
         return List.of();
     }

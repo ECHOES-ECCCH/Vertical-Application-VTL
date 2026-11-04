@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.data.domain.Sort;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import pl.psnc.vtl.portal.controllers.ocr.PageRange;
 import pl.psnc.vtl.portal.model.layers.Layer;
 import pl.psnc.vtl.portal.model.layers.PageLayer;
+import pl.psnc.vtl.portal.model.ocrmodels.OcrModel.Engine;
 import pl.psnc.vtl.portal.model.pages.Page;
 import pl.psnc.vtl.portal.model.regions.BoundingBox;
 import pl.psnc.vtl.portal.model.transcriptions.Language;
@@ -25,6 +27,7 @@ import pl.psnc.vtl.portal.repositories.transcriptions.LanguageRepository;
 import pl.psnc.vtl.portal.repositories.verses.VerseRepository;
 import pl.psnc.vtl.portal.repositories.words.WordRepository;
 import pl.psnc.vtl.portal.services.layers.LayerService;
+import pl.psnc.vtl.portal.services.ocrmodels.OcrModelService;
 import pl.psnc.vtl.portal.services.registration.LoggedInUserHolder;
 import pl.psnc.vtl.portal.services.verses.UndoRedoService.Operation;
 import pl.psnc.vtl.portal.services.verses.VerseContentService;
@@ -58,9 +61,11 @@ public class OCRToolsService {
     private final LayerService layerService;
     private final VerseContentService verseContentService;
     private final WordService wordService;
+    private final OcrModelService ocrModelService;
 
-    public void recognizeEmptyVerses(Page page, long layerId, String lang) throws OCRToolsException {
+    public void recognizeEmptyVerses(Page page, long layerId, String modelIds) throws OCRToolsException {
         Long transcriptionId = page.getTranscription().getId();
+        Pair<String, String> engineAndModel = ocrModelService.parseModelParam(modelIds);
         List<Verse> verses = verseRepository.findByPageIdAndPageLayerLayerId(page.getId(), layerId);
         List<Verse> emptyVerses = verses.stream()
                 .filter(v -> StringUtils.isBlank(v.getContent()) && !v.isImage()).collect(toList());
@@ -71,7 +76,6 @@ public class OCRToolsService {
             v.setStatus(VerseStatus.NONE);
             v.setInitialVerseContent(null);
             v.setCurrentVerseContent(null);
-            v.setLang(lang.replaceFirst("([a-z_]+).*", "$1"));
             verseRepository.save(v);
         });
         verseRepository.flush();
@@ -82,7 +86,7 @@ public class OCRToolsService {
             List<OcrBoundingBox> boxes = emptyVersesNoWords.stream()
                     .map(v -> new OcrBoundingBox(v.getId(), v.getBoundingBox())).collect(toList());
             Map<Long, String> ocrResponse = ocrToolsRepository.recognizePageFragments(transcriptionId, page.getPath(),
-                    page.getRelativeNo(), boxes, lang, true, false);
+                    page.getRelativeNo(), boxes, engineAndModel.getLeft(), engineAndModel.getRight(), true, false);
             Operation dummyOp = new Operation();
             for (Verse v : emptyVersesNoWords) {
                 List<List<Verse>> parsedVerses = hocrParser.parseVerses(ocrResponse.get(v.getId()));
@@ -99,7 +103,7 @@ public class OCRToolsService {
             List<OcrBoundingBox> boxes = emptyVersesWords.values().stream().flatMap(List::stream)
                     .map(w -> new OcrBoundingBox(w.getId(), w.getBoundingBox())).collect(toList());
             Map<Long, String> ocrResponse = ocrToolsRepository.recognizePageFragments(transcriptionId, page.getPath(),
-                    page.getRelativeNo(), boxes, lang, false, true);
+                    page.getRelativeNo(), boxes, engineAndModel.getLeft(), engineAndModel.getRight(), false, true);
             emptyVersesWithWords.forEach(v -> {
                 List<Word> words = emptyVersesWords.get(v.getId());
                 words.forEach(w -> w.setContent(ocrResponse.getOrDefault(w.getId(), "")));
@@ -111,7 +115,7 @@ public class OCRToolsService {
     }
 
 
-    public List<Verse> recognizePage(Page page, String lang, boolean includeWords,
+    public List<Verse> recognizePage(Page page, String modelIds, boolean includeWords,
             boolean handleColumns) throws OCRToolsException {
         String filename = page.getPath();
         String extension = FilenameUtils.getExtension(filename);
@@ -125,11 +129,12 @@ public class OCRToolsService {
         }
 
         Long transcriptionId = page.getTranscription().getId();
-        String hOCR =
-                ocrToolsRepository.recognizePage(transcriptionId, filename, page.getRelativeNo(), lang, handleColumns);
+        Pair<String, String> engineAndModel = ocrModelService.parseModelParam(modelIds);
+        String hOCR = ocrToolsRepository.recognizePage(transcriptionId, filename, page.getRelativeNo(),
+                engineAndModel.getLeft(), engineAndModel.getRight(), handleColumns);
 
         List<Verse> verses = hocrParser.parseVerses(hOCR).get(0);
-        boolean removed = cleanupVerses(verses);
+        boolean removed = cleanupVerses(verses, engineAndModel.getLeft());
         if (handleColumns) {
             orderVersesInColumns(verses);
         } else if (removed) {
@@ -140,7 +145,6 @@ public class OCRToolsService {
 
         for (Verse v : verses) {
             v.setFromOCR(true);
-            v.setLang(lang.replaceFirst("([a-z_]+).*", "$1"));
             if (!includeWords) {
                 v.getWords().clear();
             }
@@ -148,7 +152,7 @@ public class OCRToolsService {
         return verses;
     }
 
-    private boolean cleanupVerses(List<Verse> verses) {
+    private boolean cleanupVerses(List<Verse> verses, String engine) {
         boolean removed = false;
         for (Iterator<Verse> it = verses.iterator(); it.hasNext();) {
             Verse v = it.next();
@@ -161,13 +165,28 @@ public class OCRToolsService {
             if (words.isEmpty())
                 continue;
 
-            boolean cleanFirst = words.get(0).getContent().equals("|");
-            if (cleanFirst)
+            int origSize = words.size();
+            if (words.get(0).getContent().equals("|"))
                 words.remove(0);
-            boolean cleanLast = words.get(words.size() - 1).getContent().equals("|");
-            if (cleanLast)
+            if (words.get(words.size() - 1).getContent().equals("|"))
                 words.remove(words.size() - 1);
-            if (cleanFirst || cleanLast) {
+
+            if (Engine.KRAKEN.getValue().equals(engine)) {
+                Word prev = null;
+                for (Iterator<Word> it2 = words.iterator(); it2.hasNext();) {
+                    Word w = it2.next();
+                    if (StringUtils.isBlank(w.getContent())) {
+                        it2.remove();
+                        if (prev != null) {
+                            prev.getBoundingBox().setLowerRightX(w.getBoundingBox().getUpperLeftX());
+                        }
+                    } else {
+                        prev = w;
+                    }
+                }
+            }
+
+            if (words.size() != origSize) {
                 if (words.isEmpty()) {
                     it.remove();
                     removed = true;

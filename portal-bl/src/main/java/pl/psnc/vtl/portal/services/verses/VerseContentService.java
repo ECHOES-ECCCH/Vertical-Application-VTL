@@ -1,6 +1,7 @@
 package pl.psnc.vtl.portal.services.verses;
 
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.text.similarity.LevenshteinDistance;
 import org.springframework.stereotype.Service;
 import pl.psnc.vtl.portal.dto.permissions.ViewMode;
@@ -14,6 +15,7 @@ import pl.psnc.vtl.portal.repositories.ocrtools.OCRToolsRepository;
 import pl.psnc.vtl.portal.repositories.ocrtools.OcrBoundingBox;
 import pl.psnc.vtl.portal.repositories.verses.VerseContentRepository;
 import pl.psnc.vtl.portal.repositories.verses.VerseRepository;
+import pl.psnc.vtl.portal.services.ocrmodels.OcrModelService;
 import pl.psnc.vtl.portal.services.parsers.ocr.HOCRParser;
 import pl.psnc.vtl.portal.services.permissions.TranscriptionPermissionService;
 import pl.psnc.vtl.portal.services.registration.LoggedInUserHolder;
@@ -28,7 +30,6 @@ import javax.validation.ValidationException;
 
 import java.util.*;
 
-import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 @Service
@@ -57,6 +58,8 @@ public class VerseContentService {
     private final WordService wordService;
 
     private final UndoRedoService undoRedoService;
+
+    private final OcrModelService ocrModelService;
 
     private final EntityManager entityManager;
 
@@ -246,11 +249,11 @@ public class VerseContentService {
         return verse.getFormatting();
     }
 
-    public PageLayer.Id recogniseVerses(List<Long> verseIds, List<String> langCodes)
+    public PageLayer.Id recogniseVerses(List<Long> verseIds, String modelIds)
             throws OCRToolsException {
         Verse firstVerse = verseService.getVerseToMakeAction(verseIds.get(0));
         Page page = firstVerse.getPage();
-        page.getTranscription().setLastSetLanguageCode(langCodes.get(0));
+        page.getTranscription().setLastSetModelId(modelIds);
         Operation undoRedoOp = new Operation();
 
         List<Verse> verses = verseRepository.findAllById(verseIds);
@@ -261,10 +264,10 @@ public class VerseContentService {
 
         List<OcrBoundingBox> boxes = verses.stream()
                 .map(v -> new OcrBoundingBox(v.getId(), v.getBoundingBox())).collect(toList());
-        String langs = langCodes.stream().collect(joining("+"));
+        Pair<String, String> engineAndModel = ocrModelService.parseModelParam(modelIds);
         Map<Long, String> verseOcrs =
                 ocrToolsRepository.recognizePageFragments(page.getTranscription().getId(), page.getPath(),
-                        page.getRelativeNo(), boxes, langs, true, false);
+                        page.getRelativeNo(), boxes, engineAndModel.getLeft(), engineAndModel.getRight(), true, false);
         for (Verse verse : verses) {
             List<List<Verse>> parsedVerses = hocrParser.parseVerses(verseOcrs.get(verse.getId()));
             List<Word> words = new ArrayList<>();

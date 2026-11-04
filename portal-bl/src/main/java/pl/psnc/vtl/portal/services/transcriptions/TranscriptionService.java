@@ -20,6 +20,7 @@ import pl.psnc.vtl.portal.dto.layers.LayerDto;
 import pl.psnc.vtl.portal.dto.permissions.ViewMode;
 import pl.psnc.vtl.portal.dto.transcriptions.*;
 import pl.psnc.vtl.portal.model.layers.PageLayer;
+import pl.psnc.vtl.portal.model.ocrmodels.OcrModel;
 import pl.psnc.vtl.portal.model.pages.Page;
 import pl.psnc.vtl.portal.model.permissions.TranscriptionGroup;
 import pl.psnc.vtl.portal.model.permissions.TranscriptionUser;
@@ -40,6 +41,7 @@ import pl.psnc.vtl.portal.repositories.verses.VerseRepository;
 import pl.psnc.vtl.portal.services.indexes.IndexService;
 import pl.psnc.vtl.portal.services.layers.LayerMapperImpl;
 import pl.psnc.vtl.portal.services.layers.LayerService;
+import pl.psnc.vtl.portal.services.ocrmodels.OcrModelService;
 import pl.psnc.vtl.portal.services.pages.*;
 import pl.psnc.vtl.portal.services.parsers.ocr.OcrLevel;
 import pl.psnc.vtl.portal.services.permissions.TranscriptionPermissionService;
@@ -127,6 +129,8 @@ public class TranscriptionService {
     private final IndexService indexService;
 
     private final LayerService layerService;
+
+    private final OcrModelService ocrModelService;
 
     private final LoggedInUserHolder loggedInUserHolder;
     private final TransactionTemplate transactionTemplate;
@@ -465,12 +469,38 @@ public class TranscriptionService {
 
     public String getTranscriptionDefaultLanguage(long transcriptionId) {
         Transcription transcription = this.requireTranscription(transcriptionId);
+        if (transcription.getLastSetModelId() != null) {
+            String language = ocrModelService.getOcrModels(transcription.getLastSetModelId()).stream()
+                    .map(OcrModel::getLanguage).filter(Objects::nonNull)
+                    .findFirst().orElse(null);
+            if (language != null) {
+                return language;
+            }
+        }
 
-        return ObjectUtils.firstNonNull(transcription.getLastSetLanguageCode(),
+        return ObjectUtils.firstNonNull(
                 transcription.getAnalyticInfo().getLanguage() != null ? transcription.getAnalyticInfo().getLanguage()
                         .getCode() : null,
                 transcription.getMonographicInfo().getLanguage() != null ? transcription.getMonographicInfo()
                         .getLanguage().getCode() : null, propertyService.getDefaultTranscriptionLanguage());
+    }
+
+    public String getTranscriptionDefaultModel(long transcriptionId) {
+        Transcription transcription = this.requireTranscription(transcriptionId);
+        if (transcription.getLastSetModelId() != null) {
+            return transcription.getLastSetModelId();
+        }
+
+        String language = ObjectUtils.firstNonNull(
+                transcription.getAnalyticInfo().getLanguage() != null ? transcription.getAnalyticInfo().getLanguage()
+                        .getCode() : null,
+                transcription.getMonographicInfo().getLanguage() != null ? transcription.getMonographicInfo()
+                        .getLanguage().getCode() : null,
+                propertyService.getDefaultTranscriptionLanguage());
+        return ocrModelService.getOcrModelsForTranscription(transcriptionId).stream()
+                .filter(m -> language.equals(m.getLanguage()))
+                .map(m -> m.getId().toString())
+                .findFirst().orElse(null);
     }
 
 
@@ -481,15 +511,15 @@ public class TranscriptionService {
      * only pages without transcription are recognized.
      * @param transcriptionId transcription identifier
      * @param ocrMode         ocr mode
-     * @param lang            language used for ocr
+     * @param model           model(s) used for ocr
      * @param pages           relative numbers of pages
      * @param layerId         id of transcription layer
      * @param handleColumns
      */
-    public void recognizeTranscriptionPages(long transcriptionId, OcrMode ocrMode, String lang, String pages,
+    public void recognizeTranscriptionPages(long transcriptionId, OcrMode ocrMode, String model, String pages,
             Long layerId, OcrLevel ocrLevel, boolean handleColumns) {
-
         transcriptionPermissionService.checkTranscribeAccess(transcriptionId);
+        requireTranscription(transcriptionId).setLastSetModelId(model);
         List<Integer> pageNums =
                 PageHelper.parsePages(pages, pageRepository.countByTranscriptionId(transcriptionId) + 1);
         List<Long> pageIds = pageRepository.findByTranscriptionIdAndPageNoIn(transcriptionId, pageNums).stream()
@@ -509,7 +539,7 @@ public class TranscriptionService {
                 for (int i = 0; i < pageIds.size(); i++) {
                     Page page = pageService.getPage(transcriptionId, pageIds.get(i), ViewMode.TRANSCRIBE);
                     if (!page.isEmpty())
-                        pageService.recognizePage(page, lang, ocrMode, layerId, ocrLevel, handleColumns);
+                        pageService.recognizePage(page, model, ocrMode, layerId, ocrLevel, handleColumns);
                     transcriptionProcessingCoordinator.progress(transcriptionId, OPERATION, 100 * i / pageIds.size());
                 }
                 transcriptionProcessingCoordinator.processingFinished(transcriptionId, OPERATION, null);

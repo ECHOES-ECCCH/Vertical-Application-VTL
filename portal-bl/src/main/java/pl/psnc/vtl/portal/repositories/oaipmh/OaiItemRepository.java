@@ -35,11 +35,11 @@ public class OaiItemRepository implements ItemRepository {
 
     @Override
     public Item getItem(String identifier) {
-
-        Transcription transcription = transcriptionService.requireTranscription(
-                OaiItemUtils.getTranscriptionIdFromOaiId(identifier));
+        long tId = OaiItemUtils.getTranscriptionIdFromOaiId(identifier);
+        Transcription transcription = transcriptionService.requireTranscription(tId);
         transcriptionService.completeTranscription(transcription, false, 1, 1);
-        return new OaiItem(transcription);
+        String defaultLanguage = transcriptionService.getTranscriptionDefaultLanguage(tId);
+        return new OaiItem(transcription, defaultLanguage);
     }
 
     @Override
@@ -161,7 +161,9 @@ public class OaiItemRepository implements ItemRepository {
     }
 
     private ListItemsResults pageToListItemResults(PaginatedTranscriptions<Transcription> page) {
-        List<Item> oaiItems = page.getTranscriptions().stream().map(OaiItem::new).collect(Collectors.toList());
+        List<Item> oaiItems = page.getTranscriptions().stream()
+                .map(t -> new OaiItem(t, transcriptionService.getTranscriptionDefaultLanguage(t.getId())))
+                .collect(Collectors.toList());
         return new ListItemsResults(page.getPage() < (page.getPages() - 1), oaiItems, (int) page.getHits());
     }
 }

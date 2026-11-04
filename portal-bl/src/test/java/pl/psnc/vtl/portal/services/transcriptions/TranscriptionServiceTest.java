@@ -29,6 +29,7 @@ import pl.psnc.vtl.portal.repositories.verses.VerseRepository;
 import pl.psnc.vtl.portal.security.CustomUser;
 import pl.psnc.vtl.portal.services.indexes.IndexService;
 import pl.psnc.vtl.portal.services.layers.LayerService;
+import pl.psnc.vtl.portal.services.ocrmodels.OcrModelService;
 import pl.psnc.vtl.portal.services.pages.ImportPageRecognizerFactory;
 import pl.psnc.vtl.portal.services.pages.PageImportService;
 import pl.psnc.vtl.portal.services.pages.PageListService;
@@ -137,6 +138,9 @@ public class TranscriptionServiceTest {
     private LayerService layerService;
 
     @Mock
+    private OcrModelService ocrModelService;
+
+    @Mock
     private LoggedInUserHolder loggedInUserHolder;
 
     @Mock
@@ -179,6 +183,7 @@ public class TranscriptionServiceTest {
                 userService,
                 indexService,
                 layerService,
+                ocrModelService,
                 loggedInUserHolder,
                 transactionTemplate);
 

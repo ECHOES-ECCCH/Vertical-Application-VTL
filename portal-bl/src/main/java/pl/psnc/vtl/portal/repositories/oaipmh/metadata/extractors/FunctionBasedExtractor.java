@@ -12,7 +12,7 @@ import java.util.function.Function;
 public class FunctionBasedExtractor implements ValuesExtractor {
     private final Function<Transcription, List<DcValue>> extractionFunction;
     @Override
-    public List<DcValue> extractValues(Transcription transcription) {
+    public List<DcValue> extractValues(Transcription transcription, String defaultLanguage) {
         return extractionFunction.apply(transcription);
     }
 }

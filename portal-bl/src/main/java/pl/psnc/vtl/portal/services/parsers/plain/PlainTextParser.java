@@ -70,7 +70,6 @@ public class PlainTextParser implements TranscriptionContentParser {
                 wordService.synchronizeWords(verses.get(i));
                 verses.get(i).setStatus(VerseStatus.NONE);
                 verses.get(i).setFromOCR(false);
-                verses.get(i).setLang(null);
                 verses.get(i).setFormatting(new Formatting());
                 i++;
             }

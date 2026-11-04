@@ -15,7 +15,7 @@ public class ConfigurationBasedExtractor implements ValuesExtractor {
 
 
     @Override
-    public List<DcValue> extractValues(Transcription transcription) {
+    public List<DcValue> extractValues(Transcription transcription, String defaultLanguage) {
         return OaiItemUtils.getDcFieldConfiguration(fieldName);
     }
 }

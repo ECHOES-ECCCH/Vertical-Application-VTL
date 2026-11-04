@@ -36,10 +36,12 @@ public class OCRToolsRepository extends BackendSystemRepository {
 
     private static final int MAX_RETRY_COUNT = 3;
 
-    public String recognizePage(Long transcriptionId, String filename, Integer page, String lang, boolean handleColumns)
+    public String recognizePage(Long transcriptionId, String filename, Integer page, String engine, String model,
+            boolean handleColumns)
             throws OCRToolsException {
         String uri = ocrToolsUrl + "api/ocr/" + transcriptionId + "/recognize-hocr/" + encode(filename, UTF_8)
-                + "?lang=" + encode(lang, UTF_8)
+                + "?engine=" + encode(engine, UTF_8)
+                + "&model=" + encode(model, UTF_8)
                 + "&handleColumns=" + handleColumns;
         if (page != null)
             uri += "&page=" + page;
@@ -74,15 +76,16 @@ public class OCRToolsRepository extends BackendSystemRepository {
     }
 
     public Map<Long, String> recognizePageFragments(Long transcriptionId, String filename, Integer page,
-            List<OcrBoundingBox> boxes, String lang, boolean hocr, boolean singleWordMode)
+            List<OcrBoundingBox> boxes, String engine, String modelPaths, boolean hocr, boolean singleWordMode)
             throws OCRToolsException {
         String actionMessage = "recognizing verses of " + filename + " for transcription '" + transcriptionId + "'";
         String requestBody = writeRequestValue(new OcrBatchRequest(boxes), actionMessage);
 
         String uri = ocrToolsUrl + "api/ocr/" + transcriptionId + "/recognize-subimg-batch/"
                 + encode(filename, UTF_8)
-                + "?lang=" + encode(lang, UTF_8)
-				+ "&hocr=" + hocr
+                + "?engine=" + encode(engine, UTF_8)
+                + "&model=" + encode(modelPaths, UTF_8)
+                + "&hocr=" + hocr
                 + "&singleWord=" + singleWordMode;
         if (page != null)
             uri += "&page=" + page;

@@ -75,12 +75,6 @@ public class OCRTrainingRepository extends BackendSystemRepository {
     }
 
     private String getRequestBodyForTesseractTraining(List<Verse> verses, String language) {
-        verses.forEach(v -> {
-            if (v.getLang() == null) {
-                v.setLang("pol");
-            }
-        });
-
         OcrCorrectionsBatch ocrCorrectionsBatch = new OcrCorrectionsBatch();
         ocrCorrectionsBatch.setCorrections(
                 verses.stream()

@@ -11,10 +11,9 @@ import java.util.List;
 @Component
 public class TitleExtractor implements ValuesExtractor {
     @Override
-    public List<DcValue> extractValues(Transcription transcription) {
+    public List<DcValue> extractValues(Transcription transcription, String defaultLanguage) {
         if (Strings.isNotBlank(transcription.getTitleLabel())) {
-            return List.of(new DcValue(transcription.getTitleLabel(),
-                    determineLanguage(transcription.getLastSetLanguageCode())));
+            return List.of(new DcValue(transcription.getTitleLabel(), determineLanguage(defaultLanguage)));
         }
         return List.of();
     }

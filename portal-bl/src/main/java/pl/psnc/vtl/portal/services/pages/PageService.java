@@ -312,16 +312,14 @@ public class PageService {
         }
     }
 
-    public void recognizePage(Page page, String lang, OcrMode ocrMode, long layerId, OcrLevel ocrLevel,
+    public void recognizePage(Page page, String model, OcrMode ocrMode, long layerId, OcrLevel ocrLevel,
             boolean handleColumns) {
-
-        page.getTranscription().setLastSetLanguageCode(lang.replaceFirst("([a-z_]+).*", "$1"));
 
         boolean includeWords = OcrLevel.WORD == Objects.requireNonNullElse(ocrLevel, defaultOcrLevel);
         if (ocrMode == OcrMode.UPDATE) {
-            ocrToolsService.recognizeEmptyVerses(page, layerId, lang);
+            ocrToolsService.recognizeEmptyVerses(page, layerId, model);
         } else {
-            List<Verse> versesToSave = ocrToolsService.recognizePage(page, lang, includeWords, handleColumns);
+            List<Verse> versesToSave = ocrToolsService.recognizePage(page, model, includeWords, handleColumns);
             pageImportService.replacePageVerses(page, layerId, versesToSave);
         }
 
@@ -331,12 +329,13 @@ public class PageService {
         LogAction.clearMDCAction();
     }
 
-    public PageLayer.Id recognizePage(long transcriptionId, long pageId, String lang, OcrMode ocrMode,
+    public PageLayer.Id recognizePage(long transcriptionId, long pageId, String model, OcrMode ocrMode,
             long layerId, OcrLevel ocrLevel, boolean handleColumns) {
         Page page =
                 getPage(transcriptionId, pageId, transcriptionPermissionService.checkTranscribeAccess(transcriptionId));
+        page.getTranscription().setLastSetModelId(model);
         undoRedoService.reset(new Id(pageId, layerId));
-        recognizePage(page, lang, ocrMode, layerId, ocrLevel, handleColumns);
+        recognizePage(page, model, ocrMode, layerId, ocrLevel, handleColumns);
         return pageLayerService.getPageLayer(pageId, layerId).getId();
     }
 

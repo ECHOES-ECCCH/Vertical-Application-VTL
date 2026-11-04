@@ -201,6 +201,13 @@ public class Transcription {
     private Integer percentOfTranscribed = 0;
 
     /**
+     * Last used OCR model id, can be null or a list separated by plus.
+     */
+    @Column(nullable = true)
+    @JsonIgnore
+    private String lastSetModelId;
+
+    /**
      * Number of members in the transcription.
      */
     @Transient
@@ -230,12 +237,6 @@ public class Transcription {
      */
     @Transient
     private Integer percentOfVerified;
-
-    /**
-     * lastSetLanguageCode
-     */
-    @JsonIgnore
-    private String lastSetLanguageCode;
 
     /**
      * transcriptionContinuation
