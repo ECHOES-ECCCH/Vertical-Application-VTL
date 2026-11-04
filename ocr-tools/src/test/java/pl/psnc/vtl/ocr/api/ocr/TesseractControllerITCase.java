@@ -13,19 +13,19 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import pl.psnc.vtl.ocr.api.ocr.tesseract.VerseBboxesDto;
-import pl.psnc.vtl.ocr.api.ocr.tesseract.OcrBatchResponse;
-import pl.psnc.vtl.ocr.api.ocr.tesseract.VerseBboxDto;
+import pl.psnc.vtl.ocr.api.ocr.VerseBboxesDto.VerseBboxDto;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.*;
-import static org.hamcrest.Matchers.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.hamcrest.Matchers.greaterThan;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static pl.psnc.vtl.ocr.matcher.TextContentMatchers.*;
+import static pl.psnc.vtl.ocr.matcher.TextContentMatchers.fuzzyMatch;
 
 
 @RunWith(SpringRunner.class)

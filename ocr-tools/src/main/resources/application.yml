@@ -22,6 +22,7 @@ vtl:
         endpoint: "${OCR_TRAINING_ENDPOINT}"
         # contains subfolders for each trained language
         trained-langs-dir: ${VTL_STORAGE:/var/vtl}/trained_langs
+    ocr-models-dir: ${VTL_STORAGE:/var/vtl}/ocr-models
 
 tesseract:
     tessdata: /usr/share/tesseract-ocr/5/tessdata

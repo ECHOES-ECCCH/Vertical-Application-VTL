@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.psnc.vtl.ocr.domain.ocr.TesseractService;
+import pl.psnc.vtl.ocr.domain.ocr.OcrService;
 
 @RestController
 //@RequestMapping("/api/healthcheck")
@@ -18,7 +18,7 @@ import pl.psnc.vtl.ocr.domain.ocr.TesseractService;
 @RequiredArgsConstructor
 public class HealthCheckController {
 
-    private final TesseractService tesseractService;
+    private final OcrService ocrService;
     @GetMapping(path = "/live", produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(description = "Check if app is alive")
     @ApiResponses(value = {
@@ -36,8 +36,8 @@ public class HealthCheckController {
     })
     public ResponseEntity<HealthCheckDto> getReadyState() {
         HealthCheckDto healthCheckDto = new HealthCheckDto();
-        healthCheckDto.setBusy(tesseractService.isBusy());
-        healthCheckDto.setActiveOCRTasks(tesseractService.taskCounter());
+        healthCheckDto.setBusy(ocrService.isBusy());
+        healthCheckDto.setActiveOCRTasks(ocrService.taskCounter());
         return ResponseEntity.ok(healthCheckDto);
     }
 
