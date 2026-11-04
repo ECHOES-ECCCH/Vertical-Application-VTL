@@ -254,11 +254,11 @@ public class TranscriptionController {
         return ResponseEntity.ok(transcriptionService.changeTranscriptionVisibility(transcriptionId, flagValue.getHidden()));
     }
 
-    @Operation(summary = "Getting transcription default language")
-    @GetMapping(path = "/transcriptions/{transcriptionId}/default-language", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> getTranscriptionDefaultLanguage(
+    @Operation(summary = "Getting transcription default OCR models")
+    @GetMapping(path = "/transcriptions/{transcriptionId}/default-model", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> getTranscriptionDefaultModel(
             @PathVariable("transcriptionId") Long transcriptionId) {
-        return ResponseEntity.ok(transcriptionService.getTranscriptionDefaultLanguage(transcriptionId));
+        return ResponseEntity.ok(transcriptionService.getTranscriptionDefaultModel(transcriptionId));
     }
 
     /**
@@ -324,9 +324,8 @@ public class TranscriptionController {
                     "<p><span style=\"color: #000000;\"><strong>UPDATE</strong> - update with newly recognized text only verses that have no content<br /></span></p>\n" +
                     "<p><span style=\"color: #000000;\"><strong>EMPTYONLY</strong> - recognize only pages that have no verses<br /></span></p>")
             @RequestParam OcrMode ocrMode,
-            @Parameter(name = "lang", description = "Language of the text used for recognition (ISO 639-3 3 letter code), "
-                    + "can be a list of languages separated by plus sign")
-            @RequestParam String lang,
+            @Parameter(name = "model", description = "Ids of models to be used for recognition, separated by plus sign")
+            @RequestParam String model,
             @Parameter(name = "pages", description = "Pages selected for recognition. When not supplied all pages of the selected transcription will be used." +
                     "Page numbers should be separated with a comma. Page ranges are also possible. Examples: \"1,2,7\", \"1-4\", \"1,5,8-10\"")
             @RequestParam(required = false) String pages,
@@ -335,7 +334,7 @@ public class TranscriptionController {
             @RequestParam(required = false) OcrLevel ocrLevel,
             @RequestParam(required = false, defaultValue = "false") boolean handleColumns) {
 
-        transcriptionService.recognizeTranscriptionPages(transcriptionId, ocrMode, lang, pages, layerId, ocrLevel,
+        transcriptionService.recognizeTranscriptionPages(transcriptionId, ocrMode, model, pages, layerId, ocrLevel,
                 handleColumns);
         return ResponseEntity.created(URI.create("/api/transcriptions/" + transcriptionId + "/processing-status"))
                 .build();

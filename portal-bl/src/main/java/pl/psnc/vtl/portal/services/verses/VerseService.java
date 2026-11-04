@@ -18,7 +18,6 @@ import pl.psnc.vtl.portal.model.indexes.Index;
 import pl.psnc.vtl.portal.model.layers.PageLayer;
 import pl.psnc.vtl.portal.model.pages.Page;
 import pl.psnc.vtl.portal.model.regions.BoundingBox;
-import pl.psnc.vtl.portal.model.transcriptions.Transcription;
 import pl.psnc.vtl.portal.model.users.User;
 import pl.psnc.vtl.portal.model.verses.*;
 import pl.psnc.vtl.portal.model.words.Word;
@@ -452,7 +451,6 @@ public class VerseService {
                 User user = loggedInUserHolder.getLoggedInUser();
                 Page page =
                         pageRepository.findById(pageLayer.getPage().getId()).orElseThrow(EntityNotFoundException::new);
-                setDefaultLang(verses);
                 setStatus(verses, viewMode, status, user);
 
                 Event event = eventParticipationService.getCurrentEvent();
@@ -474,25 +472,6 @@ public class VerseService {
             lock.unlock();
         }
         return BeanLoader.getBean(VerseService.class).getVersesAndBlocksDto(pageLayerId);
-    }
-
-    private void setDefaultLang(List<Verse> verses) {
-        verses = verses.stream().filter(verse -> verse.getLang() != null).collect(Collectors.toList());
-        if (!verses.isEmpty()) {
-            Transcription transcription = verses.get(0).getPage().getTranscription();
-
-            String defaultLang;
-            if (transcription.getAnalyticInfo().getLanguage() != null) {
-                defaultLang = transcription.getAnalyticInfo().getLanguage().getCode();
-            } else if (transcription.getMonographicInfo().getLanguage() != null) {
-                defaultLang = transcription.getMonographicInfo().getLanguage().getCode();
-            } else if (transcription.getLastSetLanguageCode() != null) {
-                defaultLang = transcription.getLastSetLanguageCode();
-            } else {
-                defaultLang = propertyService.getDefaultTranscriptionLanguage();
-            }
-            verses.forEach(verse -> verse.setLang(defaultLang));
-        }
     }
 
     @Transactional(propagation = Propagation.NOT_SUPPORTED)

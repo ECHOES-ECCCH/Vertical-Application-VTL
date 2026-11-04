@@ -1,5 +1,6 @@
 package pl.psnc.vtl.portal.repositories.oaipmh;
 
+import lombok.AllArgsConstructor;
 import org.dspace.xoai.dataprovider.model.Item;
 import org.dspace.xoai.dataprovider.model.Set;
 import org.dspace.xoai.model.oaipmh.About;
@@ -11,13 +12,11 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
+@AllArgsConstructor
 public class OaiItem implements Item {
 
     private final Transcription transcription;
-
-    public OaiItem(Transcription transcription) {
-        this.transcription = transcription;
-    }
+    private String defaultLanguage;
 
     @Override
     public List<About> getAbout() {
@@ -26,7 +25,7 @@ public class OaiItem implements Item {
 
     @Override
     public Metadata getMetadata() {
-        return new Metadata(OaiItemUtils.convertToOaiDc(transcription));
+        return new Metadata(OaiItemUtils.convertToOaiDc(transcription, defaultLanguage));
     }
 
     @Override

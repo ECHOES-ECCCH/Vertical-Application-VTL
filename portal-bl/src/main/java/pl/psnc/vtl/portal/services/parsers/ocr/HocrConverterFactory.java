@@ -27,6 +27,7 @@ public class HocrConverterFactory extends ConverterFactory {
             case Hocr.OCR_CAREA_CLASS_NAME:
                 return new AreaConverter(converterSettings);
             case Hocr.OCR_PARAGRAPH_CLASS_NAME:
+            case Hocr.OCRX_BLOCK_CLASS_NAME:
                 return new ParagraphConverter(converterSettings);
             case Hocr.OCR_SECTION_CLASS_NAME:
                 return new SectionConverter(converterSettings);

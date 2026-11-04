@@ -9,10 +9,9 @@ import java.util.Objects;
 
 public class SourceExtractor implements ValuesExtractor {
     @Override
-    public List<DcValue> extractValues(Transcription transcription) {
+    public List<DcValue> extractValues(Transcription transcription, String defaultLanguage) {
         if (Objects.nonNull(transcription.getExternalUrl())) {
-            return List.of(new DcValue(transcription.getExternalUrl(),
-                    determineLanguage(transcription.getLastSetLanguageCode())));
+            return List.of(new DcValue(transcription.getExternalUrl(), determineLanguage(defaultLanguage)));
         }
         return List.of();
     }

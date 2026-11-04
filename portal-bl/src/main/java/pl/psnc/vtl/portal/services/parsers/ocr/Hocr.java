@@ -24,5 +24,6 @@ public class Hocr {
     public static final String OCR_ANNOTATION_CLASS_NAME = "ocr_annotation";
     public static final String OCR_MARGINALIA_CLASS_NAME = "ocr_marginalia";
 
+    public static final String OCRX_BLOCK_CLASS_NAME = "ocrx_block";
     public static final String OCRX_WORD_CLASS_NAME = "ocrx_word";
 }

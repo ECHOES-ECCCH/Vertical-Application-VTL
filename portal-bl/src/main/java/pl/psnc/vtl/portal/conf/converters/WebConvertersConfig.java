@@ -9,6 +9,7 @@ import pl.psnc.vtl.portal.dto.blocks.MultipageBlockRemoveMode;
 import pl.psnc.vtl.portal.dto.transcriptions.*;
 import pl.psnc.vtl.portal.model.imports.FileType;
 import pl.psnc.vtl.portal.model.statics.StaticFileLanguage;
+import pl.psnc.vtl.portal.model.ocrmodels.OcrModel;
 import pl.psnc.vtl.portal.model.users.SecurityGroup;
 import pl.psnc.vtl.portal.model.verses.*;
 import pl.psnc.vtl.portal.repositories.verses.StatsSortField;
@@ -45,6 +46,7 @@ public class WebConvertersConfig implements WebMvcConfigurer {
         registry.addFormatterForFieldType(
                 StatsSortField.class, new EnumFormatter<>(StatsSortField.class));
         registry.addFormatterForFieldType(Sort.Direction.class, new EnumFormatter<>(Sort.Direction.class));
+        registry.addFormatterForFieldType(OcrModel.Engine.class, new EnumFormatter<>(OcrModel.Engine.class));
     }
 
 }

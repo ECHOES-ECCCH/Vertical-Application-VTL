@@ -39,7 +39,8 @@ public class OaiItemUtils {
                     String.format("Cannot determine local identifier from given oaiId: %s", oaiId), e);
         }
     }
-    public static String convertToOaiDc(Transcription transcription) {
+
+    public static String convertToOaiDc(Transcription transcription, String defaultLanguage) {
         StringWriter out = new StringWriter();
         try {
             XMLStreamWriter writer = factory.createXMLStreamWriter(out);
@@ -50,7 +51,7 @@ public class OaiItemUtils {
             writer.writeAttribute("xsi", "http://www.w3.org/2001/XMLSchema-instance", "schemaLocation",
                     "http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd");
             for (DublinCoreMetadataExtractors extractor : DublinCoreMetadataExtractors.values()) {
-                extractor.write(writer, transcription);
+                extractor.write(writer, transcription, defaultLanguage);
             }
             writer.writeEndElement();
             writer.flush();

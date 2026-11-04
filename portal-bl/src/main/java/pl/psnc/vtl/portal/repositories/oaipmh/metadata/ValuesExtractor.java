@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ValuesExtractor {
 
-    List<DcValue> extractValues(Transcription transcription);
+    List<DcValue> extractValues(Transcription transcription, String defaultLanguage);
 
     default String determineLanguage(String languageCode) {
         if (Strings.isNotBlank(languageCode)) {

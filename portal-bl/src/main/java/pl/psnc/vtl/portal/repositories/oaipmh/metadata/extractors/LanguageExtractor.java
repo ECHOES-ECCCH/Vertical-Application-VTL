@@ -10,9 +10,9 @@ import java.util.Objects;
 
 public class LanguageExtractor implements ValuesExtractor {
     @Override
-    public List<DcValue> extractValues(Transcription transcription) {
-        if (Objects.nonNull(transcription.getLastSetLanguageCode())) {
-            return List.of(new DcValue(transcription.getLastSetLanguageCode(), Strings.EMPTY));
+    public List<DcValue> extractValues(Transcription transcription, String defaultLanguage) {
+        if (Objects.nonNull(defaultLanguage)) {
+            return List.of(new DcValue(defaultLanguage, Strings.EMPTY));
         }
         return List.of();
     }

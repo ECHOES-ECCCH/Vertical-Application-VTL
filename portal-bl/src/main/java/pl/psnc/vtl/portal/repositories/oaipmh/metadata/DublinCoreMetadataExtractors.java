@@ -35,8 +35,9 @@ public enum DublinCoreMetadataExtractors {
         this.valuesExtractor = valuesExtractor;
     }
 
-    public void write(XMLStreamWriter writer, Transcription transcription) throws XMLStreamException {
-        List<DcValue> dcValues = valuesExtractor.extractValues(transcription);
+    public void write(XMLStreamWriter writer, Transcription transcription, String defaultLanguage)
+            throws XMLStreamException {
+        List<DcValue> dcValues = valuesExtractor.extractValues(transcription, defaultLanguage);
         for (DcValue dcValue : dcValues) {
             if (Strings.isNotBlank(dcValue.getValue())) {
                 writer.writeStartElement("http://purl.org/dc/elements/1.1/", localName);

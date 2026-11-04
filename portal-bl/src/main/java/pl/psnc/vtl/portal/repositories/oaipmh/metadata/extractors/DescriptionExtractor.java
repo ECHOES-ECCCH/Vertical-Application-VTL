@@ -9,11 +9,11 @@ import java.util.List;
 
 public class DescriptionExtractor implements ValuesExtractor {
     @Override
-    public List<DcValue> extractValues(Transcription transcription) {
+    public List<DcValue> extractValues(Transcription transcription, String defaultLanguage) {
         if (transcription.getProfileDesc() == null || Strings.isBlank(transcription.getProfileDesc().getSummary())) {
             return List.of();
         }
         return List.of(new DcValue(transcription.getProfileDesc().getSummary(),
-                determineLanguage(transcription.getLastSetLanguageCode())));
+                determineLanguage(defaultLanguage)));
     }
 }

@@ -9,9 +9,9 @@ import java.util.List;
 
 @Data
 @Validated
-public class VersesAndLanguagesDto {
+public class VersesAndModelsDto {
     @NotEmpty
     private List<Long> verseIds;
     @NotEmpty
-    private List<String> languageCodes;
+    private String modelIds;
 }

@@ -12,12 +12,12 @@ import java.util.stream.Collectors;
 @Component
 public class SubjectExtractor implements ValuesExtractor {
     @Override
-    public List<DcValue> extractValues(Transcription transcription) {
+    public List<DcValue> extractValues(Transcription transcription, String defaultLanguage) {
         if (transcription.getProfileDesc() == null || transcription.getProfileDesc().getKeywords() == null) {
             return List.of();
         }
         return transcription.getProfileDesc().getKeywords().stream().filter(Strings::isNotBlank)
-                .map(keyword -> new DcValue(keyword, determineLanguage(transcription.getLastSetLanguageCode())))
+                .map(keyword -> new DcValue(keyword, determineLanguage(defaultLanguage)))
                 .collect(Collectors.toList());
     }
 }

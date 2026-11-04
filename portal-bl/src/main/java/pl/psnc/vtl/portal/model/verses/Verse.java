@@ -124,12 +124,6 @@ public class Verse {
     }
 
     /**
-     * Language of the verse.
-     */
-    @Column
-    private String lang;
-
-    /**
      * Bounding box of the verse.
      */
     @Embedded

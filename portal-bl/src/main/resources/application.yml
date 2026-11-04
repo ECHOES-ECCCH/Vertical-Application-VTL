@@ -156,6 +156,7 @@ vtl:
   ocr-default-level: WORD
   ocr-training-url: ${OCR_TRAINING_ENDPOINT:http://localhost:5558/}
   conf-dir: ./vtl-config/
+  ocr-models-dir: ./ocr-models/
   imports-domains: ${IMPORT_DOMAINS_CHECK:false}
   echoes:
     common-platform-api-url: ${ECHOES_COMMON_PLATFORM_API_URL:}
